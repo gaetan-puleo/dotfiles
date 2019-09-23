@@ -1,0 +1,42 @@
+/* This theme is intended for a 3 items wide menu
+ * on a 1366x768 pixels resolution.
+ */
+* {
+    main-color:       #728cbb;
+    background:       #1c1c1c;
+    background-light: #1f1f1f;
+    background-focus: #282828;
+    foreground:       #888888;
+    background-color: @background;
+    text-color:       @foreground;
+    font:             "Font Awesome 5 Pro Solid 50";
+}
+#window {
+    width: 1366px;
+    height: 768px;
+    padding: 270px 289px;
+    children: [ horibox ];
+}
+#horibox {
+    children: [ listview ];
+    padding: 0px;
+}
+#listview {
+    layout: horizontal;
+    spacing: 40px;
+    lines: 3;
+}
+#element {
+    /* top right bottom left */
+    /*no space is 0px 0px -8px -81px*/
+    padding: 70px 70px 62px -11px;
+    border: 0px 0px 8px 0px;
+    background-color: @background-light;
+    border-color: @background-light;
+}
+#element.selected {
+    background-color: @background-focus;
+    text-color: @main-color;
+    border-color: @main-color;
+}
+

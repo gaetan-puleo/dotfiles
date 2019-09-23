@@ -1,0 +1,62 @@
+configuration {
+    show-icons: false;
+}
+* {
+    main-color:       #728cbb;
+    background:       #1c1c1c;
+    background-light: #1f1f1f;
+    background-focus: #282828;
+    foreground:       #bbbbbb;
+    background-color: #00000000;
+    text-color:       @foreground;
+    font:             "SauceCodePro Nerd Font 10";
+}
+#window {
+    /* top right bottom left */
+    width: 1366px;
+    height: 768px;
+    margin: 32px 0px 360px 800px;
+}
+#listview {
+    spacing: 0px;
+}
+/* Input window */
+inputbar,
+prompt,
+textbox-prompt-colon,
+entry {
+    background-color: @background-light;
+    border: 0px 0px 2px 0px;
+    margin: 0px 0px -2px 0px;
+    border-color: @background;
+}
+#inputbar {
+    children: [prompt, textbox-prompt-colon, entry];
+}
+#prompt {
+    padding: 10px 20px;
+    background-color: @main-color;
+    text-color: @background;
+}
+#textbox-prompt-colon {
+    expand: false;
+    str: " : : ";
+    padding: 10px;
+}
+#entry {
+    text-color: @main-color;
+    padding: 10px 10px 10px 0px;
+}
+/* List of entries */
+#element {
+    padding: 8px;
+    border: 0px 0px 0px 8px;
+    background-color: @background;
+    border-color: @background;
+}
+#element.selected {
+    background-color: @background-focus;
+    text-color: @main-color;
+    border-color: @main-color;
+}
+

@@ -1,0 +1,57 @@
+/* This theme is intended for a simple display of a 5
+ * items list on a 1366x768 pixels resolution.
+ */
+* {
+    main-color:       #728cbb;
+    background:       #1c1c1c;
+    background-light: #1f1f1f;
+    background-focus: #282828;
+    foreground:       #bbbbbb;
+    background-color: @background;
+    text-color:       @foreground;
+    font:             "Comfortaa bold 14";
+}
+#window {
+    width: 1366px;
+    height: 768px;
+    padding: 219px 360px;
+}
+/* Input window */
+inputbar,
+prompt,
+textbox-prompt-colon,
+entry {
+    background-color: @background-light;
+}
+#inputbar {
+    children: [prompt, textbox-prompt-colon, entry];
+    margin: 4px 0px;
+}
+#prompt {
+    padding: 10px 20px;
+    background-color: @main-color;
+    text-color: @background;
+}
+#textbox-prompt-colon {
+    expand: false;
+    str: "  : :  ";
+    padding: 10px;
+}
+#entry {
+    text-color: @main-color;
+    padding: 10px 10px 10px 0px;
+}
+/* List of entries */
+#element {
+    padding: 12px;
+    margin: 4px 0px;
+    border: 0px 0px 0px 8px;
+    background-color: @background-light;
+    border-color: @background-light;
+}
+#element.selected {
+    background-color: @background-focus;
+    text-color: @main-color;
+    border-color: @main-color;
+}
+

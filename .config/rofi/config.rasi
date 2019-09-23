@@ -1,0 +1,10 @@
+configuration {
+    drun-icon-theme:    "Paper";
+    cycle:              true;
+    hide-scrollbar:     true;
+    disable-history:    true;
+    modi:               "drun";
+    show-icons:         true;
+    display-drun:       "apps";
+}
+@import "~/.config/rofi/themes/custom-nord.rasi"
