@@ -1,0 +1,14 @@
+[alias]
+  alias = config --get-regexp "alias.*"
+  co = checkout
+  ac = !git add . && git commit -am 
+  cm = commit -m
+  st = status
+  lb = branch -a
+  l = log -20 --pretty=format:'%C(magenta)%h%Creset - %<(24)%C(cyan)%an%Creset %C(dim red)%ar%Creset : %s' --no-merges
+  lc = log -20 --pretty=format:'%C(magenta)%h%Creset - %<(24)%C(cyan)%an%Creset %C(dim red)%ar%Creset : %s'
+  last = log -1 HEAD
+  st = status
+  lb = branch -a
+  fa = fetch --all
+  today = log --stat
