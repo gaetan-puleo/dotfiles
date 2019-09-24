@@ -13,6 +13,9 @@ cd polybar && ./build.sh
 cd ../
 rm -r polybar
 
+#antigen 
+curl -L git.io/antigen > antigen.zsh
+
 #neovim
 
 sudo apt-get install -y python-dev python-pip python3-dev python3-pip
@@ -29,12 +32,23 @@ nvim +'PlugInstall --sync' +qa
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 
 # requirements
-cp -s ~/$dotfiles/.gitconfig.dist ~/$dotfiles/.gitconfig
+
+git config --global alias.alias config --get-regexp "alias.*"
+git config --global alias.co checkout
+git config --global alias.st status
+git config --global alias.cm "commit -m"
+git config --global alias.lb "branch -a"
+git config --global alias.l "log -20 --pretty=format:'%C(magenta)%h%Creset - %<(24)%C(cyan)%an%Creset %C(dim red)%ar%Creset : %s' --no-merges"
+git config --global alias.ac '!git add . && git commit -am' 
+git config --global alias.state '!git fetch --prune ; git fetch --tags ; clear && git branch -vv && git status'
+
+sudo chsh -s $(which zsh) $user
 
 # symlinks
+
 ln -s ~/$dotfiles/.fonts ~/.fonts
+ln -s ~/$dotfiles/.zshrc ~/.zshrc
 ln -s ~/$dotfiles/.config/compton.conf ~/.config/compton.conf
-ln -s ~/$dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/$dotfiles/.config/dunst ~/.config/dunst
 ln -s ~/$dotfiles/.config/i3 ~/.config/i3
 ln -s ~/$dotfiles/.config/rofi ~/.config/rofi
