@@ -15,7 +15,6 @@ set $ctrl Control
 # terminal
 set $term lxterminal
 # set default desktop layout (default is tiling)
-# workspace_layout tabbed <stacking|tabbed>
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout toggle split
@@ -137,7 +136,7 @@ for_window [urgent=latest] focus
 bindsym $mod+Shift+r restart
 
 bindsym $mod+$alt+Shift+Left exec  --no-startup-id "setxkbmap -layout fr -variant"
-bindsym $mod+$alt+Shift+Right exec  --no-startup-id "setxkbmap -layout us -variant intl"
+bindsym $mod+$alt+Shift+Right exec  --no-startup-id "setxkbmap -layout us -variant altgr-intl"
 
 # Resize window (you can also use the mouse for that)
 bindsym $mod+r mode "resize"

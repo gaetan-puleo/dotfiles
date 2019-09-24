@@ -1,4 +1,4 @@
-"
+
 "  NVIM CONFIG Version 0.1.0
 "
 "
@@ -76,9 +76,10 @@ set timeout timeoutlen=1000 ttimeoutlen=50
 
 let mapleader = ","
 
-set grepprg=rg\ --vimgrep
 
 set clipboard=unnamedplus
+
+
 "
 "   Keyboard
 "
@@ -94,36 +95,23 @@ set clipboard=unnamedplus
 
 
 " open dirvish current directory
-nmap cd <Plug>(dirvish_up)
+" nmap cd <Plug>(dirvish_up)
+
+"clear highlight
+ 
+map <esc> :noh<cr>
 
 " auto pair (
-" inoremap ( ()<Left>
+inoremap ( ()<Left>
 
 " auto pair {
-" inoremap { {}<Left>
+inoremap { {}<Left>
 
-
-" fzf
-nnoremap <C-p> :Files<Cr>
-
-
-
-" display files
-nmap <C-f> :Tags<CR>
 
 " open new tab
 map <C-w> :tab split<CR>
 
-" git status
-noremap gs :Gstatus<CR>
-
-" git diff
-noremap gd :Gdiff<CR>
 noremap <C-u> :UndotreeToggle<CR>
-
-
-" git log
-" nnoremap gl :Gitlog <Cr> 
 
 " Yank to end of line
 nnoremap Y y$
@@ -139,22 +127,18 @@ nnoremap k gk
 nnoremap B ^
 nnoremap E $
 
-" To map to <leader>D:
-noremap <leader>G :call ReactGotoDef()<CR>
-
-" search
-nmap <C-f> <CR>:Rg<CR>
-
-" search and replace
-" "nmap <C-h> <CR>:Acks <Left>
-
 " Select all text
 map <C-a> <esc>ggVG<CR>
 
 "jsdoc
 "nmap <C-j> <C-l> ?function<cr>:noh<cr><Plug>(jsdoc)
 
-
+" open filesi
+map <C-p> :Files<CR>
+nnoremap <silent> <C-F> :NERDTreeToggle<CR>
+map <Leader>p :Files<CR>
+map <Leader>f :Rg<CR>
+map <Leader>b :Buffers<CR>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -199,16 +183,9 @@ Plug 'tpope/vim-sensible'
 
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'mbbill/undotree'
-
-
-
+Plug 'mileszs/ack.vim'
 Plug 'mhinz/vim-signify'
 
-" dirvish
-Plug 'justinmk/vim-dirvish'
-
-" dirvish git
-Plug 'kristijanhusak/vim-dirvish-git'
 " linter wrapper
 Plug 'w0rp/ale'
 
@@ -226,6 +203,8 @@ Plug 'itchyny/vim-gitbranch'
 " autoreload files
 Plug 'djoshea/vim-autoread'
 
+Plug 'Shougo/denite.nvim'
+
 "fuzzy search
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -233,6 +212,10 @@ Plug 'junegunn/fzf.vim'
 "JS color syntaxes
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
+
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 Plug 'ryanoasis/vim-devicons'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -251,14 +234,51 @@ call plug#end()
 "   Plugin config
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""
-set background=dark
+
 colorscheme palenight
+
+
 
 " ALE
 let g:ale_fixers = {'javascript': ['eslint']}
 let g:ale_fix_on_save = 1
 
+" This is the default extra key bindings
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
 
+" Default fzf layout
+" - down / up / left / right
+let g:fzf_layout = { 'down': '~80%' }
+
+" In Neovim, you can set up fzf window using a Vim command
+let g:fzf_layout = { 'window': 'enew' }
+let g:fzf_layout = { 'window': '-tabnew' }
+let g:fzf_layout = { 'window': '10new' }
+
+" Customize fzf colors to match your color scheme
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+" Enable per-command history.
+" CTRL-N and CTRL-P will be automatically bound to next-history and
+" previous-history instead of down and up. If you don't like the change,
+" explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
+let g:fzf_history_dir = '~/.local/share/fzf-history'
 " fzf
 " --column: Show column number
 " --line-number: Show line number
@@ -271,7 +291,7 @@ let g:ale_fix_on_save = 1
 " --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
 " --color: Search color options
 
-let $FZF_DEFAULT_COMMAND = 'rg --files -g ""'
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden -g ""'
 
 command! -bang -nargs=* Ls  
       \ call fzf#run(fzf#wrap({'source': 'ls -a'}))
@@ -322,4 +342,43 @@ let g:signify_sign_delete_first_line = '✖'
 let g:signify_sign_change            = '◉'
 let g:signify_sign_changedelete = g:signify_sign_change
 
+" let g:NERDTreeFileExtensionHighlightFullName = 1
+" let g:NERDTreeExactMatchHighlightFullName = 1
+" let g:NERDTreePatternMatchHighlightFullName = 1
 
+let g:NERDTreeHighlightFolders = 0 " enables folder icon highlighting using exact match
+let g:NERDTreeHighlightFoldersFullName = 0 " highlights the folder name
+
+" " you can add these colors to your .vimrc to help customizing
+" let s:brown = "905532"
+" let s:aqua =  "3AFFDB"
+" let s:blue = "689FB6"
+" let s:darkBlue = "44788E"
+" let s:purple = "834F79"
+" let s:lightPurple = "834F79"
+" let s:red = "AE403F"
+" let s:beige = "F5C06F"
+" let s:yellow = "F09F17"
+" let s:orange = "D4843E"
+" let s:darkOrange = "F16529"
+" let s:pink = "CB6F6F"
+" let s:salmon = "EE6E73"
+" let s:green = "8FAA54"
+" let s:lightGreen = "31B53E"
+" let s:white = "FFFFFF"
+" let s:rspec_red = 'FE405F'
+" let s:git_orange = 'F54D27'
+
+" let g:NERDTreeExtensionHighlightColor = {} " this line is needed to avoid error
+" let g:NERDTreeExtensionHighlightColor['css'] = s:blue " sets the color of css files to blue
+
+" let g:NERDTreeExactMatchHighlightColor = {} " this line is needed to avoid error
+" let g:NERDTreeExactMatchHighlightColor['.gitignore'] = s:git_orange " sets the color for .gitignore files
+
+" let g:NERDTreePatternMatchHighlightColor = {} " this line is needed to avoid error
+" let g:NERDTreePatternMatchHighlightColor['.*_spec\.rb$'] = s:rspec_red " sets the color for files ending with _spec.rb
+"
+let g:NERDTreeHighlightCursorline = 0
+:hi Directory guifg=#FFFFFF ctermfg=white
+
+let NERDTreeShowHidden=1
