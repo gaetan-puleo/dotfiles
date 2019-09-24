@@ -3,7 +3,7 @@ dotfiles="dotfiles"
 
 sudo apt update -y
 sudo apt upgrade -y
-sudo apt install -y zsh feh i3-wm i3lock curl git dunst lxterminal xfce4-power-manager lxappearance compton rofi dunst wget chromium-browser blueman
+sudo apt install -y zsh feh i3-wm i3lock curl git dunst lxterminal xfce4-power-manager lxappearance compton rofi dunst wget chromium-browser blueman ack-grep
 
 #polybar
 sudo apt install -y build-essential cmake cmake-data pkg-config python3-sphinx libcairo2-dev libxcb1-dev libxcb-util0-dev libxcb-randr0-dev libxcb-composite0-dev python-xcbgen xcb-proto libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev
@@ -28,11 +28,11 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
 
 nvim +'PlugInstall --sync' +qa
 
-# nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+#ripgrep
+curl -LO https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep_11.0.2_amd64.deb
+sudo dpkg -i ripgrep_11.0.2_amd64.deb
 
-# requirements
-
+# git 
 git config --global alias.alias config --get-regexp "alias.*"
 git config --global alias.co checkout
 git config --global alias.st status
@@ -42,7 +42,7 @@ git config --global alias.l "log -20 --pretty=format:'%C(magenta)%h%Creset - %<(
 git config --global alias.ac '!git add . && git commit -am' 
 git config --global alias.state '!git fetch --prune ; git fetch --tags ; clear && git branch -vv && git status'
 
-sudo chsh -s $(which zsh) $user
+chsh -s /bin/bash
 
 # symlinks
 
