@@ -27,7 +27,6 @@ set linebreak    "Wrap lines at convenient points
 
 " set dark theme
 "set background=dark
-
 set encoding=UTF-8
 
 filetype plugin on
@@ -78,6 +77,18 @@ let mapleader = ","
 
 
 set clipboard=unnamedplus
+
+if (has("nvim"))
+  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+
+"For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
+"Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
+" < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+if (has("termguicolors"))
+  set termguicolors
+endif
 
 
 "
@@ -135,7 +146,9 @@ map <C-a> <esc>ggVG<CR>
 
 " open filesi
 map <C-p> :Files<CR>
-nnoremap <silent> <C-F> :NERDTreeToggle<CR>
+" nnoremap <silent> <C-F> :NERDTreeToggle<CR>
+map <C-f> <plug>NERDTreeTabsToggle<CR>
+" map <C-f> :VimFiler<CR>
 map <Leader>p :Files<CR>
 map <Leader>f :Rg<CR>
 map <Leader>b :Buffers<CR>
@@ -181,7 +194,7 @@ Plug 'janko/vim-test'
 "Must be on all .vimrc file
 Plug 'tpope/vim-sensible'
 
-Plug 'drewtempelmeyer/palenight.vim'
+" Plug 'drewtempelmeyer/palenight.vim'
 Plug 'mbbill/undotree'
 Plug 'mileszs/ack.vim'
 Plug 'mhinz/vim-signify'
@@ -203,7 +216,8 @@ Plug 'itchyny/vim-gitbranch'
 " autoreload files
 Plug 'djoshea/vim-autoread'
 
-Plug 'Shougo/denite.nvim'
+" Plug 'Shougo/denite.nvim'
+Plug 'Shougo/vimfiler.vim'
 
 "fuzzy search
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -217,7 +231,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-Plug 'ryanoasis/vim-devicons'
+Plug 'weynhamz/vim-plugin-nerdtree-tabs'
+
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " comment
@@ -228,6 +243,14 @@ Plug 'janko/vim-test'
 
 " show indentations
 Plug 'Yggdroot/indentLine'
+Plug 'SirVer/ultisnips'
+"let g:UltiSnipsExpandTrigger="<C-J>" "(optional) CTRL-J instead of TAB to avoid conflicts with YCM
+Plug 'alexbyk/vim-ultisnips-react'
+Plug 'ryanoasis/vim-devicons'
+
+" Plug 'ayu-theme/ayu-vim' " or other package manager
+Plug 'arcticicestudio/nord-vim'
+
 call plug#end()
 
 "
@@ -235,9 +258,14 @@ call plug#end()
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 
-colorscheme palenight
+" set background=dark
+" colorscheme palenight
 
-
+set termguicolors     " enable true colors support
+" let ayucolor="light"  " for light version of theme
+" let ayucolor="mirage" " for mirage version of theme
+" let ayucolor="mirage"   " for dark version of theme
+colorscheme nord
 
 " ALE
 let g:ale_fixers = {'javascript': ['eslint']}
@@ -299,7 +327,7 @@ command! -bang -nargs=* Ls
 
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': 'palenight',
+      \ 'colorscheme': 'nord',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'absolutepath', 'modified' ] ]
@@ -350,35 +378,43 @@ let g:NERDTreeHighlightFolders = 0 " enables folder icon highlighting using exac
 let g:NERDTreeHighlightFoldersFullName = 0 " highlights the folder name
 
 " " you can add these colors to your .vimrc to help customizing
-" let s:brown = "905532"
-" let s:aqua =  "3AFFDB"
-" let s:blue = "689FB6"
-" let s:darkBlue = "44788E"
-" let s:purple = "834F79"
-" let s:lightPurple = "834F79"
-" let s:red = "AE403F"
-" let s:beige = "F5C06F"
-" let s:yellow = "F09F17"
-" let s:orange = "D4843E"
-" let s:darkOrange = "F16529"
-" let s:pink = "CB6F6F"
-" let s:salmon = "EE6E73"
-" let s:green = "8FAA54"
-" let s:lightGreen = "31B53E"
-" let s:white = "FFFFFF"
-" let s:rspec_red = 'FE405F'
-" let s:git_orange = 'F54D27'
+let s:brown = "905532"
+let s:aqua =  "3AFFDB"
+let s:blue = "689FB6"
+let s:darkBlue = "44788E"
+let s:purple = "834F79"
+let s:lightPurple = "834F79"
+let s:red = "AE403F"
+let s:beige = "F5C06F"
+let s:yellow = "F09F17"
+let s:orange = "D4843E"
+let s:darkOrange = "F16529"
+let s:pink = "CB6F6F"
+let s:salmon = "EE6E73"
+let s:green = "8FAA54"
+let s:lightGreen = "31B53E"
+let s:white = "FFFFFF"
+let s:rspec_red = 'FE405F'
+let s:git_orange = 'F54D27'
 
-" let g:NERDTreeExtensionHighlightColor = {} " this line is needed to avoid error
-" let g:NERDTreeExtensionHighlightColor['css'] = s:blue " sets the color of css files to blue
+ let g:NERDTreeExtensionHighlightColor = {} " this line is needed to avoid error
+ let g:NERDTreeExtensionHighlightColor['css'] = s:blue " sets the color of css files to blue
 
-" let g:NERDTreeExactMatchHighlightColor = {} " this line is needed to avoid error
-" let g:NERDTreeExactMatchHighlightColor['.gitignore'] = s:git_orange " sets the color for .gitignore files
+ let g:NERDTreeExactMatchHighlightColor = {} " this line is needed to avoid error
+ let g:NERDTreeExactMatchHighlightColor['.gitignore'] = s:git_orange " sets the color for .gitignore files
 
-" let g:NERDTreePatternMatchHighlightColor = {} " this line is needed to avoid error
-" let g:NERDTreePatternMatchHighlightColor['.*_spec\.rb$'] = s:rspec_red " sets the color for files ending with _spec.rb
-"
+ let g:NERDTreePatternMatchHighlightColor = {} " this line is needed to avoid error
+ let g:NERDTreePatternMatchHighlightColor['.*_spec\.rb$'] = s:rspec_red " sets the color for files ending with _spec.rb
+
 let g:NERDTreeHighlightCursorline = 0
 :hi Directory guifg=#FFFFFF ctermfg=white
 
 let NERDTreeShowHidden=1
+
+
+let NERDTreeAutoDeleteBuffer = 1
+
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let g:DevIconsEnableFoldersOpenClose = 1
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
