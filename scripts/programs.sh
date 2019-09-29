@@ -2,9 +2,11 @@
 
 cd programs/
 
-./docker.sh
-./firefox.sh
-./python.sh
-./vsc.sh
-./vundle.sh
-./sass.sh
+bash ./antigen.sh
+bash ./docker.sh
+bash ./docker-compose.sh
+bash ./mongodb.sh
+bash ./nvim.sh
+bash ./ripgrep.sh
+bash ./polybar.sh
+bash ./plug.sh
