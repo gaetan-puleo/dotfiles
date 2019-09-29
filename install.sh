@@ -4,6 +4,7 @@
 
 cd ./scripts
 
+bash ./before-install.sh
 bash ./aptinstalls.sh
 bash ./programs.sh
 bash ./symlinks.sh
