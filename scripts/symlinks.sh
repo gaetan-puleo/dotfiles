@@ -3,25 +3,6 @@
 dotfiles="dotfiles"
 
 function linkDotfile {
-  dest="${1}"
-  dateStr=$(date +%Y-%m-%d-%H%M)
-
-  if [ -L ${2} ]; then
-    # Existing symlink
-    echo "Removing existing symlink: ${2}"
-    rm ${dest}
-
-  elif [ -f "${2}" ]; then
-    # Existing file
-    echo "Backing up existing file: ${2}"
-    mv ${dest}{,.${dateStr}}
-
-  elif [ -d "${2}" ]; then
-    # Existing dir
-    echo "Backing up existing dir: ${2}"
-    mv ${dest}{,.${dateStr}}
-  fi
-
   echo "Creating new symlink: ${2}"
   ln -sfn ${1} ${2}
 }
