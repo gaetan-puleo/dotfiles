@@ -5,12 +5,12 @@ dotfiles="dotfiles"
 function linkDotfile {
 
   if [ ! -L ${2} ]; then
-    if [-f "${2}" ]; then
+    if [ -f "${2}" ]; then
       # Existing file
       echo "Backing up existing file: ${2}"
       mv ${2}{,.${dateStr}}
 
-    elif [  -d "${2}" ]; then
+    elif [ -d "${2}" ]; then
       # Existing dir
       echo "Backing up existing dir: ${2}"
       mv ${2}{,.${dateStr}}
