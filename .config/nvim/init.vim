@@ -47,7 +47,8 @@ set nowb
 set tabstop=2 shiftwidth=2 expandtab
 set autoindent
 set smartindent
-
+" Set floating window to be slightly transparent
+set winbl=10
 " disable bell
 set belloff=all
 "set viminfo+=n/.vim/viminfo
@@ -67,7 +68,7 @@ set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
 
 set updatetime=1000             " Speed up the updatetime so gitgutter and friends are quicker
-
+set winhl=Normal:GroupWithFgColor
 
 " Make the keyboard faaaaaaast
 set ttyfast
@@ -89,7 +90,8 @@ endif
 if (has("termguicolors"))
   set termguicolors
 endif
-
+set splitbelow
+set splitright
 
 "
 "   Keyboard
@@ -182,11 +184,14 @@ nmap cu  <Plug>Commentary
 omap cu  <Plug>Commentary
 nmap cu <Plug>CommentaryLine
 
+
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd nvim +'PlugInstall --sync' +qa
 endif
+nnoremap <C-N> :bnext<CR>
+nnoremap <C-P> :bprev<CR>
 
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'janko/vim-test'
@@ -249,8 +254,12 @@ Plug 'alexbyk/vim-ultisnips-react'
 Plug 'ryanoasis/vim-devicons'
 
 " Plug 'ayu-theme/ayu-vim' " or other package manager
-Plug 'arcticicestudio/nord-vim'
-
+Plug 'joshdick/onedark.vim'
+" Plug 'drewtempelmeyer/palenight.vim'
+" Plug 'arcticicestudio/nord-vim'
+Plug 'ncm2/float-preview.nvim'
+Plug 'blueyed/vim-diminactive'
+Plug 'ap/vim-buftabline'
 call plug#end()
 
 "
@@ -258,14 +267,15 @@ call plug#end()
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 
+syntax on
 " set background=dark
-" colorscheme palenight
+colorscheme onedark
 
 set termguicolors     " enable true colors support
 " let ayucolor="light"  " for light version of theme
 " let ayucolor="mirage" " for mirage version of theme
 " let ayucolor="mirage"   " for dark version of theme
-colorscheme nord
+" colorscheme nord
 
 " ALE
 let g:ale_fixers = {'javascript': ['eslint']}
@@ -327,7 +337,7 @@ command! -bang -nargs=* Ls
 
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'onedark',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'absolutepath', 'modified' ] ]
@@ -335,6 +345,12 @@ let g:lightline = {
       \ 'component_function': {
       \   'gitbranch': 'gitbranch#name'
       \ },
+      \ 'component_visible_condition': {
+      \   'readonly': '(&filetype!="help"&& &readonly)',
+      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
+      \ },
+      \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
+      \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
       \ }
 
 "linter
@@ -418,3 +434,69 @@ let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let g:DevIconsEnableFoldersOpenClose = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:airline_powerline_fonts = 1
+
+set encoding=utf-8
+scriptencoding utf-8
+:set guifont=*
+
+let g:float_preview#docked = 1
+
+
+
+" Reverse the layout to make the FZF list top-down
+let $FZF_DEFAULT_OPTS='--layout=reverse'
+
+" Using the custom window creation function
+let g:fzf_layout = { 'window': 'call FloatingFZF()' }
+
+" Function to create the custom floating window
+function! FloatingFZF()
+  " creates a scratch, unlisted, new, empty, unnamed buffer
+  " to be used in the floating window
+  let buf = nvim_create_buf(v:false, v:true)
+
+  " 90% of the height
+  let height = float2nr(&lines * 0.9)
+  " 60% of the height
+  let width = float2nr(&columns * 0.6)
+  " horizontal position (centralized)
+  let horizontal = float2nr((&columns - width) / 2)
+  " vertical position (one line down of the top)
+  let vertical = 1
+
+  let opts = {
+        \ 'relative': 'editor',
+        \ 'row': vertical,
+        \ 'col': horizontal,
+        \ 'width': width,
+        \ 'height': height
+        \ }
+
+  " open the new window, floating, and enter to it
+  call nvim_open_win(buf, v:true, opts)
+endfunction
+
+
+" " Background colors for terminal windows
+" hi ActiveTerminal guibg=#333333
+
+" " Call method on window enter
+" augroup WindowManagement
+"   autocmd!
+"   autocmd WinEnter * call Handle_Win_Enter()
+" augroup END
+
+" " Change highlight group of terminal window
+" function! Handle_Win_Enter()
+"   if &buftype ==# 'terminal'
+"     setlocal winhighlight=Normal:ActiveTerminal
+"   endif
+" " endfunction
+
+" :hi ColorColumn ctermbg=0 guibg=#282c39
+augroup BgHighlight
+    autocmd!
+    autocmd WinEnter * set cul
+    autocmd WinLeave * set nocul
+augroup END
