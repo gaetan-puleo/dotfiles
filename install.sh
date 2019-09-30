@@ -10,4 +10,11 @@ bash ./programs.sh
 bash ./symlinks.sh
 bash ./clean-after-install.sh
 
-figlet "... and we're back!" | lolcat
+
+# Get all upgrades
+sudo apt upgrade -y
+
+chsh -s $(which zsh)
+# See our bash changes
+source ~/.bashrc
+figlet "... ready to work" | lolcat
