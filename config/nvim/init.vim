@@ -430,10 +430,10 @@ let NERDTreeShowHidden=1
 
 let NERDTreeAutoDeleteBuffer = 1
 
-let NERDTreeMinimalUI = 1
+let NERDTreeMinimalUI = 0
 let NERDTreeDirArrows = 1
 let g:DevIconsEnableFoldersOpenClose = 1
-let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:WebDevIconsUnicodeDecorateFolderNodes = 0
 let g:airline_powerline_fonts = 1
 
 set encoding=utf-8
