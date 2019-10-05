@@ -35,9 +35,6 @@ filetype plugin indent on
 "enable color Highlighting
 syntax enable
 
-" enable true colors support
-"set termguicolors     
-
 "disable swap and backup files
 set noswapfile
 set nobackup
@@ -51,7 +48,6 @@ set smartindent
 set winbl=10
 " disable bell
 set belloff=all
-"set viminfo+=n/.vim/viminfo
 " show line number
 set number
 
@@ -75,7 +71,6 @@ set ttyfast
 set timeout timeoutlen=1000 ttimeoutlen=50
 
 let mapleader = ","
-
 
 set clipboard=unnamedplus
 
@@ -107,19 +102,10 @@ set splitright
 ":inoremap <S-TAB> <C-D>
 
 
-" open dirvish current directory
-" nmap cd <Plug>(dirvish_up)
 
 "clear highlight
  
 map <esc> :noh<cr>
-
-" auto pair (
-inoremap ( ()<Left>
-
-" auto pair {
-inoremap { {}<Left>
-
 
 " open new tab
 map <C-w> :tab split<CR>
@@ -146,11 +132,8 @@ map <C-a> <esc>ggVG<CR>
 "jsdoc
 "nmap <C-j> <C-l> ?function<cr>:noh<cr><Plug>(jsdoc)
 
-" open filesi
-map <C-p> :Files<CR>
-" nnoremap <silent> <C-F> :NERDTreeToggle<CR>
+" open files
 map <C-f> <plug>NERDTreeTabsToggle<CR>
-" map <C-f> :VimFiler<CR>
 map <Leader>p :Files<CR>
 map <Leader>f :Rg<CR>
 map <Leader>b :Buffers<CR>
@@ -159,22 +142,6 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-"Use TAB to complete when typing words, else inserts TABs as usual.
-"Uses dictionary and source files to find matching words to complete.
-
-"See help completion for source,
-"Note: usual completion is on <C-n> but more trouble to press all the time.
-"Never type the same word twice and maybe learn a new spellings!
-"Use the Linux dictionary when spelling is in doubt.
-"Window users can copy the file to their machine.
-function! Tab_Or_Complete()
-  if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
-    return "\<C-N>"
-  else
-    return "\<Tab>"
-  endif
-endfunction
-:inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 :set dictionary="/usr/dict/words"
 
 " vim commentary
@@ -190,8 +157,14 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd nvim +'PlugInstall --sync' +qa
 endif
+
+
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
+
+" tap indent movement (use mark `m' for cursor position)
+vmap <Tab> >gv
+vmap <S-Tab> <gv
 
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'janko/vim-test'
@@ -199,9 +172,10 @@ Plug 'janko/vim-test'
 "Must be on all .vimrc file
 Plug 'tpope/vim-sensible'
 
-" Plug 'drewtempelmeyer/palenight.vim'
+" undo history tab
 Plug 'mbbill/undotree'
-Plug 'mileszs/ack.vim'
+
+"show git status line by line
 Plug 'mhinz/vim-signify'
 
 " linter wrapper
@@ -213,16 +187,11 @@ Plug 'itchyny/lightline.vim'
 " linter wrapper for lightlane
 Plug 'maximbaz/lightline-ale'
 
-Plug 'luochen1990/rainbow'
-
 "git branch function
 Plug 'itchyny/vim-gitbranch'
 
 " autoreload files
 Plug 'djoshea/vim-autoread'
-
-" Plug 'Shougo/denite.nvim'
-Plug 'Shougo/vimfiler.vim'
 
 "fuzzy search
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -230,36 +199,47 @@ Plug 'junegunn/fzf.vim'
 
 "JS color syntaxes
 Plug 'pangloss/vim-javascript'
+
+"better jsx syntax
 Plug 'maxmellon/vim-jsx-pretty'
 
+"Nerdtree plugins (have a side file tree like in vscode)
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
 Plug 'weynhamz/vim-plugin-nerdtree-tabs'
 
+" autocomplete core
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " comment
 Plug 'tpope/vim-commentary'
 Plug 'suy/vim-context-commentstring'
 
+" for test but must be tested first
 Plug 'janko/vim-test'
 
 " show indentations
 Plug 'Yggdroot/indentLine'
-Plug 'SirVer/ultisnips'
-"let g:UltiSnipsExpandTrigger="<C-J>" "(optional) CTRL-J instead of TAB to avoid conflicts with YCM
-Plug 'alexbyk/vim-ultisnips-react'
-Plug 'ryanoasis/vim-devicons'
+" ES2015 code snippets (Optional)
+Plug 'epilande/vim-es2015-snippets'
 
-" Plug 'ayu-theme/ayu-vim' " or other package manager
+" React code snippets
+Plug 'mlaursen/vim-react-snippets'
+
+"snippets core
+Plug 'SirVer/ultisnips'
+
+" theme
 Plug 'joshdick/onedark.vim'
-" Plug 'drewtempelmeyer/palenight.vim'
-" Plug 'arcticicestudio/nord-vim'
+" better modal for neovim 0.4.x
 Plug 'ncm2/float-preview.nvim'
-" Plug 'blueyed/vim-diminactive'
+" buffer tabs
 Plug 'ap/vim-buftabline'
+" auto pair quotes, brackets etc...
+Plug 'jiangmiao/auto-pairs'
+" icons
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 "
