@@ -33,4 +33,4 @@ linkDotfile ~/$dotfiles/config/rofi ~/.config/rofi
 linkDotfile ~/$dotfiles/config/polybar ~/.config/polybar
 linkDotfile ~/$dotfiles/config/nvim ~/.config/nvim
 linkDotfile ~/$dotfiles/config/lxterminal ~/.config/lxterminal
-linkDotfile ~/$dotfiles/images/walpaper.jpg ~/wallpaper.jpg
+linkDotfile ~/$dotfiles/images/wallpaper.jpg ~/wallpaper.jpg

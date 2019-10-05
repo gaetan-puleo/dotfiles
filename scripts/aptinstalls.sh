@@ -28,6 +28,7 @@ install dunst
 install wget
 install chromium-browser
 install blueman
+install fonts-firacode
 
 # fun
 install figlet
