@@ -1,6 +1,7 @@
 export TERM="xterm-256color"
 # PATH
 PATH=$PATH:~/.fzf/bin
+PATH=$PATH:~/.local/bin
 export PATH
 
 ZSH_LOCAL=$HOME/.zsh_local
@@ -28,6 +29,7 @@ alias vim="nvim"
 alias i3c="nvim ~/.config/i3/config"
 alias zshc="nvim ~/.zshrc"
 alias vimc="nvim ~/.config/nvim/init.vim"
+alias kittyc="nvim ~/.config/kitty/kitty.conf"
 alias polybarc="nvim ~/.config/polybar/config"
 alias comptonc="nvim ~/.config/compton.conf"
 alias pstart="sleep 1500 && notify-send -t 0 'take a break'"

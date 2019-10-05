@@ -13,7 +13,7 @@ set $alt Mod1
 set $ctrl Control
 
 # terminal
-set $term lxterminal
+set $term kitty
 # set default desktop layout (default is tiling)
 
 # change container layout (stacked, tabbed, toggle split)
