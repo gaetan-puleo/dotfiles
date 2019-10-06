@@ -35,3 +35,4 @@ linkDotfile ~/$dotfiles/config/nvim ~/.config/nvim
 linkDotfile ~/$dotfiles/config/lxterminal ~/.config/lxterminal
 linkDotfile ~/$dotfiles/config/kitty ~/.config/kitty
 linkDotfile ~/$dotfiles/images/wallpaper.jpg ~/wallpaper.jpg
+linkDotfile ~/$dotfiles/images/wallpaper-lock.png ~/wallpaper-lock.png
