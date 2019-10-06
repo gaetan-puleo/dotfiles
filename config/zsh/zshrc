@@ -35,7 +35,8 @@ alias comptonc="nvim ~/.config/compton.conf"
 alias pstart="sleep 1500 && notify-send -t 0 'take a break'"
 alias ppause="sleep 300 && notify-send -t 0 'go to work'"
 alias hs='history | grep'
-alias update='sudo apt-get update && sudo apt-get upgrade'
+alias install='sudo apt install'
+alias update='sudo apt update && sudo apt upgrade'
 alias showip='ifconfig | grep inet'
 
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
