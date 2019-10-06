@@ -122,4 +122,4 @@ $(ssh_info)%{$fg[blue]%}%~%u $(git_info)
 %(?.%{$fg[magenta]%}.%{$fg[red]%})%(!.#.❯)%{$reset_color%} '
 
 
-bindkey -v
+# bindkey -v
