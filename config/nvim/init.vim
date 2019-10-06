@@ -1,4 +1,4 @@
-
+"
 "  NVIM CONFIG Version 0.1.0
 "
 "
@@ -88,8 +88,10 @@ endif
 set splitbelow
 set splitright
 
+hi VertSplit ctermbg=NONE guibg=NONE
+
 "
-"   Keyboard
+" Keyboard
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " noremap <Up> <NOP>
@@ -104,7 +106,9 @@ set splitright
 
 
 "clear highlight
- 
+"
+nnoremap <C-N> :bnext<CR>
+nnoremap <C-P> :bprev<CR>
 map <esc> :noh<cr>
 
 " open new tab
@@ -158,18 +162,6 @@ endif
 
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
-
-" " " Copy to clipboard
-" vnoremap  y  "+y
-" nnoremap  Y  "+yg_
-" nnoremap  y  "+y
-" nnoremap  yy  "+yy
-
-" " " Paste from clipboard
-" nnoremap p "+p
-" nnoremap P "+P
-" vnoremap p "+p
-" vnoremap P "+P
 
 " tap indent movement (use mark `m' for cursor position)
 vmap <Tab> >gv
@@ -239,11 +231,15 @@ Plug 'mlaursen/vim-react-snippets'
 "snippets core
 Plug 'SirVer/ultisnips'
 
+" bufferline
+Plug 'mgee/lightline-bufferline'
 " theme
 Plug 'joshdick/onedark.vim'
 " better modal for neovim 0.4.x
 Plug 'ncm2/float-preview.nvim'
 " buffer tabs
+" Plug 'ap/vim-buftabline'
+
 Plug 'ap/vim-buftabline'
 " auto pair quotes, brackets etc...
 Plug 'jiangmiao/auto-pairs'
@@ -251,6 +247,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'wsdjeg/notifications.vim'
 " icons
 Plug 'ryanoasis/vim-devicons'
+
 call plug#end()
 
 "
@@ -259,9 +256,9 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 
 syntax on
-" set background=dark
+set background=dark
 colorscheme onedark
-
+" syntax enable
 set termguicolors     " enable true colors support
 " let ayucolor="light"  " for light version of theme
 " let ayucolor="mirage" " for mirage version of theme
@@ -342,7 +339,6 @@ let g:lightline = {
       \ },
       \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
       \ }
-
 "linter
 let g:lightline.component_expand = {
       \  'linter_checking': 'lightline#ale#checking',
@@ -368,7 +364,7 @@ let g:lightline#ale#indicator_errors = "\uf05e"
 let g:lightline#ale#indicator_ok = "\uf00c"
 
 " git signify
-
+"
 let g:signify_line_highlight = 0
 let g:signify_sign_add               = '✚'
 let g:signify_sign_delete            = '✖'
@@ -499,3 +495,9 @@ if exists('+colorcolumn')
     au WinLeave * set nocursorline
   augroup END
 endif
+
+hi LineNr guibg=bg
+set foldcolumn=0
+hi foldcolumn guibg=bg
+hi VertSplit guibg=bg guifg=#37474F
+" :set fillchars+=vert:\ 

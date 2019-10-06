@@ -3,6 +3,7 @@
 cd programs/
 
 bash ./antigen.sh
+bash ./nvm.sh
 bash ./docker.sh
 bash ./docker-compose.sh
 bash ./mongodb.sh
