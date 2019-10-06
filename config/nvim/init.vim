@@ -72,7 +72,7 @@ set timeout timeoutlen=1000 ttimeoutlen=50
 
 let mapleader = ","
 
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 
 if (has("nvim"))
   "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
@@ -111,9 +111,6 @@ map <esc> :noh<cr>
 map <C-w> :tab split<CR>
 
 noremap <C-u> :UndotreeToggle<CR>
-
-" Yank to end of line
-nnoremap Y y$
 
 "Delete to the end of line
 nnoremap D d$
@@ -161,6 +158,18 @@ endif
 
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
+
+" " " Copy to clipboard
+" vnoremap  y  "+y
+" nnoremap  Y  "+yg_
+" nnoremap  y  "+y
+" nnoremap  yy  "+yy
+
+" " " Paste from clipboard
+" nnoremap p "+p
+" nnoremap P "+P
+" vnoremap p "+p
+" vnoremap P "+P
 
 " tap indent movement (use mark `m' for cursor position)
 vmap <Tab> >gv
@@ -238,6 +247,8 @@ Plug 'ncm2/float-preview.nvim'
 Plug 'ap/vim-buftabline'
 " auto pair quotes, brackets etc...
 Plug 'jiangmiao/auto-pairs'
+" notifications on side
+Plug 'wsdjeg/notifications.vim'
 " icons
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
