@@ -1,4 +1,4 @@
-"
+
 "  NVIM CONFIG Version 0.1.0
 "
 "
@@ -245,6 +245,8 @@ Plug 'ap/vim-buftabline'
 Plug 'jiangmiao/auto-pairs'
 " notifications on side
 Plug 'wsdjeg/notifications.vim'
+" emmet
+Plug 'mattn/emmet-vim'
 " icons
 Plug 'ryanoasis/vim-devicons'
 
@@ -500,4 +502,10 @@ hi LineNr guibg=bg
 set foldcolumn=0
 hi foldcolumn guibg=bg
 hi VertSplit guibg=bg guifg=#37474F
-" :set fillchars+=vert:\ 
+" :set fillchars+=vert:\
+let g:user_emmet_leader_key=','
+let g:user_emmet_settings = {
+  \  'javascript.jsx' : {
+    \      'extends' : 'jsx',
+    \  },
+  \}
