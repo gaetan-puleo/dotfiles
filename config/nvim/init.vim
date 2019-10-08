@@ -231,16 +231,10 @@ Plug 'mlaursen/vim-react-snippets'
 "snippets core
 Plug 'SirVer/ultisnips'
 
-" bufferline
-Plug 'mgee/lightline-bufferline'
 " theme
 Plug 'joshdick/onedark.vim'
 " better modal for neovim 0.4.x
 Plug 'ncm2/float-preview.nvim'
-" buffer tabs
-" Plug 'ap/vim-buftabline'
-
-Plug 'ap/vim-buftabline'
 " auto pair quotes, brackets etc...
 Plug 'jiangmiao/auto-pairs'
 " notifications on side
