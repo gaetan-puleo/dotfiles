@@ -11,4 +11,5 @@ bash ./nvim.sh
 bash ./kitty.sh
 bash ./ripgrep.sh
 bash ./polybar.sh
+bash ./heroku.sh
 bash ./plug.sh
