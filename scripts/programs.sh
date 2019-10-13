@@ -12,4 +12,5 @@ bash ./kitty.sh
 bash ./ripgrep.sh
 bash ./polybar.sh
 bash ./heroku.sh
+bash ./tizonia.sh
 bash ./plug.sh

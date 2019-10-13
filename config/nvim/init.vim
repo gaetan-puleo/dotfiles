@@ -87,8 +87,8 @@ if (has("termguicolors"))
 endif
 set splitbelow
 set splitright
-
-hi VertSplit ctermbg=NONE guibg=NONE
+" Enable cursor line position tracking:
+:set cursorline
 
 "
 " Keyboard
@@ -160,6 +160,7 @@ endif
 
 
 nnoremap <C-N> :bnext<CR>
+nnoremap <C-F> :NERDTreeToggle<Enter>
 nnoremap <C-P> :bprev<CR>
 
 " tap indent movement (use mark `m' for cursor position)
@@ -226,6 +227,8 @@ Plug 'SirVer/ultisnips'
 
 " theme
 Plug 'joshdick/onedark.vim'
+" Plug 'lifepillar/vim-solarized8'
+" Plug 'cocopon/iceberg.vim'
 " better modal for neovim 0.4.x
 Plug 'ncm2/float-preview.nvim'
 " auto pair quotes, brackets etc...
@@ -234,6 +237,13 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'wsdjeg/notifications.vim'
 " emmet
 Plug 'mattn/emmet-vim'
+
+Plug 'vifm/vifm.vim'
+
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+"
 " icons
 Plug 'ryanoasis/vim-devicons'
 
@@ -244,15 +254,10 @@ call plug#end()
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 
+set termguicolors     " enable true colors support
 syntax on
 set background=dark
 colorscheme onedark
-" syntax enable
-set termguicolors     " enable true colors support
-" let ayucolor="light"  " for light version of theme
-" let ayucolor="mirage" " for mirage version of theme
-" let ayucolor="mirage"   " for dark version of theme
-" colorscheme nord
 
 " ALE
 let g:ale_fixers = {'javascript': ['eslint']}
@@ -355,10 +360,10 @@ let g:lightline#ale#indicator_ok = "\uf00c"
 " git signify
 "
 let g:signify_line_highlight = 0
-let g:signify_sign_add               = '✚'
-let g:signify_sign_delete            = '✖'
-let g:signify_sign_delete_first_line = '✖'
-let g:signify_sign_change            = '◉'
+let g:signify_sign_add               = '┃'
+let g:signify_sign_delete            = '┃'
+let g:signify_sign_delete_first_line = '┃'
+let g:signify_sign_change            = '┃'
 let g:signify_sign_changedelete = g:signify_sign_change
 
 " " you can add these colors to your .vimrc to help customizing
@@ -386,6 +391,8 @@ let g:airline_powerline_fonts = 1
 set encoding=utf-8
 scriptencoding utf-8
 :set guifont=*
+
+set linespace=0
 
 let g:float_preview#docked = 1
 
@@ -430,32 +437,32 @@ endfunction
 " Based on https://groups.google.com/d/msg/vim_use/IJU-Vk-QLJE/xz4hjPjCRBUJ
 " XXX: this will only work with lines containing text (i.e. not '~')
 " from 
-if exists('+colorcolumn')
-  function! s:DimInactiveWindows()
-    for i in range(1, tabpagewinnr(tabpagenr(), '$'))
-      let l:range = ""
-      if i != winnr()
-        if &wrap
-         " HACK: when wrapping lines is enabled, we use the maximum number
-         " of columns getting highlighted. This might get calculated by
-         " looking for the longest visible line and using a multiple of
-         " winwidth().
-         let l:width=256 " max
-        else
-         let l:width=winwidth(i)
-        endif
-        let l:range = join(range(1, l:width), ',')
-      endif
-      call setwinvar(i, '&colorcolumn', l:range)
-    endfor
-  endfunction
-  augroup DimInactiveWindows
-    au!
-    au WinEnter * call s:DimInactiveWindows()
-    au WinEnter * set cursorline
-    au WinLeave * set nocursorline
-  augroup END
-endif
+" if exists('+colorcolumn')
+"   function! s:DimInactiveWindows()
+"     for i in range(1, tabpagewinnr(tabpagenr(), '$'))
+"       let l:range = ""
+"       if i != winnr()
+"         if &wrap
+"          " HACK: when wrapping lines is enabled, we use the maximum number
+"          " of columns getting highlighted. This might get calculated by
+"          " looking for the longest visible line and using a multiple of
+"          " winwidth().
+"          let l:width=256 " max
+"         else
+"          let l:width=winwidth(i)
+"         endif
+"         let l:range = join(range(1, l:width), ',')
+"       endif
+"       call setwinvar(i, '&colorcolumn', l:range)
+"     endfor
+"   endfunction
+"   augroup DimInactiveWindows
+"     au!
+"     au WinEnter * call s:DimInactiveWindows()
+"     au WinEnter * set cursorline
+"     au WinLeave * set nocursorline
+"   augroup END
+" endif
 
 hi LineNr guibg=bg
 set foldcolumn=0
@@ -468,3 +475,39 @@ let g:user_emmet_settings = {
     \      'extends' : 'jsx',
     \  },
   \}
+
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let NERDTreeAutoDeleteBuffer = 1
+" autocmd bufenter * if (winnr(“$”) == 1 && exists(“b:NERDTreeType”) && b:NERDTreeType == “primary”) | q | endif
+let NERDTreeQuitOnOpen = 1
+
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" let g:NERDTreeSyntaxDisableDefaultExtensions = 1
+" let g:NERDTreeDisableExactMatchHighlight = 1
+" let g:NERDTreeDisablePatternMatchHighlight = 1
+" let g:NERDTreeSyntaxEnabledExtensions = ['js', 'css', 'json', 'scss', 'html']
+
+augroup nerdtreehidecwd
+	autocmd!
+	autocmd FileType nerdtree setlocal conceallevel=3 | syntax match NERDTreeDirSlash #/$# containedin=NERDTreeDir conceal contained
+augroup end
+
+
+" hi NERDTreeDir ctermfg=DarkGrey ctermbg=White
+hi NERDTreeDir ctermfg=White 
+" after a re-source, fix syntax matching issues (concealing brackets):
+if exists('g:loaded_webdevicons')
+  call webdevicons#refresh()
+endif
+
+" enable open and close folder/directory glyph flags (disabled by default with 0)
+let g:DevIconsEnableFoldersOpenClose = 1
+" change the default folder/directory glyph/icon
+let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
+let g:DevIconsDefaultFolderOpenSymbol = ''
+let g:NERDTreeDirArrowExpandable=""
+let g:NERDTreeDirArrowCollapsible=""
+
+highlight! link NERDTreeFlags NERDTreeDir

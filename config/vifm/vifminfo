@@ -1,0 +1,366 @@
+# You can edit this file by hand, but it's recommended not to do that.
+
+# Marks:
+'H
+	/home/work/
+	..
+1570962232
+'b
+	/home/work/bin/
+	..
+1570962232
+'h
+	/home/work/
+	..
+1570962232
+'z
+	/home/work/.config/vifm
+	..
+1570962232
+
+# Bookmarks:
+
+# TUI:
+al
+q0
+v1
+oh
+m-1
+l2
+r2
+
+# Left window history (oldest to newest):
+d/home/work/dev/monitoring-app/newServer
+	DataBase
+3
+d/home/work/dev/monitoring-app
+	newServer
+3
+d/home/work/dev
+	monitoring-app
+2
+d/home/work
+	dev
+9
+d/home/work/dev
+	monitoring-app
+2
+d/home/work/dev/monitoring-app
+	newServer
+3
+d/home/work/dev/monitoring-app/newServer
+	DataBase
+3
+d/home/work/dev/monitoring-app/newServer/DataBase
+	..
+0
+d/home/work/dev/monitoring-app/newServer
+	DataBase
+3
+d/home/work/dev/monitoring-app/newServer/DataBase
+	config.js
+1
+d/home/work/.config/vifm
+	scripts
+2
+d/home/work/.config/vifm/scripts
+	..
+0
+d/home/work/.config/vifm
+	scripts
+2
+d/home/work/.config
+	vifm
+26
+d/home/work
+	dotfiles
+10
+d/home/work/dotfiles
+	config
+1
+d/home/work
+	Pictures
+5
+d/home
+	work
+2
+d/home/work
+	dev
+9
+d/home/work/dev
+	monitoring-app
+2
+d/home/work/dev/monitoring-app
+	server
+5
+d/home/work/dev/monitoring-app/server
+	validation
+9
+d/home/work/dev/monitoring-app/server/validation
+	alert.js
+1
+d/home/work/dev/monitoring-app
+	newServer
+3
+d/home/work/dev/monitoring-app/newServer
+	DataBase
+3
+d/home/work/dev/monitoring-app/newServer/DataBase
+	config.js
+1
+d/home/work/dev/monitoring-app/newServer
+	App
+2
+d/home/work/dev/monitoring-app
+	newServer
+3
+d/home/work/dev/monitoring-app/newServer
+	index.js
+9
+d/home/work/dev/monitoring-app
+	newServer
+3
+d/home/work/dev
+	monitoring-app
+2
+d/home/work
+	..
+0
+d/home
+	work
+2
+d/home/work
+	Music
+4
+d/home/work/Music
+	..
+0
+d/home/work
+	Music
+4
+d/home/work/Music
+	..
+0
+d/home/work
+	Downloads
+3
+d/home/work/Downloads
+	..
+0
+d/home/work
+	dotfiles
+10
+d/home/work/dotfiles
+	config
+1
+d/home/work
+	Downloads
+3
+d/home/work/Downloads
+	..
+0
+d/home/work
+	Downloads
+3
+d/home
+	work
+2
+d/home/work
+	Videos
+8
+d/home
+	work
+2
+d/
+	home
+5
+d/home
+	work
+2
+d/home/work
+	Videos
+8
+d/home/work/Videos
+	..
+0
+d/home/work
+	Videos
+8
+d/home
+	work
+2
+d/
+	home
+5
+d/home
+	work
+2
+d/home/work
+	dev
+9
+d/home/work/dev
+	monitoring-app
+2
+d/home/work/dev/monitoring-app
+	newServer
+3
+d/home/work/dev/monitoring-app/newServer
+	Mail
+4
+d/home/work/dev/monitoring-app/newServer/Mail
+	..
+0
+d/home/work/dev/monitoring-app/newServer
+	Mail
+4
+d/home/work/dev/monitoring-app
+	newServer
+3
+d/home/work/dev
+	monitoring-app
+2
+d/home/work
+	dev
+9
+d/home
+	work
+2
+d/
+	home
+5
+d/home
+	work
+2
+d/home/work
+	dev
+9
+d/home/work/dev
+	monitoring-app
+2
+d/home/work/dev/monitoring-app
+	jobs
+2
+d/home/work/dev
+	monitoring-app
+2
+d/home/work
+	dotfiles
+10
+d/home/work/dotfiles
+	config
+1
+d/home/work/dotfiles/config
+	vifm
+9
+d/home/work/dotfiles/config/vifm
+	scripts
+2
+d/home/work/dotfiles/config/vifm/scripts
+	imgt
+3
+d/home/work/dotfiles/config/vifm
+	vifmrc
+4
+d/home/work/dotfiles/config
+	vifm
+9
+d/home/work/dotfiles/config/vifm
+	vifmrc
+4
+d/home/work/dotfiles/config
+	nvim
+5
+d/home/work/dotfiles/config/nvim
+	..
+0
+d/home/work/dotfiles/config
+	nvim
+5
+d/home/work/dotfiles
+	config
+1
+d/home/work
+	dotfiles
+10
+d/home/work/dotfiles
+	config
+1
+d/home/work/dotfiles/config
+	polybar
+6
+d/home/work/dotfiles/config/polybar
+	launch.sh
+2
+d/home/work/dev/monitoring-app
+	server
+5
+d/home/work/dev/monitoring-app/server
+	..
+0
+d/home/work/dev/monitoring-app
+	..
+0
+d/home/work/dev
+	monitoring-app
+2
+d/home/work/dev/monitoring-app
+	node_modules
+4
+d/home/work/dev
+	monitoring-app
+2
+d/home/work
+	dotfiles
+10
+d/home/work/dotfiles
+	config
+1
+d/home/work/dotfiles/config
+	vifm
+9
+d/home/work/dotfiles/config/vifm
+	vifmrc
+4
+d/home/work
+	Pictures
+5
+d/home/work/Pictures
+	..
+0
+d/home/work
+	dotfiles
+10
+d
+
+# Right window history (oldest to newest):
+D/home/work/dev/monitoring-app
+	..
+0
+D
+
+# Command line history (oldest to newest):
+:qa
+:q
+
+# Search history (oldest to newest):
+
+# Prompt history (oldest to newest):
+
+# Local filter history (oldest to newest):
+
+# Registers:
+
+# Directory stack (oldest to newest):
+
+# Trash content:
+
+# State:
+f
+i1
+[.1
+[F
+F
+I1
+].1
+]F
+s0

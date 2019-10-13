@@ -31,7 +31,7 @@ install blueman
 install xsel
 install imagemagick
 install tmux
-install ranger
+install vifm
 
 # fun
 install figlet

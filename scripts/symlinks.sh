@@ -30,7 +30,7 @@ linkDotfile ~/$dotfiles/config/compton.conf ~/.config/compton.conf
 linkDotfile ~/$dotfiles/config/dunst ~/.config/dunst
 linkDotfile ~/$dotfiles/config/i3 ~/.config/i3
 linkDotfile ~/$dotfiles/config/rofi ~/.config/rofi
-linkDotfile ~/$dotfiles/config/ranger ~/.config/ranger
+linkDotfile ~/$dotfiles/config/vifm ~/.config/vifm
 linkDotfile ~/$dotfiles/config/polybar ~/.config/polybar
 linkDotfile ~/$dotfiles/config/nvim ~/.config/nvim
 linkDotfile ~/$dotfiles/config/lxterminal ~/.config/lxterminal
