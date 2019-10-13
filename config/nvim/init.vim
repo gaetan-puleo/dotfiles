@@ -161,11 +161,8 @@ endif
 
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-F> :NERDTreeToggle<Enter>
+nnoremap <C-L> :NERDTreeFind<Enter>
 nnoremap <C-P> :bprev<CR>
-
-" tap indent movement (use mark `m' for cursor position)
-vmap <Tab> >gv
-vmap <S-Tab> <gv
 
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'janko/vim-test'
@@ -226,7 +223,9 @@ Plug 'mlaursen/vim-react-snippets'
 Plug 'SirVer/ultisnips'
 
 " theme
-Plug 'joshdick/onedark.vim'
+" Plug 'joshdick/onedark.vim'
+
+Plug 'drewtempelmeyer/palenight.vim'
 " Plug 'lifepillar/vim-solarized8'
 " Plug 'cocopon/iceberg.vim'
 " better modal for neovim 0.4.x
@@ -257,7 +256,7 @@ call plug#end()
 set termguicolors     " enable true colors support
 syntax on
 set background=dark
-colorscheme onedark
+colorscheme palenight
 
 " ALE
 let g:ale_fixers = {'javascript': ['eslint']}
@@ -319,7 +318,7 @@ command! -bang -nargs=* Ls
 
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': 'onedark',
+      \ 'colorscheme': 'palenight',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'absolutepath', 'modified' ] ]
