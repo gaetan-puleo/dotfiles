@@ -134,7 +134,6 @@ map <C-a> <esc>ggVG<CR>
 "nmap <C-j> <C-l> ?function<cr>:noh<cr><Plug>(jsdoc)
 
 " open files
-map <C-f> <plug>NERDTreeTabsToggle<CR>
 map <Leader>p :Files<CR>
 map <Leader>f :Rg<CR>
 map <Leader>b :Buffers<CR>
@@ -203,12 +202,6 @@ Plug 'pangloss/vim-javascript'
 
 "better jsx syntax
 Plug 'maxmellon/vim-jsx-pretty'
-
-"Nerdtree plugins (have a side file tree like in vscode)
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'weynhamz/vim-plugin-nerdtree-tabs'
 
 " autocomplete core
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -368,13 +361,6 @@ let g:signify_sign_delete_first_line = '✖'
 let g:signify_sign_change            = '◉'
 let g:signify_sign_changedelete = g:signify_sign_change
 
-" let g:NERDTreeFileExtensionHighlightFullName = 1
-" let g:NERDTreeExactMatchHighlightFullName = 1
-" let g:NERDTreePatternMatchHighlightFullName = 1
-
-let g:NERDTreeHighlightFolders = 0 " enables folder icon highlighting using exact match
-let g:NERDTreeHighlightFoldersFullName = 0 " highlights the folder name
-
 " " you can add these colors to your .vimrc to help customizing
 let s:brown = "905532"
 let s:aqua =  "3AFFDB"
@@ -395,27 +381,6 @@ let s:white = "FFFFFF"
 let s:rspec_red = 'FE405F'
 let s:git_orange = 'F54D27'
 
- let g:NERDTreeExtensionHighlightColor = {} " this line is needed to avoid error
- let g:NERDTreeExtensionHighlightColor['css'] = s:blue " sets the color of css files to blue
-
- let g:NERDTreeExactMatchHighlightColor = {} " this line is needed to avoid error
- let g:NERDTreeExactMatchHighlightColor['.gitignore'] = s:git_orange " sets the color for .gitignore files
-
- let g:NERDTreePatternMatchHighlightColor = {} " this line is needed to avoid error
- let g:NERDTreePatternMatchHighlightColor['.*_spec\.rb$'] = s:rspec_red " sets the color for files ending with _spec.rb
-
-let g:NERDTreeHighlightCursorline = 0
-:hi Directory guifg=#FFFFFF ctermfg=white
-
-let NERDTreeShowHidden=1
-
-
-let NERDTreeAutoDeleteBuffer = 1
-
-let NERDTreeMinimalUI = 0
-let NERDTreeDirArrows = 1
-let g:DevIconsEnableFoldersOpenClose = 1
-let g:WebDevIconsUnicodeDecorateFolderNodes = 0
 let g:airline_powerline_fonts = 1
 
 set encoding=utf-8

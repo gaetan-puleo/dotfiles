@@ -30,6 +30,8 @@ install chromium-browser
 install blueman
 install xsel
 install imagemagick
+install tmux
+install ranger
 
 # fun
 install figlet
