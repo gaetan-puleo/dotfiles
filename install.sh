@@ -3,10 +3,6 @@
 # chsh -s /bin/bash
 
 cd ./scripts
-echo What is your password?
-
-# read -s password
-# export password
 
 bash ./before-install.sh
 bash ./aptinstalls.sh
