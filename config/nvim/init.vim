@@ -22,3 +22,4 @@ source ~/.config/nvim/config/defx.vim
 source ~/.config/nvim/config/vim-signify.vim
 source ~/.config/nvim/config/vim-commentary.vim
 source ~/.config/nvim/config/undotree.vim
+source ~/.config/nvim/config/fzf.vim

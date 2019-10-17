@@ -41,4 +41,9 @@ Plug 'suy/vim-context-commentstring'
 " undo history tab
 Plug 'mbbill/undotree'
 
+"fuzzy search
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+
 call plug#end()

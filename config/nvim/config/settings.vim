@@ -25,3 +25,11 @@ set splitright
 
 " Enable cursor line position tracking
 set cursorline
+
+" Display tabs and trailing spaces visually
+set list listchars=tab:\ \ ,trail:·
+
+" set winbl=10
+
+" All floating window colors
+highlight NormalFloat cterm=NONE ctermfg=14 ctermbg=0 gui=NONE guifg=#93a1a1 guibg=#222530
