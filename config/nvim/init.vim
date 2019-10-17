@@ -2,10 +2,8 @@
 "	  NVIM CONFIG
 "
 "
-"	  This config needs to be stable to be used for production code
+"	  Please keep the config stable on your master branche
 "
-"	  Please create a new branch to test some features before merging to the
-"	  master branch of the dotfile repo
 """""""""""""""""""""""""""""""""""""""""""""
 
 if &compatible

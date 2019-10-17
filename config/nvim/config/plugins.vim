@@ -45,5 +45,16 @@ Plug 'mbbill/undotree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
+" Linter wrapper
+Plug 'w0rp/ale'
+
+" linter wrapper for lightlane
+Plug 'maximbaz/lightline-ale'
+
+" bufferline
+Plug 'mgee/lightline-bufferline'
+
+"git branch function
+Plug 'itchyny/vim-gitbranch'
 
 call plug#end()

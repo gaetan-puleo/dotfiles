@@ -31,5 +31,15 @@ set list listchars=tab:\ \ ,trail:·
 
 " set winbl=10
 
+" disable backupfile
+set nobackup
+set noswapfile
+
 " All floating window colors
 highlight NormalFloat cterm=NONE ctermfg=14 ctermbg=0 gui=NONE guifg=#93a1a1 guibg=#222530
+
+" force to always show tablines
+set showtabline=2
+
+" Enable mouse (I will disable it)
+set mouse=a
