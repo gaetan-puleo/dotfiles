@@ -1,5 +1,5 @@
 " Lightline
-
+" disable lightline bufferlist https://github.com/itchyny/lightline.vim/issues/292
 let g:lightline = {
       \ 'colorscheme': 'palenight',
       \ 'active': {
