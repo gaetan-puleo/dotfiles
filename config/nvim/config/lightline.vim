@@ -2,6 +2,9 @@
 " disable lightline bufferlist https://github.com/itchyny/lightline.vim/issues/292
 let g:lightline = {
       \ 'colorscheme': 'palenight',
+       \ 'enable': {
+      \   'tabline': 0
+      \ },
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'absolutepath', 'modified' ] ],
@@ -21,20 +24,17 @@ let g:lightline = {
       \ 'separator': {'left': '', 'right': '' },
       \ 'subseparator' : {'left': '', 'right': ''},
       \ 'component_expand': {
-      \ 'buffers': 'lightline#bufferline#buffers',
       \ 'linter_checking': 'lightline#ale#checking',
       \ 'linter_warnings': 'lightline#ale#warnings',
       \ 'linter_errors': 'lightline#ale#errors',
       \ 'linter_ok': 'lightline#ale#ok',
       \ },
       \ 'component_type': {
-      \     'buffers': 'tabsel',
       \     'linter_checking': 'left',
       \     'linter_warnings': 'warning',
       \     'linter_errors': 'error',
       \     'linter_ok': 'left',
       \ },
-      \ 'tabline': {'left': [['buffers']], 'right': [['close']]},
       \ }
 
 " Lightline linter icons

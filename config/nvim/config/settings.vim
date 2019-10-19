@@ -39,7 +39,7 @@ set noswapfile
 highlight NormalFloat cterm=NONE ctermfg=14 ctermbg=0 gui=NONE guifg=#93a1a1 guibg=#222530
 
 " force to always show tablines
-set showtabline=2
+" set showtabline=2
 
 " Enable mouse (I will disable it)
 set mouse=a

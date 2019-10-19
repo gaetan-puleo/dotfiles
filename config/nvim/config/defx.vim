@@ -29,3 +29,19 @@ autocmd FileType defx call s:defx_my_settings()
 	  \ defx#do_action('toggle_ignored_files')
   endfunction
 	
+call defx#custom#column('icon', {
+	      \ 'directory_icon': '',
+	      \ 'opened_icon': '',
+	      \ 'root_icon': ' ',
+	      \ })
+
+call defx#custom#column('git', 'indicators', {
+  \ 'Modified'  : 'M',
+  \ 'Staged'    : '✚',
+  \ 'Untracked' : 'U',
+  \ 'Renamed'   : 'R',
+  \ 'Unmerged'  : '',
+  \ 'Ignored'   : 'I',
+  \ 'Deleted'   : '✖',
+  \ 'Unknown'   : '?'
+  \ })

@@ -48,6 +48,7 @@ antigen apply
 alias g="git"
 alias vim="nvim"
 alias i3c="nvim ~/.config/i3/config"
+alias tmuxc="nvim ~/.tmux.conf"
 alias zshc="nvim ~/.zshrc"
 alias vimc="nvim ~/.config/nvim/init.vim"
 alias kittyc="nvim ~/.config/kitty/kitty.conf"
