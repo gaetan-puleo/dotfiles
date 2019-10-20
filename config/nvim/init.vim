@@ -15,6 +15,7 @@ source ~/.config/nvim/config/settings.vim
 source ~/.config/nvim/config/mapping.vim
 
 " plugins settings
+source ~/.config/nvim/config/ale.vim
 source ~/.config/nvim/config/lightline.vim
 source ~/.config/nvim/config/defx.vim
 source ~/.config/nvim/config/coc.vim
