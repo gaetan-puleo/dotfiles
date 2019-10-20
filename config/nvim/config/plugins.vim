@@ -57,4 +57,7 @@ Plug 'mgee/lightline-bufferline'
 "git branch function
 Plug 'itchyny/vim-gitbranch'
 
+" launch test
+Plug 'janko-m/vim-test'
+
 call plug#end()
