@@ -30,22 +30,9 @@ zstyle ':completion:*:manuals.*'  insert-sections   true
 zstyle ':completion:*:man:*'      menu yes select
 bindkey '^[[3~' delete-char
 bindkey '^[3;5~' delete-char
-# ANTIGEN START
-
-source $HOME/antigen.zsh
-antigen bundle zdharma/fast-syntax-highlighting
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle command-not-found
-antigen bundle mafredri/zsh-async
-antigen bundle olivierverdier/zsh-git-prompt
-antigen bundle mdumitru/last-working-dir
-antigen bundle marzocchi/zsh-notify
-antigen bundle buonomo/yarn-completion
-antigen apply
-
-# ANTIGEN END
 
 alias g="git"
+alias nvm="echo 'nvm is an alias for fnm' && fnm"
 alias vim="nvim"
 alias i3c="nvim ~/.config/i3/config"
 alias tmuxc="nvim ~/.tmux.conf"
@@ -82,9 +69,6 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --color=fg:-1,bg:-1,hl:#c678dd,fg+:#ffffff,bg+:#4b5263,hl+:#d858fe
 --color=info:#98c379,prompt:#61afef,pointer:#be5046,marker:#e5c07b,spinner:#61afef,header:#61afef
 '
-
-# PROMPT='%(?.%F{magenta}.%F{red})❯%f $(git_super_status) # '
-
 
 setopt prompt_subst
 autoload -U colors && colors # Enable colors in prompt
@@ -156,8 +140,27 @@ PS1='
 $(ssh_info)%{$fg[blue]%}%~%u $(git_info) 
 %(?.%{$fg[magenta]%}.%{$fg[red]%})%(!.#.❯)%{$reset_color%} '
 
-
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 # bindkey -v
+
+
+# fnm
+export PATH=/home/work/.fnm:$PATH
+eval "`fnm env --multi`"
+
+source "${HOME}/.zgen/zgen.zsh"
+
+# static load
+# if the init script doesn't exist
+if ! zgen saved; then
+
+  # specify plugins here
+  zgen load mdumitru/last-working-dir
+  zgen load olivierverdier/zsh-git-prompt
+  zgen load zsh-users/zsh-autosuggestions
+  zgen load command-not-found
+  zgen load zdharma/fast-syntax-highlighting
+  zgen load buonomo/yarn-completion
+
+  # generate the init script from plugins above
+  zgen save
+fi
