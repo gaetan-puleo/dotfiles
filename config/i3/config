@@ -21,7 +21,7 @@ bindsym $mod+s layout toggle split
 bindsym $mod+t layout tabbed
 
 # split orientation
-bindsym $mod+h split h;exec --no-startup-id notify-send 'tile horizontally'
+bindsym $mod+h split s;exec --no-startup-id notify-send 'tile horizontally'
 bindsym $mod+v split v;exec --no-startup-id notify-send 'tile vertically'
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
