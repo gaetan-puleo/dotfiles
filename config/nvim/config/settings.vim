@@ -43,3 +43,16 @@ highlight NormalFloat cterm=NONE ctermfg=14 ctermbg=0 gui=NONE guifg=#93a1a1 gui
 
 " Enable mouse (I will disable it)
 set mouse=a
+
+augroup neovim_terminal
+  autocmd!
+
+  " Enter Terminal-mode (insert) automatically
+  autocmd TermOpen * startinsert
+
+  " Disables number lines on terminal buffers
+  autocmd TermOpen * :set nonumber norelativenumber
+augroup END
+
+" redefined :W as :w
+cabbrev W w

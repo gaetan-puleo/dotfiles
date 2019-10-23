@@ -164,3 +164,7 @@ if ! zgen saved; then
   # generate the init script from plugins above
   zgen save
 fi
+
+# fnm
+export PATH=/home/work/.fnm:$PATH
+eval "`fnm env --multi`"

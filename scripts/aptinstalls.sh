@@ -5,7 +5,7 @@ function install {
 
   if [ $? -ne 0 ]; then
     echo "Installing: ${1}..."
-    sudo apt -y install $1
+    sudo apt-get -y install $1
   else
     echo "Already installed: ${1}"
   fi
@@ -19,7 +19,7 @@ install feh
 install i3-wm
 install i3lock
 install dunst
-install lxterminal
+# install lxterminal
 install xfce4-power-manager
 install lxappearance
 install compton

@@ -24,6 +24,9 @@ function linkDotfile {
   
 }
 
+if [ ! -d "~/.config" ]; then
+  mkdir -p ~/.config
+fi
 linkDotfile ~/$dotfiles/fonts ~/.fonts
 linkDotfile ~/$dotfiles/config/zsh/zshrc ~/.zshrc
 linkDotfile ~/$dotfiles/config/compton.conf ~/.config/compton.conf
