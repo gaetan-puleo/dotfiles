@@ -142,11 +142,6 @@ $(ssh_info)%{$fg[blue]%}%~%u $(git_info)
 
 # bindkey -v
 
-
-# fnm
-export PATH=/home/work/.fnm:$PATH
-eval "`fnm env --multi`"
-
 source "${HOME}/.zgen/zgen.zsh"
 
 # static load
@@ -166,5 +161,5 @@ if ! zgen saved; then
 fi
 
 # fnm
-export PATH=/home/work/.fnm:$PATH
+export PATH=~/.fnm:$PATH
 eval "`fnm env --multi`"
