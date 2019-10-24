@@ -2,6 +2,7 @@
 
 # chsh -s /bin/bash
 
+cd ~/dotfiles
 cd ./scripts
 
 bash ./before-install.sh
@@ -12,7 +13,7 @@ bash ./config.sh
 bash ./clean-after-install.sh
 
 # Get all upgrades
-sudo apt upgrade -y
+sudo apt-get upgrade -y
 
 chsh -s $(which zsh)
 # See our bash changes

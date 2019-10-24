@@ -1,5 +1,4 @@
 nnoremap <silent> <leader>n :Defx -split=vertical -winwidth=30 -direction=topleft -toggle -columns=git:mark:indent:icon:icons:filename:type<cr>
-
 nnoremap <silent> <leader>s :Defx `expand('%:p:h')` -search=`expand('%:p')` -split=vertical -winwidth=30 -direction=topleft -toggle -columns=git:mark:indent:icon:icons:filename:type<cr>
 
 autocmd FileType defx call s:defx_my_settings()
@@ -14,8 +13,12 @@ autocmd FileType defx call s:defx_my_settings()
     \ defx#is_directory() 
     \ ? defx#do_action('open_or_close_tree') :
 		\ defx#do_action('multi', ['drop'])
-    nnoremap <silent><buffer><expr> h defx#do_action('multi', ['drop', 'split'])
-    nnoremap <silent><buffer><expr> v defx#do_action('multi', ['drop', 'vsplit'])
+    " nnoremap <silent><buffer><expr> s defx#do_action('multi', [ 'split'])
+    " nnoremap <silent><buffer><expr> v defx#do_action('multi', ['vsplit'])
+nnoremap <silent><buffer><expr> v
+	  \ defx#do_action('drop', 'vsplit')
+nnoremap <silent><buffer><expr> s
+	  \ defx#do_action('drop', 'split')
     " nnoremap <silent><buffer><expr> yy defx#do_action('copy')
     " nnoremap <silent><buffer><expr> dd defx#do_action('move')
     nnoremap <silent><buffer><expr> cd defx#do_action('change_vim_cwd')
@@ -26,6 +29,10 @@ autocmd FileType defx call s:defx_my_settings()
     nnoremap <silent><buffer><expr> n defx#do_action('new_file')
     nnoremap <silent><buffer><expr> - defx#do_action('cd', ['..'])
     nnoremap <silent><buffer><expr> h defx#do_action('cd', ['..'])
+  	nnoremap <silent><buffer><expr> > defx#do_action('resize',
+	  \ defx#get_context().winwidth + 10)
+	  nnoremap <silent><buffer><expr> < defx#do_action('resize',
+	  \ defx#get_context().winwidth - 10)
 	  nnoremap <silent><buffer><expr> .
 	  \ defx#do_action('toggle_ignored_files')
   endfunction
