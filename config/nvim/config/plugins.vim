@@ -54,6 +54,9 @@ Plug 'maximbaz/lightline-ale'
 " bufferline
 Plug 'mgee/lightline-bufferline'
 
+" Swap Windows with <leader>ww (before on src window and after on dest window)
+Plug 'wesQ3/vim-windowswap'
+
 "git branch function
 Plug 'itchyny/vim-gitbranch'
 
