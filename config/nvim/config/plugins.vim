@@ -63,4 +63,6 @@ Plug 'itchyny/vim-gitbranch'
 " launch test
 Plug 'janko-m/vim-test'
 
+" jsdoc syntax
+Plug 'othree/jsdoc-syntax.vim'
 call plug#end()
