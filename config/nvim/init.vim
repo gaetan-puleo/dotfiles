@@ -22,5 +22,6 @@ source ~/.config/nvim/config/coc.vim
 source ~/.config/nvim/config/vim-test.vim
 source ~/.config/nvim/config/vim-signify.vim
 source ~/.config/nvim/config/vim-commentary.vim
+source ~/.config/nvim/config/vim-emmet.vim
 source ~/.config/nvim/config/undotree.vim
 source ~/.config/nvim/config/fzf.vim

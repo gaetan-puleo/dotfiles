@@ -65,4 +65,7 @@ Plug 'janko-m/vim-test'
 
 " jsdoc syntax
 Plug 'othree/jsdoc-syntax.vim'
+
+" emmet (ctrl-y and , to extend)
+Plug 'mattn/emmet-vim'
 call plug#end()
