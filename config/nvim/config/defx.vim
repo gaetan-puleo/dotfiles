@@ -8,17 +8,15 @@ autocmd FileType defx call s:defx_my_settings()
     nnoremap <silent><buffer><expr> <2-LeftMouse> 
     \ defx#is_directory() 
     \ ? defx#do_action('open_or_close_tree') :
-    \ defx#do_action('multi', ['drop'])
+    \ defx#do_action('multi', ['drop', 'quit'])
     nnoremap <silent><buffer><expr> <cr>
     \ defx#is_directory() 
     \ ? defx#do_action('open_or_close_tree') :
-		\ defx#do_action('multi', ['drop'])
-    " nnoremap <silent><buffer><expr> s defx#do_action('multi', [ 'split'])
-    " nnoremap <silent><buffer><expr> v defx#do_action('multi', ['vsplit'])
+		\ defx#do_action('multi', ['drop', 'quit'])
 nnoremap <silent><buffer><expr> v
-	  \ defx#do_action('drop', 'vsplit')
+	  \ defx#do_action('multi',[['drop','vsplit'], 'quit'])
 nnoremap <silent><buffer><expr> s
-	  \ defx#do_action('drop', 'split')
+	  \ defx#do_action('multi',[['drop',  'split'], 'quit'])
     " nnoremap <silent><buffer><expr> yy defx#do_action('copy')
     " nnoremap <silent><buffer><expr> dd defx#do_action('move')
     nnoremap <silent><buffer><expr> cd defx#do_action('change_vim_cwd')
@@ -53,3 +51,8 @@ call defx#custom#column('git', 'indicators', {
   \ 'Deleted'   : '✖',
   \ 'Unknown'   : '?'
   \ })
+
+
+" I want to update defx status automatically when changing file.
+autocmd BufWritePost * call defx#redraw()
+

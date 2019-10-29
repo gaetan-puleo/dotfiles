@@ -34,6 +34,7 @@ set list listchars=tab:\ \ ,trail:·
 " disable backupfile
 set nobackup
 set noswapfile
+:set backupcopy=yes
 
 " All floating window colors
 highlight NormalFloat cterm=NONE ctermfg=14 ctermbg=0 gui=NONE guifg=#93a1a1 guibg=#222530
