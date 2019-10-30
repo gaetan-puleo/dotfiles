@@ -1,5 +1,6 @@
 nnoremap <silent> <leader>n :Defx -split=vertical -winwidth=30 -direction=topleft -toggle -columns=git:mark:indent:icon:icons:filename:type<cr>
 nnoremap <silent> <leader>s :Defx `expand('%:p:h')` -search=`expand('%:p')` -split=vertical -winwidth=30 -direction=topleft -toggle -columns=git:mark:indent:icon:icons:filename:type<cr>
+nnoremap <silent> <leader>o :Defx `expand('%:p:h')` -search=`expand('%:p')` -toggle -columns=git:mark:indent:icon:icons:filename:type<cr>
 
 autocmd FileType defx call s:defx_my_settings()
 	function! s:defx_my_settings() abort
