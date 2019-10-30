@@ -14,6 +14,8 @@ autocmd FileType defx call s:defx_my_settings()
     \ defx#is_directory() 
     \ ? defx#do_action('open_or_close_tree') :
 		\ defx#do_action('multi', ['drop'])
+nnoremap <silent><buffer><expr> o
+	  \ defx#do_action('multi',[['open']])
 nnoremap <silent><buffer><expr> v
 	  \ defx#do_action('multi',[['drop','vsplit']])
 nnoremap <silent><buffer><expr> s
