@@ -1,1 +1,1 @@
-nmap <silent> <leader>g <Plug>(coc-definition)
+nnoremap <silent> <leader>g <Plug>(coc-definition)

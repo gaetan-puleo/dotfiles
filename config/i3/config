@@ -8,7 +8,7 @@
 # keys
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $win Mod4
-set $mod Mod4
+set $mod Mod1
 set $alt Mod1
 set $ctrl Control
 
@@ -17,11 +17,11 @@ set $term kitty
 # set default desktop layout (default is tiling)
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout toggle split
-bindsym $mod+t layout tabbed
+# bindsym $mod+s layout toggle split
+# bindsym $mod+t layout tabbed
 
 # split orientation
-bindsym $mod+h split s;exec --no-startup-id notify-send 'tile horizontally'
+bindsym $mod+s split h;exec --no-startup-id notify-send 'tile horizontally'
 bindsym $mod+v split v;exec --no-startup-id notify-send 'tile vertically'
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
@@ -59,22 +59,17 @@ bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 focus_follows_mouse no
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right 
 bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # workspace back and forth (with/without active container)
 workspace_auto_back_and_forth yes
@@ -83,8 +78,8 @@ workspace_auto_back_and_forth yes
 bindsym $mod+f fullscreen toggle
 
 #navigate workspaces next / previous
-bindsym $alt+$ctrl+Right workspace next
-bindsym $alt+$ctrl+Left workspace prev
+bindsym $alt+$ctrl+l workspace next
+bindsym $alt+$ctrl+h workspace prev
 
 # bindsym $mod+B exec --no-startup-id pkill polybar && polybar barminimal
 # Workspace names
@@ -135,18 +130,18 @@ for_window [urgent=latest] focus
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
-bindsym $mod+$alt+Shift+Left exec  --no-startup-id "setxkbmap -layout fr -variant"
-bindsym $mod+$alt+Shift+Right exec  --no-startup-id "setxkbmap -layout us -variant altgr-intl"
+bindsym $mod+$alt+Shift+h exec  --no-startup-id "setxkbmap -layout fr -variant"
+bindsym $mod+$alt+Shift+l exec  --no-startup-id "setxkbmap -layout us -variant altgr-intl"
 
 
 # Resize window (you can also use the mouse for that)
 bindsym $mod+r mode "resize"
 mode "resize" {
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 5 px or 5 ppt
-        bindsym Down resize grow height 5 px or 5 ppt
-        bindsym Up resize shrink height 5 px or 5 ppt
-        bindsym Right resize grow width 5 px or 5 ppt
+        bindsym h resize shrink width 5 px or 5 ppt
+        bindsym j resize grow height 5 px or 5 ppt
+        bindsym k resize shrink height 5 px or 5 ppt
+        bindsym l resize grow width 5 px or 5 ppt
 
         # exit resize mode: Enter or Escape
         bindsym Return mode "default"

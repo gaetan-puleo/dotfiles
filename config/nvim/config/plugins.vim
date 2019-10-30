@@ -52,7 +52,7 @@ Plug 'w0rp/ale'
 Plug 'maximbaz/lightline-ale'
 
 " bufferline
-Plug 'mgee/lightline-bufferline'
+" Plug 'mgee/lightline-bufferline'
 
 " Swap Windows with <leader>ww (before on src window and after on dest window)
 Plug 'wesQ3/vim-windowswap'
@@ -61,11 +61,11 @@ Plug 'wesQ3/vim-windowswap'
 Plug 'itchyny/vim-gitbranch'
 
 " launch test
-Plug 'janko-m/vim-test'
+" Plug 'janko-m/vim-test'
 
 " jsdoc syntax
 Plug 'othree/jsdoc-syntax.vim'
 
 " emmet (ctrl-y and , to extend)
-Plug 'mattn/emmet-vim'
+" Plug 'mattn/emmet-vim'
 call plug#end()

@@ -13,9 +13,6 @@ set belloff=all
 " show linenumber
 set number
 
-" leader key
-let mapleader = ","
-
 " allow clipboard
 set clipboard+=unnamedplus
 
@@ -42,8 +39,9 @@ highlight NormalFloat cterm=NONE ctermfg=14 ctermbg=0 gui=NONE guifg=#93a1a1 gui
 " force to always show tablines
 " set showtabline=2
 
-" Enable mouse (I will disable it)
-set mouse=a
+" disable mouse
+set mouse=r
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
 augroup neovim_terminal
   autocmd!

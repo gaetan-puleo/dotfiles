@@ -1,6 +1,6 @@
-map <Leader>p :Files<CR>
-map <Leader>f :Rg<CR>
-map <Leader>b :Buffers<CR>
+" map <Leader>p :Files<CR>
+nnoremap <Leader>f :Rg<CR>
+nnoremap <Leader>b :Buffers<CR>
 
 
 " Reverse the layout to make the FZF list top-down
