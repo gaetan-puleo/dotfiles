@@ -65,11 +65,22 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right 
 bindsym $mod+semicolon focus right
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+set $MoveSplit Move split
+bindsym $mod+Shift+m mode "$MoveSplit"
+mode "$MoveSplit" {
+
+    # exit resize mode: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+
+    # alternatively, you can use the cursor keys:
+    bindsym h move left
+    bindsym j move down
+    bindsym k move up
+    bindsym l move right
+
+
+}
 
 # workspace back and forth (with/without active container)
 workspace_auto_back_and_forth yes
@@ -78,8 +89,8 @@ workspace_auto_back_and_forth yes
 bindsym $mod+f fullscreen toggle
 
 #navigate workspaces next / previous
-bindsym $alt+$ctrl+l workspace next
-bindsym $alt+$ctrl+h workspace prev
+bindsym $alt+Shift+l workspace next
+bindsym $alt+Shift+h workspace prev
 
 # bindsym $mod+B exec --no-startup-id pkill polybar && polybar barminimal
 # Workspace names
@@ -104,16 +115,24 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 
-# Move to workspace with focused container
-bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
-bindsym $mod+Shift+2 move container to workspace $ws2; workspace $ws2
-bindsym $mod+Shift+3 move container to workspace $ws3; workspace $ws3
-bindsym $mod+Shift+4 move container to workspace $ws4; workspace $ws4
-bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
-bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
-bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
-bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
-bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
+set $Move Move container to (1) (2) (3) (4) (5) (6) (7) (8) (9)
+bindsym $mod+m mode "$Move"
+mode "$Move" {
+    # Move to workspace with focused container
+    bindsym 1 move container to workspace $ws1; workspace $ws1
+    bindsym 2 move container to workspace $ws2; workspace $ws2
+    bindsym 3 move container to workspace $ws3; workspace $ws3
+    bindsym 4 move container to workspace $ws4; workspace $ws4
+    bindsym 5 move container to workspace $ws5; workspace $ws5
+    bindsym 6 move container to workspace $ws6; workspace $ws6
+    bindsym 7 move container to workspace $ws7; workspace $ws7
+    bindsym 8 move container to workspace $ws8; workspace $ws8
+    bindsym 9 move container to workspace $ws9; workspace $ws9
+
+    # exit resize mode: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
 
 # Open applications on specific workspaces
 assign [class="firefox"] $ws3
@@ -130,10 +149,6 @@ for_window [urgent=latest] focus
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
-bindsym $mod+$alt+Shift+h exec  --no-startup-id "setxkbmap -layout fr -variant"
-bindsym $mod+$alt+Shift+l exec  --no-startup-id "setxkbmap -layout us -variant altgr-intl"
-
-
 # Resize window (you can also use the mouse for that)
 bindsym $mod+r mode "resize"
 mode "resize" {
@@ -147,6 +162,19 @@ mode "resize" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+
+# exit i3 (logs you out of your X session)
+set $Lang Language (1) QWERTY US altgr-intl, (2) AZERTY FR
+mode "$Lang" {
+    bindsym 2 exec  --no-startup-id "setxkbmap -layout fr -variant"
+    bindsym 1 exec  --no-startup-id "setxkbmap -layout us -variant altgr-intl"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Shift+a mode "$Lang"
+
 # exit i3 (logs you out of your X session)
 set $System System (l) logout, (x) lock, (s) suspend, (r) reboot, (Shift+s) shutdown
 mode "$System" {
