@@ -197,7 +197,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id blueman-applet
 
-exec_always --no-startup-id setxkbmap -option caps:super
+exec_always --no-startup-id setxkbmap -option caps:escape
 exec_always --no-startup-id  zsh $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-scale ~/wallpaper.jpg
 
