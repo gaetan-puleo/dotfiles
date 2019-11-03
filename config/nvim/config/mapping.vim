@@ -22,3 +22,5 @@ nnoremap <Down> <nop>
 
 "last open buffer
 nmap <Leader><Leader> <c-^>
+
+imap jj <Esc>

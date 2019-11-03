@@ -8,7 +8,7 @@
 # keys
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $win Mod4
-set $mod Mod1
+set $mod Mod4
 set $alt Mod1
 set $ctrl Control
 
@@ -78,8 +78,6 @@ mode "$MoveSplit" {
     bindsym j move down
     bindsym k move up
     bindsym l move right
-
-
 }
 
 # workspace back and forth (with/without active container)
@@ -89,8 +87,8 @@ workspace_auto_back_and_forth yes
 bindsym $mod+f fullscreen toggle
 
 #navigate workspaces next / previous
-bindsym $alt+Shift+l workspace next
-bindsym $alt+Shift+h workspace prev
+bindsym $mod+Shift+l workspace next
+bindsym $mod+Shift+h workspace prev
 
 # bindsym $mod+B exec --no-startup-id pkill polybar && polybar barminimal
 # Workspace names
@@ -164,9 +162,10 @@ mode "resize" {
 }
 
 # exit i3 (logs you out of your X session)
-set $Lang Language (1) QWERTY US altgr-intl, (2) AZERTY FR
+set $Lang Language (1) QWERTY US altgr-intl, (2) QWERTY US altgr-intl for mac (3) AZERTY FR
 mode "$Lang" {
-    bindsym 2 exec  --no-startup-id "setxkbmap -layout fr -variant"
+    bindsym 3 exec  --no-startup-id "setxkbmap -layout fr -variant"
+    bindsym 2 exec  --no-startup-id "setxkbmap -layout us -variant altgr-intl -option altwin:swap_lalt_lwin"
     bindsym 1 exec  --no-startup-id "setxkbmap -layout us -variant altgr-intl"
 
     # back to normal: Enter or Escape
@@ -197,7 +196,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id blueman-applet
 
-exec_always --no-startup-id setxkbmap -option caps:escape
+exec_always --no-startup-id setxkbmap -option caps:super
 exec_always --no-startup-id  zsh $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-scale ~/wallpaper.jpg
 

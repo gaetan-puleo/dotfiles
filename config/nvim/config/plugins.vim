@@ -60,12 +60,7 @@ Plug 'wesQ3/vim-windowswap'
 "git branch function
 Plug 'itchyny/vim-gitbranch'
 
-" launch test
-" Plug 'janko-m/vim-test'
-
 " jsdoc syntax
 Plug 'othree/jsdoc-syntax.vim'
 
-" emmet (ctrl-y and , to extend)
-" Plug 'mattn/emmet-vim'
 call plug#end()

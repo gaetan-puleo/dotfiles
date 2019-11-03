@@ -1,0 +1,97 @@
+# Welcome to the Javascript snippets!
+
+# ES6 + snippets
+snippet const "Simple const" b
+const ${1} = ${2};
+endsnippet
+
+snippet constDestructuring "Destructing in const" b
+const {${1}} = ${2:VISUAL};
+endsnippet
+
+snippet func "Simple Function" b
+function ${1} (${2:VISUAL}) {
+	${3:VISUAL}
+}
+endsnippet
+
+snippet => "Arrow function" i
+(${1}) => ${2}
+endsnippet
+
+# Class
+snippet class
+class ${1:name} {
+	constructor(${2:arg}) {
+		${3:// init}
+	}
+	${4}
+}
+endsnippet
+
+# Import
+snippet im
+import ${1:foo} from '${2:bar}'
+endsnippet
+
+# Export
+snippet ex
+export ${1:default} ${2:VISUAL}
+endsnippet
+
+# JSX (REACT, PREACT)
+
+snippet funcC "JSX functional component"
+function ${1:Component} (props) {
+	return (${2:VISUAL})
+}
+endsnippet
+
+snippet classPure "JSX pure component"
+class ${1:Component} extends PureComponent {
+	render() {
+		return (${2:VISUAL})
+	}
+}
+endsnippet
+
+snippet classComponent "JSX component"
+class ${1:Component} extends Component {
+	render() {
+		return (${2:VISUAL})
+	}
+}
+endsnippet
+
+# Redux
+snippet connectComponent "Connect a component to redux store" b
+function mapStateToProps(state) {
+	return ${1:state};
+}
+
+function mapDispatchToProps(dispatch) {
+	return {
+		actions: bindActionCreators(${2:actions}, dispatch)
+	}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps) (${3:Component})
+endsnippet
+
+snippet funcReducer "Create a reducer" b
+export default function ${1} (state={}, action) {
+	switch(action.type) {
+		default : 
+			return state;
+	} 
+}
+endsnippet
+snippet constActions "Create an action creator with redux thunk" b
+	export const ${1} = () => dispatch => {
+		return dispatch({})
+	}
+endsnippet
+
+snippet <> "Create a JSX tag"
+<${1}>${2:VISUAL}</${1}>
+endsnippet
