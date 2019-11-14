@@ -63,4 +63,10 @@ Plug 'itchyny/vim-gitbranch'
 " jsdoc syntax
 Plug 'othree/jsdoc-syntax.vim'
 
+" vim autoread
+Plug 'djoshea/vim-autoread'
+
+"vim mdx
+Plug 'jxnblk/vim-mdx-js'
+
 call plug#end()
