@@ -39,8 +39,8 @@ highlight NormalFloat cterm=NONE ctermfg=14 ctermbg=0 gui=NONE guifg=#93a1a1 gui
 " force to always show tablines
 " set showtabline=2
 
-" disable mouse
-set mouse=r
+" mouse (r for disable and a for enable )
+set mouse=a
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
 augroup neovim_terminal
