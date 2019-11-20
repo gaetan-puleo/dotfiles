@@ -18,7 +18,7 @@ function linkDotfile {
   fi
 
   if [ ! -e ${2} ]; then
-    echo "Generate symlink for ${2}}"
+    echo "Generate symlink for ${2}"
     ln -sfn ${1} ${2}
   fi
   
