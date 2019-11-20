@@ -28,6 +28,8 @@ if [ ! -d "~/.config" ]; then
   mkdir -p ~/.config
 fi
 linkDotfile ~/$dotfiles/fonts ~/.fonts
+linkDotfile ~/$dotfiles/icons ~/.icons
+linkDotfile ~/$dotfiles/themes ~/.themes
 linkDotfile ~/$dotfiles/config/zsh/zshrc ~/.zshrc
 linkDotfile ~/$dotfiles/config/compton.conf ~/.config/compton.conf
 linkDotfile ~/$dotfiles/config/dunst ~/.config/dunst
