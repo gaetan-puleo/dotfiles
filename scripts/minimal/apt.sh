@@ -9,9 +9,6 @@ sudo apt-get -y install \
   dunst \
   rofi \
   feh \
-  i3-wm \
-  i3lock \
-  xfce4-power-manager \
   lxappearance \
   compton \
   chromium-browser \
@@ -19,4 +16,9 @@ sudo apt-get -y install \
   xsel \
   imagemagick \
   vifm \
-
+  xfce4-power-manager \
+  xfce4-panel \
+  xfce4-xkb-plugin \
+  herbstluftwm \
+  sxhkd \
+  scrot \

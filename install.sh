@@ -1,21 +1,10 @@
 #!/bin/bash
 
-# chsh -s /bin/bash
-
 cd ~/dotfiles
-cd ./scripts
+set -x
+source ./minimal-install.sh
+source ./scripts/extra/programs/docker.sh
+source ./scripts/extra/programs/docker-compose.sh
+source ./scripts/extra/programs/mongodb.sh
 
-bash ./before-install.sh
-bash ./aptinstalls.sh
-bash ./programs.sh
-bash ./symlinks.sh
-bash ./config.sh
-bash ./clean-after-install.sh
-
-# Get all upgrades
-sudo apt-get upgrade -y
-
-chsh -s $(which zsh)
-# See our bash changes
-source ~/.bashrc
-figlet "... ready to work" | lolcat
+set +x

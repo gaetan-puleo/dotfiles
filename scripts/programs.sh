@@ -8,5 +8,4 @@ bash ./mongodb.sh
 bash ./nvim.sh
 bash ./kitty.sh
 bash ./ripgrep.sh
-bash ./polybar.sh
 bash ./plug.sh
