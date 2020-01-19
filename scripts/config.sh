@@ -1,6 +1,7 @@
 #!/bin/bash
 
-cd ./config
+cd ./scripts/minimal/config
 
-bash ./git.sh
-bash ./zsh.sh
+source ./git.sh
+
+cd ../../../
