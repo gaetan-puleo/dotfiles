@@ -14,6 +14,7 @@ sxhkd &
 nm-applet &
 xfce4-power-manager &
 blueman-applet &
+setxkbmap -layout us -variant altgr-intl -option altwin:swap_lalt_lwin &
 setxkbmap -option caps:super &
 feh --bg-scale ~/wallpaper.jpg &
 # trayer --edge top --widthtype request --align right --tint 0xffffff --transparent false --alpha 255 &
