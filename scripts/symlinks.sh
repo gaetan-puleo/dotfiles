@@ -38,9 +38,8 @@ linkDotfile ~/$dotfiles/config/tmux/tmux.conf ~/.tmux.conf
 linkDotfile ~/$dotfiles/config/rofi ~/.config/rofi
 linkDotfile ~/$dotfiles/config/nvim ~/.config/nvim
 linkDotfile ~/$dotfiles/config/kitty ~/.config/kitty
+linkDotfile ~/$dotfiles/config/tint2 ~/.config/tint2
 linkDotfile ~/$dotfiles/config/start ~/.config/start
 linkDotfile ~/$dotfiles/config/sxhkd ~/.config/sxhkd
-linkDotfile ~/$dotfiles/config/xfce4/panel ~/.config/xfce4/panel
-linkDotfile ~/$dotfiles/config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
 linkDotfile ~/$dotfiles/images/wallpaper.jpg ~/wallpaper.jpg
 linkDotfile ~/$dotfiles/images/wallpaper-lock.png ~/wallpaper-lock.png

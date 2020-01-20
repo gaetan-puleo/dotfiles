@@ -1,11 +1,20 @@
 #!/usr/bin/env bash
 
+pkill trayer
+pkill dunst
+pkill sxhkd
+pkill feh
+pkill compton
+pkill tint2
+
+compton -b -f
+tint2 &
 dunst &
 sxhkd &
-compton -b -f
 nm-applet &
 xfce4-power-manager &
 blueman-applet &
 setxkbmap -option caps:super &
 feh --bg-scale ~/wallpaper.jpg &
-xfce4-panel &
+# trayer --edge top --widthtype request --align right --tint 0xffffff --transparent false --alpha 255 &
+notify-send -t 1000 Config "Config Reloaded"

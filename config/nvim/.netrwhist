@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =5
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/work/dotfiles/config'
+let g:netrw_dirhist_7='/home/work/.config/tint2'
+let g:netrw_dirhist_6='/home/work/.config'
 let g:netrw_dirhist_5='/home/work'
 let g:netrw_dirhist_4='/home/work/kinto'
 let g:netrw_dirhist_3='/home/work/kinto/.xkb'
