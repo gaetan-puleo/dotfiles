@@ -18,9 +18,10 @@ source ~/.config/nvim/config/mapping.vim
 source ~/.config/nvim/config/ale.vim
 source ~/.config/nvim/config/lightline.vim
 source ~/.config/nvim/config/defx.vim
+source ~/.config/nvim/config/denite.vim
 source ~/.config/nvim/config/coc.vim
 source ~/.config/nvim/config/vim-signify.vim
 source ~/.config/nvim/config/vim-commentary.vim
 source ~/.config/nvim/config/vim-windowswap.vim
 source ~/.config/nvim/config/undotree.vim
-source ~/.config/nvim/config/fzf.vim
+source ~/.config/nvim/config/fruzzy.vim

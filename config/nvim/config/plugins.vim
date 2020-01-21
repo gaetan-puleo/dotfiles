@@ -41,10 +41,6 @@ Plug 'suy/vim-context-commentstring'
 " undo history tab
 Plug 'mbbill/undotree'
 
-"fuzzy search
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-
 " Linter wrapper
 Plug 'w0rp/ale'
 
@@ -68,5 +64,11 @@ Plug 'djoshea/vim-autoread'
 
 "vim mdx
 Plug 'jxnblk/vim-mdx-js'
+
+" denite
+Plug 'Shougo/denite.nvim'
+Plug 'raghur/fruzzy', {'do': { -> fruzzy#install()}}
+" Plug 'chemzqm/denite-extra'
+" Plug 'chemzqm/todoapp.vim'
 
 call plug#end()
