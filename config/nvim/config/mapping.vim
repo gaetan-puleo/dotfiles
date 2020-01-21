@@ -9,6 +9,8 @@ noremap <leader>l <C-w>l
 noremap <leader>w :w<cr>
 " inoremap <leader>jj :w<cr>
 
+" go fuck yourself EX mode
+map Q <nop>
 
 nnoremap <Left> <nop>
 nnoremap <Right> <nop>

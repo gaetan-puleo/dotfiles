@@ -43,6 +43,9 @@ highlight NormalFloat cterm=NONE ctermfg=14 ctermbg=0 gui=NONE guifg=#93a1a1 gui
 set mouse=a
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
+" auto save when changing buffer 
+set autowrite
+
 augroup neovim_terminal
   autocmd!
 

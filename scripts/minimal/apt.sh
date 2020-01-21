@@ -21,3 +21,4 @@ sudo apt-get -y install \
   sxhkd \
   scrot \
   tint2 \
+  sqlite \

@@ -66,9 +66,9 @@ Plug 'djoshea/vim-autoread'
 Plug 'jxnblk/vim-mdx-js'
 
 " denite
-Plug 'Shougo/denite.nvim'
+Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'raghur/fruzzy', {'do': { -> fruzzy#install()}}
 " Plug 'chemzqm/denite-extra'
-" Plug 'chemzqm/todoapp.vim'
+Plug 'chemzqm/todoapp.vim'
 
 call plug#end()
