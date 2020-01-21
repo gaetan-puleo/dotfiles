@@ -7,10 +7,11 @@ pkill feh
 pkill compton
 pkill tint2
 
+
+sxhkd &
 compton -b -f
 tint2 &
 dunst &
-sxhkd &
 nm-applet &
 xfce4-power-manager &
 blueman-applet &
