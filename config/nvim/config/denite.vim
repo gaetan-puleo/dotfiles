@@ -33,9 +33,6 @@ nnoremap <Leader>s :Denite -start-filter grep:::!<CR>
 	  imap <silent><buffer> <C-c> <Plug>(denite_filter_quit)
 	endfunction
 
-" tell denite to use this matcher by default for all sources
-" call denite#custom#source('_', 'matchers', ['matcher/fruzzy'])
-"
 call denite#custom#var('grep', 'command', ['rg'])
 call denite#custom#var('grep', 'default_opts',
     \ ['-i', '--vimgrep', '--no-heading'])

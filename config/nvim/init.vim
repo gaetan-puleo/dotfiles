@@ -24,4 +24,3 @@ source ~/.config/nvim/config/vim-signify.vim
 source ~/.config/nvim/config/vim-commentary.vim
 source ~/.config/nvim/config/vim-windowswap.vim
 source ~/.config/nvim/config/undotree.vim
-source ~/.config/nvim/config/fruzzy.vim
