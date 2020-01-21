@@ -34,7 +34,15 @@ nnoremap <Leader>s :Denite -start-filter grep:::!<CR>
 	endfunction
 
 " tell denite to use this matcher by default for all sources
-call denite#custom#source('_', 'matchers', ['matcher/fruzzy'])
+" call denite#custom#source('_', 'matchers', ['matcher/fruzzy'])
+"
+call denite#custom#var('grep', 'command', ['rg'])
+call denite#custom#var('grep', 'default_opts',
+    \ ['-i', '--vimgrep', '--no-heading'])
+call denite#custom#var('grep', 'recursive_opts', [])
+call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
+call denite#custom#var('grep', 'separator', ['--'])
+call denite#custom#var('grep', 'final_opts', [])
 " allow grep source filtering on either path or text
 " call denite#custom#source('grep', 'converters', ['converter_abbr_word'])
 
