@@ -1,7 +1,7 @@
 " Define mappings
 
 nnoremap <Leader>f :Denite file/rec<CR>
-nnoremap <Leader>b :Denite buffer -direction=topleft<CR>
+nnoremap <Leader>b :Denite buffer -direction=belowright -split=vertical -winwidth=30<CR>
 nnoremap <Leader>s :Denite -start-filter grep:::!<CR>
 
   autocmd FileType denite call s:denite_my_settings()
