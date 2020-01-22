@@ -58,3 +58,5 @@ augroup END
 
 " redefined :W as :w
 cabbrev W w
+
+:set hidden
