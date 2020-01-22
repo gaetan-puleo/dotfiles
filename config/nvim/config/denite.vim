@@ -10,8 +10,8 @@ nnoremap <Leader>s :Denite -start-filter grep:::!<CR>
 	  \ denite#do_map('do_action')
 	  nnoremap <silent><buffer><expr> <CR>
 	  \ denite#do_map('do_action')
-	  nnoremap <silent><buffer><expr> r
-	  \ denite#do_map('do_action', 'delete')
+	  " nnoremap <silent><buffer><expr> r
+	  " \ denite#do_map('do_action', 'delete')
 	  nnoremap <silent><buffer><expr> p
 	  \ denite#do_map('do_action', 'preview')
 	  nnoremap <silent><buffer><expr> q
@@ -22,7 +22,7 @@ nnoremap <Leader>s :Denite -start-filter grep:::!<CR>
 	  \ denite#do_map('toggle_select').'j'
 	endfunction
   " I want to use external statusline plugin like lightline/vim-airline etc.
-	call denite#custom#option('_', 'statusline', v:false)
+	call denite#custom#option('_', 'statusline', v:true)
 
   autocmd FileType denite-filter call s:denite_filter_my_settings()
 	function! s:denite_filter_my_settings() abort
@@ -43,6 +43,18 @@ call denite#custom#var('grep', 'recursive_opts', [])
 call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
 call denite#custom#var('grep', 'separator', ['--'])
 call denite#custom#var('grep', 'final_opts', [])
+
+call denite#custom#var('buffer', 'command', ['rg'])
+" call denite#custom#var('grep', 'default_opts',
+"     \ ['-i', '--vimgrep', '--no-heading'])
+call denite#custom#var('buffer', 'recursive_opts', [])
+call denite#custom#var('buffer', 'pattern_opt', ['--regexp'])
+call denite#custom#var('buffer', 'separator', ['--'])
+call denite#custom#var('buffer', 'final_opts', [])
+
+call denite#custom#var('file/rec', 'command',
+\ ['rg', '--files', '--glob', '!.git'])
+
 " allow grep source filtering on either path or text
 " call denite#custom#source('grep', 'converters', ['converter_abbr_word'])
 
