@@ -59,4 +59,9 @@ augroup END
 " redefined :W as :w
 cabbrev W w
 
+" keep history if when changling buffer
 :set hidden
+
+" persistent undo history
+set undodir=~/.cache/.vim/undodir
+set undofile

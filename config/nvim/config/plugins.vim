@@ -36,7 +36,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-commentary'
 
 " Use context for comment
-Plug 'suy/vim-context-commentstring'
+" Plug 'suy/vim-context-commentstring'
 
 " undo history tab
 Plug 'mbbill/undotree'
@@ -69,5 +69,11 @@ Plug 'jxnblk/vim-mdx-js'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 " Plug 'chemzqm/denite-extra'
 Plug 'chemzqm/todoapp.vim'
+
+" zoom mode
+Plug 'troydm/zoomwintab.vim'
+
+" git messenger
+Plug 'rhysd/git-messenger.vim'
 
 call plug#end()

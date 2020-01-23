@@ -9,7 +9,6 @@
 if &compatible
   set nocompatible               " Be iMproved
 endif
-
 source ~/.config/nvim/config/plugins.vim
 source ~/.config/nvim/config/settings.vim
 source ~/.config/nvim/config/mapping.vim
@@ -24,3 +23,4 @@ source ~/.config/nvim/config/vim-signify.vim
 source ~/.config/nvim/config/vim-commentary.vim
 source ~/.config/nvim/config/vim-windowswap.vim
 source ~/.config/nvim/config/undotree.vim
+source ~/.config/nvim/config/zoomwintab.vim
