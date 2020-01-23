@@ -5,17 +5,13 @@ snippet const "Simple const" b
 const ${1} = ${2};
 endsnippet
 
-snippet constDestructuring "Destructing in const" b
-const {${1}} = ${2:VISUAL};
-endsnippet
-
 snippet func "Simple Function" b
 function ${1} (${2:VISUAL}) {
 	${3:VISUAL}
 }
 endsnippet
 
-snippet => "Arrow function" i
+snippet => "()=>{}" i
 (${1}) => ${2}
 endsnippet
 
@@ -86,7 +82,7 @@ export default function ${1} (state={}, action) {
 	} 
 }
 endsnippet
-snippet constActions "Create an action creator with redux thunk" b
+snippet cActions "Create an action creator with redux thunk" b
 	export const ${1} = () => dispatch => {
 		return dispatch({})
 	}

@@ -70,6 +70,9 @@ Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 " Plug 'chemzqm/denite-extra'
 Plug 'chemzqm/todoapp.vim'
 
+" JSDOC
+Plug 'heavenshell/vim-jsdoc'
+
 " zoom mode
 Plug 'troydm/zoomwintab.vim'
 
