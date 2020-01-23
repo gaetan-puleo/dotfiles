@@ -15,8 +15,6 @@ noremap <leader>w :w<cr>
 map Q <nop>
 " go fuck yourself recording 
 map q <nop>
-" go fuck yourself search
-map <Esc> <nop>
 
 nnoremap <Left> <nop>
 nnoremap <Right> <nop>
