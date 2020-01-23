@@ -2,8 +2,13 @@ nnoremap <silent> <leader>g <Plug>(coc-definition)
 " Remap keys for gotos
 nmap <silent>  <leader>gd <Plug>(coc-definition)
 nmap <silent>  <leader>gy <Plug>(coc-type-definition)
-nmap <silent> <leader>gi <Plug>(coc-implementation)
+nmap <silent>  <leader>gi <Plug>(coc-implementation)
 nmap <silent>  <leader>gr <Plug>(coc-references)
+
+nmap <silent>  gd <Plug>(coc-definition)
+nmap <silent>  gy <Plug>(coc-type-definition)
+nmap <silent>  gi <Plug>(coc-implementation)
+nmap <silent>  gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window
 nnoremap <silent> <leader>k :call <SID>show_documentation()<CR>

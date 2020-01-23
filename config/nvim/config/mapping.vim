@@ -1,5 +1,7 @@
 let mapleader=' '
 
+" go to file
+noremap <leader>gf gf
 "navigate with keyboard
 noremap <leader>h <C-w>h
 noremap <leader>j <C-w>j
