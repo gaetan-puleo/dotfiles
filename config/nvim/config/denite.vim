@@ -1,7 +1,7 @@
 " Define mappings
 
 nnoremap <Leader>f :Denite file/rec -start-filter -split=floating<CR>
-nnoremap <Leader>b :Denite buffer -direction=belowright -winwidth=30 -start-filter -split=vertical<CR>
+nnoremap <Leader>b :Denite buffer -direction=belowright -winwidth=35 -start-filter -split=vertical<CR>
 nnoremap <Leader>s :Denite -start-filter grep:::! -split=floating<CR>
 nnoremap <Leader>c :Denite command -start-filter -direction=top -split=floating <CR>
 
