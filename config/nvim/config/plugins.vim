@@ -76,6 +76,8 @@ Plug 'troydm/zoomwintab.vim'
 " git messenger
 Plug 'rhysd/git-messenger.vim'
 
+" git conflicts
+Plug 'rhysd/conflict-marker.vim'
 " echodoc
 " Plug 'Shougo/echodoc.vim'
 
