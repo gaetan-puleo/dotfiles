@@ -35,9 +35,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Comment
 Plug 'tpope/vim-commentary'
 
-" Use context for comment
-" Plug 'suy/vim-context-commentstring'
-
 " undo history tab
 Plug 'mbbill/undotree'
 
@@ -78,5 +75,8 @@ Plug 'troydm/zoomwintab.vim'
 
 " git messenger
 Plug 'rhysd/git-messenger.vim'
+
+" echodoc
+" Plug 'Shougo/echodoc.vim'
 
 call plug#end()
