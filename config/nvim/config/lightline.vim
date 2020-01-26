@@ -6,7 +6,13 @@ let g:lightline = {
       \ 'enable': {
       \   'tabline': 1
       \ },
-      \ 'tabline': {'left': [['buffers']], 'right': []},
+      \ 'tabline': {
+      \   'left': [ [ 'bufferinfo' ],
+      \             [ 'separator' ],
+      \             [ 'bufferbefore', 'buffercurrent', 'bufferafter' ], ],
+      \   'right': [ ],
+      \  },
+      \ 'tabline_separator': {'left': '', 'right': ''},
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'absolutepath', 'modified' ] ],
@@ -17,7 +23,8 @@ let g:lightline = {
       \               [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ] ]
       \ },
       \ 'component_function': {
-      \   'gitbranch': 'gitbranch#name'
+      \   'gitbranch': 'gitbranch#name',
+    \   'bufferinfo': 'lightline#buffer#bufferinfo',
       \ },
       \ 'component_visible_condition': {
       \   'readonly': '(&filetype!="help"&& &readonly)',
@@ -26,14 +33,18 @@ let g:lightline = {
       \ 'separator': {'left': '', 'right': '' },
       \ 'subseparator' : {'left': '', 'right': ''},
       \ 'component_expand': {
-      \ 'buffers': 'lightline#bufferline#buffers',
+    \   'buffercurrent': 'lightline#buffer#buffercurrent',
+    \   'bufferbefore': 'lightline#buffer#bufferbefore',
+    \   'bufferafter': 'lightline#buffer#bufferafter',
       \ 'linter_checking': 'lightline#ale#checking',
       \ 'linter_warnings': 'lightline#ale#warnings',
       \ 'linter_errors': 'lightline#ale#errors',
       \ 'linter_ok': 'lightline#ale#ok',
       \ },
       \ 'component_type': {
-      \     'buffers': 'tabsel',
+    \   'buffercurrent': 'tabsel',
+    \   'bufferbefore': 'raw',
+    \   'bufferafter': 'raw',
       \     'linter_checking': 'left',
       \     'linter_warnings': 'warning',
       \     'linter_errors': 'error',
@@ -53,7 +64,6 @@ let g:lightline#ale#indicator_ok = "\uf00c"
 let g:lightline#bufferline#show_number = 2
 let g:lightline#bufferline#shorten_path = 1
 let g:lightline#bufferline#unnamed      = '[No Name]'
-
 
 nmap <Leader>1 <Plug>lightline#bufferline#go(1)
 nmap <Leader>2 <Plug>lightline#bufferline#go(2)

@@ -2,6 +2,7 @@
 set termguicolors
 
 " apply theme
+
 colorscheme palenight
 
 " One tab equal 2 spaces

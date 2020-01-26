@@ -1,0 +1,16 @@
+# default: 1
+rounded = 0
+background_color = #000000 00
+border_sides = TRBL
+border_width = 1
+border_color = #000000 00
+
+
+# panel: 2
+rounded = 0
+background_color = #292D3E 50
+border_sides = TRBL
+border_width = 1
+border_color = #ffffff 30
+
+

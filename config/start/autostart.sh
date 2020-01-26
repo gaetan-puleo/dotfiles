@@ -19,7 +19,9 @@ sxhkd &
 compton -b -f
 
 # panel
-tint2 &
+tint2 -c ~/dotfiles/config/tint2/tint2-leftrc &
+tint2 -c ~/dotfiles/config/tint2/tint2-centerrc &
+tint2 -c ~/dotfiles/config/tint2/tint2-rightrc &
 
 # notifications
 dunst &

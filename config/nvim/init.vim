@@ -18,6 +18,7 @@ source ~/.config/nvim/config/ale.vim
 source ~/.config/nvim/config/lightline.vim
 source ~/.config/nvim/config/defx.vim
 source ~/.config/nvim/config/denite.vim
+source ~/.config/nvim/config/devicon.vim
 source ~/.config/nvim/config/coc.vim
 source ~/.config/nvim/config/conflict-marker.vim
 source ~/.config/nvim/config/vim-signify.vim
