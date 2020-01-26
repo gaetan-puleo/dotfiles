@@ -22,3 +22,4 @@ sudo apt-get -y install \
   scrot \
   tint2 \
   sqlite \
+  acpi \
