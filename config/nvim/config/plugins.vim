@@ -44,8 +44,7 @@ Plug 'w0rp/ale'
 " linter wrapper for lightlane
 Plug 'maximbaz/lightline-ale'
 
-" bufferline
-" Plug 'mgee/lightline-bufferline'
+Plug 'mengelbrecht/lightline-bufferline'
 
 " Swap Windows with <leader>ww (before on src window and after on dest window)
 Plug 'wesQ3/vim-windowswap'
@@ -78,7 +77,8 @@ Plug 'rhysd/git-messenger.vim'
 
 " git conflicts
 Plug 'rhysd/conflict-marker.vim'
-" echodoc
-" Plug 'Shougo/echodoc.vim'
+
+" vista
+Plug 'liuchengxu/vista.vim'
 
 call plug#end()

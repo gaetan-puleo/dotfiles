@@ -1,0 +1,10 @@
+[] verifier que l'installation fonctionne
+[] trouver un locker (i3lock?)
+[] trouver un systeme d'extinction du pc
+[] configurer terminal a droite (shortcut)
+[] rules pour les fenetres
+[] bluetooth icon pour tint2
+[] meilleur comportement pour la taskbar
+[] wifi icon tint2
+[] better herbstluftwm look
+[] try gap / margin design

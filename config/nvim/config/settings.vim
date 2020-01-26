@@ -37,7 +37,7 @@ set noswapfile
 highlight NormalFloat cterm=NONE ctermfg=14 ctermbg=0 gui=NONE guifg=#93a1a1 guibg=#222530
 
 " force to always show tablines
-" set showtabline=2
+set showtabline=2
 
 " mouse (r for disable and a for enable )
 set mouse=a
@@ -65,3 +65,6 @@ cabbrev W w
 " persistent undo history
 set undodir=~/.cache/.vim/undodir
 set undofile
+
+" hide mode (already in statusbar)
+set noshowmode

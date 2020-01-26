@@ -7,17 +7,17 @@ super + d
 
 # volume +
 XF86AudioRaiseVolume
-  pactl set-sink-volume @DEFAULT_SINK@ +5% && notify-send -t 1000 "Volume +5%" #increase sound volume
+  amixer set Master 5%+ unmute -q&& notify-send -t 1000 "Volume +5%" #increase sound volume
   # pactl set-sink-volume @DEFAULT_SINK@ +5% && notify-send -t 1000 "Volume + $(amixer get Master | grep -Eo '[0-9]+%')" #increase sound volume
 
 # volume -
 XF86AudioLowerVolume 
-  pactl set-sink-volume @DEFAULT_SINK@ -5% && notify-send -t 1000 "Volume -5%" #decrease sound volume  
+  amixer set Master 5%- -q && notify-send -t 1000 "Volume -5%" #decrease sound volume  
   # pactl set-sink-volume @DEFAULT_SINK@ -5% && notify-send -t 1000 "Volume - $(amixer get Master | grep -Eo '[0-9]+%')" #decrease sound volume
 
 # volume mute
 XF86AudioMute 
-  pactl set-sink-mute @DEFAULT_SINK@ toggle && notify-send -t 1000 "Toggle Mute volume" # mute sound
+  amixer set Master toggle -q && notify-send -t 1000 "Toggle Mute volume" # mute sound
 
 # Print screen
 # Without the sleep scrot crashes with:
