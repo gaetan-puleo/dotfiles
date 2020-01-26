@@ -26,7 +26,7 @@ if [[ "$(amixer sget Master | grep Mono: |awk -F '[][]' '{print $6}')" = "on" ]]
         echo ~/dotfiles/config/tint2/images/icons/vol-lowest.svg
     fi
     if  [[ $1 = "-l" ]]; then
-        echo ${vol}%
+        echo "${vol}%"
     fi
 else
     echo ~/dotfiles/config/tint2/images/icons/vol-muted.svg

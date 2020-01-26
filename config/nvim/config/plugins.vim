@@ -7,7 +7,6 @@ Plug 'tpope/vim-sensible'
 
 " UI theme
 Plug 'drewtempelmeyer/palenight.vim'
-" Plug 'tyrannicaltoucan/vim-quantum'
 
 " Status bar
 Plug 'itchyny/lightline.vim'
@@ -46,6 +45,7 @@ Plug 'w0rp/ale'
 Plug 'maximbaz/lightline-ale'
 
 Plug 'taohexxx/lightline-buffer'
+Plug 'mengelbrecht/lightline-bufferline'
 
 " Swap Windows with <leader>ww (before on src window and after on dest window)
 Plug 'wesQ3/vim-windowswap'

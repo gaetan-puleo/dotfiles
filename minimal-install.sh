@@ -14,5 +14,6 @@ source ./scripts/minimal/programs/nvim.sh
 source ./scripts/minimal/programs/plug.sh
 source ./scripts/minimal/programs/ripgrep.sh
 source ./scripts/minimal/programs/zgen.sh
+source ./scripts/minimal/programs/spotify-now.sh
 source ./scripts/minimal/done.sh
 set +x
