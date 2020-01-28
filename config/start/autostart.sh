@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-# keyboard map
-setxkbmap -layout us -variant altgr-intl &
-setxkbmap -option caps:super &
-
 # kill all
 pkill trayer
 pkill dunst
@@ -16,12 +12,13 @@ pkill tint2
 sxhkd &
 
 # compositor
-compton -b -f
+compton -b -f &
 
 # panel
-tint2 -c ~/dotfiles/config/tint2/tint2-leftrc &
-tint2 -c ~/dotfiles/config/tint2/tint2-centerrc &
-tint2 -c ~/dotfiles/config/tint2/tint2-rightrc &
+# tint2 -c ~/dotfiles/config/tint2/tint2-leftrc &
+# tint2 -c ~/dotfiles/config/tint2/tint2-centerrc &
+tint2 -c ~/dotfiles/config/tint2/tint2-toprc &
+tint2 -c ~/dotfiles/config/tint2/tint2-bottomrc &
 
 # notifications
 dunst &
@@ -38,5 +35,9 @@ blueman-applet &
 # set wallpaper
 feh --bg-scale ~/wallpaper.jpg &
 
+# keyboard map
+setxkbmap -layout us -variant altgr-intl &
+setxkbmap -option caps:super &
+
 # final notifications
-notify-send -t 1000 Config "Config Reloaded"
+notify-send -t 1000 Config "Config Reloaded" &
