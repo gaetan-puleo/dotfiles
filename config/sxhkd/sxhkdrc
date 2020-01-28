@@ -7,17 +7,18 @@ super + d
 
 # volume +
 XF86AudioRaiseVolume
-  amixer set Master 5%+ unmute -q&& notify-send -t 1000 "Volume +5%" #increase sound volume
-  # pactl set-sink-volume @DEFAULT_SINK@ +5% && notify-send -t 1000 "Volume + $(amixer get Master | grep -Eo '[0-9]+%')" #increase sound volume
+  pactl set-sink-volume @DEFAULT_SINK@ +5% && notify-send -t 1000 "Volume + $(amixer get Master | grep -Eo '[0-9]+%')" #increase sound volume
+  # amixer set Master 5%+ unmute -q&& notify-send -t 1000 "Volume +5%" #increase sound volume
 
 # volume -
-XF86AudioLowerVolume 
-  amixer set Master 5%- -q && notify-send -t 1000 "Volume -5%" #decrease sound volume  
-  # pactl set-sink-volume @DEFAULT_SINK@ -5% && notify-send -t 1000 "Volume - $(amixer get Master | grep -Eo '[0-9]+%')" #decrease sound volume
+XF86AudioLowerVolume
+  pactl set-sink-volume @DEFAULT_SINK@ -5% && notify-send -t 1000 "Volume - $(amixer get Master | grep -Eo '[0-9]+%')" #decrease sound volume
+  # amixer set Master 5%- -q && notify-send -t 1000 "Volume -5%" #decrease sound volume  
 
 # volume mute
 XF86AudioMute 
-  amixer set Master toggle -q && notify-send -t 1000 "Toggle Mute volume" # mute sound
+  pactl set-sink-mute @DEFAULT_SINK@ toggle
+  # amixer set Master toggle -q && notify-send -t 1000 "Toggle Mute volume" # mute sound
 
 # Print screen
 # Without the sleep scrot crashes with:
@@ -28,38 +29,4 @@ Print
 
 control + Print
     scrot ~/'Pictures/%Y-%m-%d_%H%M%S-$wx$h_scrot.png'
-
-# # focus or send to the given desktop
-# super + {_,shift + }{1-9,0}
-# 	bspc {desktop -f,node -d} '^{1-9,10}'
-
-
-# # focus window
-# super + {_,shift + } {h,j,k,l}
-#   bspc node -{f,s} {west,south,north,east}
-
-# # close and kill 
-# super + {_, shift} + q
-#   bspc node -{c,k}
-
-# # logout/restart bspwm
-# super + alt + {q,r}
-# 	bspc {quit,wm -r}
-
-# # set the window state
-# super + f
-#   if [ -z "$(bspc query -N -n focused.fullscreen)" ]; then \
-# 	  bspc node focused -t fullscreen; \
-#   else \
-#     bspc node focused -t tiled; \
-#   fi
-
-# # expand a window by moving one of its side outward
-# super + alt + {h,j,k,l}
-# 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
-
-# # contract a window by moving one of its side inward
-# super + alt + shift + {h,j,k,l}
-# 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
-
 

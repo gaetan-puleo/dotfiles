@@ -54,9 +54,10 @@ border_width = 3
 
 #-------------------------------------
 # Panel
-panel_items = T:CS
+panel_items = T:ECES
 panel_size = 100% 32
 panel_margin = 0 0
+panel_padding = 0 0 20
 panel_background_id = 2
 panel_shrink = 0
 wm_menu = 1 # enable mouse support
@@ -148,4 +149,33 @@ separator = new
 separator_style = empty
 separator_size = 1000
 
+# Executor 2
+execp = new
+execp_command = bash ~/dotfiles/config/tint2/scripts/bash/volume-icon.sh -l
+execp_interval = 3
+execp_has_icon = 1
+# execp_cache_icon = 1
+execp_continuous = 0
+execp_markup = 1
+execp_font = FiraCode Nerd Font 10 
+execp_font_color = #eeeeee 100
+execp_padding = 0 0
+execp_centered = 0
+execp_icon_w = 14
+execp_icon_h = 14
+
+# Executor 3
+execp = new
+execp_command = bash ~/dotfiles/config/tint2/scripts/bash/battery.sh -l
+execp_interval = 3
+execp_has_icon = 1
+# execp_cache_icon = 1
+execp_continuous = 0
+execp_markup = 1
+execp_font = FiraCode Nerd Font 10 
+execp_font_color = #ffffff 100
+execp_padding = 0 0
+execp_centered = 0
+execp_icon_w = 14
+execp_icon_h = 14
 

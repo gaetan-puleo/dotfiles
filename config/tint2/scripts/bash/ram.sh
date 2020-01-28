@@ -22,13 +22,13 @@ mem_info=$(</proc/meminfo)
 
 ## Complete summary
 	if  [[ $1 = "-fi" ]]; then
-    echo "  $mem"
+    echo "  $mem"
 	elif [[ $1 = "-f" ]]; then
     echo "$mem"
     
 ## Only used RAM
 	elif  [[ $1 = "-i" ]]; then
-    echo "  $usedmem MB"
+    echo "  $usedmem MB"
 	else
     echo "$usedmem MB"
 	fi

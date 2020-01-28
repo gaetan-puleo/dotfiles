@@ -140,35 +140,7 @@ execp_centered = 0
 execp_icon_w = 14
 execp_icon_h = 14
 
-# Executor 2
-execp = new
-execp_command = bash ~/dotfiles/config/tint2/scripts/bash/volume-icon.sh -l
-execp_interval = 3
-execp_has_icon = 1
-# execp_cache_icon = 1
-execp_continuous = 0
-execp_markup = 1
-execp_font = FiraCode Nerd Font 10 
-execp_font_color = #eeeeee 100
-execp_padding = 0 0
-execp_centered = 0
-execp_icon_w = 14
-execp_icon_h = 14
 
-# Executor 3
-execp = new
-execp_command = bash ~/dotfiles/config/tint2/scripts/bash/battery.sh -l
-execp_interval = 3
-execp_has_icon = 1
-# execp_cache_icon = 1
-execp_continuous = 0
-execp_markup = 1
-execp_font = FiraCode Nerd Font 10 
-execp_font_color = #ffffff 100
-execp_padding = 0 0
-execp_centered = 0
-execp_icon_w = 14
-execp_icon_h = 14
 
 # Executor 4
 execp = new
