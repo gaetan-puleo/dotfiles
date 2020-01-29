@@ -15,8 +15,6 @@ sxhkd &
 compton -b -f &
 
 # panel
-# tint2 -c ~/dotfiles/config/tint2/tint2-leftrc &
-# tint2 -c ~/dotfiles/config/tint2/tint2-centerrc &
 tint2 -c ~/dotfiles/config/tint2/tint2-toprc &
 tint2 -c ~/dotfiles/config/tint2/tint2-bottomrc &
 
@@ -36,8 +34,7 @@ blueman-applet &
 feh --bg-scale ~/wallpaper.jpg &
 
 # keyboard map
-setxkbmap -layout us -variant altgr-intl &
-setxkbmap -option caps:super &
+setxkbmap -layout us -variant altgr-intl -option caps:super &
 
 # final notifications
 notify-send -t 1000 Config "Config Reloaded" &
