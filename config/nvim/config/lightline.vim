@@ -2,7 +2,7 @@
 " disable lightline bufferlist https://github.com/itchyny/lightline.vim/issues/292
 
 let g:lightline = {
-      \ 'colorscheme': 'palenight',
+      \ 'colorscheme': 'ayu',
       \ 'enable': {
       \   'tabline': 1
       \ },

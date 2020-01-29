@@ -7,7 +7,8 @@ Plug 'tpope/vim-sensible'
 
 " UI theme
 Plug 'drewtempelmeyer/palenight.vim'
-
+Plug 'dikiaap/minimalist'
+Plug 'ayu-theme/ayu-vim'
 " Status bar
 Plug 'itchyny/lightline.vim'
 

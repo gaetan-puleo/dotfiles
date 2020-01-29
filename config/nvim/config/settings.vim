@@ -3,8 +3,10 @@ set termguicolors
 
 " apply theme
 
-colorscheme palenight
+" colorscheme palenight
 
+colorscheme ayu
+let ayucolor="mirage"   " for dark version of theme
 " One tab equal 2 spaces
 set tabstop=2 shiftwidth=2 expandtab
 

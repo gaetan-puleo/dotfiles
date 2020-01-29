@@ -33,7 +33,7 @@ linkDotfile ~/$dotfiles/themes ~/.themes
 linkDotfile ~/$dotfiles/config/zsh/zshrc ~/.zshrc
 linkDotfile ~/$dotfiles/config/compton.conf ~/.config/compton.conf
 linkDotfile ~/$dotfiles/config/dunst ~/.config/dunst
-linkDotfile ~/$dotfiles/config/herbstluftwm ~/.config/herbstluftwm
+linkDotfile ~/$dotfiles/config/i3 ~/.config/i3
 linkDotfile ~/$dotfiles/config/tmux/tmux.conf ~/.tmux.conf
 linkDotfile ~/$dotfiles/config/rofi ~/.config/rofi
 linkDotfile ~/$dotfiles/config/nvim ~/.config/nvim

@@ -17,7 +17,7 @@ sudo apt-get -y install \
   imagemagick \
   vifm \
   xfce4-power-manager \
-  herbstluftwm \
+  i3wm \
   sxhkd \
   scrot \
   tint2 \
