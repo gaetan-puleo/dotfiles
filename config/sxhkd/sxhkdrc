@@ -20,13 +20,8 @@ XF86AudioMute
   pactl set-sink-mute @DEFAULT_SINK@ toggle
   # amixer set Master toggle -q && notify-send -t 1000 "Toggle Mute volume" # mute sound
 
-# Print screen
-# Without the sleep scrot crashes with:
-# giblib error: couldn't grab keyboard:Resource temporarily unavailable
 Print
-    sleep 0.2; \
-    scrot -s ~/'Pictures/%Y-%m-%d_%H%M%S-$wx$h_scrot.png'
-
+    maim -s ~/Pictures/$(date +%s)-screenshot.png
 control + Print
-    scrot ~/'Pictures/%Y-%m-%d_%H%M%S-$wx$h_scrot.png'
+    maim ~/Pictures/$(date +%s)-screenshot.png
 

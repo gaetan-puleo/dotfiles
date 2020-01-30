@@ -19,7 +19,7 @@ sudo apt-get -y install \
   xfce4-power-manager \
   i3wm \
   sxhkd \
-  scrot \
+  maim \
   tint2 \
   sqlite \
   acpi \
