@@ -25,3 +25,8 @@ Print
 control + Print
     maim ~/Pictures/$(date +%s)-screenshot.png
 
+super + p
+    kitty -e nnn
+
+# super + x
+    # pkill -u $USER
