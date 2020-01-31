@@ -40,7 +40,7 @@ bindsym $mod+apostrophe split vertical
 bindsym $mod+quotedbl   split vertical
 bindsym $mod+minus      split vertical
 
-bindsym $mod+Shift+r reload
+bindsym $mod+r exec --no-startup-id bash ~/dotfiles/config/start/autostart.sh && i3-msg reload
 
 bindsym $mod+f fullscreen
 bindsym $mod+Shift+s floating toggle
@@ -77,4 +77,4 @@ for_window [class="^Pavucontrol$"] floating enable
 
 new_window 1pixel
 
-exec --no-startup-id bash ~/dotfiles/config/start/autostart.sh
+exec_always --no-startup-id bash ~/dotfiles/config/start/autostart.sh
