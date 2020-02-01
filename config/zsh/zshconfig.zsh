@@ -10,7 +10,7 @@ fi
 setopt auto_cd
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
-SAVEHIST=1000
+SAVEHIST=500
 setopt hist_ignore_all_dups # remove older duplicate entries from history
 setopt hist_reduce_blanks # remove superfluous blanks from history items
 setopt SHARE_HISTORY

@@ -1,7 +1,9 @@
+# zmodload zsh/zprof
+source ~/dotfiles/config/zsh/prompt.zsh
 source ~/dotfiles/config/zsh/path.zsh
 source ~/dotfiles/config/zsh/zshconfig.zsh
 source ~/dotfiles/config/zsh/aliases.zsh
-source ~/dotfiles/config/zsh/prompt.zsh
-source ~/dotfiles/config/zsh/fzf.zsh
+# source ~/dotfiles/config/zsh/fzf.zsh
 source ~/dotfiles/config/zsh/zgen.zsh
 source ~/dotfiles/config/zsh/fnm.zsh
+# zprof
