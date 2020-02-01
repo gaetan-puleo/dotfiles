@@ -2,7 +2,7 @@
 
 nnoremap <Leader>f :Denite file/rec -start-filter -split=floating -auto-action=preview<CR>
 nnoremap <Leader>b :Denite buffer -direction=belowright -winwidth=35 -start-filter -split=vertical<CR>
-nnoremap <Leader>s :Denite -start-filter grep:::! -split=floating<CR>
+nnoremap <Leader>s :Denite -start-filter grep:::! -split=floating -auto-action=preview<CR>
 nnoremap <Leader>c :Denite command -start-filter -direction=top -split=floating <CR>
 
   autocmd FileType denite call s:denite_my_settings()
@@ -29,11 +29,6 @@ nnoremap <Leader>c :Denite command -start-filter -direction=top -split=floating 
 
   autocmd FileType denite-filter call s:denite_filter_my_settings()
 	function! s:denite_filter_my_settings() abort
-    " I want to move the cursor in a Denite filter window, while in insert mode.
-	  inoremap <silent><buffer> <C-j>
-	  \ <Esc><C-w>p:call cursor(line('.')+1,0)<CR><C-w>pA
-	  inoremap <silent><buffer> <C-k>
-	  \ <Esc><C-w>p:call cursor(line('.')-1,0)<CR><C-w>pA
     " quit with esc"
     imap <silent><buffer> <Esc> <Plug>(denite_filter_quit)
     
