@@ -73,6 +73,8 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 for_window [class="^Blueman-manager$"] floating enable
 for_window [class="^Pavucontrol$"] floating enable
 
+# workspaces rules
+assign [window_role="browser"] $ws3
 
 
 new_window 1pixel
