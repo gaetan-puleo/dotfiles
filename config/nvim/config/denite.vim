@@ -1,6 +1,6 @@
 " Define mappings
 
-nnoremap <Leader>f :Denite file/rec -start-filter -split=floating<CR>
+nnoremap <Leader>f :Denite file/rec -start-filter -split=floating -auto-action=preview<CR>
 nnoremap <Leader>b :Denite buffer -direction=belowright -winwidth=35 -start-filter -split=vertical<CR>
 nnoremap <Leader>s :Denite -start-filter grep:::! -split=floating<CR>
 nnoremap <Leader>c :Denite command -start-filter -direction=top -split=floating <CR>
@@ -34,9 +34,11 @@ nnoremap <Leader>c :Denite command -start-filter -direction=top -split=floating 
 	  \ <Esc><C-w>p:call cursor(line('.')+1,0)<CR><C-w>pA
 	  inoremap <silent><buffer> <C-k>
 	  \ <Esc><C-w>p:call cursor(line('.')-1,0)<CR><C-w>pA
-
     " quit with esc"
     imap <silent><buffer> <Esc> <Plug>(denite_filter_quit)
+    
+    " quit with enter and validate
+    imap <silent><buffer> <CR> <Plug>(denite_filter_quit)<CR>
 	endfunction
 
 
