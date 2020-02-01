@@ -35,9 +35,11 @@ nnoremap <Leader>c :Denite command -start-filter -direction=top -split=floating 
 	  inoremap <silent><buffer> <C-k>
 	  \ <Esc><C-w>p:call cursor(line('.')-1,0)<CR><C-w>pA
 
-    " I want to quit filter window in denite filter window.
-	  imap <silent><buffer> <C-c> <Plug>(denite_filter_quit)
+    " quit with esc"
+    imap <silent><buffer> <Esc> <Plug>(denite_filter_quit)
 	endfunction
+
+
 
 call denite#custom#var('grep', 'command', ['rg'])
 call denite#custom#var('grep', 'default_opts',
