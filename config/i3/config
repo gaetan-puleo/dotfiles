@@ -75,7 +75,7 @@ for_window [class="^Pavucontrol$"] floating enable
 
 # workspaces rules
 assign [window_role="browser"] $ws3
-
+for_window [class="Spotify"] move to workspace $ws4
 
 new_window 1pixel
 
