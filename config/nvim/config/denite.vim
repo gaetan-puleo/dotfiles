@@ -58,6 +58,8 @@ call denite#custom#var('buffer', 'final_opts', [])
 call denite#custom#var('file/rec', 'command',
 \ ['rg', '--files', '--glob', '!.git'])
 
+call denite#custom#var('buffer', 'date_format', '')
+call denite#custom#source('buffer', 'matchers', ['converter/abbr_word', 'matcher/substring'])
 " allow grep source filtering on either path or text
 " call denite#custom#source('grep', 'converters', ['converter_abbr_word'])
 
