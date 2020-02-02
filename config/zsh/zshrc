@@ -1,3 +1,4 @@
+[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
 # zmodload zsh/zprof
 source ~/dotfiles/config/zsh/prompt.zsh
 source ~/dotfiles/config/zsh/path.zsh
