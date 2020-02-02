@@ -14,7 +14,7 @@ noremap <leader>w :w<cr>
 " go fuck yourself EX mode
 map Q <nop>
 " go fuck yourself recording 
-map q <nop>
+nmap q <nop>
 
 nnoremap <Left> <nop>
 nnoremap <Right> <nop>
@@ -31,3 +31,8 @@ nmap <Leader><Leader> <c-^>
 
 " toggle tabline
 nnoremap <silent> <leader>t :execute 'set showtabline=' . (&showtabline ==# 0 ? 2 : 0)<CR>
+
+" quit buffer
+nnoremap <leader>q :q<CR>
+" save
+nnoremap <leader>w :w<CR>
