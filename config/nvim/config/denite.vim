@@ -1,8 +1,10 @@
 " Define mappings
 
-nnoremap <Leader>f :Denite file/rec -start-filter -split=floating -auto-action=preview <CR>
+" nnoremap <Leader>f :Denite file/rec -start-filter -split=floating -auto-action=preview <CR>
+nnoremap <Leader>f :Denite file/rec -start-filter -split=floating <CR>
 nnoremap <Leader>b :Denite buffer -direction=belowright -winwidth=35 -start-filter -split=vertical<CR>
-nnoremap <Leader>s :Denite -start-filter grep:::! -split=floating -auto-action=preview<CR>
+" nnoremap <Leader>s :Denite -start-filter grep:::! -split=floating -auto-action=preview<CR>
+nnoremap <Leader>s :Denite -start-filter grep:::! -split=floating<CR>
 nnoremap <Leader>c :Denite command -start-filter -direction=top -split=floating <CR>
 
   autocmd FileType denite call s:denite_my_settings()
@@ -21,8 +23,8 @@ nnoremap <Leader>c :Denite command -start-filter -direction=top -split=floating 
 	  \ denite#do_map('quit')
 	  nnoremap <silent><buffer><expr> i
 	  \ denite#do_map('open_filter_buffer')
-	  nnoremap <silent><buffer><expr> <Space>
-	  \ denite#do_map('toggle_select').'j'
+	  " nnoremap <silent><buffer><expr> <Space>
+	  " \ denite#do_map('toggle_select').'j'
 	endfunction
   " I want to use external statusline plugin like lightline/vim-airline etc.
 	" call denite#custom#option('_', 'statusline', v:true)

@@ -65,9 +65,10 @@ conky.text = [[
   ${goto 20}<leader>f${goto 150} search for files
   ${goto 20}<leader>s${goto 150} search in files
   ${goto 20}<leader>b${goto 150} list buffers
+  ${goto 20}<leader>t${goto 150} toggle tabline
   ${goto 20}<leader>p${goto 150} open tree view
-  ${goto 20}<leader>z${goto 150} toggle focus mode
   near the current file
+  ${goto 20}<leader>z${goto 150} toggle focus mode
   ${goto 20}<leader>ww${goto 150} swap 2 windows
   (must select 2 windows)
   ${goto 20}<leader>d${goto 150} show documentation

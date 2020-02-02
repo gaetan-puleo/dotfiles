@@ -40,7 +40,7 @@ bindsym $mod+apostrophe split vertical
 bindsym $mod+quotedbl   split vertical
 bindsym $mod+minus      split vertical
 
-bindsym $mod+r exec --no-startup-id bash ~/dotfiles/config/start/autostart.sh && i3-msg reload
+bindsym $mod+r exec --no-startup-id i3-msg reload && bash ~/dotfiles/config/start/autostart.sh
 
 bindsym $mod+z fullscreen
 bindsym $mod+Shift+s floating toggle
@@ -90,3 +90,4 @@ client.urgent           #2F343A #FF5370 #FFFFFF #FF5370   #FF5370
 client.placeholder      #292D3E #3B4048 #697098 #292D3E   #292D3E
 
 exec_always --no-startup-id bash ~/dotfiles/config/start/autostart.sh
+exec --no-startup-id conky -d

@@ -1,7 +1,7 @@
 let mapleader=' '
 
 " go to file
-noremap <leader>gf gf
+" noremap <leader>gf gf
 "navigate with keyboard
 nmap <leader>h <C-w>h
 nmap <leader>j <C-w>j
@@ -29,4 +29,5 @@ nnoremap <Down> <nop>
 "last open buffer
 nmap <Leader><Leader> <c-^>
 
-imap jj <Esc>
+" toggle tabline
+nnoremap <silent> <leader>t :execute 'set showtabline=' . (&showtabline ==# 0 ? 2 : 0)<CR>
