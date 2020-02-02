@@ -42,7 +42,7 @@ bindsym $mod+minus      split vertical
 
 bindsym $mod+r exec --no-startup-id bash ~/dotfiles/config/start/autostart.sh && i3-msg reload
 
-bindsym $mod+f fullscreen
+bindsym $mod+z fullscreen
 bindsym $mod+Shift+s floating toggle
 
 
