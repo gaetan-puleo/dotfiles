@@ -13,6 +13,7 @@ conky.config = {
 	own_window_type = 'override',
 	own_window_argb_visual = true,
 	own_window_argb_value = 120,
+  own_window_transparent = false,
 	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
 	border_inner_margin = 10,
 	border_outer_margin = 0,
@@ -25,19 +26,20 @@ conky.config = {
 	draw_borders = false,
 	draw_graph_borders = false,
 	use_xft = true,
-	font = 'Ubuntu Mono:size=12',
-	xftalpha = 0.8,
+	font = 'DroidSansMono NerdFont:size=10',
+	xftalpha = 1,
 	uppercase = false,
 	default_color = '#FFFFFF',
 	own_window_colour = '#000000',
 	minimum_width = 0, minimum_height = 0,
+  lua_load = '~/dotfiles/config/conky/conky.lua',
 };
 conky.text = [[
-	${color #DD3A21}C₈H₁₀N₄O₂${color}${goto 200}${font FiraCode NerdFont}${font}${voffset -2} ${time %d/%m/%y}  ${font FiraCode NerdFont}${font}${voffset -2} ${time %H:%M}
+	${goto 200}${font FiraCode NerdFont}${font}${voffset -2} ${time %d/%m/%y}  ${font FiraCode NerdFont}${font}${voffset -2} ${time %H:%M}
 	${hr}
-	${font FiraCode NerdFont}${font}${voffset -2} ${addrs enp3s0}
-	${goto 20}${upspeedgraph enp3s0 30,178 06E9F8 2104FA}${goto 202}${downspeedgraph enp3s0 30,175 FFFF00 DD3A21}
-	${font FiraCode NerdFont}${goto 20}${font} ${upspeed enp3s0}${font FiraCode NerdFont}${goto 202}${font} ${downspeed enp3s0}
+	${font FiraCode NerdFont}${font}${voffset -2} ${lua myaddr}
+	${goto 20}${lua myspeedgraph up 30 178 06E9F8 2104FA}${goto 202}${lua myspeedgraph down 30 175 FFFF00 DD3A21 }
+	${font FiraCode NerdFont}${goto 20}${font} ${lua myspeed up}${font FiraCode NerdFont}${goto 202}${font} ${lua myspeed down}
 	${hr}
 	${font FiraCode NerdFont}${font}${voffset -2}
 	${goto 20}${diskiograph_read 30,178 06E9F8 2104FA}${goto 202}${diskiograph_write 30,175 FFFF00 DD3A21}
