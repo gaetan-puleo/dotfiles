@@ -7,6 +7,7 @@ pkill sxhkd
 pkill feh
 pkill compton
 pkill tint2
+pkill conky
 
 # keyboard shortcut
 sxhkd &
@@ -17,6 +18,9 @@ compton -b -f &
 # panel
 tint2 -c ~/dotfiles/config/tint2/tint2-toprc &
 tint2 -c ~/dotfiles/config/tint2/tint2-bottomrc &
+
+# system info
+conky &
 
 # notifications
 dunst &
