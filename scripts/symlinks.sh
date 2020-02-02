@@ -31,6 +31,7 @@ linkDotfile ~/$dotfiles/fonts ~/.fonts
 linkDotfile ~/$dotfiles/icons ~/.icons
 linkDotfile ~/$dotfiles/themes ~/.themes
 linkDotfile ~/$dotfiles/config/zsh/zshrc ~/.zshrc
+linkDotfile ~/$dotfiles/config/conky/conkyrc ~/.conkyrc
 linkDotfile ~/$dotfiles/config/compton.conf ~/.config/compton.conf
 linkDotfile ~/$dotfiles/config/dunst ~/.config/dunst
 linkDotfile ~/$dotfiles/config/i3 ~/.config/i3

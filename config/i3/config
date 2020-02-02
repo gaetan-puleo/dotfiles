@@ -77,6 +77,16 @@ for_window [class="^Pavucontrol$"] floating enable
 assign [window_role="browser"] $ws3
 for_window [class="Spotify"] move to workspace $ws4
 
-new_window 1pixel
+new_window none
+
+for_window [class="^.*"] border pixel 4
+
+
+# class                 border  bground text    indicator child_border
+client.focused          #939ede #939ede #FFFFFF #989aa2   #939ede
+client.focused_inactive #3E4452 #3E4452 #697098 #3E4452   #3E4452
+client.unfocused        #3B4048 #292D3E #697098 #3B4048   #3B4048
+client.urgent           #2F343A #FF5370 #FFFFFF #FF5370   #FF5370
+client.placeholder      #292D3E #3B4048 #697098 #292D3E   #292D3E
 
 exec_always --no-startup-id bash ~/dotfiles/config/start/autostart.sh

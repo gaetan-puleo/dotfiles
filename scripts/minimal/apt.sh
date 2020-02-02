@@ -23,3 +23,4 @@ sudo apt-get -y install \
   tint2 \
   sqlite \
   acpi \
+  conky \
