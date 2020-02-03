@@ -1,4 +1,7 @@
 super + Return
+        kitty -e tmux new-session -A -s main
+
+super + ctrl + Return
         kitty
 
 # application launcher
@@ -25,7 +28,7 @@ Print
 control + Print
     maim ~/Pictures/$(date +%s)-screenshot.png
 
-super + p
+super + n
     kitty -e nnn
 
 # super + x
