@@ -1,4 +1,6 @@
 {
+  "javascript.suggest.enabled": false,
+  "javascript.validate.enable": false,
   "snippets.ultisnips.directories": [
     "UltiSnips",
     "~/.config/nvim/utilsnips"
