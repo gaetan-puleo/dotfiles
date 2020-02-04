@@ -36,3 +36,7 @@ nnoremap <silent> <leader>t :execute 'set showtabline=' . (&showtabline ==# 0 ? 
 nnoremap <leader>q :q<CR>
 " save
 nnoremap <leader>w :w<CR>
+
+nnoremap <leader>\ :vsplit<CR>
+nnoremap <leader>- :split<CR>
+
