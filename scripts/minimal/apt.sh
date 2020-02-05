@@ -18,9 +18,12 @@ sudo apt-get -y install \
   vifm \
   xfce4-power-manager \
   i3wm \
+  i3lock \
   sxhkd \
   maim \
   tint2 \
   sqlite \
   acpi \
   conky \
+  nnn \
+  tmux \
