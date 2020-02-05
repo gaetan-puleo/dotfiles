@@ -1,3 +1,7 @@
+export EDITOR=/usr/bin/nvim
+export VISUAL=/usr/bin/nvim
+export REACT_EDITOR=/usr/bin/nvim
+
 # [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
 # zmodload zsh/zprof
 source ~/dotfiles/config/zsh/prompt.zsh
