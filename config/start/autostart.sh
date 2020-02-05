@@ -31,7 +31,7 @@ xfce4-power-manager &
 blueman-applet &
 
 # set wallpaper
-feh --bg-scale ~/wallpaper.jpg &
+feh --randomize --bg-scale ~/dotfiles/images/wallpapers/* 
 
 # keyboard map
 setxkbmap -layout us -variant altgr-intl -option caps:super &
