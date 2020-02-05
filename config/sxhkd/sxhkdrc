@@ -1,4 +1,7 @@
 super + Return
+        kitty -e bash -c "tmux attach -t $(tmux ls | grep -v attached | head -1 | cut -f1 -d:) || tmux"
+
+
         kitty -e tmux new-session -A -s main
 
 super + ctrl + Return
