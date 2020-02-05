@@ -33,3 +33,6 @@ super + n
 
 # super + x
     # pkill -u $USER
+super + x
+    bash ~/dotfiles/config/i3lock/i3lock.sh
+
