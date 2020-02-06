@@ -12,7 +12,8 @@ pkill tint2
 sxhkd &
 
 # compositor
-compton -b -f &
+compton --config ~/.config/compton.conf &
+
 
 # panel
 tint2 -c ~/dotfiles/config/tint2/tint2-toprc &
