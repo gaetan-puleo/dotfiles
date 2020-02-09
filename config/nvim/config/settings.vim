@@ -1,10 +1,6 @@
 " true colors for terms
 set termguicolors
 
-" apply theme
-
-" colorscheme palenight
-
 let ayucolor="dark"   " for dark version of theme
 colorscheme ayu
 

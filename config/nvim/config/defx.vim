@@ -13,6 +13,10 @@ autocmd FileType defx call s:defx_my_settings()
     \ defx#is_directory() 
     \ ? defx#do_action('open_or_close_tree') :
 		\ defx#do_action('multi', ['drop'])
+    nnoremap <silent><buffer><expr> <2-LeftMouse>
+    \ defx#is_directory() 
+    \ ? defx#do_action('open_or_close_tree') :
+		\ defx#do_action('multi', ['drop'])
     nnoremap <silent><buffer><expr> o
 	  \ defx#do_action('multi',[['open']])
     nnoremap <silent><buffer><expr> v
@@ -37,6 +41,7 @@ autocmd FileType defx call s:defx_my_settings()
 	  \ defx#do_action('toggle_ignored_files')
 	  nnoremap <silent><buffer><expr> q
 	  \ defx#do_action('quit')
+    nnoremap <silent><buffer><expr> <RightMouse> defx#do_action('cd', ['..'])
   endfunction
 	
 call defx#custom#column('icon', {

@@ -35,7 +35,7 @@ nnoremap <silent> <Leader>s :Denite -start-filter grep:::! -split=floating<CR>
 	function! s:denite_filter_my_settings() abort
     " quit with esc"
     imap <silent><buffer> <Esc> <Plug>(denite_filter_quit)
-    
+
     " quit with enter and validate
     imap <silent><buffer> <CR> <Plug>(denite_filter_quit)<CR>
 	endfunction

@@ -8,5 +8,16 @@
     "~/.config/nvim/utilsnips"
   ],
   // emmet
-  "emmet.includeLanguages": { "javascript": "javascriptreact"}
+  "emmet.includeLanguages": { "javascript": "javascriptreact"},
+  // eslint
+  "eslint.enable": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": ["javascript", "typescript", "typescriptreact", "javascriptreact", "typescript.tsx"],
+  //prettier
+  "coc.preferences.formatOnSaveFiletypes": ["css","scss","javascript", "typescript", "typescriptreact", "json", "javascriptreact", "typescript.tsx"],
+  // diagnostic
+  "diagnostic.errorSign": "•",
+  "diagnostic.warningSign": "•",
+  "diagnostic.infoSign": "•",
+  // json
 }

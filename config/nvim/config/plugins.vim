@@ -6,7 +6,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tpope/vim-sensible'
 
 " UI theme
-Plug 'drewtempelmeyer/palenight.vim'
+" Plug 'drewtempelmeyer/palenight.vim'
 Plug 'ayu-theme/ayu-vim'
 " Status bar
 Plug 'itchyny/lightline.vim'
@@ -36,16 +36,16 @@ Plug 'neoclide/coc-denite'
 Plug 'tpope/vim-commentary'
 
 " undo history tab
-Plug 'mbbill/undotree'
+" Plug 'mbbill/undotree'
 
 " Linter wrapper
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 
 " linter wrapper for lightlane
-Plug 'maximbaz/lightline-ale'
+" Plug 'maximbaz/lightline-ale'
 
-Plug 'taohexxx/lightline-buffer'
-Plug 'mengelbrecht/lightline-bufferline'
+" Plug 'taohexxx/lightline-buffer'
+" Plug 'mengelbrecht/lightline-bufferline'
 
 " Swap Windows with <leader>ww (before on src window and after on dest window)
 Plug 'wesQ3/vim-windowswap'
@@ -87,7 +87,7 @@ Plug 'liuchengxu/vista.vim'
 Plug 'wellle/tmux-complete.vim'
 
 " devicons
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 
 
 call plug#end()

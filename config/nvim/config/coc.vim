@@ -17,7 +17,7 @@ function! s:show_documentation()
   endif
 endfunction
 
-call coc#add_extension('coc-json', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-yaml', 'coc-snippets', 'coc-pairs', 'coc-emmet')
+call coc#add_extension('coc-json', 'coc-tsserver','coc-prettier', 'coc-eslint','coc-css', 'coc-html', 'coc-yaml', 'coc-snippets', 'coc-pairs', 'coc-emmet')
 " To make completion works like VSCode
 inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
 let g:coc_snippet_next = '<TAB>'
