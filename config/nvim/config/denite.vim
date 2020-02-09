@@ -2,10 +2,12 @@
 
 " nnoremap <Leader>f :Denite file/rec -start-filter -split=floating -auto-action=preview <CR>
 nnoremap <Leader>f :Denite file/rec -start-filter -split=floating <CR>
-nnoremap <Leader>b :Denite buffer -direction=belowright -winwidth=35 -start-filter -split=vertical<CR>
+nnoremap <Leader>c :Denite coc-command -start-filter -split=floating <CR>
+nnoremap <Leader>b :Denite buffer -start-filter -split=floating<CR>
+nnoremap <Leader>gs :Denite gitstatus -split=floating<CR>
+nnoremap <Leader>gl :Denite gitlog -split=floating<CR>
 " nnoremap <Leader>s :Denite -start-filter grep:::! -split=floating -auto-action=preview<CR>
-nnoremap <Leader>s :Denite -start-filter grep:::! -split=floating<CR>
-nnoremap <Leader>c :Denite command -start-filter -direction=top -split=floating <CR>
+nnoremap <silent> <Leader>p :Denite -start-filter grep:::! -split=floating<CR>
 
   autocmd FileType denite call s:denite_my_settings()
 	function! s:denite_my_settings() abort

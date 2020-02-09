@@ -7,8 +7,7 @@ nmap <silent>  gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window
 " nnoremap <silent> <leader>k :call <SID>show_documentation()<CR>
-nnoremap <silent> <leader>d :call CocAction('doHover')<CR>
-
+" nnoremap <silent> <leader>d :call CocAction('doHover')<CR>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -18,7 +17,7 @@ function! s:show_documentation()
   endif
 endfunction
 
-call coc#add_extension('coc-json', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-yaml', 'coc-snippets', 'coc-pairs')
+call coc#add_extension('coc-json', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-yaml', 'coc-snippets', 'coc-pairs', 'coc-emmet')
 " To make completion works like VSCode
 inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
 let g:coc_snippet_next = '<TAB>'

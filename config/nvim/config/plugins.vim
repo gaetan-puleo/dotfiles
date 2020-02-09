@@ -7,7 +7,6 @@ Plug 'tpope/vim-sensible'
 
 " UI theme
 Plug 'drewtempelmeyer/palenight.vim'
-Plug 'dikiaap/minimalist'
 Plug 'ayu-theme/ayu-vim'
 " Status bar
 Plug 'itchyny/lightline.vim'
@@ -32,7 +31,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 
 " Autocomplete core
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
+Plug 'neoclide/coc-denite'
 " Comment
 Plug 'tpope/vim-commentary'
 
@@ -65,7 +64,8 @@ Plug 'jxnblk/vim-mdx-js'
 
 " denite
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'chemzqm/denite-extra'
+Plug 'chemzqm/denite-extra'
+Plug 'chemzqm/denite-git'
 Plug 'chemzqm/todoapp.vim'
 
 " JSDOC
@@ -83,6 +83,11 @@ Plug 'rhysd/conflict-marker.vim'
 " vista
 Plug 'liuchengxu/vista.vim'
 
+" TMUX
+Plug 'wellle/tmux-complete.vim'
+
 " devicons
 Plug 'ryanoasis/vim-devicons'
+
+
 call plug#end()

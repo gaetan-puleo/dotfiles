@@ -5,8 +5,9 @@ set termguicolors
 
 " colorscheme palenight
 
+let ayucolor="dark"   " for dark version of theme
 colorscheme ayu
-let ayucolor="mirage"   " for dark version of theme
+
 " One tab equal 2 spaces
 set tabstop=2 shiftwidth=2 expandtab
 
@@ -37,7 +38,7 @@ set noswapfile
 :set backupcopy=yes
 
 " All floating window colors
-highlight NormalFloat cterm=NONE ctermfg=14 ctermbg=0 gui=NONE guifg=#93a1a1 guibg=#222530
+highlight NormalFloat cterm=NONE ctermfg=14 ctermbg=0 gui=NONE guifg=#93a1a1 guibg=#1b262c
 
 " force to always show tablines
 " set showtabline=2
@@ -72,3 +73,7 @@ set undofile
 " hide mode (already in statusbar)
 set noshowmode
 
+" see invinsble characters
+" :set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+" :set list
+:set nowrap

@@ -1,7 +1,7 @@
-super + Return
+super + ctrl + Return
         kitty -e bash -c "tmux attach -t $(tmux ls | grep -v attached | head -1 | cut -f1 -d:) || tmux"
 
-super + ctrl + Return
+super + Return
         kitty
 
 # application launcher

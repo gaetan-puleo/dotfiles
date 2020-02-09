@@ -1,8 +1,12 @@
 {
+  // tsserver
   "javascript.suggest.enabled": false,
   "javascript.validate.enable": false,
+  // snippets
   "snippets.ultisnips.directories": [
     "UltiSnips",
     "~/.config/nvim/utilsnips"
-  ]
+  ],
+  // emmet
+  "emmet.includeLanguages": { "javascript": "javascriptreact"}
 }
