@@ -2,7 +2,7 @@
 
 " nnoremap <Leader>f :Denite file/rec -start-filter -split=floating -auto-action=preview <CR>
 nnoremap <Leader>f :Denite file/rec -start-filter -split=floating <CR>
-nnoremap <Leader>c :Denite coc-command -start-filter -split=floating <CR>
+nnoremap <Leader>c :Denite quickfix -start-filter -split=floating <CR>
 nnoremap <Leader>b :Denite buffer -start-filter -split=floating<CR>
 nnoremap <Leader>gs :Denite gitstatus -split=floating<CR>
 nnoremap <Leader>gl :Denite gitlog -split=floating<CR>
