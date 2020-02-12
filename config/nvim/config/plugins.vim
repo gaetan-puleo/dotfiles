@@ -36,6 +36,8 @@ Plug 'neoclide/coc-denite'
 Plug 'tpope/vim-commentary'
 
 Plug 'jremmen/vim-ripgrep'
+
+" Plug 'mcchrish/nnn.vim'
 " undo history tab
 " Plug 'mbbill/undotree'
 

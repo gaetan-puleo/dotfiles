@@ -17,6 +17,7 @@ alias showip='ifconfig | grep inet'
 alias dot='cd ~/dotfiles'
 alias md='mkdir -p'
 alias nuke='rm -rf'
+alias nnn='nnn -e'
 
 alias d='docker'
 alias gmicro='git clone https://github.com/gaetan-puleo/express-microservice-boilerplate.git'

@@ -1,5 +1,5 @@
-export EDITOR=/usr/bin/nvim
 export VISUAL=/usr/bin/nvim
+export EDITOR=/usr/bin/nvim
 export REACT_EDITOR=/usr/bin/nvim
 
 # zmodload zsh/zprof

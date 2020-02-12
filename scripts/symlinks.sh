@@ -33,6 +33,7 @@ linkDotfile ~/$dotfiles/themes ~/.themes
 linkDotfile ~/$dotfiles/config/zsh/zshrc ~/.zshrc
 linkDotfile ~/$dotfiles/config/conky/conkyrc ~/.conkyrc
 linkDotfile ~/$dotfiles/config/compton.conf ~/.config/compton.conf
+linkDotfile ~/$dotfiles/config/mimeapps.list ~/.config/mimeapps.list
 linkDotfile ~/$dotfiles/config/dunst ~/.config/dunst
 linkDotfile ~/$dotfiles/config/i3 ~/.config/i3
 linkDotfile ~/$dotfiles/config/tmux/tmux.conf ~/.tmux.conf

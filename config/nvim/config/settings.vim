@@ -31,7 +31,7 @@ set list listchars=tab:\ \ ,trail:·
 " disable backupfile
 set nobackup
 set noswapfile
-:set backupcopy=yes
+set backupcopy=yes
 
 " All floating window colors
 highlight NormalFloat cterm=NONE ctermfg=14 ctermbg=0 gui=NONE guifg=#93a1a1 guibg=#1b262c
@@ -60,7 +60,7 @@ augroup END
 cabbrev W w
 
 " keep history if when changling buffer
-:set hidden
+set hidden
 
 " persistent undo history
 set undodir=~/.cache/.vim/undodir
@@ -72,4 +72,8 @@ set noshowmode
 " see invinsble characters
 " :set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 " :set list
-:set nowrap
+" set nowrap
+
+"shows partial in the same split
+set inccommand=nosplit
+

@@ -2,7 +2,6 @@
 
 " nnoremap <Leader>f :Denite file/rec -start-filter -split=floating -auto-action=preview <CR>
 nnoremap <Leader>f :Denite file/rec -start-filter -split=floating <CR>
-nnoremap <Leader>c :Denite quickfix -start-filter -split=floating <CR>
 nnoremap <Leader>b :Denite buffer -start-filter -split=floating<CR>
 nnoremap <Leader>gs :Denite gitstatus -split=floating<CR>
 nnoremap <Leader>gl :Denite gitlog -split=floating<CR>
@@ -25,8 +24,16 @@ nnoremap <silent> <Leader>s :Denite -start-filter grep:::! -split=floating<CR>
 	  \ denite#do_map('quit')
 	  nnoremap <silent><buffer><expr> i
 	  \ denite#do_map('open_filter_buffer')
+    nnoremap <silent><buffer> r
+	  \ :<C-u>call <SID>denite_quickfix()<CR>
+
 	  " nnoremap <silent><buffer><expr> <Space>
 	  " \ denite#do_map('toggle_select').'j'
+	endfunction
+
+	function! s:denite_quickfix()
+	  call denite#call_map('toggle_select_all')
+	  call denite#call_map('do_action', 'quickfix')
 	endfunction
   " I want to use external statusline plugin like lightline/vim-airline etc.
 	" call denite#custom#option('_', 'statusline', v:true)
