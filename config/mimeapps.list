@@ -7,4 +7,7 @@ x-scheme-handler/unknown=chromium-browser.desktop
 
 [Added Associations]
 application/x-shellscript=nvim.desktop;
+application/javascript=nvim.desktop;
+text/plain=nvim.desktop;
+text/x-matlab=nvim.desktop;
 image/svg+xml=eog.desktop;
