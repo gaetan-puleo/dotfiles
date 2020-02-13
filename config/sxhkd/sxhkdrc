@@ -28,8 +28,11 @@ Print
 control + Print
     maim ~/Pictures/$(date +%s)-screenshot.png
 
-super + n
-    kitty -e nnn
+super + e
+    kitty -e ranger
+
+super + f
+    kitty -e ranger
 
 # super + x
     # pkill -u $USER

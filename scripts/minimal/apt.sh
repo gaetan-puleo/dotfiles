@@ -25,5 +25,5 @@ sudo apt-get -y install \
   sqlite \
   acpi \
   conky \
-  nnn \
+  ranger \
   tmux \

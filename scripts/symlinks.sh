@@ -40,6 +40,7 @@ linkDotfile ~/$dotfiles/config/tmux/tmux.conf ~/.tmux.conf
 linkDotfile ~/$dotfiles/config/rofi ~/.config/rofi
 linkDotfile ~/$dotfiles/config/nvim ~/.config/nvim
 linkDotfile ~/$dotfiles/config/kitty ~/.config/kitty
+linkDotfile ~/$dotfiles/config/ranger ~/.config/ranger
 linkDotfile ~/$dotfiles/config/tint2 ~/.config/tint2
 linkDotfile ~/$dotfiles/config/start ~/.config/start
 linkDotfile ~/$dotfiles/config/sxhkd ~/.config/sxhkd
