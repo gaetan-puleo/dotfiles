@@ -32,7 +32,7 @@ conky.config = {
 	default_color = '#FFFFFF',
 	own_window_colour = '#000000',
 	minimum_width = 0, minimum_height = 0,
-  lua_load = '~/dotfiles/config/conky/conky.lua',
+  lua_load = '~/.config/conky/conky.lua',
 };
 conky.text = [[
 	${goto 200}${font FiraCode NerdFont}${font}${voffset -2} ${time %d/%m/%y}  ${font FiraCode NerdFont}${font}${voffset -2} ${time %H:%M}

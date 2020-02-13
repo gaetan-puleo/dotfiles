@@ -16,8 +16,8 @@ compton --config ~/.config/compton.conf &
 
 
 # panel
-tint2 -c ~/dotfiles/config/tint2/tint2-toprc &
-tint2 -c ~/dotfiles/config/tint2/tint2-bottomrc &
+tint2 -c ~/.config/tint2/tint2-toprc &
+tint2 -c ~/.config/tint2/tint2-bottomrc &
 
 # notifications
 dunst &
@@ -32,7 +32,7 @@ xfce4-power-manager &
 blueman-applet &
 
 # set wallpaper
-feh --randomize --bg-scale ~/dotfiles/images/wallpapers/* 
+feh --randomize --bg-scale ~/Pictures/wallpapers/* 
 
 # keyboard map
 setxkbmap -layout us -variant altgr-intl -option caps:super &
