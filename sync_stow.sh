@@ -1,0 +1,17 @@
+stow conky
+stow dunst
+stow nvim
+stow autostart
+stow compton
+stow fonts
+stow i3
+stow i3lock
+stow icons
+stow images
+stow kitty
+stow nvim
+stow rofi
+stow sxhkd
+stow themes
+stow tmux
+stow zsh
