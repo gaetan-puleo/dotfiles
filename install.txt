@@ -1,16 +1,17 @@
 _____________________________________________________________________          
 
                  __
-                / /             Dotfiles by TheWildPenguin 
-               / /              UBUNTU: 18.04 LTS
-              / /                 
-             / /                  
-            / /              
-           / /                    
-          / /         _          
-         /_/         |_|        INSTALLATION will start...
-
-
+                / /             Dotfiles by TheWildPenguin  
+               / /              UBUNTU: 18.04 LTS           
+              / /                                           
+             / /                                            
+            / /                                              
+           / /                                               
+          / /         _         It's dangerous to go alone!   
+         /_/         |_|        Take this.                
+                                                            
+                                                             
+                                                               
 _____________________________________________________________________
 
 
