@@ -1,5 +1,5 @@
 " nnoremap <silent> <leader>p :Defx -split=vertical -winwidth=30 -direction=topleft -toggle -columns=git:mark:indent:icon:icons:filename:type<cr>
-nnoremap <silent> <leader>e :Defx `expand('%:p:h')` -search=`expand('%:p')` -split=vertical -winwidth=30 -direction=topleft -toggle -columns=git:mark:indent:icon:icons:filename:type<cr>
+nnoremap <silent> <leader>e :Defx `expand('%:p:h')` -search=`expand('%:p')` -show-ignored-files -split=vertical -winwidth=30 -direction=topleft -toggle -columns=git:mark:indent:icon:icons:filename:type<cr>
 
 autocmd FileType defx call s:defx_my_settings()
 	function! s:defx_my_settings() abort
@@ -60,7 +60,6 @@ call defx#custom#column('git', 'indicators', {
   \ 'Deleted'   : '✖',
   \ 'Unknown'   : '?'
   \ })
-
 
 " I want to update defx status automatically when changing file.
 autocmd BufWritePost * call defx#redraw()
