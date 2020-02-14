@@ -1,8 +1,0 @@
-[] verifier que l'installation fonctionne
-[] trouver un locker (i3lock?)
-[] trouver un systeme d'extinction du pc
-[] configurer terminal a droite (shortcut)
-[] rules pour les fenetres de slack
-[] bluetooth icon pour tint2
-[x] meilleur comportement pour la taskbar
-[x] wifi icon tint2

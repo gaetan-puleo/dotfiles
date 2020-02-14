@@ -1,0 +1,13 @@
+source './install/preconfig.sh'
+source './install/apt.sh'
+
+source './install/programs/fnm.sh'
+source './install/programs/nvim.sh'
+source './install/programs/plug.sh'
+source './install/programs/zgen.sh'
+source './install/programs/kitty.sh'
+source './install/programs/docker.sh'
+source './install/programs/docker-compose.sh'
+source './install/programs/mongodb.sh'
+source './install/programs/ripgrep.sh'
+source './install/programs/spotify-now.sh'
