@@ -17,7 +17,7 @@ sudo apt-get -y install \
   imagemagick \
   vifm \
   xfce4-power-manager \
-  i3wm \
+  i3 \
   i3lock \
   sxhkd \
   maim \
@@ -27,3 +27,5 @@ sudo apt-get -y install \
   conky \
   ranger \
   tmux \
+  w3m \
+  w3m-img \
