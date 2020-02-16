@@ -29,3 +29,4 @@ sudo apt-get -y install \
   tmux \
   w3m \
   w3m-img \
+  python3 \
