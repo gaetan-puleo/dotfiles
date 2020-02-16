@@ -29,10 +29,7 @@ control + Print
     maim ~/Pictures/$(date +%s)-screenshot.png
 
 super + e
-    kitty -e ranger
-
-super + f
-    kitty -e ranger
+    kitty -e zsh -c ranger
 
 # super + x
     # pkill -u $USER
