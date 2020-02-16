@@ -1,3 +1,5 @@
+cd ~/dotfiles
+
 stow conky
 stow dunst
 stow nvim
@@ -15,3 +17,4 @@ stow sxhkd
 stow themes
 stow tmux
 stow zsh
+stow Xresources
