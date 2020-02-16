@@ -74,7 +74,8 @@ for_window [class="^Blueman-manager$"] floating enable
 for_window [class="^Pavucontrol$"] floating enable
 
 # workspaces rules
-assign [window_role="browser"] $ws3
+assign [window_role="^browser$"] $ws3
+assign [class="slack"] $ws5
 for_window [class="Spotify"] move to workspace $ws4
 
 new_window none
