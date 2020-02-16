@@ -7,4 +7,4 @@ configuration {
     show-icons:         true;
     display-drun:       "apps";
 }
-@import "~/.config/rofi/themes/custom-nord.rasi"
+@import "~/.config/rofi/themes/aurore.rasi"

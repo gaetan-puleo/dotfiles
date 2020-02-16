@@ -21,7 +21,7 @@ case $chosen in
         systemctl reboot
         ;;
     ) # Log out of the current session
-        i3-msg exit
+        pkill -u $USER
         ;;
 esac
 

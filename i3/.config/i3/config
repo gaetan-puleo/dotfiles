@@ -15,6 +15,10 @@ set $ws10 "10:  "
 # kill focused window (vim delete, follows vimperator settings more than vim)
 bindsym $mod+q kill
 
+
+# disable focus with mouse
+focus_follows_mouse no
+
 # i3 uses jkl; instead of hjkl -- fix that
 bindsym $mod+h focus left
 bindsym $mod+j focus down

@@ -82,12 +82,13 @@
     margin: 0;
     spacing: 0;
     border-color: @separatorcolor;
+
 }
 
 #prompt {
-    padding: 16;
-    background-color: @backgroundcoloralternate;
-    border: 0 1 0 0;
+  padding: 16;
+  background-color: @backgroundcoloralternate;
+  border: 0 1 0 0;
 }
 
 #entry {
@@ -106,3 +107,4 @@
     border: 1px;
     border-color: #ff0000;
 }
+

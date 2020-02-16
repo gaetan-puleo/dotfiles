@@ -37,7 +37,7 @@ super + f
 # super + x
     # pkill -u $USER
 super + x
-    bash ~/dotfiles/config/i3lock/i3lock.sh
+    bash ~/.config/i3lock/i3lock.sh
 
 alt + Tab  
     rofi -modi combi -combi-modi window -show combi

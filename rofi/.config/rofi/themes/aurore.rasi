@@ -1,0 +1,56 @@
+// reset
+* {
+  background-color: rgba(0,0,0,0);
+  border: 1;
+  /* border-color: red; */
+  border: none;
+
+  font: "Monospace 12";
+  color: rgba(255,255,255,0.4);
+}
+
+#window {
+  background-color: rgba(0,0,0,0.9);
+  width: 100%;
+  height: 100%;  
+}
+
+#mainbox {
+  margin: 20%;
+}
+
+#inputbar {
+  padding: 10px;
+  children:[ prompt, textbox-prompt-colon ,entry];
+}
+
+#prompt {
+
+  font: "Monospace 18";
+  margin: 0 10px 0 0;
+}
+
+#entry {
+  color: rgba(255,255,255, 0.8);
+  font: "Monospace 18";
+}
+
+#element {
+  padding: 12px;
+}
+
+#element.selected.normal {
+  color: #000;
+  border: 0 0 0 3px solid;
+  font-weight: bold;
+  border-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+textbox-prompt-colon {
+	expand: false;
+	str: ":";
+  font: "Monospace 18";
+	margin: 0 1ch 0 0;
+	text-color: @base0D;
+}

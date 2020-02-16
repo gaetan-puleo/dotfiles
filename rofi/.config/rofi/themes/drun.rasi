@@ -12,9 +12,10 @@
     font:             "Comfortaa bold 14";
 }
 #window {
-    width: 1366px;
-    height: 768px;
-    padding: 219px 360px;
+  width: 1366px;
+  height: 768px;
+  padding: 219px 360px;
+	transparency: "real";
 }
 /* Input window */
 inputbar,
