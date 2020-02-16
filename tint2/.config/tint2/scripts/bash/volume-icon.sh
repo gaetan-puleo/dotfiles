@@ -17,17 +17,17 @@ if [[ "$(amixer sget Master | grep Mono: |awk -F '[][]' '{print $6}')" = "on" ]]
     vol=$(amixer sget Master | awk -F'[][]' '/Right:|Mono:/ && NF > 1 {sub(/%/, ""); printf "%0.0f\n", $2}')
 
     if [[ ${vol} -ge 90 ]]; then
-        echo ~/dotfiles/config/tint2/images/icons/vol-full.svg
+        echo ~/.config/tint2/images/icons/vol-full.svg
     elif [[ ${vol} -ge 40 ]]; then
-        echo ~/dotfiles/config/tint2/images/icons/vol-medium.svg
+        echo ~/.config/tint2/images/icons/vol-medium.svg
     elif [[ ${vol} -ge 10 ]]; then
-        echo ~/dotfiles/config/tint2/images/icons/vol-low.svg
+        echo ~/.config/tint2/images/icons/vol-low.svg
     else
-        echo ~/dotfiles/config/tint2/images/icons/vol-lowest.svg
+        echo ~/.config/tint2/images/icons/vol-lowest.svg
     fi
     if  [[ $1 = "-l" ]]; then
         echo "${vol}%"
     fi
 else
-    echo ~/dotfiles/config/tint2/images/icons/vol-muted.svg
+    echo ~/.config/tint2/images/icons/vol-muted.svg
 fi

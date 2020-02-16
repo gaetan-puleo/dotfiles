@@ -154,7 +154,7 @@ separator_size = 1000
 
 # Executor 2
 execp = new
-execp_command = bash ~/dotfiles/config/tint2/scripts/bash/volume-icon.sh -l
+execp_command = bash ~/.config/tint2/scripts/bash/volume-icon.sh -l
 execp_interval = 3
 execp_has_icon = 1
 # execp_cache_icon = 1
@@ -169,7 +169,7 @@ execp_icon_h = 14
 
 # Executor 3
 execp = new
-execp_command = bash ~/dotfiles/config/tint2/scripts/bash/battery.sh -l
+execp_command = bash ~/.config/tint2/scripts/bash/battery.sh -l
 execp_interval = 3
 execp_has_icon = 1
 # execp_cache_icon = 1

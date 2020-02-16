@@ -100,7 +100,7 @@ separator_style = empty
 
 # Executor 1 SPOTIFY
 execp = new
-execp_command = bash ~/dotfiles/config/tint2/scripts/bash/spotify.sh
+execp_command = bash ~/.config/tint2/scripts/bash/spotify.sh
 execp_interval = 3
 execp_continuous = 0
 execp_markup = 1
@@ -112,7 +112,7 @@ execp_padding = 0 0
 
 # Executor 6
 execp = new
-execp_command = bash ~/dotfiles/config/tint2/scripts/bash/ram.sh -fi
+execp_command = bash ~/.config/tint2/scripts/bash/ram.sh -fi
 execp_interval = 1
 execp_has_icon = 0
 # execp_cache_icon = 1
@@ -127,7 +127,7 @@ execp_icon_h = 14
 
 # Executor 5
 execp = new
-execp_command = bash ~/dotfiles/config/tint2/scripts/bash/cpu.sh -i
+execp_command = bash ~/.config/tint2/scripts/bash/cpu.sh -i
 execp_interval = 1
 execp_has_icon = 0
 # execp_cache_icon = 1
@@ -144,7 +144,7 @@ execp_icon_h = 14
 
 # Executor 4
 execp = new
-execp_command = bash ~/dotfiles/config/tint2/scripts/bash/wifi.sh
+execp_command = bash ~/.config/tint2/scripts/bash/wifi.sh
 execp_interval = 30
 execp_has_icon = 1
 # execp_cache_icon = 1

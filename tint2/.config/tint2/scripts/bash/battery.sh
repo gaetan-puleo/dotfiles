@@ -5,7 +5,7 @@
 # Author: Piotr Miller
 # e-mail: nwg.piotr@gmail.com
 # Website: http://nwg.pl
-# Project: https://github.com/nwg-piotr/dotfiles/config/tint2/
+# Project: https://github.com/nwg-piotr/config/tint2/
 # License: GPL3
 
 # Dependencies: `acpi`
@@ -29,27 +29,27 @@ fi
 if [[ "$bat" == *"until"* ]]; then
 
     if [[ "$level" -ge "95" ]]; then
-        echo ~/dotfiles/config/tint2/images/icons/bat-full-charging.svg
+        echo ~/.config/tint2/images/icons/bat-full-charging.svg
     elif [[ "$level" -ge "75" ]]; then
-        echo ~/dotfiles/config/tint2/images/icons/bat-threefourth-charging.svg
+        echo ~/.config/tint2/images/icons/bat-threefourth-charging.svg
     elif [[ "$level" -ge "35" ]]; then
-        echo ~/dotfiles/config/tint2/images/icons/bat-half-charging.svg
+        echo ~/.config/tint2/images/icons/bat-half-charging.svg
     elif [[ "$level" -ge "15" ]]; then
-        echo ~/dotfiles/config/tint2/images/icons/bat-quarter-charging.svg
+        echo ~/.config/tint2/images/icons/bat-quarter-charging.svg
     else
-        echo ~/dotfiles/config/tint2/images/icons/bat-empty-charging.svg
+        echo ~/.config/tint2/images/icons/bat-empty-charging.svg
     fi
 else
     if [[ "$level" -ge "95" ]]; then
-        echo ~/dotfiles/config/tint2/images/icons/bat-full.svg
+        echo ~/.config/tint2/images/icons/bat-full.svg
     elif [[ "$level" -ge "75" ]]; then
-        echo ~/dotfiles/config/tint2/images/icons/bat-threefourth.svg
+        echo ~/.config/tint2/images/icons/bat-threefourth.svg
     elif [[ "$level" -ge "35" ]]; then
-        echo ~/dotfiles/config/tint2/images/icons/bat-half.svg
+        echo ~/.config/tint2/images/icons/bat-half.svg
     elif [[ "$level" -ge "15" ]]; then
-        echo ~/dotfiles/config/tint2/images/icons/bat-quarter.svg
+        echo ~/.config/tint2/images/icons/bat-quarter.svg
     else
-        echo ~/dotfiles/config/tint2/images/icons/bat-empty.svg
+        echo ~/.config/tint2/images/icons/bat-empty.svg
     fi
 fi
 if  [[ $1 = "-l" ]]; then

@@ -16,5 +16,6 @@ stow rofi
 stow sxhkd
 stow themes
 stow tmux
+stow tint2
 stow zsh
 stow Xresources

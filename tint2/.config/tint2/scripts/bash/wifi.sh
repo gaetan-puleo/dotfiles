@@ -23,6 +23,6 @@ if [[ $1 == -N* ]]; then
 elif [[ $1 == -M* ]]; then
     echo "$(echo $1 | cut -c3-) $name"
 else
-    echo ~/dotfiles/config/tint2/images/icons/wifi.svg
+    echo ~/.config/tint2/images/icons/wifi.svg
     echo " ${name}"
 fi
