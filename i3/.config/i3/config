@@ -73,9 +73,11 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 for_window [class="^Blueman-manager$"] floating enable
 for_window [class="^Pavucontrol$"] floating enable
 
+# bindsym Mod1+Tab exec --no-startup-id rofi -modi combi -combi-modi window -show combi
+
 # workspaces rules
 assign [window_role="^browser$"] $ws3
-assign [class="slack"] $ws5
+for_window [class="Slack"] move to workspace $ws5
 for_window [class="Spotify"] move to workspace $ws4
 
 new_window none

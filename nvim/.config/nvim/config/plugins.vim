@@ -88,7 +88,7 @@ Plug 'liuchengxu/vista.vim'
 
 " TMUX
 Plug 'wellle/tmux-complete.vim'
-
+Plug 'christoomey/vim-tmux-navigator'
 " devicons
 " Plug 'ryanoasis/vim-devicons'
 
