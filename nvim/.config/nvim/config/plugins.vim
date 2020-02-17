@@ -6,8 +6,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tpope/vim-sensible'
 
 " UI theme
-" Plug 'drewtempelmeyer/palenight.vim'
+Plug 'drewtempelmeyer/palenight.vim'
 Plug 'ayu-theme/ayu-vim'
+Plug 'chriskempson/base16-vim'
 " Status bar
 Plug 'itchyny/lightline.vim'
 

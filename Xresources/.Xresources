@@ -1,42 +1,103 @@
 !! Colorscheme
+#define fg #93a1a1
+#define bg #141c21
+#define cursorColor #141c21
 
-! special
-*.foreground: ##A6ACCD
-*.background: #292D3E
-*.cursorColor: #afbfbf
-
-
-
-! black
-*.color0: #263640
-*.color8: #4a697d
+! black 
+#define c0 #263640
+#define c8 #4a697d
 
 ! red
-*.color1: #d12f2c
-*.color9: #fa3935
+#define c1 #d12f2c
+#define c9 #fa3935
+
+#define c2 #819400
+#define c10 #a4bd00
+
+#define c3 #b08500
+#define c11 #d9a400
+
+#define c4 #2587cc
+#define c12 #2ca2f5
+
+#define c5 #696ebf
+#define c13 #8086e8
+
+#define c6 #289c93
+#define c14 #33c5ba
+
+#define c7 #bfbaac
+#define c15 #fdf6e3
+
+! special
+*.foreground: fg
+*.background: bg
+*.cursorColor: cursorColor
+
+! black
+*.color0: c0
+*.color8: c8
+
+! red
+*.color1: c1
+*.color9: c9
 
 ! green
-*.color2: #819400
-*.color10: #a4bd00
+*.color2: c2
+*.color10: c10
 
 ! yellow
-*.color3: #b08500
-*.color11: #d9a400
+*.color3: c3
+*.color11: c11
 
 ! blue
-*.color4: #2587cc
-*.color12: #2ca2f5
+*.color4: c4
+*.color12: c12
 
 ! magenta
-*.color5: #696ebf
-*.color13: #8086e8
+*.color5: c5
+*.color13: c13 
 
 ! cyan
-*.color6: #289c93
-*.color14: #33c5ba
+*.color6: c6
+*.color14: c14
 
 ! white
-*.color7: #bfbaac
-*.color15: #fdf6e3
+*.color7: c7
+*.color15: c15
+!! Colorscheme
 
-URxvt.scrollBar: false
+UXTerm*renderFont: true
+UXTerm*faceName: Fira Code Nerd Font
+UXTerm*faceSize: 12
+UXTerm*foreground: fg
+UXTerm*background: bg
+UXTerm*cursorColor: cursorColor
+UXTerm*color0: c0
+UXTerm*color8: c8
+UXTerm*color1: c1
+UXTerm*color9: c9
+UXTerm*color2: c2
+UXTerm*color10: c10
+UXTerm*color3: c3
+UXTerm*color11: c11
+UXTerm*color4: c4
+UXTerm*color12: c12
+UXTerm*color5: c5
+UXTerm*color13: c13
+UXTerm*color6: c6
+UXTerm*color14: c14
+UXTerm*color7: c7
+UXTerm*color15: c15
+
+UXTerm*dynamicColors: true
+UXTerm*utf8:               2
+UXTerm*eightBitInput:      true
+UXTerm*saveLines:          512
+UXTerm*scrollKey:          true
+UXTerm*scrollTtyOutput:    false
+UXTerm*scrollBar:          false
+UXTerm*rightScrollBar:     false
+UXTerm*jumpScroll:         false
+UXTerm*multiScroll:        false
+UXTerm*toolBar:            false
