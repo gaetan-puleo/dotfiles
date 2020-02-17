@@ -18,3 +18,4 @@ You can choose between
 
 + stow (generate alias for dotfiles)
 + apt (install all packages listed in apt.sh)
++ nvim (install all nvim plugins)

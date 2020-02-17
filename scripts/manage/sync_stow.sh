@@ -10,6 +10,7 @@ stow i3
 stow i3lock
 stow icons
 stow images
+stow ranger
 stow kitty
 stow nvim
 stow rofi
