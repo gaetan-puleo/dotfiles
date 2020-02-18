@@ -80,13 +80,13 @@ for_window [class="^Pavucontrol$"] floating enable
 # bindsym Mod1+Tab exec --no-startup-id rofi -modi combi -combi-modi window -show combi
 
 # workspaces rules
-assign [window_role="^browser$"] $ws3
-for_window [class="Slack"] move to workspace $ws5
-for_window [class="Spotify"] move to workspace $ws4
+for_window [window_role="^browser$"] move to workspace $ws3; workspace $ws3
+for_window [class="Slack"] move to workspace $ws5; workspace $ws5
+for_window [class="Spotify"] move to workspace $ws4; workspace $ws4
 
 new_window none
 
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 3
 
 hide_edge_borders smart
 
