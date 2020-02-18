@@ -14,7 +14,7 @@ Plug 'itchyny/lightline.vim'
 
 " File explorer
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
-
+Plug 'dylanaraps/fff.vim'
 " defx git
 Plug 'kristijanhusak/defx-git'
 

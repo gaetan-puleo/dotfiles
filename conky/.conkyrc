@@ -12,13 +12,13 @@ conky.config = {
 	own_window = true,
 	own_window_type = 'override',
 	own_window_argb_visual = true,
-	own_window_argb_value = 120,
+	own_window_argb_value = 0,
   own_window_transparent = false,
 	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
 	border_inner_margin = 10,
 	border_outer_margin = 0,
 	xinerama_head = 2,
-	alignment = 'bottom_right',
+	alignment = 'top_right',
 	gap_x = 90,
 	gap_y = 90,
 	draw_shades = true,
@@ -35,7 +35,7 @@ conky.config = {
   lua_load = '~/.config/conky/conky.lua',
 };
 conky.text = [[
-	${goto 200}${font FiraCode NerdFont}${font}${voffset -2} ${time %d/%m/%y}  ${font FiraCode NerdFont}${font}${voffset -2} ${time %H:%M}
+	${goto 20}${font FiraCode NerdFont}${font}${voffset -2} ${time %d/%m/%y}  ${font FiraCode NerdFont}${font}${voffset -2} ${time %H:%M}
 	${hr}
 	${font FiraCode NerdFont}${font}${voffset -2} ${lua myaddr}
 	${goto 20}${lua myspeedgraph up 30 178 06E9F8 2104FA}${goto 202}${lua myspeedgraph down 30 175 FFFF00 DD3A21 }
@@ -59,23 +59,5 @@ conky.text = [[
 	${goto 20}${top name 3} ${goto 180}${top pid 3}${goto 235}${top cpu 3}${goto 290}${top mem 3}
 	${goto 20}${top name 4} ${goto 180}${top pid 4}${goto 235}${top cpu 4}${goto 290}${top mem 4}
 	${goto 20}${top name 5} ${goto 180}${top pid 5}${goto 235}${top cpu 5}${goto 290}${top mem 5}
-	${hr}
-	${font FiraCode NerdFont}${font}${voffset -2} vim shortcuts
 
-  ${goto 20}<leader>f${goto 150} search for files
-  ${goto 20}<leader>s${goto 150} search in files
-  ${goto 20}<leader>b${goto 150} list buffers
-  ${goto 20}<leader>t${goto 150} toggle tabline
-  ${goto 20}<leader>p${goto 150} open tree view
-  near the current file
-  ${goto 20}<leader>z${goto 150} toggle focus mode
-  ${goto 20}<leader>ww${goto 150} swap 2 windows
-  (must select 2 windows)
-  ${goto 20}<leader>d${goto 150} show documentation
-  if supported
-  ${goto 20}gi${goto 150} go to implementation
-  ${goto 20}gd${goto 150} go to definition
-  ${goto 20}gf${goto 150} go to file
-  ${goto 20}<leader>[hjkl]${goto 150} move to split top,
-  left,bottom or right
 ]];

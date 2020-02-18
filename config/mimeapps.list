@@ -11,3 +11,6 @@ application/javascript=nvim.desktop;
 text/plain=nvim.desktop;
 text/x-matlab=nvim.desktop;
 image/svg+xml=eog.desktop;
+image/png=feh.desktop;
+image/jpeg=feh.desktop;
+image/jpg=feh.desktop;
