@@ -7,6 +7,7 @@ nmap <silent>  gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window
 nnoremap <silent> <leader>k :call <SID>show_documentation()<CR>
+nnoremap <silent> K :call <SID>show_documentation()<CR>
 " nnoremap <silent> <leader>d :call CocAction('doHover')<CR>
 
 function! s:show_documentation()
