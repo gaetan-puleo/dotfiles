@@ -7,14 +7,17 @@ Plug 'tpope/vim-sensible'
 
 " UI theme
 Plug 'drewtempelmeyer/palenight.vim'
+
+Plug 'cocopon/iceberg.vim'
+
 Plug 'ayu-theme/ayu-vim'
 Plug 'chriskempson/base16-vim'
+Plug 'ntk148v/vim-horizon'
 " Status bar
 Plug 'itchyny/lightline.vim'
 
 " File explorer
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'dylanaraps/fff.vim'
 " defx git
 Plug 'kristijanhusak/defx-git'
 
@@ -24,11 +27,12 @@ Plug 'kristijanhusak/defx-icons'
 " Show git status line by line
 Plug 'mhinz/vim-signify'
 
+Plug 'sheerun/vim-polyglot'
 " JS color syntaxes
-Plug 'pangloss/vim-javascript'
+" Plug 'pangloss/vim-javascript'
 
 "Better jsx syntax
-Plug 'maxmellon/vim-jsx-pretty'
+" Plug 'maxmellon/vim-jsx-pretty'
 
 " Autocomplete core
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -36,20 +40,9 @@ Plug 'neoclide/coc-denite'
 " Comment
 Plug 'tpope/vim-commentary'
 
-Plug 'jremmen/vim-ripgrep'
-
 " Plug 'mcchrish/nnn.vim'
 " undo history tab
 " Plug 'mbbill/undotree'
-
-" Linter wrapper
-" Plug 'w0rp/ale'
-
-" linter wrapper for lightlane
-" Plug 'maximbaz/lightline-ale'
-
-" Plug 'taohexxx/lightline-buffer'
-" Plug 'mengelbrecht/lightline-bufferline'
 
 " Swap Windows with <leader>ww (before on src window and after on dest window)
 Plug 'wesQ3/vim-windowswap'
@@ -72,9 +65,6 @@ Plug 'chemzqm/denite-extra'
 Plug 'chemzqm/denite-git'
 Plug 'chemzqm/todoapp.vim'
 
-" JSDOC
-Plug 'heavenshell/vim-jsdoc'
-
 " zoom mode
 Plug 'troydm/zoomwintab.vim'
 
@@ -91,7 +81,6 @@ Plug 'liuchengxu/vista.vim'
 Plug 'wellle/tmux-complete.vim'
 Plug 'christoomey/vim-tmux-navigator'
 " devicons
-" Plug 'ryanoasis/vim-devicons'
 
 
 call plug#end()

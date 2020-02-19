@@ -1,8 +1,7 @@
 " true colors for terms
 set termguicolors
 
-let ayucolor="dark"   " for dark version of theme
-colorscheme ayu
+colorscheme iceberg
 
 " One tab equal 2 spaces
 set tabstop=2 shiftwidth=2 expandtab
@@ -32,9 +31,6 @@ set list listchars=tab:\ \ ,trail:·
 set nobackup
 set noswapfile
 set backupcopy=yes
-
-" All floating window colors
-highlight NormalFloat cterm=NONE ctermfg=14 ctermbg=0 gui=NONE guifg=#93a1a1 guibg=#1b262c
 
 " force to always show tablines
 " set showtabline=2
