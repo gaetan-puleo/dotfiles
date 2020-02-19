@@ -2,6 +2,7 @@ source './install/preconfig.sh'
 source './install/apt.sh'
 
 source './install/programs/fnm.sh'
+source './install/programs/fff.sh'
 source './install/programs/nvim.sh'
 source './install/programs/plug.sh'
 source './install/programs/zgen.sh'

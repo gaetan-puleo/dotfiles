@@ -3,3 +3,4 @@ icons/default/
 bin
 .uuid
 bookmarks
+ranger/.config/ranger/plugins/
