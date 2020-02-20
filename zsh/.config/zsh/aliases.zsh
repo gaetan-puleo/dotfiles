@@ -1,23 +1,15 @@
 alias g="git"
 alias nvm="echo 'nvm is an alias for fnm' && fnm"
 alias vim="nvim"
-alias i3c="nvim ~/.config/i3/config"
-alias tmuxc="nvim ~/.tmux.conf"
-alias zshc="nvim ~/.zshrc"
-alias vimc="nvim ~/.config/nvim/init.vim"
-alias kittyc="nvim ~/.config/kitty/kitty.conf"
-alias polybarc="nvim ~/.config/polybar/config"
-alias comptonc="nvim ~/.config/compton.conf"
 alias pstart="sleep 1500 && notify-send -t 0 'take a break'"
 alias ppause="sleep 300 && notify-send -t 0 'go to work'"
 alias hs='history | grep'
 alias install='sudo apt install'
 alias update='sudo apt update && sudo apt upgrade'
 alias showip='ifconfig | grep inet'
-alias dot='cd ~/dotfiles'
+alias dot='zsh ~/dotfiles/install.sh'
 alias md='mkdir -p'
 alias nuke='rm -rf'
-alias nnn='nnn -e'
 
 alias d='docker'
 alias gmicro='git clone https://github.com/gaetan-puleo/express-microservice-boilerplate.git'
