@@ -1,7 +1,8 @@
 " true colors for terms
 set termguicolors
 
-colorscheme iceberg
+" colorscheme iceberg
+colorscheme nord
 
 " One tab equal 2 spaces
 set tabstop=2 shiftwidth=2 expandtab

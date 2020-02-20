@@ -5,8 +5,8 @@ pkill trayer
 pkill dunst
 pkill sxhkd
 pkill feh
-pkill compton
 pkill tint2
+pkill compton
 
 # keyboard shortcut
 sxhkd &

@@ -13,6 +13,7 @@ Plug 'cocopon/iceberg.vim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'chriskempson/base16-vim'
 Plug 'ntk148v/vim-horizon'
+Plug 'arcticicestudio/nord-vim'
 " Status bar
 Plug 'itchyny/lightline.vim'
 

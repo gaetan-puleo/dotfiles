@@ -45,6 +45,7 @@ bindsym $mod+quotedbl   split vertical
 bindsym $mod+minus      split vertical
 
 bindsym $mod+r exec --no-startup-id i3-msg reload && bash ~/.config/autostart/autostart.sh
+# bindsym $mod+r exec --no-startup-id i3-msg reload 
 
 bindsym $mod+z fullscreen
 bindsym $mod+Shift+s floating toggle
@@ -97,5 +98,5 @@ client.unfocused        #3B4048 #292D3E #697098 #3B4048   #3B4048
 client.urgent           #2F343A #FF5370 #FFFFFF #FF5370   #FF5370
 client.placeholder      #292D3E #3B4048 #697098 #292D3E   #292D3E
 
-exec_always --no-startup-id bash ~/.config/autostart/autostart.sh
+exec --no-startup-id bash ~/.config/autostart/autostart.sh
 exec --no-startup-id conky

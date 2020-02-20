@@ -2,7 +2,7 @@
 " disable lightline bufferlist https://github.com/itchyny/lightline.vim/issues/292
 
 let g:lightline = {
-      \ 'colorscheme': 'iceberg',
+      \ 'colorscheme': 'nord',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch','readonly', 'absolutepath', 'modified' ] ],
