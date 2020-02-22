@@ -1,6 +1,9 @@
 " true colors for terms
 set termguicolors
 
+" Necesary for lots of cool vim things
+set nocompatible
+
 " colorscheme iceberg
 colorscheme nord
 

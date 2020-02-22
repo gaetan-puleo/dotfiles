@@ -9,11 +9,11 @@ do
       ;;
     stow)
       echo 'reload stow'
-      source '~/dotfiles/scripts/manage/sync_stow.sh'
+      source ~/dotfiles/scripts/manage/sync_stow.sh
       ;;
     apt)
       echo 'install'
-      source '~/dotfiles/scripts/bootstrap/install/apt.sh'
+      source ~/dotfiles/scripts/bootstrap/install/apt.sh
       ;;
   esac
 done

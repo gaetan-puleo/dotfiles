@@ -20,6 +20,10 @@ nnoremap <Left> <nop>
 nnoremap <Right> <nop>
 nnoremap <Up> <nop>
 nnoremap <Down> <nop>
+
+" Up and down are more logical with g..
+nnoremap <silent> k gk
+nnoremap <silent> j gj
 " Disable arrow keys completely in Insert Mode
 " inoremap <up> <nop>
 " inoremap <down> <nop>
