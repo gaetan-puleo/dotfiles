@@ -1,8 +1,9 @@
 sudo apt-get -y install \
-  figlet \
-  lolcat \
   git \
   curl \
+  unzip \
+  tar \
+  zip \
   wget \
   zsh \
   tmux \
@@ -15,7 +16,6 @@ sudo apt-get -y install \
   blueman \
   xsel \
   imagemagick \
-  vifm \
   xfce4-power-manager \
   i3 \
   i3lock \
@@ -30,3 +30,5 @@ sudo apt-get -y install \
   w3m \
   w3m-img \
   python3 \
+  stow \
+

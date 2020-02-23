@@ -1,14 +1,12 @@
-source './install/preconfig.sh'
-source './install/apt.sh'
+source $HOME/dotfiles/scripts/bootstrap/install/preconfig.sh
+source $HOME/dotfiles/scripts/bootstrap/install/apt.sh
 
-source './install/programs/fnm.sh'
-source './install/programs/fff.sh'
-source './install/programs/nvim.sh'
-source './install/programs/plug.sh'
-source './install/programs/zgen.sh'
-source './install/programs/kitty.sh'
-source './install/programs/docker.sh'
-source './install/programs/docker-compose.sh'
-source './install/programs/mongodb.sh'
-source './install/programs/ripgrep.sh'
-source './install/programs/spotify-now.sh'
+source $HOME/dotfiles/scripts/bootstrap/install/programs/fnm.sh
+source $HOME/dotfiles/scripts/bootstrap/install/programs/plug.sh
+source $HOME/dotfiles/scripts/bootstrap/install/programs/nvim.sh
+source $HOME/dotfiles/scripts/bootstrap/install/programs/zgen.sh
+source $HOME/dotfiles/scripts/bootstrap/install/programs/kitty.sh
+source $HOME/dotfiles/scripts/bootstrap/install/programs/docker-compose.sh
+source $HOME/dotfiles/scripts/bootstrap/install/programs/mongodb.sh
+source $HOME/dotfiles/scripts/bootstrap/install/programs/ripgrep.sh
+source $HOME/dotfiles/scripts/bootstrap/install/programs/spotify-now.sh

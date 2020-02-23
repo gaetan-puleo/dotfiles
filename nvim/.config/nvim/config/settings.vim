@@ -4,7 +4,6 @@ set termguicolors
 " Necesary for lots of cool vim things
 set nocompatible
 
-" colorscheme iceberg
 colorscheme nord
 
 " One tab equal 2 spaces

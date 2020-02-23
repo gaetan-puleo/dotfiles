@@ -7,7 +7,7 @@ alias hs='history | grep'
 alias install='sudo apt install'
 alias update='sudo apt update && sudo apt upgrade'
 alias showip='ifconfig | grep inet'
-alias dot='bash ~/dotfiles/install.sh'
+alias dot="bash $HOME/dotfiles/install.sh"
 alias md='mkdir -p'
 alias nuke='rm -rf'
 

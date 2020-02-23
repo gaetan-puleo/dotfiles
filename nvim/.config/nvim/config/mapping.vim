@@ -25,12 +25,6 @@ nnoremap <Down> :resize +1<CR>
 nnoremap <silent> k gk
 nnoremap <silent> j gj
 
-" Disable arrow keys completely in Insert Mode
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-
 "last open buffer
 nmap <Leader><Leader> <c-^>
 

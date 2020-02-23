@@ -16,7 +16,7 @@ if ! source "$HOME/.zgen/init.zsh"; then
 
     zgen load agkozak/zsh-z
     zgen load zsh-users/zsh-autosuggestions
-    zgen load command-not-found
+    zgen oh-my-zsh plugins/command-not-found
     # zgen load zdharma/fast-syntax-highlighting
     # zgen load buonomo/yarn-completion
     # zgen load qoomon/zsh-lazyload

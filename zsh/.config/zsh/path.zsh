@@ -1,4 +1,4 @@
-PATH=$PATH:~/.fzf/bin
-PATH=$PATH:~/.local/bin
-PATH=$PATH:~/bin
+PATH=$PATH:$HOME/.fzf/bin
+PATH=$PATH:$HOME/.local/bin
+PATH=$PATH:$HOME/bin
 export PATH

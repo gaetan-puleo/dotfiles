@@ -9,3 +9,5 @@ delete
 
 open_with jj
 open_with h
+q
+shell q

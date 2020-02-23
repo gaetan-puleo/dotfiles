@@ -1,3 +1,3 @@
 # fnm
-export PATH=~/.fnm:$PATH
+export PATH=$HOME/.fnm:$PATH
 eval "`fnm env --multi`"
