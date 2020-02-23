@@ -24,7 +24,8 @@ XF86AudioMute
   # amixer set Master toggle -q && notify-send -t 1000 "Toggle Mute volume" # mute sound
 
 Print
-    maim -s ~/Pictures/$(date +%s)-screenshot.png
+    bash $HOME/.config/rofi/scripts/scrot.sh
+    #maim -s ~/Pictures/$(date +%s)-screenshot.png
 control + Print
     maim ~/Pictures/$(date +%s)-screenshot.png
 
@@ -34,7 +35,14 @@ super + e
 # super + x
     # pkill -u $USER
 super + x
-    bash ~/.config/i3lock/i3lock.sh
+    bash $HOME/.config/i3lock/i3lock.sh
+
+super + i
+    zsh $HOME/.config/rofi/scripts/xrandr.sh
+
+super + p
+    bash $HOME/.config/rofi/scripts/monitor_layout.sh
+
 
 alt + Tab  
     rofi -modi combi -combi-modi window -show combi
