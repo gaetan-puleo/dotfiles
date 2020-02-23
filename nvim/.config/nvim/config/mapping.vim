@@ -16,19 +16,20 @@ map Q <nop>
 " go fuck yourself recording 
 nmap q <nop>
 
-nnoremap <Left> <nop>
-nnoremap <Right> <nop>
-nnoremap <Up> <nop>
-nnoremap <Down> <nop>
+nnoremap <Left> :vertical resize -1<CR>
+nnoremap <Right> :vertical resize +1<CR>
+nnoremap <Up> :resize -1<CR>
+nnoremap <Down> :resize +1<CR>
 
 " Up and down are more logical with g..
 nnoremap <silent> k gk
 nnoremap <silent> j gj
+
 " Disable arrow keys completely in Insert Mode
-" inoremap <up> <nop>
-" inoremap <down> <nop>
-" inoremap <left> <nop>
-" inoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
 
 "last open buffer
 nmap <Leader><Leader> <c-^>
