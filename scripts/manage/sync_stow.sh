@@ -7,7 +7,6 @@ stow autostart
 stow compton
 stow fonts
 stow i3
-stow i3_tmux_vim
 stow i3lock
 stow icons
 stow images
