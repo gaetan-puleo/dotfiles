@@ -4,10 +4,10 @@ Q
 qq
 search 
 open_with i00
-open_with 
 delete
 
 open_with jj
 open_with h
 q
 shell q
+open_with 
