@@ -1,4 +1,4 @@
-cat ~/dotfiles/install.txt
+cat $HOME/dotfiles/install.txt
 
 for param in "$@"
 do
