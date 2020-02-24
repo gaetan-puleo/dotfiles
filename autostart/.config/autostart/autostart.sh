@@ -6,13 +6,13 @@ pkill dunst
 pkill sxhkd
 pkill feh
 pkill tint2
-pkill compton
+# pkill compton
 
 # keyboard shortcut
 sxhkd &
 
 # compositor
-compton --config ~/.config/compton.conf &
+# compton --config ~/.config/compton.conf &
 
 
 # panel

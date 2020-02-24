@@ -1,4 +1,4 @@
-# Right panel
+# Top panel
 
 #---- Created by Gaetan Puleo ----
 # See https://gitlab.com/o9000/tint2/wikis/Configure for 
@@ -15,14 +15,14 @@ border_color = #000000 00
 
 # panel: 2
 rounded = 0
-background_color = #292D3E 100
+background_color = #2e3440 70
 border_sides = TRBL
 border_width = 0
 border_color = #ffffff 30
 
 # Task: 3
 rounded = 0
-background_color = #3B4048 100
+background_color = #3B4048 0
 border_color = #000000 100
 border_width = 3
 border_sides = B
@@ -30,7 +30,7 @@ border_content_tint_weight = 100
 
 # Task active: 4
 rounded = 0
-background_color = #000000 100
+background_color = #000000 70
 background_content_tint_weight = 40
 border_sides = B
 border_width = 3
@@ -39,7 +39,7 @@ border_content_tint_weight = 100
 
 # Task urgent: 5
 rounded = 0
-background_color = #BE5046 100
+background_color = #BE5046 0
 background_content_tint_weight = 0
 border_sides = B
 border_width = 3
@@ -48,7 +48,7 @@ border_content_tint_weight = 0
 
 # taskbar: 6
 rounded = 0
-background_color = #3E4452 100
+background_color = #3E4452 20
 background_content_tint_weight = 0
 border_sides = TBRL
 border_width = 1
