@@ -99,4 +99,4 @@ client.urgent           #2F343A #FF5370 #FFFFFF #FF5370   #FF5370
 client.placeholder      #292D3E #3B4048 #697098 #292D3E   #292D3E
 
 exec --no-startup-id bash ~/.config/autostart/autostart.sh
-exec --no-startup-id conky
+# exec --no-startup-id conky
