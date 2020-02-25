@@ -12,20 +12,21 @@ autocmd FileType defx call s:defx_my_settings()
     nnoremap <silent><buffer><expr> <cr>
     \ defx#is_directory() 
     \ ? defx#do_action('open_or_close_tree') :
-		\ defx#do_action('multi', ['drop'])
+		\ defx#do_action('multi', ['drop', 'quit'])
     nnoremap <silent><buffer><expr> <2-LeftMouse>
     \ defx#is_directory() 
     \ ? defx#do_action('open_or_close_tree') :
-		\ defx#do_action('multi', ['drop'])
+		\ defx#do_action('multi', ['drop', 'quit'])
     nnoremap <silent><buffer><expr> o
 	  \ defx#do_action('multi',[['open']])
     nnoremap <silent><buffer><expr> v
 	  \ defx#do_action('multi',[['drop','vsplit']])
     nnoremap <silent><buffer><expr> s
 	  \ defx#do_action('multi',[['drop',  'split']])
-    " nnoremap <silent><buffer><expr> yy defx#do_action('copy')
-    " nnoremap <silent><buffer><expr> dd defx#do_action('move')
-    nnoremap <silent><buffer><expr> h defx#is_opened_tree() ? defx#do_action('close_tree') : defx#do_action('cd', ['..'])
+    nnoremap <silent><buffer><expr> yy defx#do_action('copy')
+    nnoremap <silent><buffer><expr> dd defx#do_action('move')
+    " nnoremap <silent><buffer><expr> h defx#is_opened_tree() ? defx#do_action('close_tree') : defx#do_action('cd', ['..'])
+    nnoremap <silent><buffer><expr> h defx#do_action('close_tree')
     nnoremap <silent><buffer><expr> cd defx#do_action('change_vim_cwd')
     nnoremap <silent><buffer><expr> ! defx#do_action('execute_command')
     nnoremap <silent><buffer><expr> pp defx#do_action('paste')
