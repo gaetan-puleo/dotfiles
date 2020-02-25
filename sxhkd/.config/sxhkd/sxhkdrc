@@ -43,6 +43,8 @@ super + i
 super + p
     bash $HOME/.config/rofi/scripts/monitor_layout.sh
 
+alt + p
+    myrmidon.sh $HOME/.config/myrmidon/tasks.json
 
 alt + Tab  
     rofi -modi combi -combi-modi window -show combi

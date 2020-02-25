@@ -11,6 +11,7 @@ stow i3lock
 stow icons
 stow images
 stow ranger
+stow myrmidon
 stow kitty
 stow nvim
 stow rofi

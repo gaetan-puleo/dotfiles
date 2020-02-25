@@ -31,4 +31,5 @@ sudo apt-get -y install \
   w3m-img \
   python3 \
   stow \
+  jq \
 
