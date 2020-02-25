@@ -1,11 +1,23 @@
 [
   {
-    "name": "Area screenshot",
-    "command": "gnome-screenshot -a"
+    "name": "Screenshots",
+    "command": "bash $HOME/.config/rofi/scripts/scrot.sh"
   },
   {
-    "name": "Window screenshot",
-    "command": "gnome-screenshot -w"
+    "name": "Application launcher",
+    "command": "rofi -show drun"
+  },
+  {
+    "name": "Current monitor resolutions",
+    "command": "zsh $HOME/.config/rofi/scripts/xrandr.sh"
+  },
+  {
+    "name": "Monitor Layout",
+    "command": "bash $HOME/.config/rofi/scripts/monitor_layout.sh"
+  },
+  {
+    "name": "Show all windows",
+    "command": "rofi -modi combi -combi-modi window -show combi"
   },
   {
     "name": "Power off",
@@ -16,6 +28,11 @@
     "name": "Reboot",
     "confirm": true,
     "command": "systemctl reboot"
+  },
+  {
+    "name": "Lock",
+    "confirm": true,
+    "command": "bash $HOME/.config/i3lock/i3lock.sh"
   },
   {
     "name": "Suspend",
