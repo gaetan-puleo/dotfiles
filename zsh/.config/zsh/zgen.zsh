@@ -21,7 +21,6 @@ if ! source "$HOME/.zgen/init.zsh"; then
     # zgen load buonomo/yarn-completion
     # zgen load qoomon/zsh-lazyload
     zgen load zsh-users/zsh-syntax-highlighting
-
     # generate the init script from plugins above
     zgen save
   fi
