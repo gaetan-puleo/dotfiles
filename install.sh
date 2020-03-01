@@ -9,7 +9,9 @@ do
       ;;
     stow)
       echo 'reload stow'
-      source $HOME/dotfiles/scripts/manage/sync_stow.sh
+      cd $HOME/dotfiles/home/
+      stow -t $HOME *
+      cd -
       ;;
     install)
       echo 'install'
