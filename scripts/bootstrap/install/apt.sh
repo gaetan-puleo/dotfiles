@@ -32,4 +32,5 @@ sudo apt-get -y install \
   python3 \
   stow \
   jq \
+  libavcodec-extra \
 
