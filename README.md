@@ -10,4 +10,7 @@ cd $HOME/dotfiles/home
 
 # create all symlinks in $HOME
 stow -t $HOME *
+
+cd $HOME/dotfiles/externals
+stow -t $HOME *
 ```

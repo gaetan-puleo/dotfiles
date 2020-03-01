@@ -9,9 +9,12 @@ do
       ;;
     stow)
       echo 'reload stow'
-      cd $HOME/dotfiles/home/
+      cd $HOME/dotfiles/home
       stow -t $HOME *
-      cd -
+      cd - > /dev/null # no logs
+      cd $HOME/dotfiles/externals
+      stow -t $HOME *
+      cd - > /dev/null # no logs
       ;;
     install)
       echo 'install'
