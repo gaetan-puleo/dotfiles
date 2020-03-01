@@ -4,3 +4,6 @@
 [submodule "externals/nordic"]
 	path = externals/nordic
 	url = https://github.com/EliverLara/Nordic.git
+[submodule "externals/asdf"]
+	path = externals/asdf
+	url = https://github.com/asdf-vm/asdf.git

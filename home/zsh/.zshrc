@@ -10,5 +10,4 @@ source $HOME/.config/zsh/aliases.zsh
 source $HOME/.config/zsh/variables.zsh
 # source ~/.config/zsh/fzf.zsh
 source $HOME/.config/zsh/zgen.zsh
-source $HOME/.config/zsh/fnm.zsh
 # zprof

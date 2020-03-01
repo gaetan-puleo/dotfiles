@@ -32,5 +32,7 @@ sudo apt-get -y install \
   python3 \
   stow \
   jq \
-  libavcodec-extra \
-
+  libavcodec-extra \ # netflix
+  automake autoconf libreadline-dev \ # asdf deps
+  libncurses-dev libssl-dev libyaml-dev \
+  libxslt-dev libffi-dev libtool unixodbc-dev \
