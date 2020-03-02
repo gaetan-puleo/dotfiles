@@ -1,0 +1,26 @@
+[user]
+  # These values are set in ~/.gitconfig_local
+
+[alias]
+  alias = config --get-regexp 'alias.*
+  co  = checkout       # Checkout a branch
+  cob = checkout -b
+
+  a = add
+  ap = add -p
+
+  c = commit
+  cm = commit -m
+
+  d = diff
+  ds = diff --stat
+
+  ba = branch -a
+
+  l = log -20 --pretty=format:'%C(magenta)%h%Creset - %<(24)%C(cyan)%an%Creset %C(dim red)%ar%Creset : %s' --no-merges
+
+  st = status
+  state = "!git fetch --prune ; git fetch --tags ; clear && git branch -vv && git status"
+[include]
+  path = ~/.gitconfig_local
+
