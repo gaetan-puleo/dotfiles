@@ -8,6 +8,6 @@ source $HOME/.config/zsh/path.zsh
 source $HOME/.config/zsh/zshconfig.zsh
 source $HOME/.config/zsh/aliases.zsh
 source $HOME/.config/zsh/variables.zsh
-# source ~/.config/zsh/fzf.zsh
+source ~/.config/zsh/fnm.zsh
 source $HOME/.config/zsh/zgen.zsh
 # zprof

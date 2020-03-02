@@ -11,3 +11,5 @@ source $HOME/dotfiles/scripts/bootstrap/install/programs/docker-compose.sh
 source $HOME/dotfiles/scripts/bootstrap/install/programs/mongodb.sh
 source $HOME/dotfiles/scripts/bootstrap/install/programs/ripgrep.sh
 source $HOME/dotfiles/scripts/bootstrap/install/programs/spotify-now.sh
+
+chsh -s /bin/zsh
