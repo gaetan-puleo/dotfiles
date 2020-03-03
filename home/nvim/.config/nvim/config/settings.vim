@@ -76,3 +76,6 @@ set noshowmode
 "shows partial in the same split
 set inccommand=nosplit
 
+" enable local .vimrc
+set exrc
+set secure

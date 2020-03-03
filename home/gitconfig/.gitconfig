@@ -21,6 +21,9 @@
 
   st = status
   state = "!git fetch --prune ; git fetch --tags ; clear && git branch -vv && git status"
+
 [include]
   path = ~/.gitconfig_local
 
+[core]
+    excludesfile = ~/.gitignore_global

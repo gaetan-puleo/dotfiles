@@ -26,6 +26,7 @@ source ~/.config/nvim/config/vim-signify.vim
 source ~/.config/nvim/config/vim-commentary.vim
 source ~/.config/nvim/config/vim-windowswap.vim
 source ~/.config/nvim/config/vim-tmux-navigator.vim
+source ~/.config/nvim/config/vim-test.vim
 source ~/.config/nvim/config/undotree.vim
 source ~/.config/nvim/config/vista.vim
 source ~/.config/nvim/config/zoomwintab.vim

@@ -64,7 +64,6 @@ Plug 'jxnblk/vim-mdx-js'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'chemzqm/denite-extra'
 Plug 'chemzqm/denite-git'
-Plug 'chemzqm/todoapp.vim'
 
 " zoom mode
 Plug 'troydm/zoomwintab.vim'
@@ -81,6 +80,8 @@ Plug 'liuchengxu/vista.vim'
 " TMUX
 Plug 'wellle/tmux-complete.vim'
 Plug 'christoomey/vim-tmux-navigator'
+
+Plug 'janko/vim-test'
 " devicons
 
 
