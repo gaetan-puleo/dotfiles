@@ -1,8 +1,8 @@
+" disable netrw
+" let loaded_netrwPlugin = 1
+
 " true colors for terms
 set termguicolors
-
-" Necesary for lots of cool vim things
-set nocompatible
 
 colorscheme nord
 
@@ -12,8 +12,14 @@ set tabstop=2 shiftwidth=2 expandtab
 " no alerts
 set belloff=all
 
-" show linenumber
-set number
+" show linenumber with toggle between relative and absolute
+set number relativenumber
+
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
 
 " allow clipboard
 set clipboard+=unnamedplus

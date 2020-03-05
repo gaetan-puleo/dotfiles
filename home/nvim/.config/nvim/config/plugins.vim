@@ -6,13 +6,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tpope/vim-sensible'
 
 " UI theme
-" Plug 'drewtempelmeyer/palenight.vim'
-
-" Plug 'cocopon/iceberg.vim'
-
-" Plug 'ayu-theme/ayu-vim'
-" Plug 'chriskempson/base16-vim'
-" Plug 'ntk148v/vim-horizon'
 Plug 'arcticicestudio/nord-vim'
 " Status bar
 Plug 'itchyny/lightline.vim'
@@ -39,9 +32,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-denite'
 " Comment
-Plug 'tpope/vim-commentary'
+" Plug 'tpope/vim-commentary'
 
-" Plug 'mcchrish/nnn.vim'
 " undo history tab
 " Plug 'mbbill/undotree'
 
@@ -58,7 +50,7 @@ Plug 'othree/jsdoc-syntax.vim'
 Plug 'djoshea/vim-autoread'
 
 "vim mdx
-Plug 'jxnblk/vim-mdx-js'
+" Plug 'jxnblk/vim-mdx-js'
 
 " denite
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -66,7 +58,7 @@ Plug 'chemzqm/denite-extra'
 Plug 'chemzqm/denite-git'
 
 " zoom mode
-Plug 'troydm/zoomwintab.vim'
+" Plug 'troydm/zoomwintab.vim'
 
 " git messenger
 Plug 'rhysd/git-messenger.vim'
@@ -75,14 +67,13 @@ Plug 'rhysd/git-messenger.vim'
 Plug 'rhysd/conflict-marker.vim'
 
 " vista
-Plug 'liuchengxu/vista.vim'
+" Plug 'liuchengxu/vista.vim'
 
 " TMUX
 Plug 'wellle/tmux-complete.vim'
 Plug 'christoomey/vim-tmux-navigator'
 
-Plug 'janko/vim-test'
-" devicons
+" Plug 'janko/vim-test'
 
 
 call plug#end()
