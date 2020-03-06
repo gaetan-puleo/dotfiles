@@ -28,6 +28,9 @@ nnoremap <silent> j gj
 "last open buffer
 nmap <Leader><Leader> <c-^>
 
+" disable Backspace and delete
+inoremap <BS> <Nop>
+inoremap <Del> <Nop>
 " toggle tabline
 nnoremap <silent> <leader>t :execute 'set showtabline=' . (&showtabline ==# 0 ? 2 : 0)<CR>
 
