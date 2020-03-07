@@ -3,10 +3,12 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Must be on all .vimrc file
+
 Plug 'tpope/vim-sensible'
 
 " UI theme
 Plug 'arcticicestudio/nord-vim'
+Plug 'drewtempelmeyer/palenight.vim'
 " Status bar
 Plug 'itchyny/lightline.vim'
 
@@ -22,6 +24,7 @@ Plug 'kristijanhusak/defx-icons'
 Plug 'mhinz/vim-signify'
 
 Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-surround'
 " JS color syntaxes
 " Plug 'pangloss/vim-javascript'
 
@@ -58,7 +61,7 @@ Plug 'chemzqm/denite-extra'
 Plug 'chemzqm/denite-git'
 
 " zoom mode
-" Plug 'troydm/zoomwintab.vim'
+Plug 'troydm/zoomwintab.vim'
 
 " git messenger
 Plug 'rhysd/git-messenger.vim'
@@ -72,6 +75,10 @@ Plug 'rhysd/conflict-marker.vim'
 " TMUX
 Plug 'wellle/tmux-complete.vim'
 Plug 'christoomey/vim-tmux-navigator'
+
+
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-repeat'
 
 " Plug 'janko/vim-test'
 

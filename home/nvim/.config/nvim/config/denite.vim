@@ -1,12 +1,12 @@
 " Define mappings
 
 " nnoremap <Leader>f :Denite file/rec -start-filter -split=floating -auto-action=preview <CR>
-nnoremap <Leader>f :Denite file/rec -start-filter -split=floating <CR>
-nnoremap <Leader>b :Denite buffer -start-filter -split=floating<CR>
-nnoremap <Leader>gs :Denite gitstatus -split=floating<CR>
-nnoremap <Leader>gl :Denite gitlog -split=floating<CR>
+nnoremap  <silent> <Leader>f :Denite file/rec -start-filter -direction=dynamictop -filter-split-direction=top -winheight=10<CR>
+nnoremap <silent> <Leader>b :Denite buffer -start-filter -direction=dynamictop -filter-split-direction=top -winheight=10 <CR>
+nnoremap <Leader>gs :Denite gitstatus -start-filter -direction=dynamictop -filter-split-direction=top -winheight=10 <CR>
+nnoremap <Leader>gl :Denite gitlog -direction=dynamictop -filter-split-direction=top -winheight=10 <CR>
 " nnoremap <Leader>s :Denite -start-filter grep:::! -split=floating -auto-action=preview<CR>
-nnoremap <silent> <Leader>s :Denite -start-filter grep:::! -split=floating<CR>
+nnoremap <silent> <Leader>s :Denite -start-filter -direction=dynamictop -filter-split-direction=top -winheight=10 -buffer-name='Source codes' -auto-action=preview grep:::! <CR>
 
 autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort

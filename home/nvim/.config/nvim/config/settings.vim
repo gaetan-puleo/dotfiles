@@ -1,10 +1,10 @@
 " disable netrw
-" let loaded_netrwPlugin = 1
+let loaded_netrwPlugin = 1
 
 " true colors for terms
 set termguicolors
 
-colorscheme nord
+colorscheme palenight
 
 " One tab equal 2 spaces
 set tabstop=2 shiftwidth=2 expandtab
@@ -14,12 +14,6 @@ set belloff=all
 
 " show linenumber with toggle between relative and absolute
 set number relativenumber
-
-augroup numbertoggle
-  autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-augroup END
 
 " allow clipboard
 set clipboard+=unnamedplus
@@ -85,3 +79,16 @@ set inccommand=nosplit
 " enable local .vimrc
 set exrc
 set secure
+
+set shortmess=at
+
+" Call method on window enter
+augroup WindowManagement
+  autocmd!
+  autocmd WinEnter * call Handle_Win_Enter()
+augroup END
+
+" Change highlight group of active/inactive windows
+function! Handle_Win_Enter()
+  setlocal winhighlight=Normal:ActiveWindow,NormalNC:InactiveWindow
+endfunction
