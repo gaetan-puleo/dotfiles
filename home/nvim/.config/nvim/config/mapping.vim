@@ -32,7 +32,7 @@ nmap <Leader><Leader> <c-^>
 nnoremap <silent> <leader>t :execute 'set showtabline=' . (&showtabline ==# 0 ? 2 : 0)<CR>
 
 " quit buffer
-nnoremap <leader>q :q<CR>
+" nnoremap <leader>q :q<CR>
 " save
 nnoremap <leader>w :w<CR>
 

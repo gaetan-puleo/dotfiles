@@ -35,14 +35,12 @@ Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-denite'
 " Comment
-" Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary'
 
 " undo history tab
 " Plug 'mbbill/undotree'
 
-" Swap Windows with <leader>ww (before on src window and after on dest window)
-Plug 'wesQ3/vim-windowswap'
-
+Plug 't9md/vim-choosewin'
 "git branch function
 Plug 'itchyny/vim-gitbranch'
 
