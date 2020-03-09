@@ -80,8 +80,6 @@ set inccommand=nosplit
 set exrc
 set secure
 
-set shortmess=at
-
 " Call method on window enter
 augroup WindowManagement
   autocmd!
