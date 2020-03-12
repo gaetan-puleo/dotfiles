@@ -15,6 +15,7 @@ if ! source "$HOME/.zgen/init.zsh"; then
     # zgen load olivierverdier/zsh-git-prompt
 
     zgen load agkozak/zsh-z
+    zgen load micha/resty
     zgen load zsh-users/zsh-autosuggestions
     zgen oh-my-zsh plugins/command-not-found
     # zgen load zdharma/fast-syntax-highlighting
