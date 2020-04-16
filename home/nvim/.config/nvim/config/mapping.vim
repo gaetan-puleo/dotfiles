@@ -29,7 +29,7 @@ nnoremap <silent> j gj
 nmap <Leader><Leader> <c-^>
 
 " toggle tabline
-nnoremap <silent> <leader>t :execute 'set showtabline=' . (&showtabline ==# 0 ? 2 : 0)<CR>
+" nnoremap <silent> <leader>t :execute 'set showtabline=' . (&showtabline ==# 0 ? 2 : 0)<CR>
 
 " quit buffer
 " nnoremap <leader>q :q<CR>

@@ -51,7 +51,7 @@ Plug 'othree/jsdoc-syntax.vim'
 Plug 'djoshea/vim-autoread'
 
 "vim mdx
-" Plug 'jxnblk/vim-mdx-js'
+Plug 'jxnblk/vim-mdx-js'
 
 " denite
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -68,7 +68,7 @@ Plug 'rhysd/git-messenger.vim'
 Plug 'rhysd/conflict-marker.vim'
 
 " vista
-" Plug 'liuchengxu/vista.vim'
+Plug 'liuchengxu/vista.vim'
 
 " TMUX
 Plug 'wellle/tmux-complete.vim'
@@ -78,7 +78,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat'
 
-" Plug 'janko/vim-test'
+Plug 'janko/vim-test'
 
 
 call plug#end()
