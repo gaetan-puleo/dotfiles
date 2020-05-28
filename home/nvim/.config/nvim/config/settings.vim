@@ -13,7 +13,8 @@ set tabstop=2 shiftwidth=2 expandtab
 set belloff=all
 
 " show linenumber with toggle between relative and absolute
-set number relativenumber
+" set number relativenumber
+set number
 
 " allow clipboard
 set clipboard+=unnamedplus
@@ -36,7 +37,7 @@ set noswapfile
 set backupcopy=yes
 
 " force to always show tablines
-" set showtabline=2
+set showtabline=2
 
 " mouse (r for disable and a for enable )
 set mouse=a

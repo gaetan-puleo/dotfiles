@@ -11,14 +11,15 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'drewtempelmeyer/palenight.vim'
 " Status bar
 Plug 'itchyny/lightline.vim'
+Plug 'taohexxx/lightline-buffer'
 
 " File explorer
-Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 " defx git
-Plug 'kristijanhusak/defx-git'
+" Plug 'kristijanhusak/defx-git'
 
 " defx color icons
-Plug 'kristijanhusak/defx-icons'
+" Plug 'kristijanhusak/defx-icons'
 
 " Show git status line by line
 Plug 'mhinz/vim-signify'
@@ -80,5 +81,7 @@ Plug 'tpope/vim-repeat'
 
 Plug 'janko/vim-test'
 
+
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
