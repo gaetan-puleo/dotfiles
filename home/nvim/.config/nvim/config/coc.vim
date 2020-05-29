@@ -17,7 +17,7 @@ function! s:show_documentation()
   endif
 endfunction
 
-call coc#add_extension('coc-json', 'coc-tsserver','coc-prettier', 'coc-eslint','coc-css', 'coc-html', 'coc-yaml', 'coc-snippets', 'coc-pairs', 'coc-emmet', 'coc-explorer')
+call coc#add_extension('coc-json', 'coc-tsserver','coc-prettier', 'coc-eslint','coc-css', 'coc-html', 'coc-yaml', 'coc-snippets', 'coc-pairs', 'coc-emmet', 'coc-explorer', 'coc-git')
 " To make completion works like VSCode
 inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
 let g:coc_snippet_next = '<TAB>'
@@ -49,7 +49,7 @@ let g:coc_explorer_global_presets = {
 
 
 " Use preset argument to open it
-nmap <leader>e :CocCommand explorer --preset .vim<CR>
+nmap <leader>e :CocCommand explorer<CR>
 " nmap <space>ef :CocCommand explorer --preset floating<CR>
 
 " List all presets

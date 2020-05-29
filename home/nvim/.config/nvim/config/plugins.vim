@@ -5,41 +5,23 @@ call plug#begin('~/.local/share/nvim/plugged')
 " Must be on all .vimrc file
 
 Plug 'tpope/vim-sensible'
-
 " UI theme
-Plug 'arcticicestudio/nord-vim'
 Plug 'drewtempelmeyer/palenight.vim'
 " Status bar
 Plug 'itchyny/lightline.vim'
 Plug 'taohexxx/lightline-buffer'
 
-" File explorer
-" Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
-" defx git
-" Plug 'kristijanhusak/defx-git'
-
-" defx color icons
-" Plug 'kristijanhusak/defx-icons'
-
 " Show git status line by line
-Plug 'mhinz/vim-signify'
+" Plug 'mhinz/vim-signify'
 
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround'
-" JS color syntaxes
-" Plug 'pangloss/vim-javascript'
-
-"Better jsx syntax
-" Plug 'maxmellon/vim-jsx-pretty'
 
 " Autocomplete core
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc-denite'
+
 " Comment
 Plug 'tpope/vim-commentary'
-
-" undo history tab
-" Plug 'mbbill/undotree'
 
 Plug 't9md/vim-choosewin'
 "git branch function
@@ -61,9 +43,6 @@ Plug 'chemzqm/denite-git'
 
 " zoom mode
 Plug 'troydm/zoomwintab.vim'
-
-" git messenger
-Plug 'rhysd/git-messenger.vim'
 
 " git conflicts
 Plug 'rhysd/conflict-marker.vim'

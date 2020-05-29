@@ -43,6 +43,11 @@ let g:lightline = {
       \ 'subseparator' : {'left': '', 'right': ''},
       \ }
 
+function! LightlineGitBlame() abort
+  let blame = get(b:, 'coc_git_blame', '')
+  " return blame
+  return winwidth(0) > 120 ? blame : ''
+endfunction
 " remap arrow keys
 nnoremap <leader><Left> :bprev<CR>
 nnoremap <leader><Right> :bnext<CR>
