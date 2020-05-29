@@ -114,5 +114,7 @@
     // "]c": "gitNext",
     // "<<": "gitStage",
     // ">>": "gitUnstage"
-  }
+  },
+  // coc git
+  "git.enableGutters": false
 }

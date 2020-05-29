@@ -12,7 +12,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'taohexxx/lightline-buffer'
 
 " Show git status line by line
-" Plug 'mhinz/vim-signify'
+Plug 'mhinz/vim-signify'
 
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround'
