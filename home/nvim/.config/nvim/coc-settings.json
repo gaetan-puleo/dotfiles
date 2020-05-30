@@ -47,6 +47,7 @@
       "expand": true
     }
   ],
+  "explorer.previewAction.onHover": false,
   "explorer.keyMappings": {
     "i": false, // cancel default mapkey
 
