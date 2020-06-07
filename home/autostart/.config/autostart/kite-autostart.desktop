@@ -1,0 +1,8 @@
+[Desktop Entry]
+NoDisplay=true
+Type=Application
+Version=2.20200605.0
+Name=Kite
+Comment=Kite - ML powered code completions
+Exec=/home/gaetan/.local/share/kite/kited --system-boot
+Hidden=true

@@ -20,6 +20,8 @@
     "typescript.tsx"
   ],
   //prettier
+  "prettier.formatterPriority": 1,
+  "prettier.eslintIntegration": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
     "scss",
