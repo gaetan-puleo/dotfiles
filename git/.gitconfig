@@ -1,0 +1,19 @@
+[user]
+      # These values are set in ~/.gitconfig_local
+
+[core]
+  excludesfile = ~/.gitignore_global
+
+[alias]
+  ; alias  = "! git config --get-regexp ^alias\."
+  
+  rb = rebase
+  rs = reset
+  l = log
+  lo = log --oneline
+  fa = fetch --all -p
+  st = status
+  co = checkout
+  cm = commit -m
+[include]
+  path = ~/.gitconfig_local
