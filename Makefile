@@ -105,15 +105,7 @@ install_base:
 	$(UPGRADE_CMD)
 	$(INSTALL_CMD) $(BASE_PKGS)
 
-minimal: minimal_setup \ ## Minimal installation 
-				install_base \
-				zsh \
-				zgen \
-				nvim \
-				fnm \
-				node \
-				stow
-
+minimal: minimal_setup install_base zsh zgen nvim fnm node stow ## Install minimal deps
 gui: minimal_gui kitty ## Install gui bundle
 dev: docker docker_dev install_dev ## Install dev bundle
 design: install_design ## Install Design bundle
