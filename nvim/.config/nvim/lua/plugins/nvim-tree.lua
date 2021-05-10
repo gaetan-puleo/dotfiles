@@ -23,7 +23,7 @@ vim.g['nvim_tree_disable_netrw'] = 1 -- disable netrw
 vim.g['nvim_tree_hijack_netrw'] = 1 -- use nvim-tree vhen typing `nvim` or `nvim .`
 
 vim.g['nvim_tree_show_icons'] = {
-  git = 0,
+  git = 1,
   folders = 1,
   files = 1,
 }

@@ -44,7 +44,7 @@ zgen:
 	# Install zgen (zsh plugin manager)
 	git clone https://github.com/tarjoilija/zgen.git ${HOME}/.zgen
 
-kitty: https://addons.mozilla.org/en-US/firefox/addon/tokyo_night/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search
+kitty:
 	# set kitty as default term
 	sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator $$(which kitty) 50
 	sudo update-alternatives --set x-terminal-emulator $$(which kitty)
