@@ -39,5 +39,5 @@
 ## Makefile
 
 - [] Fix install
-- [] Create install pattern
+- [] Create install test
 - [] Automatic UI setup investigation
