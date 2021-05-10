@@ -27,6 +27,7 @@ require('packer').startup(function()
 --   -- UI to select things (files, grep results, open buffers...)
   use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}} }
   use 'folke/tokyonight.nvim'         -- tokyonight power
+  -- use 'gaetan-puleo/tokyonight.nvim'         -- tokyonight power
   use 'hoob3rt/lualine.nvim'        -- Fancier statusline
   -- Add indentation guides even on blank lines
   use { 'lukas-reineke/indent-blankline.nvim', branch="lua" }
