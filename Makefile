@@ -38,7 +38,8 @@ help:
 minimal_setup: 
 	echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 
-zsh:	chsh -s $$(which zsh)
+zsh:	
+	chsh -s $$(which zsh)
 
 zgen:
 	# Install zgen (zsh plugin manager)
