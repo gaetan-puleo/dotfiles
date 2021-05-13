@@ -30,7 +30,7 @@ require('packer').startup(function()
   use 'folke/tokyonight.nvim'         -- tokyonight power
   use 'hoob3rt/lualine.nvim'        -- Fancier statusline
   -- Add indentation guides even on blank lines
-  use { 'lukas-reineke/indent-blankline.nvim', branch="lua" }
+  -- use { 'lukas-reineke/indent-blankline.nvim', branch="lua" }
   -- Add git related info in the signs columns and popups
   use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'} }
   use 'hrsh7th/nvim-compe'           -- Autocompletion plugin
@@ -62,7 +62,7 @@ require('plugins/commentary')
 require('plugins/compe')
 require('plugins/dashboard')
 require('plugins/gitsigns')
-require('plugins/indent-blankline')
+-- require('plugins/indent-blankline')
 -- require('plugins/kommentary')
 require('plugins/lsp-config')
 require('plugins/lspsaga')
