@@ -1,0 +1,15 @@
+name: tests-installations
+on: [push]
+jobs:
+  nvim: 
+    runs-on: ubuntu-20.04
+    name: 
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: modular
+          fetch-depth: 1
+      - run: bash "${GITHUB_WORKSPACE}/nvim/install.bash"
+        shell: bash
+      - run: bash "${GITHUB_WORKSPACE}/nvim/tests.bash"
+        shell: bash
