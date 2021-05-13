@@ -1,4 +1,8 @@
 #/bin/bash
 
+echo "SYMLINK DEBUG"
+# remove default folder kitty
+rm -rf ~/.config/kitty
+
 # link directory and print it
-ln -sfvn ~/dotfiles/kitty/kitty ~/.config/
+ln -sv ~/dotfiles/kitty/kitty ~/.config/

@@ -23,5 +23,3 @@ jobs:
           fetch-depth: 1
       - run: bash "${GITHUB_WORKSPACE}/kitty/install.bash"
         shell: bash
-      - run: bash "${GITHUB_WORKSPACE}/kitty/tests.bash"
-        shell: bash
