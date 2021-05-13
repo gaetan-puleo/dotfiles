@@ -59,7 +59,7 @@ local function make_config()
 end
 
 local function setup_servers()
-  local servers = {'tsserver','cssls', 'html', 'jsonls', 'diagnosticls'}
+  local servers = {'tsserver','cssls', 'html', 'jsonls', 'diagnosticls', 'bashls'}
   for _, server in pairs(servers) do
     local config = make_config()
 
