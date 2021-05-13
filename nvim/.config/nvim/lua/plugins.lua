@@ -21,13 +21,13 @@ require('packer').startup(function()
 	use 'windwp/nvim-spectre' 				 -- Search and Replace
   use 'sbdchd/neoformat'             -- code formatter
   use 'djoshea/vim-autoread'         -- vim autoread file after external write
-	use 'b3nj5m1n/kommentary' 				 -- add comments
+	use 'tpope/vim-commentary' 				 -- add comments
+	-- use 'b3nj5m1n/kommentary' 				 -- add comments
   use 'liuchengxu/vim-which-key'     -- never forget keybinding
   use 'AckslD/nvim-whichkey-setup.lua' -- which key for lua
 --   -- UI to select things (files, grep results, open buffers...)
   use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}} }
   use 'folke/tokyonight.nvim'         -- tokyonight power
-  -- use 'gaetan-puleo/tokyonight.nvim'         -- tokyonight power
   use 'hoob3rt/lualine.nvim'        -- Fancier statusline
   -- Add indentation guides even on blank lines
   use { 'lukas-reineke/indent-blankline.nvim', branch="lua" }
@@ -37,12 +37,12 @@ require('packer').startup(function()
   use 'PsychoLlama/further.vim'      -- Go to file with for nodejs and webpack
   use 'glepnir/dashboard-nvim'       -- Better start page
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use 'JoosepAlviste/nvim-ts-context-commentstring' -- Better comments for jsx, tsx, vue, html
+	use 'nvim-treesitter/playground'
+	use 'JoosepAlviste/nvim-ts-context-commentstring' -- Better comments for jsx, tsx, vue, html
   use 'windwp/nvim-ts-autotag'       -- auto rename Tag
   use 'metakirby5/codi.vim'       	 -- code runner
   use 'kyazdani42/nvim-tree.lua'     -- tree file
   use 'norcalli/nvim-colorizer.lua'  -- display color in your buffer
-	-- use 'romgrk/barbar.nvim' 					 -- display buffers name as tab
   use 'akinsho/nvim-bufferline.lua'  -- display buffers name as tab
   use 'kyazdani42/nvim-web-devicons' -- display icons
   -- LSP
@@ -57,13 +57,13 @@ end)
 
 -- require('plugins/ale')
 require('plugins/bufferline')
--- require('plugins/barbar')
 require('plugins/codi')
+require('plugins/commentary')
 require('plugins/compe')
 require('plugins/dashboard')
 require('plugins/gitsigns')
 require('plugins/indent-blankline')
-require('plugins/kommentary')
+-- require('plugins/kommentary')
 require('plugins/lsp-config')
 require('plugins/lspsaga')
 require('plugins/lualine')

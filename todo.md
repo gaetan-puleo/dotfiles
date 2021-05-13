@@ -11,7 +11,7 @@
 		if I close a buffer on bufferline, nvimtree open new buffer in new split
 		[issue](https://github.com/kyazdani42/nvim-tree.lua/issues/341)
 - [] fix neoformat bug (undojoin )
-- [] fix comment jsx
+- [x] fix comment jsx
 
 ### Keymaps
 
@@ -41,3 +41,15 @@
 - [] Fix install
 - [] Create install test
 - [] Automatic UI setup investigation
+
+## Kitty
+
+- [] add kitty config
+
+## global
+
+- [] set wallpaper for ubuntu
+- [] set font for terminal
+- [] set ui theme
+- [] set icon theme
+- [] set options ubuntu
