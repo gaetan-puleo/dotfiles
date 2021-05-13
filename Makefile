@@ -24,7 +24,7 @@ OFFICE_DEV := jq httpie libgtk-3-dev # dev deps
 # Node JS global packages
 NODE_PKGS := tsun	vscode-html-languageserver-bin vscode-css-languageserver-bin 
 NODE_PKGS += typescript typescript-language-server vscode-json-languageserver 
-NODE_PKGS += diagnostic-languageserver eslint_d yarn 
+NODE_PKGS += diagnostic-languageserver eslint_d yarn bash-language-server 
 
 # Packages
 INSTALL_CMD := sudo apt install -y
@@ -77,9 +77,10 @@ chrome:
 	$(INSTALL_CMD) google-chrome-stable
 
 stow:
-	stow -n -t ${HOME} nvim
-	stow -n -t ${HOME} git
-	stow -n -t ${HOME} zsh
+	stow -t ${HOME} nvim
+	stow -t ${HOME} git
+	stow -t ${HOME} zsh
+	stow -t ${HOME} kitty
 
 docker:
 	$(INSTALL_CMD) docker docker-compose

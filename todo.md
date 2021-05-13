@@ -44,12 +44,15 @@
 
 ## Kitty
 
-- [] add kitty config
+- [x] add kitty config
 
 ## global
-
+- [x] system specific folder 
 - [] set wallpaper for ubuntu
 - [] set font for terminal
 - [] set ui theme
 - [] set icon theme
 - [] set options ubuntu
+- [] modular config
+- [] add tests
+<!-- - [] modular stow -->
