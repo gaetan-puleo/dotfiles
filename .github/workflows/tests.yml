@@ -33,3 +33,13 @@ jobs:
           fetch-depth: 1
       - run: bash "${GITHUB_WORKSPACE}/fonts/install.bash"
         shell: bash
+  zsh: 
+    runs-on: ubuntu-20.04
+    name: 
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: modular
+          fetch-depth: 1
+      - run: bash "${GITHUB_WORKSPACE}/zsh/install.bash"
+        shell: bash
