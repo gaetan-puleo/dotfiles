@@ -8,7 +8,7 @@ fi
 
 # navigate without cd
 setopt auto_cd
-HISTFILE=~/.zsh_history
+HISTFILE=~/.cache/zsh/.zsh_history
 HISTSIZE=10000
 SAVEHIST=500
 setopt hist_ignore_all_dups # remove older duplicate entries from history
