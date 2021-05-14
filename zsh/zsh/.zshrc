@@ -21,7 +21,7 @@ source $HOME/.config/zsh/zshconfig.zsh
 source $HOME/.config/zsh/aliases.zsh
 source $HOME/.config/zsh/variables.zsh
 source $HOME/.config/zsh/last_dir.zsh
-source $HOME/zsh-lazyload/zsh-lazyload.zsh
+# source $HOME/zsh-lazyload/zsh-lazyload.zsh
 lazyload fnm node yarn npm -- 'source $HOME/.config/zsh/fnm.zsh'
 source $HOME/.config/zsh/zgen.zsh
 # zprof
