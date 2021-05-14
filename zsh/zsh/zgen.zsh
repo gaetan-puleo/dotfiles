@@ -4,7 +4,6 @@ source "${HOME}/.zgenom/zgenom.zsh"
 if ! zgenom saved; then
 
 	# specify plugins here
-	zgenom load mdumitru/last-working-dir
 	zgenom load djui/alias-tips
 	zgenom load zsh-users/zsh-autosuggestions
 	# zgen oh-my-zsh plugins/command-not-found
