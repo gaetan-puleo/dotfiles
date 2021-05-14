@@ -26,3 +26,5 @@ zstyle ':completion:*:manuals.*'  insert-sections   true
 zstyle ':completion:*:man:*'      menu yes select
 bindkey '^[[3~' delete-char
 bindkey '^[3;5~' delete-char
+
+export HISTCONTROL=ignoreboth # remove duplicate entries in history

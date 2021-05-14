@@ -2,4 +2,4 @@
 
 # link directory and print it
 ln -sfv ~/dotfiles/zsh/zsh ~/.config/
-ln -sfv ~/dotfiles/.zshrc ~/.config/.zshrc
+# ln -sfv ~/dotfiles/zsh/zsh/.zshrc ~/.config/.zshrc

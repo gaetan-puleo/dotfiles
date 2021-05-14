@@ -1,3 +1,6 @@
+.zcompdump
 .uuid
 plugged
 plugin
+node_modules
+.gitconfig_local

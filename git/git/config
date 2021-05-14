@@ -2,7 +2,7 @@
       # These values are set in ~/.gitconfig_local
 
 [core]
-  excludesfile = ~/.gitignore_global
+  excludesfile = ~/.config/git/.gitignore_global
 
 [alias]
   ; alias  = "! git config --get-regexp ^alias\."
@@ -16,4 +16,4 @@
   co = checkout
   cm = commit -m
 [include]
-  path = ~/.gitconfig_local
+  path = ~/.config/git/.gitconfig_local
