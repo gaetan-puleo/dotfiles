@@ -1,8 +1,16 @@
 local map = vim.api.nvim_set_keymap
 
 require'bufferline'.setup{
-  separator_style = "slant",
-  mappings = true,
+	options = {
+		-- separator_style = "thick",
+		mappings = true,
+		offsets = {{filetype = "NvimTree", text = "File Explorer", highlight = "Directory", text_align = "left"}},
+		always_show_bufferline = false,
+		diagnostics = "nvim_lsp",
+		diagnostics_indicator = function(count, level, diagnostics_dict)
+			return "("..count..")"
+		end
+	}
 }
 
 map('n', '<leader>1', ':lua require"bufferline".go_to_buffer(1)<CR>', {})
