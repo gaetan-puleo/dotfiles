@@ -16,7 +16,6 @@ map('n', 'k', 'gk', {noremap = true, silent = true})
 map('v', 'i', 'I', {noremap = true, silent = true})
 
 -- Change splits faster
-map('n', 'h', '<C-w>h', {noremap = true, silent = true})
 map('n', '<leader>h', '<C-w>h', {noremap = true, silent = true})
 map('n', '<leader>j', '<C-w>j', {noremap = true, silent = true})
 map('n', '<leader>k', '<C-w>k', {noremap = true, silent = true})

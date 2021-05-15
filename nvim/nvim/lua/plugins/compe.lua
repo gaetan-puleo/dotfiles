@@ -15,16 +15,16 @@ require'compe'.setup {
   documentation = true;
 
   source = {
-    path = true;
-    buffer = true;
+    path = { priority = 10;};
+    buffer = { priority = 20 };
     calc = false;
-    vsnip = false;
-    nvim_lsp = true;
-    nvim_lua = true;
+    vsnip = { priority = 100;};
+    nvim_lsp = { priority = 90 };
+    nvim_lua = { priority = 30 };
     spell = false;
     tags = false;
-    snippets_nvim = true;
-    treesitter = true;
+    snippets_nvim = false;
+    treesitter = { priority = 80; };
   };
 }
 
@@ -63,6 +63,7 @@ end
 
 
 vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("i", "<CR>", "compe#confirm('<CR>')", {expr = true, silent = true})
 vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})

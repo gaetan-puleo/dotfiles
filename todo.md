@@ -10,7 +10,7 @@
 - [] nvimtree bug
 		if I close a buffer on bufferline, nvimtree open new buffer in new split
 		[issue](https://github.com/kyazdani42/nvim-tree.lua/issues/341)
-- [] fix neoformat bug (undojoin )
+- [x] fix neoformat bug (undojoin )
 - [x] fix comment jsx
 
 ### Keymaps

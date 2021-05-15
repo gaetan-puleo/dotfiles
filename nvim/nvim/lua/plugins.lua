@@ -34,6 +34,9 @@ require('packer').startup(function()
   -- Add git related info in the signs columns and popups
   use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'} }
   use 'hrsh7th/nvim-compe'           -- Autocompletion plugin
+	use 'hrsh7th/vim-vsnip'
+	use 'hrsh7th/vim-vsnip-integ'
+	use 'rafamadriz/friendly-snippets'
   use 'PsychoLlama/further.vim'      -- Go to file with for nodejs and webpack
   use 'glepnir/dashboard-nvim'       -- Better start page
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
@@ -52,6 +55,7 @@ require('packer').startup(function()
   use 'simrat39/symbols-outline.nvim' -- display symbols
   use 'gaetan-puleo/hi-common-groups' -- theme groups
   use 'onsails/lspkind-nvim'         -- add vscode like icons in completion menu
+	use 'folke/trouble.nvim'
 end)
 
 
@@ -76,5 +80,6 @@ require('plugins/sneak')
 require('plugins/symbols-outline')
 require('plugins/telescope')
 require('plugins/treesitter')
+require('plugins/trouble')
 --Set colorscheme (order is important here)
 vim.cmd[[colorscheme tokyonight]]
