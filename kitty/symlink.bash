@@ -1,8 +1,8 @@
 #/bin/bash
+CURR_PATH=$(dirname $(realpath ${BASH_SOURCE[0]}))
 
-echo "SYMLINK DEBUG"
 # remove default folder kitty
 rm -rf ~/.config/kitty
 
 # link directory and print it
-ln -sv "${DOTPATH}/kitty/kitty" ~/.config/
+ln -sfv "${CURR_PATH}/kitty" ~/.config/

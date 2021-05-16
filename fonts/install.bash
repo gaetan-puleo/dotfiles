@@ -1,3 +1,4 @@
 #/bin/bash
+CURR_PATH=$(dirname $(realpath ${BASH_SOURCE[0]}))
 
-source "${DOTPATH}/fonts/symlink.bash"
+bash "${CURR_PATH}/symlink.bash"

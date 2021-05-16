@@ -1,8 +1,8 @@
 #/bin/bash
-export DOTPATH="$(dirname $(realpath $0))"
+CURR_PATH=$(dirname $(realpath ${BASH_SOURCE[0]}))
 
-source "${DOTPATH}/git/install.bash"
-source "${DOTPATH}/kitty/install.bash"
-source "${DOTPATH}/fonts/install.bash"
-source "${DOTPATH}/nvim/install.bash"
-source "${DOTPATH}/zsh/install.bash"
+bash "${CURR_PATH}/git/install.bash"
+bash "${CURR_PATH}/kitty/install.bash"
+bash "${CURR_PATH}/fonts/install.bash"
+bash "${CURR_PATH}/nvim/install.bash"
+bash "${CURR_PATH}/zsh/install.bash"
