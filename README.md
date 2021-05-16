@@ -6,7 +6,7 @@
 ```bash
 mkdir ~/dotfiles
 cd ~/dotfiles
-git clone <repo link>
+git clone https://github.com/gaetan-puleo/dotfiles.git
 
 makefile all
 ```
