@@ -6,4 +6,4 @@ sudo apt-get update
 sudo apt-get install -y neovim
 
 # create a symlink
-source "$(dirname "$0")/symlink.bash"
+source "${DOTPATH}/nvim/symlink.bash"

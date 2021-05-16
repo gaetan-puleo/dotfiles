@@ -1,7 +1,8 @@
 #/bin/bash
+export DOTPATH="$(dirname $(realpath $0))"
 
-source "$(dirname "$0")/git/install.bash"
-source "$(dirname "$0")/kitty/install.bash"
-source "$(dirname "$0")/fonts/install.bash"
-source "$(dirname "$0")/nvim/install.bash"
-source "$(dirname "$0")/zsh/install.bash"
+source "${DOTPATH}/git/install.bash"
+source "${DOTPATH}/kitty/install.bash"
+source "${DOTPATH}/fonts/install.bash"
+source "${DOTPATH}/nvim/install.bash"
+source "${DOTPATH}/zsh/install.bash"

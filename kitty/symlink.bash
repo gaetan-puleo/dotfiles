@@ -5,4 +5,4 @@ echo "SYMLINK DEBUG"
 rm -rf ~/.config/kitty
 
 # link directory and print it
-ln -sv ~/dotfiles/kitty/kitty ~/.config/
+ln -sv "${DOTPATH}/kitty/kitty" ~/.config/

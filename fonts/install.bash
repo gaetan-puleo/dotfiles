@@ -1,3 +1,3 @@
 #/bin/bash
 
-source "$(dirname "$0")/symlink.bash"
+source "${DOTPATH}/fonts/symlink.bash"
