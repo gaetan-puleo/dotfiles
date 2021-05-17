@@ -6,8 +6,8 @@
 ### Bugs Fix
 
 - [x] Comment in visual code is hard to do
-- [] I want multiline comment for visual mode for JSX
-- [] nvimtree bug
+- [] I want multiline comment for visual mode for JSX (https://github.com/b3nj5m1n/kommentary/issues/11)
+- [x] nvimtree bug
 		if I close a buffer on bufferline, nvimtree open new buffer in new split
 		[issue](https://github.com/kyazdani42/nvim-tree.lua/issues/341)
 - [x] fix neoformat bug (undojoin )
@@ -22,7 +22,7 @@
 - [] which key lua pluggins
 - [] create new window
 ### Dashboard 
-- [] Choose action to display on start screen
+- [x] Choose action to display on start screen
 
 ### Theme 
 - [] Make sure to have same JSX and TSX colors
@@ -36,11 +36,11 @@
 - [] Create a tokyonight window border theme
 - [] Create UI theme
 
-## Makefile
+<!-- ## Makefile
 
 - [] Fix install
 - [] Create install test
-- [] Automatic UI setup investigation
+- [] Automatic UI setup investigation -->
 
 ## Kitty
 
@@ -48,7 +48,7 @@
 
 ## global
 - [x] system specific folder 
-- [] set wallpaper for ubuntu
+- [x] set wallpaper for ubuntu
 - [] set font for terminal
 - [] set ui theme
 - [] set icon theme

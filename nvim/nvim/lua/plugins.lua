@@ -14,72 +14,63 @@ vim.api.nvim_exec([[
   augroup end
 ]], false)
 
-local use = require('packer').use
-require('packer').startup(function()
-  use 'wbthomason/packer.nvim'       -- Package manager
-  use 'antoinemadec/FixCursorHold.nvim' -- fix cursor for nvim
-	use 'windwp/nvim-spectre' 				 -- Search and Replace
-  use 'sbdchd/neoformat'             -- code formatter
-  use 'djoshea/vim-autoread'         -- vim autoread file after external write
-	use 'tpope/vim-commentary' 				 -- add comments
-	-- use 'b3nj5m1n/kommentary' 				 -- add comments
-  use 'liuchengxu/vim-which-key'     -- never forget keybinding
-  use 'AckslD/nvim-whichkey-setup.lua' -- which key for lua
---   -- UI to select things (files, grep results, open buffers...)
-  use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}} }
-  use 'folke/tokyonight.nvim'         -- tokyonight power
-  use 'hoob3rt/lualine.nvim'        -- Fancier statusline
-  -- Add indentation guides even on blank lines
-  -- use { 'lukas-reineke/indent-blankline.nvim', branch="lua" }
-  -- Add git related info in the signs columns and popups
-  use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'} }
-  use 'hrsh7th/nvim-compe'           -- Autocompletion plugin
-	use 'hrsh7th/vim-vsnip'
-	use 'hrsh7th/vim-vsnip-integ'
-	use 'rafamadriz/friendly-snippets'
-  use 'PsychoLlama/further.vim'      -- Go to file with for nodejs and webpack
-  use 'glepnir/dashboard-nvim'       -- Better start page
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-	use 'nvim-treesitter/playground'
-	use 'JoosepAlviste/nvim-ts-context-commentstring' -- Better comments for jsx, tsx, vue, html
-  use 'windwp/nvim-ts-autotag'       -- auto rename Tag
-  use 'metakirby5/codi.vim'       	 -- code runner
-  use 'kyazdani42/nvim-tree.lua'     -- tree file
-  use 'norcalli/nvim-colorizer.lua'  -- display color in your buffer
-  use 'akinsho/nvim-bufferline.lua'  -- display buffers name as tab
-  use 'kyazdani42/nvim-web-devicons' -- display icons
-  -- LSP
-  use 'neovim/nvim-lspconfig' -- native lsp config
-	use 'justinmk/vim-sneak' -- motion 
-  use 'glepnir/lspsaga.nvim' -- Better lsp integration
-  use 'simrat39/symbols-outline.nvim' -- display symbols
-  use 'gaetan-puleo/hi-common-groups' -- theme groups
-  use 'onsails/lspkind-nvim'         -- add vscode like icons in completion menu
-	use 'folke/trouble.nvim'
+local packages = {
+	-- Package manager
+	{name = 'wbthomason/packer.nvim'},
+
+	-- fix cursor for nvim
+	{name = 'antoinemadec/FixCursorHold.nvim'},
+	{name = 'nvim-lua/popup.nvim'},
+	{name = 'nvim-lua/plenary.nvim'},
+	{name = 'windwp/nvim-spectre', configFile = 'plugins/nvim-spectre'},
+	{name = 'bdchd/neoformat', configFile = 'plugins/neoformat'},
+	{name = 'djoshea/vim-autoread'},
+	{name = 'tpope/vim-commentary', configFile = 'plugins/commentary'},
+	{name = 'liuchengxu/vim-which-key', configFile = 'plugins/nvim-whichkey-setup'},
+	{name = 'AckslD/nvim-whichkey-setup.lua'},
+	{name = 'nvim-telescope/telescope.nvim', configFile = 'plugins/telescope'},
+	{name = 'folke/tokyonight.nvim'},
+	{name = 'hoob3rt/lualine.nvim', configFile = 'plugins/lualine'},
+	{name = 'lewis6991/gitsigns.nvim', configFile = 'plugins/gitsigns'},
+	{name = 'hrsh7th/nvim-compe', configFile = 'plugins/compe'},
+	{name = 'hrsh7th/vim-vsnip'},
+	{name = 'hrsh7th/vim-vsnip-integ'},
+	-- {name = 'rafamadriz/friendly-snippets'},
+	{name = 'glepnir/dashboard-nvim', configFile = 'plugins/dashboard'},
+	{name = 'nvim-treesitter/nvim-treesitter', configFile = 'plugins/treesitter', packerOptions = {run = ':TSUpdate'}},
+	-- {name = 'nvim-treesitter/playground'},
+	{name = 'JoosepAlviste/nvim-ts-context-commentstring'},
+	{name = 'windwp/nvim-ts-autotag'},
+	{name = 'kyazdani42/nvim-tree.lua', configFile = 'plugins/nvim-tree'},
+	{name = 'norcalli/nvim-colorizer.lua', configFile = 'plugins/nvim-colorizer'},
+	{name = 'akinsho/nvim-bufferline.lua', configFile = 'plugins/bufferline'},
+	{name = 'kyazdani42/nvim-web-devicons'},
+	{name = 'neovim/nvim-lspconfig', configFile = 'plugins/lsp-config'},
+	-- {name = 'justinmk/vim-sneak', configFile = 'plugins/sneak'},
+	{name = 'glepnir/lspsaga.nvim', configFile = 'plugins/lspsaga'},
+	-- {name = 'simrat39/symbols-outline.nvim', configFile = 'plugins/symbols-outline'},
+	{name = 'onsails/lspkind-nvim', configFile = 'plugins/lspkind'},
+	{name = 'xabikos/vscode-react'},
+	-- {name = 'dsznajder/vscode-es7-javascript-react-snippets'} -- vscode react snippet
+	-- {name = 'folke/trouble.nvim', configFile = 'plugins/trouble'},
+}
+
+require('packer').startup(function(use)
+	for key, value in pairs(packages) do
+		local pkg = {}
+		pkg[1] = value.name
+		
+		if value.packerOption then
+			pkg = {pkg[1],unpack(value.packerOptions)}
+		end
+		use(pkg)
+	end 
+
+	for key, value in pairs(packages) do
+		if value.configFile then
+			require(value.configFile)
+		end
+	end 
 end)
 
-
--- require('plugins/ale')
-require('plugins/bufferline')
-require('plugins/codi')
-require('plugins/commentary')
-require('plugins/compe')
-require('plugins/dashboard')
-require('plugins/gitsigns')
--- require('plugins/indent-blankline')
--- require('plugins/kommentary')
-require('plugins/lsp-config')
-require('plugins/lspsaga')
-require('plugins/lualine')
-require('plugins/neoformatter')
-require('plugins/nvim-colorizer')
-require('plugins/nvim-spectre')
-require('plugins/nvim-tree')
-require('plugins/nvim-whichkey-setup')
-require('plugins/sneak')
-require('plugins/symbols-outline')
-require('plugins/telescope')
-require('plugins/treesitter')
-require('plugins/trouble')
---Set colorscheme (order is important here)
 vim.cmd[[colorscheme tokyonight]]

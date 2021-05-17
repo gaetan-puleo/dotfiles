@@ -15,16 +15,16 @@ require'compe'.setup {
   documentation = true;
 
   source = {
-    path = { priority = 10;};
-    buffer = { priority = 20 };
+    path = false;
+    buffer = false;
     calc = false;
     vsnip = { priority = 100;};
-    nvim_lsp = { priority = 90 };
-    nvim_lua = { priority = 30 };
+    nvim_lsp = { priority = 40 };
+    nvim_lua = false;
     spell = false;
     tags = false;
     snippets_nvim = false;
-    treesitter = { priority = 80; };
+    treesitter = false;
   };
 }
 

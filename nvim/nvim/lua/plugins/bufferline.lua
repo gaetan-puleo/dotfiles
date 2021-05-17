@@ -2,7 +2,7 @@ local map = vim.api.nvim_set_keymap
 
 require'bufferline'.setup{
 	options = {
-		-- separator_style = "thick",
+		-- separator_style = "slant",
 		mappings = true,
 		offsets = {{filetype = "NvimTree", text = "File Explorer", highlight = "Directory", text_align = "left"}},
 		always_show_bufferline = false,
