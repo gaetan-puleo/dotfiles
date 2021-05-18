@@ -12,7 +12,7 @@ echo "Set dock to bottom ----------------------"
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
 
 echo "Set dock icon size ----------------------"
-gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon 28
+gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 28
 # Install packages
 
 echo "Install packages ----------------------"
