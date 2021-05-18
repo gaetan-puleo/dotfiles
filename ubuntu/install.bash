@@ -26,5 +26,5 @@ sudo apt-get install -y gcc \
 	gimp gimp-plugin-registry \
 	libreoffice-calc libreoffice-writer \
 	blender inkscape \
-	ripgrep
-
+	ripgrep \
+	autoconf automake  pkg-config

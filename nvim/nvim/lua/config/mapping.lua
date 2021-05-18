@@ -27,3 +27,7 @@ map('n', 'Q', '<NOP>', {noremap = true, silent = true})
 map('n', 'q/', '<NOP>', {noremap = true, silent = true})
 map('n', 'q?', '<NOP>', {noremap = true, silent = true}) ]]
 
+
+map('n', '<leader><leader>', ':e# <CR>', {noremap = true, silent = true})
+map('n', '<leader>\\', ':vs <CR>', {noremap = true, silent = true})
+map('n', '<leader>-', ':sp <CR>', {noremap = true, silent = true})

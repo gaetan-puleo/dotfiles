@@ -51,6 +51,7 @@ local packages = {
 	-- {name = 'simrat39/symbols-outline.nvim', configFile = 'plugins/symbols-outline'},
 	{name = 'onsails/lspkind-nvim', configFile = 'plugins/lspkind'},
 	{name = 'xabikos/vscode-react'},
+	{name = 'christoomey/vim-tmux-navigator', configFile = 'plugins/tmux-navigator'},
 	-- {name = 'dsznajder/vscode-es7-javascript-react-snippets'} -- vscode react snippet
 	-- {name = 'folke/trouble.nvim', configFile = 'plugins/trouble'},
 }
