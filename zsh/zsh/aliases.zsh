@@ -11,6 +11,7 @@ alias tmux="tmux new -As1"
 alias dot="cd $HOME/dotfiles"
 alias md='mkdir -p'
 alias nuke='rm -rf'
+alias t='todo-txt'
 
 fzfvim() {
   vim $(fzf -m --query=$1)

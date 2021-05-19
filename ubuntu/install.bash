@@ -22,6 +22,7 @@ sudo apt-get install -y gcc \
 	tar \
 	curl \
 	jq \
+	todotxt-cli \
 	httpie \
 	gimp gimp-plugin-registry \
 	libreoffice-calc libreoffice-writer \
