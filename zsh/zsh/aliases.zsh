@@ -1,6 +1,7 @@
 alias g="git"
 alias nvm="echo 'nvm is an alias for fnm' && fnm"
 alias vim="nvim"
+alias tmux="tmux new -As1"
 # alias pstart="sleep 1500 && notify-send -t 0 'take a break'"
 # alias ppause="sleep 300 && notify-send -t 0 'go to work'"
 # alias hs='history | grep'
@@ -10,10 +11,6 @@ alias vim="nvim"
 alias dot="cd $HOME/dotfiles"
 alias md='mkdir -p'
 alias nuke='rm -rf'
-
-
-# productivity aliases
-alias dot="cd $HOME/dotfiles"
 
 fzfvim() {
   vim $(fzf -m --query=$1)

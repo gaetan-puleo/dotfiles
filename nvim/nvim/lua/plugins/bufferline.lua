@@ -2,10 +2,10 @@ local map = vim.api.nvim_set_keymap
 
 require'bufferline'.setup{
 	options = {
-		-- separator_style = "slant",
+		separator_style = "slant",
 		mappings = true,
-		offsets = {{filetype = "NvimTree", text = "File Explorer", highlight = "Directory", text_align = "left"}},
-		always_show_bufferline = false,
+		-- offsets = {{filetype = "NvimTree", text = "File Explorer", highlight = "Directory", text_align = "left"}},
+		always_show_bufferline = true,
 		diagnostics = "nvim_lsp",
 		diagnostics_indicator = function(count, level, diagnostics_dict)
 			return "("..count..")"

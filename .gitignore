@@ -4,3 +4,6 @@ plugged
 plugin
 node_modules
 .gitconfig_local
+
+tmux/.tmux/plugins
+tmux/.tmux/resurrect
