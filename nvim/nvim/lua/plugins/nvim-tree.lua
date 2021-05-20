@@ -16,12 +16,14 @@ vim.g.nvim_tree_bindings = {
   ["p"]              = tree_cb("paste"),
 }
 
-map('n', '<leader>fe', ':NvimTreeToggle<CR>', {})
-map('n', '<leader>fs', ':NvimTreeFindFile<CR>', {})
+-- map('n', '<leader>fe', ':NvimTreeToggle<CR>', {})
+-- map('n', '<leader>fs', ':NvimTreeFindFile<CR>', {})
 
 vim.g['nvim_tree_disable_netrw'] = 1 -- disable netrw
 vim.g['nvim_tree_hijack_netrw'] = 1 -- use nvim-tree vhen typing `nvim` or `nvim .`
-
+vim.g['nvim_tree_lsp_diagnostics'] = 1 -- show lsp diagnostic
+vim.g['nvim_tree_auto_close'] = 1 -- close if last window
+vim.g['nvim_tree_git_hl'] = 1 -- highlight open
 vim.g['nvim_tree_show_icons'] = {
   git = 1,
   folders = 1,

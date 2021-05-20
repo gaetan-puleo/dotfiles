@@ -21,7 +21,7 @@ require'compe'.setup {
     vsnip = { priority = 100;};
     nvim_lsp = { priority = 40 };
     nvim_lua = false;
-    spell = false;
+    spell = true;
     tags = false;
     snippets_nvim = false;
     treesitter = false;

@@ -37,6 +37,9 @@ local map = vim.api.nvim_set_keymap
 -- server_filetype_map = {}
 
 saga.init_lsp_saga {
+	finder_action_keys = {
+		open = '<cr>', vsplit = 's',split = 'i',quit = 'q',scroll_down = '<C-f>', scroll_up = '<C-b>' -- quit can be a table
+	},
   code_action_icon = '',
   code_action_prompt = {
     enable = true,
@@ -46,9 +49,12 @@ saga.init_lsp_saga {
   },
 }
 
-
-map('n','gh', '<cmd>lua require(\'lspsaga.provider\').lsp_finder()<CR>', { silent = true})
-map('n','ca', '<cmd>lua require(\'lspsaga.codeaction\').code_action()<CR>', { silent = true})
-map('v','ca', '<cmd>lua require(\'lspsaga.codeaction\').range_code_action()<CR>', { silent = true})
-map('n','K', '<cmd>lua require(\'lspsaga.hover\').render_hover_doc()<CR>', { silent = true})
-map('n','gR', '<cmd>lua require(\'lspsaga.rename\').rename()<CR>', { silent = true})
+vim.lsp.buf.code_action = require('lspsaga.codeaction').code_action
+vim.lsp.buf.hover = require('lspsaga.hover').render_hover_doc
+vim.lsp.buf.rename = require('lspsaga.rename').rename
+-- map('n','gh', '<cmd>lua require(\'lspsaga.provider\').lsp_finder()<CR>', { silent = true})
+-- map('n','ca', '<cmd>lua require(\'lspsaga.codeaction\').code_action()<CR>', { silent = true})
+-- map('v','ca', '<cmd>lua require(\'lspsaga.codeaction\').range_code_action()<CR>', { silent = true})
+-- map('n','K', '<cmd>lua require(\'lspsaga.hover\').render_hover_doc()<CR>', { silent = true})
+-- map('n','gR', '<cmd>lua require(\'lspsaga.rename\').rename()<CR>', { silent = true})
+-- map('n','gs', '<cmd>lua require(\'lspsaga.signaturehelp\').signature_help()<CR>', { silent = true})
