@@ -35,6 +35,7 @@ wk.register({
 		b = {
 			name = '+Buffers',
 			l = {"<cmd>lua require('telescope.builtin').buffers()<cr>", "List buffers"},
+			-- l = {"<cmd>JABSOpen<cr>", "List buffers"},
 			f = {"<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>", "Search in current buffer"},
 		},
 		t = {

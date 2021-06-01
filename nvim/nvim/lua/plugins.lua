@@ -18,6 +18,7 @@ local packages = {
     -- Package manager
     {packer = {'wbthomason/packer.nvim'}},
     -- fix cursor for nvim
+    -- {packer = {'matbme/JABS.nvim'}},
     {packer = {'antoinemadec/FixCursorHold.nvim'}},
     {packer = {'nvim-lua/popup.nvim'}},
     {packer = {'nvim-lua/plenary.nvim'}},
