@@ -1,9 +1,27 @@
-.zcompdump
 .uuid
-plugged
-plugin
 node_modules
-.gitconfig_local
 
+# zsh
+zsh/zsh/.zcompdump
+
+# nvim
+nvim/nvim/plugged
+nvim/nvim/plugin
+
+# tmux
 tmux/.tmux/plugins
 tmux/.tmux/resurrect
+
+# git
+git/git/.gitconfig_local
+
+# fish
+
+fish/fish/*
+!fish/fish/aliases.fish
+!fish/fish/config.fish
+!fish/fish/fish_plugins
+!fish/fish/tokyonight.fish
+
+fish/fish/functions/*
+

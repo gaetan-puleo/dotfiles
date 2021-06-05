@@ -59,7 +59,8 @@ local packages = {
 		{packer = {'tpope/vim-dispatch'}}, -- Run in new buffer
 		{packer = {'folke/zen-mode.nvim'}, configFile = 'plugins/zen-mode'}, -- Zen mode
 		{packer = {'michaelb/sniprun', run = 'bash ./install.sh'}, configFile = 'plugins/sniprun'},
-		{packer = {'yardnsm/vim-import-cost', run = 'npm install'}, configFile = 'plugins/import-cost'},
+		-- {packer = {'vijaymarupudi/fzf.vim'}, configFile = 'plugins/fzf'}
+		-- {packer = {'yardnsm/vim-import-cost', run = 'npm install'}, configFile = 'plugins/import-cost'},
 		-- {packer = {'pianocomposer321/yabs.nvim'}, configFile = 'plugins/yabs'}
 }
 
