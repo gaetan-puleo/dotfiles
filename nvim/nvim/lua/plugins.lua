@@ -18,6 +18,9 @@ local packages = {
     -- Package manager
     {packer = {'wbthomason/packer.nvim'}},
     -- fix cursor for nvim
+		-- {name = 'folke/tokyonight.nvim'},
+		{packer = {'gaetan-puleo/tokyonight.nvim'}},
+		-- {name = '~/dev/tokyonight.nvim'},
     -- {packer = {'matbme/JABS.nvim'}},
     {packer = {'antoinemadec/FixCursorHold.nvim'}},
     {packer = {'nvim-lua/popup.nvim'}},
@@ -32,9 +35,6 @@ local packages = {
     {packer = {'nvim-telescope/telescope.nvim'}, configFile = 'plugins/telescope'},
 		{packer = {'PsychoLlama/further.vim'}},
 
-		-- {name = 'folke/tokyonight.nvim'},
-		{packer = {'gaetan-puleo/tokyonight.nvim'}},
-		-- {name = '~/dev/tokyonight.nvim'},
     {packer = {'hoob3rt/lualine.nvim'}, configFile = 'plugins/lualine'},
     {packer = {'lewis6991/gitsigns.nvim'}, configFile = 'plugins/gitsigns'},
     {packer = {'hrsh7th/nvim-compe'}, configFile = 'plugins/compe'},
