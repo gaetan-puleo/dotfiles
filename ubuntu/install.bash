@@ -28,5 +28,4 @@ sudo apt-get install -y gcc \
 	libreoffice-calc libreoffice-writer \
 	blender inkscape \
 	ripgrep \
-	autoconf automake  pkg-config \
-	fzf
+	autoconf automake  pkg-config
