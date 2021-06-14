@@ -15,7 +15,7 @@ require'compe'.setup {
   documentation = true;
 
   source = {
-    path = false;
+    path = {priority = 20};
     buffer = false;
     calc = false;
     vsnip = { priority = 100;};
