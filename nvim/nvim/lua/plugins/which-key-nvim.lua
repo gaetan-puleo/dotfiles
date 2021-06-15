@@ -5,11 +5,11 @@ wk.register({
 		a = {'<cmd>lua vim.lsp.buf.code_action()<CR>', 'Show code actions'}
 	},
 	g = {
-		d = {'<Cmd>lua vim.lsp.buf.definition()<CR>', 'Go to definition'},
-		t = {'<cmd>lua vim.lsp.buf.type_definition()<CR>', "Go to type definition" },
-		r = {'<cmd>lua require(\'lspsaga.provider\').lsp_finder()<CR>', 'Show references'},
-		R = {"<cmd>lua vim.lsp.buf.rename()<CR>", "Rename references"},
-		s = {"<cmd>lua vim.lsp.buf.signature_help()<CR>", "Show signature"},
+		-- d = {'<Cmd>lua vim.lsp.buf.definition()<CR>', 'Go to definition'},
+		-- t = {'<cmd>lua vim.lsp.buf.type_definition()<CR>', "Go to type definition" },
+		-- r = {'<cmd>lua require(\'lspsaga.provider\').lsp_finder()<CR>', 'Show references'},
+		-- R = {"<cmd>lua vim.lsp.buf.rename()<CR>", "Rename references"},
+		-- s = {"<cmd>lua vim.lsp.buf.signature_help()<CR>", "Show signature"},
 	},
 	['<leader>'] = {
 		['/'] = 'Comment',

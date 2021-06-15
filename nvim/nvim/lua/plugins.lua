@@ -14,64 +14,110 @@ vim.api.nvim_exec([[
   augroup end
 ]], false)
 
-local packages = {
-    -- Package manager
-    {packer = {'wbthomason/packer.nvim'}},
-    -- fix cursor for nvim
-		-- {name = 'folke/tokyonight.nvim'},
-		{packer = {'gaetan-puleo/tokyonight.nvim'}},
-		-- {name = '~/dev/tokyonight.nvim'},
-    -- {packer = {'matbme/JABS.nvim'}},
-    {packer = {'antoinemadec/FixCursorHold.nvim'}},
-    {packer = {'nvim-lua/popup.nvim'}},
-    {packer = {'nvim-lua/plenary.nvim'}},
-    {packer = {'windwp/nvim-spectre'}, configFile = 'plugins/nvim-spectre'},
-    {packer = {'sbdchd/neoformat'}, configFile = 'plugins/neoformat'},
-    {packer = {'djoshea/vim-autoread'}},
-    {packer = 'tpope/vim-commentary', configFile = 'plugins/commentary'},
-		{packer = {'lewis6991/spellsitter.nvim'}, configFile = 'plugins/spellsitter'},
-		{packer = {'tpope/vim-fugitive'}},
-    {packer = {'folke/which-key.nvim'}, configFile = 'plugins/which-key-nvim'},
-    {packer = {'nvim-telescope/telescope.nvim'}, configFile = 'plugins/telescope'},
-		{packer = {'PsychoLlama/further.vim'}},
+require('packer').startup(function()
+  use 'wbthomason/packer.nvim' -- packager for neovim
+  use 'gaetan-puleo/tokyonight.nvim' -- Theme
+  use 'antoinemadec/FixCursorHold.nvim'
+  use 'nvim-lua/popup.nvim' 
+  use 'nvim-lua/plenary.nvim'
+  use('sbdchd/neoformat') -- Formatter
+  use 'djoshea/vim-autoread' -- Autoread file
+  use 'RishabhRD/popfix'
 
-    {packer = {'hoob3rt/lualine.nvim'}, configFile = 'plugins/lualine'},
-    {packer = {'lewis6991/gitsigns.nvim'}, configFile = 'plugins/gitsigns'},
-    {packer = {'hrsh7th/nvim-compe'}, configFile = 'plugins/compe'},
-    {packer = {'hrsh7th/vim-vsnip'}},
-    {packer = {'hrsh7th/vim-vsnip-integ'}},
-		{packer = {'glepnir/dashboard-nvim'}, configFile = 'plugins/dashboard'},
-    {packer = {'nvim-treesitter/nvim-treesitter',run = ':TSUpdate'}, configFile = 'plugins/treesitter'},
-    {packer = {'JoosepAlviste/nvim-ts-context-commentstring'}},
-    {packer = {'windwp/nvim-ts-autotag'}},
-    {packer = {'kyazdani42/nvim-tree.lua'}, configFile = 'plugins/nvim-tree'},
-    {packer = {'norcalli/nvim-colorizer.lua'}, configFile = 'plugins/nvim-colorizer'},
-    {packer = {'akinsho/nvim-bufferline.lua'}, configFile = 'plugins/bufferline'},
-    {packer = {'kyazdani42/nvim-web-devicons'}},
-    {packer = {'neovim/nvim-lspconfig'}, configFile = 'plugins/lsp-config'},
-		{packer = {'RishabhRD/popfix'}},
-    -- {name = 'justinmk/vim-sneak', configFile = 'plugins/sneak'},
-    {packer = {'glepnir/lspsaga.nvim'}, configFile = 'plugins/lspsaga'},
-    {packer = {'onsails/lspkind-nvim'}, configFile = 'plugins/lspkind'},
-    {packer = {'xabikos/vscode-react'}},
-    {packer = {'christoomey/vim-tmux-navigator'}, configFile = 'plugins/tmux-navigator'},
- 		{packer = {"janko/vim-test"}, configFile = 'plugins/vim-test'},
-		{packer = {'tpope/vim-dispatch'}}, -- Run in new buffer
-		{packer = {'folke/zen-mode.nvim'}, configFile = 'plugins/zen-mode'}, -- Zen mode
-		{packer = {'michaelb/sniprun', run = 'bash ./install.sh'}, configFile = 'plugins/sniprun'},
-		-- {packer = {'vijaymarupudi/fzf.vim'}, configFile = 'plugins/fzf'}
-		-- {packer = {'yardnsm/vim-import-cost', run = 'npm install'}, configFile = 'plugins/import-cost'},
-		-- {packer = {'pianocomposer321/yabs.nvim'}, configFile = 'plugins/yabs'}
-}
+  -- cheatsheets
+  use {'folke/which-key.nvim'}
 
-require('packer').startup(function(use)
-    for key, value in pairs(packages) do
-			use(value.packer)
+  -- nvim tree
+  use('kyazdani42/nvim-tree.lua')
 
-    	if value.configFile then
-    		require(value.configFile)
-    	end
-		end 
+  -- comments
+  use {'tpope/vim-commentary'}
+
+  -- debug
+  use {'michaelb/sniprun', run = 'bash ./install.sh'}
+  
+  -- test runners manager
+  use {'janko/vim-test'}
+
+  
+  -- completion
+  use('hrsh7th/nvim-compe')
+  use('hrsh7th/vim-vsnip')
+  use('hrsh7th/vim-vsnip-integ')
+  use('onsails/lspkind-nvim')
+  
+	-- vscode react snippet
+  use 'xabikos/vscode-react'
+
+  -- statusline
+  use('hoob3rt/lualine.nvim')
+
+  -- front page
+  use('glepnir/dashboard-nvim')
+
+  -- zen mode
+  use('folke/zen-mode.nvim')
+
+  -- bufferline
+  use('akinsho/nvim-bufferline.lua')
+
+	-- icons
+	use('kyazdani42/nvim-web-devicons')
+
+  -- better nodejs go to file
+  use('PsychoLlama/further.vim')
+
+  use('tpope/vim-dispatch')
+
+  -- treesitter
+  use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
+  use('JoosepAlviste/nvim-ts-context-commentstring')
+  use 'windwp/nvim-ts-autotag'
+  use('lewis6991/spellsitter.nvim')
+
+  -- check color preview
+  use 'norcalli/nvim-colorizer.lua'
+
+  -- git gutter
+  use('lewis6991/gitsigns.nvim')
+
+
+  -- nvim lsp
+	use {'neovim/nvim-lspconfig'}
+  
+
+	-- git wrapper
+  use('tpope/vim-fugitive')
+ 
+  use('glepnir/lspsaga.nvim')
+  use('christoomey/vim-tmux-navigator')
+
+	-- finder
+ 	use 'nvim-telescope/telescope.nvim'
+
+	-- find in text
+	use 'windwp/nvim-spectre'
 end)
+
+require('plugins/bufferline')
+require('plugins/compe')
+require('plugins/commentary')
+require('plugins/dashboard')
+require('plugins/gitsigns')
+require('plugins/lsp-config') 
+require('plugins/lspkind') 
+require('plugins/lualine')
+require('plugins/lspsaga')
+require('plugins/neoformat') 
+require('plugins/nvim-colorizer') 
+require('plugins/nvim-tree') 
+require('plugins/spellsitter')
+require('plugins/sniprun')
+require('plugins/telescope')
+require('plugins/tmux-navigator')
+require('plugins/treesitter')
+require('plugins/vim-test')
+require('plugins/which-key-nvim') 
+require('plugins/zen-mode')
 
 vim.cmd[[colorscheme tokyonight]]
