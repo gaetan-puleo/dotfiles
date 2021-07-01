@@ -4,47 +4,36 @@ jobs:
   nvim: 
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: modular
-          fetch-depth: 1
+      - uses: actions/checkout@v1
+      - run: ls -a
       - run: bash "${GITHUB_WORKSPACE}/nvim/install.bash"
         shell: bash
       - run: bash "${GITHUB_WORKSPACE}/nvim/tests.bash"
         shell: bash
-  kitty: 
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: modular
-          fetch-depth: 1
-      - run: bash "${GITHUB_WORKSPACE}/kitty/install.bash"
-        shell: bash
-  fonts: 
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: modular
-          fetch-depth: 1
-      - run: bash "${GITHUB_WORKSPACE}/fonts/install.bash"
-        shell: bash
-  zsh: 
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: modular
-          fetch-depth: 1
-      - run: bash "${GITHUB_WORKSPACE}/zsh/install.bash"
-        shell: bash
-  git: 
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: modular
-          fetch-depth: 1
-      - run: bash "${GITHUB_WORKSPACE}/git/install.bash"
-        shell: bash
+  # kitty: 
+  #   runs-on: ubuntu-20.04
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #       with:
+  #         ref: modular
+  #         fetch-depth: 1
+  #     - run: bash "${GITHUB_WORKSPACE}/kitty/install.bash"
+  #       shell: bash
+  # fonts: 
+  #   runs-on: ubuntu-20.04
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #       with:
+  #         ref: modular
+  #         fetch-depth: 1
+  #     - run: bash "${GITHUB_WORKSPACE}/fonts/install.bash"
+  #       shell: bash
+  # git: 
+  #   runs-on: ubuntu-20.04
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #       with:
+  #         ref: modular
+  #         fetch-depth: 1
+  #     - run: bash "${GITHUB_WORKSPACE}/git/install.bash"
+  #       shell: bash

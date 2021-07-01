@@ -16,7 +16,7 @@ vim.api.nvim_exec([[
 
 require('packer').startup(function()
   use 'wbthomason/packer.nvim' -- packager for neovim
-  use 'gaetan-puleo/tokyonight.nvim' -- Theme
+  use 'folke/tokyonight.nvim' -- Theme
   use 'antoinemadec/FixCursorHold.nvim'
   use 'nvim-lua/popup.nvim' 
   use 'nvim-lua/plenary.nvim'
@@ -31,7 +31,7 @@ require('packer').startup(function()
   use('kyazdani42/nvim-tree.lua')
 
   -- comments
-  use {'tpope/vim-commentary'}
+	use {'tpope/vim-commentary'}
 
   -- debug
   use {'michaelb/sniprun', run = 'bash ./install.sh'}
@@ -42,21 +42,18 @@ require('packer').startup(function()
   
   -- completion
   use('hrsh7th/nvim-compe')
-  use('hrsh7th/vim-vsnip')
-  use('hrsh7th/vim-vsnip-integ')
   use('onsails/lspkind-nvim')
+	use('L3MON4D3/LuaSnip')
   
-	-- vscode react snippet
-  use 'xabikos/vscode-react'
+	use('mattn/emmet-vim') --emmet
 
   -- statusline
   use('hoob3rt/lualine.nvim')
 
+	-- graphql
+	use('jparise/vim-graphql')
   -- front page
   use('glepnir/dashboard-nvim')
-
-  -- zen mode
-  use('folke/zen-mode.nvim')
 
   -- bufferline
   use('akinsho/nvim-bufferline.lua')
@@ -81,10 +78,14 @@ require('packer').startup(function()
   -- git gutter
   use('lewis6991/gitsigns.nvim')
 
+	-- snap (grep in file
+	use { 'camspiers/snap' }
 
   -- nvim lsp
 	use {'neovim/nvim-lspconfig'}
-  
+
+	-- auto install
+	use {'kabouzeid/nvim-lspinstall'}
 
 	-- git wrapper
   use('tpope/vim-fugitive')
@@ -95,29 +96,37 @@ require('packer').startup(function()
 	-- finder
  	use 'nvim-telescope/telescope.nvim'
 
+	-- enable command like :32 to go to line 32
+	use 'nacro90/numb.nvim'
+
 	-- find in text
-	use 'windwp/nvim-spectre'
+	-- use 'windwp/nvim-spectre'
 end)
 
 require('plugins/bufferline')
 require('plugins/compe')
 require('plugins/commentary')
 require('plugins/dashboard')
+require('plugins/emmet')
 require('plugins/gitsigns')
 require('plugins/lsp-config') 
-require('plugins/lspkind') 
+require('plugins/lspkind')
 require('plugins/lualine')
+require('plugins/luasnip')
+require('plugins/lsp-install')
 require('plugins/lspsaga')
 require('plugins/neoformat') 
+require('plugins/numb') 
 require('plugins/nvim-colorizer') 
+-- require('plugins/nvim-spectre') 
 require('plugins/nvim-tree') 
 require('plugins/spellsitter')
+require('plugins/snap')
 require('plugins/sniprun')
 require('plugins/telescope')
 require('plugins/tmux-navigator')
 require('plugins/treesitter')
 require('plugins/vim-test')
 require('plugins/which-key-nvim') 
-require('plugins/zen-mode')
 
 vim.cmd[[colorscheme tokyonight]]

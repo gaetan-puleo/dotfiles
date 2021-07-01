@@ -5,11 +5,11 @@ wk.register({
 		a = {'<cmd>lua vim.lsp.buf.code_action()<CR>', 'Show code actions'}
 	},
 	g = {
-		-- d = {'<Cmd>lua vim.lsp.buf.definition()<CR>', 'Go to definition'},
+		d = 'Go to definition',
 		-- t = {'<cmd>lua vim.lsp.buf.type_definition()<CR>', "Go to type definition" },
 		-- r = {'<cmd>lua require(\'lspsaga.provider\').lsp_finder()<CR>', 'Show references'},
-		-- R = {"<cmd>lua vim.lsp.buf.rename()<CR>", "Rename references"},
-		-- s = {"<cmd>lua vim.lsp.buf.signature_help()<CR>", "Show signature"},
+		R = "Rename references",
+		s = "Show signature",
 	},
 	['<leader>'] = {
 		['/'] = 'Comment',
@@ -29,8 +29,9 @@ wk.register({
 			s = {':NvimTreeFindFile<CR>', 'Show current file in file tree'},
 			o = {"<cmd>lua require('telescope.builtin').oldfiles()<cr>", 'Search recently used file'},
 			p = {"<cmd>lua require('telescope.builtin').find_files({hidden = true, ignore = true})<cr>", 'Search for a specific file'},
-			g = {"<cmd>lua require('telescope.builtin').live_grep({hidden = true, ignore = true})<cr>", 'Search in files'},
-			r = {"<cmd>lua require('spectre').open()<cr>", 'Search and replace in files'},
+			-- g = {"<cmd>lua require('telescope.builtin').live_grep({hidden = true, ignore = true})<cr>", 'Search in files'},
+			g = 'Search in files',
+			-- r = {"<cmd>lua require('spectre').open()<cr>", 'Search and replace in files'},
 		},
 		b = {
 			name = '+Buffers',

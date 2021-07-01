@@ -13,4 +13,5 @@ npm install -g tsun \
 	vscode-json-languageserver \
 	diagnostic-languageserver \
 	eslint_d yarn \
-	bash-language-server 
+	bash-language-server
+

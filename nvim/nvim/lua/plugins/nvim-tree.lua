@@ -1,19 +1,19 @@
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
 local map = vim.api.nvim_set_keymap
 vim.g.nvim_tree_bindings = {
-  ["<CR>"]           = tree_cb("edit"),
-  ["<2-LeftMouse>"]  = tree_cb("edit"),
-  ["h"]              = tree_cb("close_node"),
-  ["l"]              = tree_cb("edit"),
-  ["I"]              = tree_cb("toggle_ignored"),
-  ["H"]              = tree_cb("toggle_dotfiles"),
-  ["R"]              = tree_cb("refresh"),
-  ["a"]              = tree_cb("create"),
-  ["d"]              = tree_cb("remove"),
-  ["r"]              = tree_cb("rename"),
-  ["x"]              = tree_cb("cut"),
-  ["y"]              = tree_cb("copy"),
-  ["p"]              = tree_cb("paste"),
+	{key = "<CR>",           cb = tree_cb("edit")},
+	{key = "<2-LeftMouse>",  cb = tree_cb("edit")},
+	{key = "l",              cb = tree_cb("edit")},
+	{key = "h",              cb = tree_cb("close_node")},
+	{key = "I",              cb = tree_cb("toggle_ignored")},
+	{key = "H",              cb = tree_cb("toggle_dotfiles")},
+	{key = "R",              cb = tree_cb("refresh")},
+	{key = "a",              cb = tree_cb("create")},
+	{key = "d",              cb = tree_cb("remove")},
+	{key = "r",              cb = tree_cb("rename")},
+	{key = "x",              cb = tree_cb("cut")},
+	{key = "y",              cb = tree_cb("copy")},
+	{key = "p",              cb = tree_cb("paste")},
 }
 
 -- map('n', '<leader>fe', ':NvimTreeToggle<CR>', {})
