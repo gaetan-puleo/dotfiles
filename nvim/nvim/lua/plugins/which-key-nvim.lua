@@ -25,8 +25,8 @@ wk.register({
 		['0'] = "which_key_ignore",
 		f = {
 			name = '+Files / Find',
-			e = {':NvimTreeToggle<CR>', 'Open file tree'},
-			s = {':NvimTreeFindFile<CR>', 'Show current file in file tree'},
+			e = 'Open file tree',
+			s = 'Show current file in file tree',
 			o = {"<cmd>lua require('telescope.builtin').oldfiles()<cr>", 'Search recently used file'},
 			p = {"<cmd>lua require('telescope.builtin').find_files({hidden = true, ignore = true})<cr>", 'Search for a specific file'},
 			-- g = {"<cmd>lua require('telescope.builtin').live_grep({hidden = true, ignore = true})<cr>", 'Search in files'},

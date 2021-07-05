@@ -127,6 +127,6 @@ require('plugins/telescope')
 require('plugins/tmux-navigator')
 require('plugins/treesitter')
 require('plugins/vim-test')
-require('plugins/which-key-nvim') 
+require('plugins/which-key-nvim')
 
 vim.cmd[[colorscheme tokyonight]]

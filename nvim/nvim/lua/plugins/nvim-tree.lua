@@ -16,8 +16,8 @@ vim.g.nvim_tree_bindings = {
 	{key = "p",              cb = tree_cb("paste")},
 }
 
--- map('n', '<leader>fe', ':NvimTreeToggle<CR>', {})
--- map('n', '<leader>fs', ':NvimTreeFindFile<CR>', {})
+map('n', '<leader>fe', ':NvimTreeToggle<CR>', {})
+map('n', '<leader>fs', ':NvimTreeFindFile<CR>', {})
 
 vim.g['nvim_tree_disable_netrw'] = 1 -- disable netrw
 vim.g['nvim_tree_hijack_netrw'] = 1 -- use nvim-tree vhen typing `nvim` or `nvim .`
