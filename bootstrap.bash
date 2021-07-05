@@ -11,3 +11,6 @@ bash "${CURR_PATH}/fzf/install.bash"
 bash "${CURR_PATH}/fish/install.bash"
 bash "${CURR_PATH}/node/install.bash"
 bash "${CURR_PATH}/tmux/install.bash"
+
+
+bash "${CURR_PATH}/checkhealth.bash"
