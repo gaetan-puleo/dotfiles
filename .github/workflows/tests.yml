@@ -35,3 +35,11 @@ jobs:
         shell: bash
       - run: bash "${GITHUB_WORKSPACE}/git/test.bash"
         shell: bash
+  tmux: 
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: bash "${GITHUB_WORKSPACE}/tmux/install.bash"
+        shell: bash
+      - run: bash "${GITHUB_WORKSPACE}/tmux/test.bash"
+        shell: bash
