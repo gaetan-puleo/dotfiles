@@ -29,7 +29,7 @@
 
 ## Tmux
 
-- [] Create a theme for tmux or choose
+- [x] Create a theme for tmux or choose
 - [] make a better config
 
 ## GTK
