@@ -1,4 +1,6 @@
 [user]
+	email = gpuleo@synthesio.com
+	name = gpuleo
       # These values are set in ~/.gitconfig_local
 
 [core]
