@@ -1,10 +1,10 @@
-# Install fnm (faster nvm alternative)
-curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash
-source ${HOME}/.bashrc
+# We need to install fish first
 
-# Install nodejs and nodejs global packages
-fnm install --lts
-fnm use 14
+fish
+nvm install lts
+
+nvm use lts
+
 npm install -g tsun \
 	vscode-html-languageserver-bin \
 	vscode-css-languageserver-bin \

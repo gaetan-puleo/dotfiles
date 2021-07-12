@@ -6,11 +6,12 @@ bash "${CURR_PATH}/git/install.bash"
 bash "${CURR_PATH}/kitty/install.bash"
 bash "${CURR_PATH}/fonts/install.bash"
 bash "${CURR_PATH}/nvim/install.bash"
-bash "${CURR_PATH}/fzf/install.bash"
-# bash "${CURR_PATH}/zsh/install.bash"
 bash "${CURR_PATH}/fish/install.bash"
 bash "${CURR_PATH}/node/install.bash"
 bash "${CURR_PATH}/tmux/install.bash"
 
 
 bash "${CURR_PATH}/checkhealth.bash"
+
+# fish
+chsh $USER -s $(which fish)

@@ -7,7 +7,6 @@
   excludesfile = ~/.config/git/.gitignore_global
 
 [alias]
-  ; alias  = "! git config --get-regexp ^alias\."
   alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
   rb = rebase
   rs = reset
