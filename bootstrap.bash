@@ -5,6 +5,7 @@ bash "${CURR_PATH}/ubuntu/install.bash"
 bash "${CURR_PATH}/git/install.bash"
 bash "${CURR_PATH}/kitty/install.bash"
 bash "${CURR_PATH}/fonts/install.bash"
+bash "${CURR_PATH}/themes/install.bash"
 bash "${CURR_PATH}/nvim/install.bash"
 bash "${CURR_PATH}/fish/install.bash"
 # bash "${CURR_PATH}/node/install.bash" # Run in fish script

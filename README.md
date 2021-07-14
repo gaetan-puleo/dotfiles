@@ -4,27 +4,25 @@
 
 ### Quick Setup
 ```bash
-mkdir ~/dotfiles
-cd ~/dotfiles
 git clone https://github.com/gaetan-puleo/dotfiles.git
 
-makefile all
+bash dotfiles/bootstrap.bash
 ```
-### Advanced Setup
+<!-- ### Advanced Setup -->
 
-#### Install only wanted apps
-You can install only the wanted packages
-```bash
-makefile minimal # minimal Setup
-makefile raspberry # Setup a raspberry server
+<!-- #### Install only wanted apps -->
+<!-- You can install only the wanted packages -->
+<!-- ```bash -->
+<!-- makefile minimal # minimal Setup -->
+<!-- makefile raspberry # Setup a raspberry server -->
 
-# optionnal bundle 
-makefile gui 
-makefile server 
-makefile design 
-makefile office 
-makefile dev 
-```
+<!-- # optionnal bundle --> 
+<!-- makefile gui --> 
+<!-- makefile server --> 
+<!-- makefile design --> 
+<!-- makefile office --> 
+<!-- makefile dev --> 
+<!-- ``` -->
 
 #### Firefox Addons
 

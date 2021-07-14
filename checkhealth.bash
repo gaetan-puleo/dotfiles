@@ -31,11 +31,11 @@ echo -e "\n"
 
 # node
 echo -e "${GREEN}NODE CHECK${NOCOLOR}"
-fish -c "node -v"
+fish -C "node -v && exit"
 echo -e "\n"
 
 echo -e "${GREEN}YARN CHECK${NOCOLOR}"
-fish -c "yarn -v"
+fish -C "yarn -v && exit"
 echo -e "\n"
 
 echo -e "${GREEN}DOCKER CHECK${NOCOLOR}"
