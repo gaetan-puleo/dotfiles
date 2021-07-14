@@ -6,5 +6,6 @@ sudo add-apt-repository ppa:neovim-ppa/unstable -y
 sudo apt-get update
 sudo apt-get install -y neovim
 
+nvim --headless +PackerInstall +qa
 # create a symlink
 bash "${CURR_PATH}/symlink.bash"

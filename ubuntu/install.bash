@@ -28,4 +28,5 @@ sudo apt-get install -y gcc \
 	libreoffice-calc libreoffice-writer \
 	blender inkscape \
 	ripgrep \
-	autoconf automake  pkg-config
+	autoconf automake pkg-config \
+	tmux	
