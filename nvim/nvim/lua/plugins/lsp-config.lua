@@ -65,7 +65,7 @@ end
 
 
 local function setup_servers()
-	local servers = {'typescript', 'bash', 'json', 'css', 'graphql', 'html', 'tailwindcss', 'diagnosticls'}
+	local servers = {'typescript', 'bash', 'json', 'css', 'graphql', 'html', 'diagnosticls'}
 
   for _, server in pairs(servers) do
     local config = make_config()
