@@ -1,8 +1,7 @@
 #!/bin/bash
 export DEBIAN_FRONTEND=noninteractive # force non interactive
-export NEEDRESTART_MODE=a #force restart
+export DOWNLOADBEFORE=true # suppress apt fast dialog
 CURR_PATH=$(dirname $(realpath ${BASH_SOURCE[0]}))
-# add more workers
 
 echo "Add more watchers ----------------------"
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
