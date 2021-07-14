@@ -84,9 +84,6 @@ require('packer').startup(function()
   -- nvim lsp
 	use {'neovim/nvim-lspconfig'}
 
-	-- auto install
-	use {'kabouzeid/nvim-lspinstall'}
-
 	-- git wrapper
   use('tpope/vim-fugitive')
  
@@ -113,7 +110,6 @@ require('plugins/lsp-config')
 require('plugins/lspkind')
 require('plugins/lualine')
 require('plugins/luasnip')
-require('plugins/lsp-install')
 require('plugins/lspsaga')
 require('plugins/neoformat') 
 require('plugins/numb') 
