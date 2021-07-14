@@ -6,6 +6,6 @@ CURR_PATH=$(dirname $(realpath ${BASH_SOURCE[0]}))
 # sudo apt-fast update
 # sudo apt-fast install -y neovim
 
-nvim --headless +PackerInstall +qa
+# nvim --headless +PackerInstall +qa
 # create a symlink
 bash "${CURR_PATH}/symlink.bash"
