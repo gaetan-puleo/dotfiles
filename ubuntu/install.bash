@@ -1,5 +1,6 @@
 #!/bin/bash
-
+export DEBIAN_FRONTEND=noninteractive # force non interactive
+export NEEDRESTART_MODE=a #force restart
 CURR_PATH=$(dirname $(realpath ${BASH_SOURCE[0]}))
 # add more workers
 
@@ -16,17 +17,16 @@ gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 28
 # Install packages
 
 # add apt fast
-sudo apt-add-repository ppa:apt-fast/stable -y < /dev/null && sudo apt-get update && echo debconf apt-fast/maxdownloads string 16 | sudo debconf-set-selections && echo debconf apt-fast/dlflag boolean true | sudo debconf-set-selections && echo debconf apt-fast/aptmanager string apt-get | sudo debconf-set-selections && sudo apt-get -y install apt-fast
-
+sudo apt-add-repository ppa:apt-fast/stable -y && sudo apt-get update && sudo apt-get -y install apt-fast 
 # neovim
 sudo add-apt-repository ppa:neovim-ppa/unstable -y
 
 echo "Install packages ----------------------"
 
 
-sudo apt-fast update -y
-sudo apt-fast upgrade -y
-sudo apt-fast install -y gcc \
+sudo apt-fast update -yq
+sudo apt-fast upgrade -yq
+sudo apt-fast install -yq gcc \
 	tar \
 	curl \
 	jq \
