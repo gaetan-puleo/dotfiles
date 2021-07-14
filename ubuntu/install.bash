@@ -1,6 +1,4 @@
 #!/bin/bash
-export DEBIAN_FRONTEND=noninteractive # force non interactive
-export DOWNLOADBEFORE=true # suppress apt fast dialog
 CURR_PATH=$(dirname $(realpath ${BASH_SOURCE[0]}))
 
 echo "Add more watchers ----------------------"
@@ -15,17 +13,14 @@ echo "Set dock icon size ----------------------"
 gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 28
 # Install packages
 
-# add apt fast
-sudo apt-add-repository ppa:apt-fast/stable -y && sudo apt-get update && sudo apt-get -y install apt-fast 
 # neovim
 sudo add-apt-repository ppa:neovim-ppa/unstable -y
 
 echo "Install packages ----------------------"
 
-
-sudo apt-fast update -yq
-sudo apt-fast upgrade -yq
-sudo apt-fast install -yq gcc \
+sudo apt-get update -y
+sudo apt-get upgrade -y
+sudo apt-get install -y gcc \
 	tar \
 	curl \
 	jq \
