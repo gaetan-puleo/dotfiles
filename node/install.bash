@@ -1,11 +1,10 @@
 # We need to install fish first
 
-fish
-nvm install lts
+fish -c "nvm install lts"
 
-nvm use lts
+fish -c "nvm use lts"
 
-npm install -g tsun \
+fish -c "npm install -g tsun \
 	vscode-html-languageserver-bin \
 	vscode-css-languageserver-bin \
 	typescript \
@@ -14,4 +13,4 @@ npm install -g tsun \
 	diagnostic-languageserver \
 	eslint_d yarn \
 	bash-language-server
-
+"
