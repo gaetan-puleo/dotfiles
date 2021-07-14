@@ -17,18 +17,24 @@ gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 28
 
 # add apt fast
 sudo apt-add-repository ppa:apt-fast/stable -y && sudo apt-get update && sudo apt-get -y install apt-fast 
+# neovim
+sudo add-apt-repository ppa:neovim-ppa/unstable -y
+
 echo "Install packages ----------------------"
+
+
 sudo apt-fast update -y
 sudo apt-fast upgrade -y
 sudo apt-fast install -y gcc \
 	tar \
 	curl \
 	jq \
-	todotxt-cli \
 	httpie \
-	gimp gimp-plugin-registry \
-	libreoffice-calc libreoffice-writer \
-	blender inkscape \
+	libreoffice-writer \
 	ripgrep \
 	autoconf automake pkg-config \
-	tmux	
+	tmux \
+	kitty \
+	fish \
+	neovim \
+	git

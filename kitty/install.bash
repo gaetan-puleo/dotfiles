@@ -2,8 +2,8 @@
 CURR_PATH=$(dirname $(realpath ${BASH_SOURCE[0]}))
 
 # Install kitty
-sudo apt-fast update
-sudo apt-fast install -y kitty
+# sudo apt-fast update
+# sudo apt-fast install -y kitty
 
 # set kitty as default term
 sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator $(which kitty) 50
