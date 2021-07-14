@@ -4,7 +4,7 @@ CURR_PATH=$(dirname $(realpath ${BASH_SOURCE[0]}))
 bash "${CURR_PATH}/symlink.bash"
 
 # Install fish 
-sudo apt-get update && sudo apt-get install -y fish
+sudo apt-fast update && sudo apt-get install -y fish
 # chsh $USER -s $(which fish)
 
 
