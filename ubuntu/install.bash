@@ -15,10 +15,12 @@ echo "Set dock icon size ----------------------"
 gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 28
 # Install packages
 
+# add apt fast
+sudo apt-add-repository ppa:apt-fast/stable -y && sudo apt-get update && sudo apt-get -y install apt-fast 
 echo "Install packages ----------------------"
-sudo apt-get update -y
-sudo apt-get upgrade -y
-sudo apt-get install -y gcc \
+sudo apt-fast update -y
+sudo apt-fast upgrade -y
+sudo apt-fast install -y gcc \
 	tar \
 	curl \
 	jq \
