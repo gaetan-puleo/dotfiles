@@ -15,12 +15,11 @@ require'compe'.setup {
   documentation = true;
 
   source = {
-		emmet = {priority = 50};
     path = {priority = 20};
     buffer = {priority = 30};
     calc = false;
-    vsnip = { priority = 100;};
-    luasnip = { priority = 100;};
+    -- vsnip = { priority = 100;};
+    -- luasnip = { priority = 100;};
     nvim_lsp = { priority = 40 };
     nvim_lua = { priority = 40 };
     spell = { priority = 1};
@@ -70,7 +69,7 @@ local function prequire(...)
   return nil
 end
 
-local luasnip = prequire('luasnip')
+-- local luasnip = prequire('luasnip')
 
 local t = function(str)
   return vim.api.nvim_replace_termcodes(str, true, true, true)
@@ -88,8 +87,8 @@ end
 _G.tab_complete = function()
   if vim.fn.pumvisible() == 1 then
       return t "<C-n>"
-  elseif luasnip and luasnip.expand_or_jumpable() then
-      return t "<Plug>luasnip-expand-or-jump"
+  -- elseif luasnip and luasnip.expand_or_jumpable() then
+  --     return t "<Plug>luasnip-expand-or-jump"
   elseif check_back_space() then
       return t "<Tab>"
   else
@@ -99,8 +98,8 @@ end
 _G.s_tab_complete = function()
   if vim.fn.pumvisible() == 1 then
       return t "<C-p>"
-  elseif luasnip and luasnip.jumpable(-1) then
-      return t "<Plug>luasnip-jump-prev"
+  -- elseif luasnip and luasnip.jumpable(-1) then
+  --     return t "<Plug>luasnip-jump-prev"
   else
       return t "<S-Tab>"
   end

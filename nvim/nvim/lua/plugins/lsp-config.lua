@@ -3,6 +3,7 @@
 -- require('lsp/jsonls')
 -- require('lsp/graphql')
 local nvim_lsp = require('lspconfig')
+local configs = require'lspconfig/configs'    
 -- require'lspinstall'.setup() -- important
 -- local servers = {'tsserver', 'cssls' , 'jsonls', 'graphql'}
 
@@ -64,9 +65,22 @@ local function make_config()
 end
 
 
+if not nvim_lsp.emmet_ls then    
+  configs.emmet_ls = {    
+    default_config = {    
+      cmd = {'emmet-ls', '--stdio'};
+      filetypes = {'html', 'css'};
+      root_dir = function(fname)    
+        return vim.loop.cwd()
+      end;    
+      settings = {};    
+    };    
+  }    
+end
+
 local function setup_servers()
 	-- local servers = {'typescript', 'bash', 'json', 'css', 'graphql', 'html', 'diagnosticls'}
-	local servers = {'tsserver', 'bashls', 'jsonls', 'cssls', 'graphql', 'html', 'diagnosticls'}
+	local servers = {'tsserver', 'bashls', 'jsonls', 'cssls', 'graphql', 'html', 'diagnosticls', 'emmet_ls'}
 
   for _, server in pairs(servers) do
     local config = make_config()

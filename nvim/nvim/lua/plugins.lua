@@ -33,9 +33,6 @@ require('packer').startup(function()
   -- comments
 	use {'tpope/vim-commentary'}
 
-  -- debug
-  use {'michaelb/sniprun', run = 'bash ./install.sh'}
-  
   -- test runners manager
   use {'janko/vim-test'}
 
@@ -43,9 +40,6 @@ require('packer').startup(function()
   -- completion
   use('hrsh7th/nvim-compe')
   use('onsails/lspkind-nvim')
-	use('L3MON4D3/LuaSnip')
-  
-	use('mattn/emmet-vim') --emmet
 
   -- statusline
   use('hoob3rt/lualine.nvim')
@@ -104,12 +98,10 @@ require('plugins/bufferline')
 require('plugins/compe')
 require('plugins/commentary')
 require('plugins/dashboard')
-require('plugins/emmet')
 require('plugins/gitsigns')
 require('plugins/lsp-config') 
 require('plugins/lspkind')
 require('plugins/lualine')
-require('plugins/luasnip')
 require('plugins/lspsaga')
 require('plugins/neoformat') 
 require('plugins/numb') 
@@ -118,7 +110,6 @@ require('plugins/nvim-colorizer')
 require('plugins/nvim-tree') 
 require('plugins/spellsitter')
 require('plugins/snap')
-require('plugins/sniprun')
 require('plugins/telescope')
 require('plugins/tmux-navigator')
 require('plugins/treesitter')

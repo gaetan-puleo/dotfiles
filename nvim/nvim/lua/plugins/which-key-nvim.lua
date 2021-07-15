@@ -47,10 +47,6 @@ wk.register({
 			l = {'<cmd>TestLast<CR>', 'Test last test run'}, 
 			v = {'<cmd>TestVisit<CR>', 'Test visit'}, 
 		},
-		c = {
-			name = '+Code',
-			r = {"<cmd>SnipRun <cr>", "Run code"}
-		},
 		g = {
 			name = '+Git',
 			s = {"<cmd>Git <CR>", "Git status"},
@@ -76,10 +72,6 @@ wk.register({
 
 wk.register({
 	['<leader>'] = {
-		c = {
-			name = '+code',
-			r = {":'<,'>SnipRun <cr>", "Run code"}
-		},
 	}
 },{
 	mode = 'v'
