@@ -65,22 +65,22 @@ local function make_config()
 end
 
 
-if not nvim_lsp.emmet_ls then    
-  configs.emmet_ls = {    
-    default_config = {    
-      cmd = {'emmet-ls', '--stdio'};
-      filetypes = {'html', 'css'};
-      root_dir = function(fname)    
-        return vim.loop.cwd()
-      end;    
-      settings = {};    
-    };    
-  }    
-end
+-- if not nvim_lsp.emmet_ls then    
+--   configs.emmet_ls = {    
+--     default_config = {    
+--       cmd = {'emmet-ls', '--stdio'};
+--       filetypes = {'html', 'css', 'scss'};
+--       root_dir = function(fname)    
+--         return vim.loop.cwd()
+--       end;    
+--       settings = {};    
+--     };    
+--   }    
+-- end
 
 local function setup_servers()
 	-- local servers = {'typescript', 'bash', 'json', 'css', 'graphql', 'html', 'diagnosticls'}
-	local servers = {'tsserver', 'bashls', 'jsonls', 'cssls', 'graphql', 'html', 'diagnosticls', 'emmet_ls'}
+	local servers = {'tsserver', 'bashls', 'jsonls', 'cssls', 'graphql', 'html', 'diagnosticls'}
 
   for _, server in pairs(servers) do
     local config = make_config()

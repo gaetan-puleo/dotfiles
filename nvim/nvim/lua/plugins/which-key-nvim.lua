@@ -59,10 +59,7 @@ wk.register({
 		-- 	h =  {"<cmd>lua require('dap').toggle_breakpoint()<cr>", "Toggle breakpoint"},
 		-- 	r = {"<cmd>lua require('dap').repl.open({})<cr>"}
 		-- },
-		w = {
-			name = '+Windows',
-			z = {':ZenMode<cr>', 'Zen mode'}
-		},
+		z = {':ZenMode<cr>', 'Zen mode'},
 		['-'] = 'Split vertically',
 		['\\'] = 'Split horizontally'
 	}

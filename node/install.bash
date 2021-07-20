@@ -15,7 +15,6 @@ fish -C "npm install -g tsun \
 	diagnostic-languageserver \
 	eslint_d yarn \
 	graphql-language-service-cli \
-	emmet-ls \
 	bash-language-server && exit
 "
 

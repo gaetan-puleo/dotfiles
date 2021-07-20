@@ -90,6 +90,11 @@ require('packer').startup(function()
 	-- enable command like :32 to go to line 32
 	use 'nacro90/numb.nvim'
 
+	-- focus only current code
+	use 'folke/twilight.nvim'
+	
+	-- focus current buffer
+	use 'folke/zen-mode.nvim'
 	-- find in text
 	-- use 'windwp/nvim-spectre'
 end)
@@ -113,7 +118,9 @@ require('plugins/snap')
 require('plugins/telescope')
 require('plugins/tmux-navigator')
 require('plugins/treesitter')
+require('plugins/twilight')
 require('plugins/vim-test')
 require('plugins/which-key-nvim')
+require('plugins/zen-mode')
 
 vim.cmd[[colorscheme tokyonight]]
