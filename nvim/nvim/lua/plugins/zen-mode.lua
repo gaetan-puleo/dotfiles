@@ -3,6 +3,7 @@ require("zen-mode").setup {
 		backdrop = 0.8
 	},
 	plugins =  {
+		tmux = { enabled = false},
 		twilight = { enabled = false },
 		gitsigns = { enabled = true },
 	},
