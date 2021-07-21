@@ -26,6 +26,12 @@ require'compe'.setup {
     tags = false;
     snippets_nvim = false;
     treesitter = {priority = 29};
+		tmux = {
+			priority = 30;
+			disabled = false;
+			all_panes = true;
+			kind = 'tmux';
+		};
   };
 }
 
