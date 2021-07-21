@@ -98,6 +98,7 @@ require('packer').startup(function()
 	use 'folke/zen-mode.nvim'
 	-- find in text
 	-- use 'windwp/nvim-spectre'
+	use 'NTBBloodbath/color-converter.nvim'
 end)
 
 require('plugins/bufferline')
