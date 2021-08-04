@@ -14,3 +14,4 @@ cd
 fish -c "curl -sL https://git.io/fisher | source && fisher update"
 
 bash "${CURR_PATH}/../node/install.bash"
+bash "${CURR_PATH}/../lsp/install.bash"
