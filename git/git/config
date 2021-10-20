@@ -1,7 +1,5 @@
 [user]
-	email = gpuleo@synthesio.com
-	name = gpuleo
-      # These values are set in ~/.gitconfig_local
+  # These values are set in ~/.gitconfig_local
 
 [core]
   excludesfile = ~/.config/git/.gitignore_global

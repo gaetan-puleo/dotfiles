@@ -64,7 +64,7 @@ vim.wo.signcolumn="yes"
 -- Change preview window location
 vim.g.splitbelow = true
 
-
+vim.opt.listchars = {eol = '↵',trail = '~',tab = '>-', nbsp = '␣', space = "_"}
 
 
 
