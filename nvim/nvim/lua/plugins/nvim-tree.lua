@@ -1,6 +1,6 @@
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
 local map = vim.api.nvim_set_keymap
-vim.g.nvim_tree_bindings = {
+local list = {
 	{key = "<CR>",           cb = tree_cb("edit")},
 	{key = "<2-LeftMouse>",  cb = tree_cb("edit")},
 	{key = "l",              cb = tree_cb("edit")},
@@ -19,9 +19,9 @@ vim.g.nvim_tree_bindings = {
 map('n', '<leader>fe', ':NvimTreeToggle<CR>', {})
 map('n', '<leader>fs', ':NvimTreeFindFile<CR>', {})
 
-vim.g['nvim_tree_disable_netrw'] = 1 -- disable netrw
-vim.g['nvim_tree_hijack_netrw'] = 1 -- use nvim-tree vhen typing `nvim` or `nvim .`
-vim.g['nvim_tree_lsp_diagnostics'] = 1 -- show lsp diagnostic
+-- vim.g['nvim_tree_disable_netrw'] = 1 -- disable netrw
+-- vim.g['nvim_tree_hijack_netrw'] = 1 -- use nvim-tree vhen typing `nvim` or `nvim .`
+-- vim.g['nvim_tree_lsp_diagnostics'] = 1 -- show lsp diagnostic
 vim.g['nvim_tree_auto_close'] = 0 -- close if last window
 vim.g['nvim_tree_git_hl'] = 1 -- highlight open
 vim.g['nvim_tree_show_icons'] = {
@@ -56,4 +56,31 @@ vim.g['nvim_tree_icons'] = {
     warning = "",
     error = "",
   }
+}
+
+require'nvim-tree'.setup {
+  -- disables netrw completely
+  disable_netrw = true,
+  -- hijack netrw window on startup
+  hijack_netrw = true,
+  -- open the tree when running this setup function
+  open_on_setup = false,
+  -- closes neovim automatically when the tree is the last **WINDOW** in the view
+  auto_close = false,
+  diagnostics = {
+    enable = true,
+    icons = {
+      hint = "",
+      info = "",
+      warning = "",
+      error = "",
+    }
+  },
+  view = {
+		auto_resize = true,
+
+		mappings = {
+			list = list
+		}
+	}
 }
