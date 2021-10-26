@@ -82,7 +82,8 @@ require('packer').startup(function()
 	-- git wrapper
   use('tpope/vim-fugitive')
  
-  use('glepnir/lspsaga.nvim')
+  -- use('glepnir/lspsaga.nvim')
+	use { 'tami5/lspsaga.nvim', branch = 'nvim51' }
   use('christoomey/vim-tmux-navigator')
 
 	-- finder
