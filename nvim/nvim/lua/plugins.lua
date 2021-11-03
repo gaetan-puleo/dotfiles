@@ -65,7 +65,6 @@ require('packer').startup(function()
   use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
   use('JoosepAlviste/nvim-ts-context-commentstring')
   use 'windwp/nvim-ts-autotag'
-  use('lewis6991/spellsitter.nvim')
 
   -- check color preview
   use 'norcalli/nvim-colorizer.lua'
