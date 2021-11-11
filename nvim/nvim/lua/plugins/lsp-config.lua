@@ -92,7 +92,7 @@ end
 
 local function setup_servers()
 	-- local servers = {'typescript', 'bash', 'json', 'css', 'graphql', 'html', 'diagnosticls'}
-	local servers = {'tsserver', 'bashls', 'jsonls', 'cssls', 'graphql', 'html', 'diagnosticls'}
+	local servers = {'denols', 'bashls', 'jsonls', 'cssls', 'graphql', 'html', 'diagnosticls'}
 
   for _, server in pairs(servers) do
     local config = make_config()

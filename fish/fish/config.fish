@@ -7,6 +7,7 @@ set -x MANPAGER "nvim -c 'set ft=man' -"
 # sources
 source ~/.config/fish/aliases.fish
 source ~/.config/fish/tokyonight.fish
+source ~/.config/fish/deno.fish
 
 # local config if present
 if test -e ~/.config/fish/config.local.fish

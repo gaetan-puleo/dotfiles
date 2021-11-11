@@ -99,6 +99,7 @@ require('packer').startup(function()
 	-- find in text
 	-- use 'windwp/nvim-spectre'
 	use 'NTBBloodbath/color-converter.nvim'
+	use 'tpope/vim-unimpaired'
 end)
 
 require('plugins/bufferline')

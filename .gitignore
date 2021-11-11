@@ -22,6 +22,7 @@ fish/fish/*
 !fish/fish/config.fish
 !fish/fish/fish_plugins
 !fish/fish/tokyonight.fish
+!fish/fish/deno.fish
 
 fish/fish/functions/*
 
