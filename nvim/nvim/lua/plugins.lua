@@ -72,11 +72,12 @@ require('packer').startup(function()
   -- git gutter
   use('lewis6991/gitsigns.nvim')
 
-	-- snap (grep in file
+	-- snap (grep in files)
 	use { 'camspiers/snap' }
 
   -- nvim lsp
 	use {'neovim/nvim-lspconfig'}
+	use {'jose-elias-alvarez/nvim-lsp-ts-utils'}
 
 	-- git wrapper
   use('tpope/vim-fugitive')
@@ -97,9 +98,10 @@ require('packer').startup(function()
 	-- focus current buffer
 	use 'folke/zen-mode.nvim'
 	-- find in text
-	-- use 'windwp/nvim-spectre'
 	use 'NTBBloodbath/color-converter.nvim'
 	use 'tpope/vim-unimpaired'
+
+	-- use 'dyng/ctrlsf.vim'
 end)
 
 require('plugins/bufferline')
@@ -114,7 +116,6 @@ require('plugins/lspsaga')
 require('plugins/neoformat') 
 require('plugins/numb') 
 require('plugins/nvim-colorizer') 
--- require('plugins/nvim-spectre') 
 require('plugins/nvim-tree') 
 require('plugins/snap')
 require('plugins/telescope')
