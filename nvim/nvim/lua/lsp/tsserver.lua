@@ -48,5 +48,8 @@ end
 local opts = {
     capabilities = capabilities,
 		on_attach = on_attach,
+    flags = {
+      debounce_text_changes = 150,
+    }
 }
 return opts

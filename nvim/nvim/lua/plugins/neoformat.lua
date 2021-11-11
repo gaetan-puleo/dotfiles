@@ -1,4 +1,4 @@
 -- by default all formatters are enabled
 vim.cmd('source ~/.config/nvim/config/neoformatter.vim')
 
-vim.g.neoformat_run_all_formatters = 1
+vim.g.neoformat_enabled_javascript = { 'prettier', 'eslint_d' }
