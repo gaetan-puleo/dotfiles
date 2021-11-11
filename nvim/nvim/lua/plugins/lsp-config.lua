@@ -8,18 +8,18 @@ local configs = require'lspconfig/configs'
 -- local servers = {'tsserver', 'cssls' , 'jsonls', 'graphql'}
 
 
-vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-  virtual_text = false,
-  signs = true,
-  underline = true,
-  update_in_insert = false,
-})
+-- vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+--   virtual_text = false,
+--   signs = true,
+--   underline = true,
+--   update_in_insert = false,
+-- })
 
 
 -- You will likely want to reduce updatetime which affects CursorHold
 -- note: this setting is global and should be set only once
-vim.o.updatetime = 250
-vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_line_diagnostics({focusable=false})]]
+-- vim.o.updatetime = 250
+-- vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_line_diagnostics({focusable=false})]]
 
 --Enable (broadcasting) snippet capability for completion
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -65,16 +65,16 @@ local on_attach = function(client, bufnr)
 end
 
 -- config that activates keymaps and enables snippet support
-local function make_config()
-  local capabilities = vim.lsp.protocol.make_client_capabilities()
-  capabilities.textDocument.completion.completionItem.snippetSupport = true
-  return {
-    -- enable snippet support
-    capabilities = capabilities,
-    -- map buffer local keybindings when the language server attaches
-    on_attach = on_attach,
-  }
-end
+-- local function make_config()
+--   local capabilities = vim.lsp.protocol.make_client_capabilities()
+--   capabilities.textDocument.completion.completionItem.snippetSupport = true
+--   return {
+--     -- enable snippet support
+--     capabilities = capabilities,
+--     -- map buffer local keybindings when the language server attaches
+--     on_attach = on_attach,
+--   }
+-- end
 
 
 -- if not nvim_lsp.emmet_ls then    
@@ -92,17 +92,15 @@ end
 
 local function setup_servers()
 	-- local servers = {'typescript', 'bash', 'json', 'css', 'graphql', 'html', 'diagnosticls'}
-	local servers = {'denols', 'bashls', 'jsonls', 'cssls', 'graphql', 'html', 'diagnosticls'}
+	-- local servers = {'tsserver', 'bashls', 'jsonls', 'cssls', 'graphql', 'html', 'diagnosticls'}
+	-- local servers = {'tsserver', 'jsonls', 'cssls', 'graphql', 'html'}
+	local servers = {'tsserver', 'diagnosticls'}
 
   for _, server in pairs(servers) do
-    local config = make_config()
 
-    -- config per server
-    if server == "diagnosticls" then
-      config = vim.tbl_extend("force", config, require'plugins/diagnosticls')
-    end
-		
-    nvim_lsp[server].setup(config)
+			local path = 'lsp/' .. server
+      local config = require(path)
+   		nvim_lsp[server].setup(config)
     
   end
 end
