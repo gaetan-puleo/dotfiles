@@ -34,6 +34,10 @@ require'nvim-treesitter.configs'.setup {
       show_help = '?',
     },
   },
+	refactor = {
+    highlight_definitions = { enable = true },
+    highlight_current_scope = { enable = true },
+  },
 	highlight = {
     enable = true
   }

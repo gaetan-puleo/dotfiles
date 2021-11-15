@@ -65,6 +65,7 @@ require('packer').startup(function()
   use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
   use('JoosepAlviste/nvim-ts-context-commentstring')
   use 'windwp/nvim-ts-autotag'
+	use 'nvim-treesitter/nvim-treesitter-refactor'
 
   -- check color preview
   use 'norcalli/nvim-colorizer.lua'
@@ -101,6 +102,7 @@ require('packer').startup(function()
 	use 'NTBBloodbath/color-converter.nvim'
 	use 'tpope/vim-unimpaired'
 
+	use 'ggandor/lightspeed.nvim'
 	-- use 'dyng/ctrlsf.vim'
 end)
 
