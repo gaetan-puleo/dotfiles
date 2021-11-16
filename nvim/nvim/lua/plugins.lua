@@ -104,6 +104,8 @@ require('packer').startup(function()
 
 	use 'ggandor/lightspeed.nvim'
 	-- use 'dyng/ctrlsf.vim'
+	-- nvim window
+	use 'https://gitlab.com/yorickpeterse/nvim-window.git'
 end)
 
 require('plugins/bufferline')
@@ -119,6 +121,7 @@ require('plugins/neoformat')
 require('plugins/numb') 
 require('plugins/nvim-colorizer') 
 require('plugins/nvim-tree') 
+require('plugins/nvim-window') 
 require('plugins/snap')
 require('plugins/telescope')
 require('plugins/tmux-navigator')
