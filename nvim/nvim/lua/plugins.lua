@@ -66,6 +66,7 @@ require('packer').startup(function()
   use('JoosepAlviste/nvim-ts-context-commentstring')
   use 'windwp/nvim-ts-autotag'
 	use 'nvim-treesitter/nvim-treesitter-refactor'
+	use 'SmiteshP/nvim-gps'
 
   -- check color preview
   use 'norcalli/nvim-colorizer.lua'
