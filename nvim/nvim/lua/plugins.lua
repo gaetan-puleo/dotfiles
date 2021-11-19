@@ -106,6 +106,8 @@ require('packer').startup(function()
 	-- use 'dyng/ctrlsf.vim'
 	-- nvim window
 	use 'https://gitlab.com/yorickpeterse/nvim-window.git'
+
+	use 'folke/trouble.nvim'
 end)
 
 require('plugins/bufferline')
@@ -127,6 +129,7 @@ require('plugins/telescope')
 require('plugins/tmux-navigator')
 require('plugins/treesitter')
 require('plugins/twilight')
+require('plugins/trouble')
 require('plugins/vim-test')
 require('plugins/which-key-nvim')
 require('plugins/zen-mode')
