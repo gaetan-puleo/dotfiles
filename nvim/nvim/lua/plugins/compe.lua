@@ -28,7 +28,7 @@ require'compe'.setup {
     treesitter = {priority = 29};
 		tmux = {
 			priority = 30;
-			disabled = false;
+			disabled = true;
 			all_panes = true;
 			kind = 'tmux';
 		};
