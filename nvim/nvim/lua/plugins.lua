@@ -41,7 +41,6 @@ require('packer').startup(function()
   use('hrsh7th/nvim-compe')
   use('onsails/lspkind-nvim')
 
-	use 'andersevenrud/compe-tmux'
   -- statusline
   use('hoob3rt/lualine.nvim')
 
