@@ -4,33 +4,33 @@ jobs:
   nvim: 
     runs-on: ubuntu-20.04
     steps:
-      - run: sudo apt-add-repository ppa:apt-fast/stable -y < /dev/null && sudo apt-get update && echo debconf apt-fast/maxdownloads string 16 | sudo debconf-set-selections && echo debconf apt-fast/dlflag boolean true | sudo debconf-set-selections && echo debconf apt-fast/aptmanager string apt-get | sudo debconf-set-selections && sudo apt-get -y install apt-fast
+      - run: sudo apt-get update
         shell: bash
       - uses: actions/checkout@v2
       - run: bash "${GITHUB_WORKSPACE}/nvim/install.bash"
         shell: bash
       - run: bash "${GITHUB_WORKSPACE}/nvim/tests.bash"
         shell: bash
-  # kitty: 
-  #   runs-on: ubuntu-20.04
-  #   steps:
-  #     - run: DEBIAN_FRONTEND=noninteractive sudo apt-add-repository ppa:apt-fast/stable -y && sudo apt-get update && sudo apt-get -y install apt-fast
-  #       shell: bash
-  #     - uses: actions/checkout@v2
-  #     - run: bash "${GITHUB_WORKSPACE}/kitty/install.bash"
-  #       shell: bash
-  #     - run: bash "${GITHUB_WORKSPACE}/kitty/test.bash"
-  #       shell: bash
-  # fish: 
-  #   runs-on: ubuntu-20.04
-  #   steps:
-  #     - run: DEBIAN_FRONTEND=noninteractive sudo apt-add-repository ppa:apt-fast/stable -y && sudo apt-get update && sudo apt-get -y install apt-fast
-  #       shell: bash
-  #     - uses: actions/checkout@v2
-  #     - run: bash "${GITHUB_WORKSPACE}/fish/install.bash"
-  #       shell: bash
-      # - run: bash "${GITHUB_WORKSPACE}/fish/test.bash"
-        # shell: bash
+  kitty: 
+     runs-on: ubuntu-20.04
+     steps:
+       - run: DEBIAN_FRONTEND=noninteractive sudo apt-get update 
+         shell: bash
+       - uses: actions/checkout@v2
+       - run: bash "${GITHUB_WORKSPACE}/kitty/install.bash"
+         shell: bash
+       - run: bash "${GITHUB_WORKSPACE}/kitty/test.bash"
+         shell: bash
+  fish: 
+    runs-on: ubuntu-20.04
+    steps:
+      - run: DEBIAN_FRONTEND=noninteractive sudo apt-get update 
+        shell: bash
+      - uses: actions/checkout@v2
+      - run: bash "${GITHUB_WORKSPACE}/fish/install.bash"
+        shell: bash
+      - run: bash "${GITHUB_WORKSPACE}/fish/test.bash"
+        shell: bash
   # fonts: 
   #   runs-on: ubuntu-20.04
   #   steps:

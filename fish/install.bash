@@ -4,11 +4,11 @@ CURR_PATH=$(dirname $(realpath ${BASH_SOURCE[0]}))
 bash "${CURR_PATH}/symlink.bash"
 
 # Install fish 
-# sudo apt-fast update && sudo apt-get install -y fish
-# chsh $USER -s $(which fish)
+sudo apt-get update && sudo apt-get install -y fish
+chsh $USER -s $(which fish)
 
 
-# Install fisher
+# Install fisherghcr.io/catthehacker/ubuntu:act-20.04
 ls ~/.config/
 cd
 fish -c "curl -sL https://git.io/fisher | source && fisher update"
