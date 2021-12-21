@@ -13,9 +13,6 @@ echo "Set dock icon size ----------------------"
 gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 28
 # Install packages
 
-# neovim
-sudo add-apt-repository ppa:neovim-ppa/unstable -y
-
 echo "Install packages ----------------------"
 
 sudo apt-get update -y
@@ -28,8 +25,4 @@ sudo apt-get install -y gcc g++\
 	libreoffice-writer \
 	ripgrep \
 	autoconf automake pkg-config \
-	tmux \
-	kitty \
-	fish \
-	neovim \
 	git
