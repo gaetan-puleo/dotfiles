@@ -21,15 +21,21 @@ jobs:
          shell: bash
        - run: bash "${GITHUB_WORKSPACE}/kitty/test.bash"
          shell: bash
-  fish: 
+  fish_node_lsp: 
     runs-on: ubuntu-20.04
     steps:
       - run: DEBIAN_FRONTEND=noninteractive sudo apt-get update 
         shell: bash
       - uses: actions/checkout@v2
+      # fish
       - run: bash "${GITHUB_WORKSPACE}/fish/install.bash"
         shell: bash
       - run: bash "${GITHUB_WORKSPACE}/fish/test.bash"
+        shell: bash
+      # test for node
+      - run: bash "${GITHUB_WORKSPACE}/node/test.bash"
+        shell: bash
+      - run: bash "${GITHUB_WORKSPACE}/lsp/test.bash"
         shell: bash
   fonts: 
     runs-on: ubuntu-20.04
@@ -41,6 +47,7 @@ jobs:
         shell: bash
       - run: bash "${GITHUB_WORKSPACE}/fonts/test.bash"
         shell: bash
+
   # git: 
   #   runs-on: ubuntu-20.04
   #   steps:
