@@ -31,15 +31,16 @@ jobs:
         shell: bash
       - run: bash "${GITHUB_WORKSPACE}/fish/test.bash"
         shell: bash
-  # fonts: 
-  #   runs-on: ubuntu-20.04
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #       with:
-  #         ref: modular
-  #         fetch-depth: 1
-  #     - run: bash "${GITHUB_WORKSPACE}/fonts/install.bash"
-  #       shell: bash
+  fonts: 
+    runs-on: ubuntu-20.04
+    steps:
+      - run: DEBIAN_FRONTEND=noninteractive sudo apt-get update 
+        shell: bash
+      - uses: actions/checkout@v2
+      - run: bash "${GITHUB_WORKSPACE}/fonts/install.bash"
+        shell: bash
+      - run: bash "${GITHUB_WORKSPACE}/fonts/test.bash"
+        shell: bash
   # git: 
   #   runs-on: ubuntu-20.04
   #   steps:
