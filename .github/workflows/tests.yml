@@ -35,8 +35,8 @@ jobs:
       # test for node
       - run: bash "${GITHUB_WORKSPACE}/node/test.bash"
         shell: bash
-      - run: bash "${GITHUB_WORKSPACE}/lsp/test.bash"
-        shell: bash
+      # - run: bash "${GITHUB_WORKSPACE}/lsp/test.bash"
+      #  shell: bash
   fonts: 
     runs-on: ubuntu-20.04
     steps:
