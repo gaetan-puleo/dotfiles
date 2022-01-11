@@ -15,5 +15,8 @@
   co = checkout
   cm = commit -m
 	oups = commit --amend --no-edit
+	sm = stash push -m
+	sl = stash list
+	sa = stash apply --index
 [include]
   path = ~/.config/git/.gitconfig_local
