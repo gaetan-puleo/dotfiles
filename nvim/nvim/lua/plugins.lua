@@ -102,6 +102,7 @@ require('packer').startup(function()
 	use 'tpope/vim-unimpaired'
 
 	use 'ggandor/lightspeed.nvim'
+	use "petertriho/nvim-scrollbar"
 	-- use 'dyng/ctrlsf.vim'
 	-- nvim window
 	use 'https://gitlab.com/yorickpeterse/nvim-window.git'
@@ -124,6 +125,7 @@ require('plugins/nvim-colorizer')
 require('plugins/nvim-tree') 
 require('plugins/nvim-window') 
 require('plugins/snap')
+require('plugins/scrollbar')
 require('plugins/telescope')
 require('plugins/tmux-navigator')
 require('plugins/treesitter')
