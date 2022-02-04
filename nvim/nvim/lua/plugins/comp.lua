@@ -2,6 +2,7 @@ vim.o.completeopt = "menuone,noselect"
 
 local cmp = require'cmp'
 local lspkind = require('lspkind')
+require("luasnip/loaders/from_vscode").load()
 cmp.setup({ 
     snippet = {
       expand = function(args)
@@ -19,6 +20,7 @@ cmp.setup({
       ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     },
     sources = {
+      { name = 'luasnip' },
       { name = 'nvim_lsp' },
       { name = 'buffer' },
     },

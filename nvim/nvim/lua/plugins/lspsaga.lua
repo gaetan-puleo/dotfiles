@@ -36,7 +36,8 @@ local map = vim.api.nvim_set_keymap
 -- like server_filetype_map = {metals = {'sbt', 'scala'}}
 -- server_filetype_map = {}
 
-saga.init_lsp_saga {
+saga.setup {
+  use_saga_diagnostic_sign = false,
 	finder_action_keys = {
 		open = '<cr>', vsplit = 's',split = 'i',quit = 'q',scroll_down = '<C-f>', scroll_up = '<C-b>' -- quit can be a table
 	},
