@@ -21,7 +21,7 @@ local on_attach = function(client, bufnr)
 
 
   local ts_utils = require("nvim-lsp-ts-utils")
-
+  client.resolved_capabilities.document_formatting = false
   ts_utils.setup_client(client)
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   -- buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)

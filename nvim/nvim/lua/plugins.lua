@@ -21,7 +21,7 @@ require('packer').startup(function()
   use {'antoinemadec/FixCursorHold.nvim', commit = '0e4e22d21975da60b0fd2d302285b3b603f9f71e'}
   use 'nvim-lua/popup.nvim' 
   use {'nvim-lua/plenary.nvim', commit = '563d9f6d083f0514548f2ac4ad1888326d0a1c66'}
-  use( {'sbdchd/neoformat', commit = '0d665b05efa344977208c230f164440e3a5ce52f' }) -- Formatter
+  -- use( {'sbdchd/neoformat', commit = '0d665b05efa344977208c230f164440e3a5ce52f' }) -- Formatter
   use 'djoshea/vim-autoread' -- Autoread file
   use 'RishabhRD/popfix'
 
@@ -54,6 +54,7 @@ require('packer').startup(function()
 	use "rafamadriz/friendly-snippets"
   -- lsp
   use({ 'neovim/nvim-lspconfig', commit = 'e7df7ecae0b0d2f997ea65e951ddbe98ca3e154b'})
+  use({ 'jose-elias-alvarez/null-ls.nvim', commit = 'e8a666829a3d803844f24daa4932e4f5fe76cbeb'})
   use {'jose-elias-alvarez/nvim-lsp-ts-utils', commit = '64d233a8859e27139c55472248147114e0be1652' }
   -- statusline
   use({'nvim-lualine/lualine.nvim', commit = 'aed7f2546177b5ffc8300f1ecd1c9e0e06779695'})
@@ -135,8 +136,9 @@ require('plugins/lsp-config')
 require('plugins/lspkind')
 require('plugins/lualine')
 require('plugins/lspsaga')
-require('plugins/neoformat') 
+-- require('plugins/neoformat') 
 require('plugins/numb') 
+require('plugins/null_ls') 
 require('plugins/nvim-colorizer') 
 require('plugins/nvim-tree') 
 -- require('plugins/vgit') 
