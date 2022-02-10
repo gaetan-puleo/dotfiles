@@ -1,9 +1,8 @@
 local wk = require("which-key")
 
 wk.register({
-	c = {
-		a = {'<cmd>lua vim.lsp.buf.code_action()<CR>', 'Show code actions'}
-	},
+	c = 'pick and close a buffer',
+	p = 'pick and choose a buffer',
 	g = {
 		d = 'Go to definition',
 		-- t = {'<cmd>lua vim.lsp.buf.type_definition()<CR>', "Go to type definition" },
