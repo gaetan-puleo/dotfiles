@@ -14,17 +14,17 @@ local colors = {
 
 local l = {
   normal = {
-    a = {bg = colors.gray, fg = colors.purple, gui = 'bold'},
-    b = {bg = colors.gray, fg = colors.white},
-    c = {bg = colors.gray, fg = colors.white}
-  },
-  insert = {
     a = {bg = colors.gray, fg = colors.blue, gui = 'bold'},
     b = {bg = colors.gray, fg = colors.white},
     c = {bg = colors.gray, fg = colors.white}
   },
-  visual = {
+  insert = {
     a = {bg = colors.gray, fg = colors.green, gui = 'bold'},
+    b = {bg = colors.gray, fg = colors.white},
+    c = {bg = colors.gray, fg = colors.white}
+  },
+  visual = {
+    a = {bg = colors.gray, fg = colors.purple, gui = 'bold'},
     b = {bg = colors.gray, fg = colors.white},
     c = {bg = colors.gray, fg = colors.white}
   },
