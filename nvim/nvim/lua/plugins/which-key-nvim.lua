@@ -52,14 +52,6 @@ wk.register({
 			b = {"<cmd>Git blame <CR>", "Git blame"},
 			d = {"<cmd>Gvdiffsplit  <CR>", "Git diff"}
 		},
-		c = {
-			name = '+Colors',
-			c =  {"<cmd>lua require('color-converter').cycle() <CR>", "Convert color"},
-			x =  {"<cmd>lua require('color-converter').to_hex() <CR>", "Convert to HEX"},
-			r =  {"<cmd>lua require('color-converter').to_rgb() <CR>", "Convert to RGB"},
-			h =  {"<cmd>lua require('color-converter').to_hsl() <CR>", "Convert to HSL"},
-
-		},
 		-- d = {
 		-- 	name = '+debugger',
 		-- 	u =  {"<cmd>lua require('dapui').toggle()<cr>", "Toggle debugger UI"},
