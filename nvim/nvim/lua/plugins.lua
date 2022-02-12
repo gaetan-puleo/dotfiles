@@ -1,6 +1,5 @@
 -- Install packer
 local execute = vim.api.nvim_command
--- local split = require('utils/split')
 local install_path = vim.fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
@@ -71,9 +70,8 @@ require('packer').startup(function()
   }
 
   -- better nodejs go to file
-  -- use('PsychoLlama/further.vim')
+  use('PsychoLlama/further.vim')
 
-  -- use('tpope/vim-dispatch')
 
   -- treesitter
   use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', commit = 'efedf3510aa85f89a687dd1e29eab6f4677fa17e'})
@@ -84,17 +82,9 @@ require('packer').startup(function()
   -- check color preview
   use ({'norcalli/nvim-colorizer.lua', commit = '36c610a9717cc9ec426a07c8e6bf3b3abcb139d6'})
 
-  -- git gutter
-  -- use({'tanvirtin/vgit.nvim', commit = '9ffd228466782d5bdcaedd8927f6327c4a14f665' })
-
 	-- snap (grep in files)
 	use { 'camspiers/snap', commit = '500f97650136d4c5a00179d7f80dd614e13efdbe' }
 
-
-
-
-	-- git wrapper
-  -- use('tpope/vim-fugitive')
  
 	use { 'tami5/lspsaga.nvim', branch = 'nvim6.0' }
   use({'christoomey/vim-tmux-navigator', commit = '9ca5bfe5bd274051b5dd796cc150348afc993b80'})
@@ -105,40 +95,26 @@ require('packer').startup(function()
 	-- enable command like :32 to go to line 32
   use { 'nacro90/numb.nvim', commit = 'c8b128230adb22727256fd24a221f4c5a1b41e93' }
 
-	-- focus only current code
-	-- use 'folke/twilight.nvim'
 	
-	-- focus current buffer
-	-- use 'folke/zen-mode.nvim'
-	-- find in text
-	-- use 'NTBBloodbath/color-converter.nvim'
-	-- use 'tpope/vim-unimpaired'
   use { 'nvim-pack/nvim-spectre', commit = '8223c970677e4d88c9b6b6d81bda23daf11062bb' }
-	-- use 'ggandor/lightspeed.nvim'
-	-- use "petertriho/nvim-scrollbar"
-	-- nvim window
-	-- use 'https://gitlab.com/yorickpeterse/nvim-window.git'
+	use 'ggandor/lightspeed.nvim'
 
-  -- use {'kevinhwang91/nvim-bqf', commit = 'a289c8fcb9f56a9df638b396a7c037997ab59a9d'}
-
-	-- use 'folke/trouble.nvim'
 end)
 vim.api.nvim_set_keymap('n', '<Leader>h', ':lua require("replacer").run()<cr>', { silent = true })
 require('plugins/bufferline')
 require('plugins/comp')
 require('plugins/commentary')
--- require('plugins/ctrlsf')
 -- require('plugins/dashboard')
 require('plugins/gitsigns')
 require('plugins/lsp-config') 
 require('plugins/lspkind')
+require('plugins/lightspeed')
 require('plugins/lualine')
 require('plugins/lspsaga')
 require('plugins/numb') 
 require('plugins/null_ls') 
 require('plugins/nvim-colorizer') 
 require('plugins/nvim-tree') 
--- require('plugins/vgit') 
 -- require('plugins/nvim-window') 
 require('plugins/snap')
 require('plugins/nvim-spectre')
@@ -146,10 +122,8 @@ require('plugins/nvim-spectre')
 require('plugins/telescope')
 require('plugins/tmux-navigator')
 require('plugins/treesitter')
--- require('plugins/twilight')
 -- require('plugins/trouble')
 -- require('plugins/vim-test')
 require('plugins/which-key-nvim')
--- require('plugins/zen-mode')
 
 vim.cmd[[colorscheme tokyonight]]

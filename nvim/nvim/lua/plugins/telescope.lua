@@ -10,7 +10,18 @@ require('telescope').setup {
     },
     generic_sorter =  require'telescope.sorters'.get_fzy_sorter,
     file_sorter =  require'telescope.sorters'.get_fzy_sorter,
-  }
+  },
+	-- pickers = {
+	-- 	find_files = {
+	-- 		layout_config = {
+	-- 			anchor = "S",
+	-- 			prompt_position = "bottom",
+	-- 			mirror = false
+	-- 		},
+	-- 		-- previewer = false,
+	-- 		-- theme = "dropdown"
+	-- 	}
+	-- },
 }
 
 -- " Using lua functions
