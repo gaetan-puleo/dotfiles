@@ -60,7 +60,7 @@ require('packer').startup(function()
 	-- graphql
 	-- use('jparise/vim-graphql')
   -- front page
-  -- use('glepnir/dashboard-nvim')
+  use('glepnir/dashboard-nvim')
 
   -- bufferline
   use({'akinsho/nvim-bufferline.lua', commit = '7451dfc97d28e6783dbeb1cdcff12619a9323c98'})
@@ -104,7 +104,7 @@ vim.api.nvim_set_keymap('n', '<Leader>h', ':lua require("replacer").run()<cr>', 
 require('plugins/bufferline')
 require('plugins/comp')
 require('plugins/commentary')
--- require('plugins/dashboard')
+require('plugins/dashboard')
 require('plugins/gitsigns')
 require('plugins/lsp-config') 
 require('plugins/lspkind')
@@ -118,7 +118,6 @@ require('plugins/nvim-tree')
 -- require('plugins/nvim-window') 
 require('plugins/snap')
 require('plugins/nvim-spectre')
--- require('plugins/scrollbar')
 require('plugins/telescope')
 require('plugins/tmux-navigator')
 require('plugins/treesitter')
