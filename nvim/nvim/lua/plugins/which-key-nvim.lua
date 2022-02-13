@@ -38,14 +38,14 @@ wk.register({
 			-- l = {"<cmd>JABSOpen<cr>", "List buffers"},
 			f = {"<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>", "Search in current buffer"},
 		},
-		t = {
-			name = '+Tests',
-			n = {'<cmd>TestNearest<CR>', 'Test nearest test'},
-			f = {'<cmd>TestFile<CR>', 'Test file'}, 
-			s = {'<cmd>TestSuite<CR>', 'Test Suite'}, 
-			l = {'<cmd>TestLast<CR>', 'Test last test run'}, 
-			v = {'<cmd>TestVisit<CR>', 'Test visit'}, 
-		},
+		-- t = {
+		-- 	name = '+Tests',
+		-- 	n = {'<cmd>TestNearest<CR>', 'Test nearest test'},
+		-- 	f = {'<cmd>TestFile<CR>', 'Test file'}, 
+		-- 	s = {'<cmd>TestSuite<CR>', 'Test Suite'}, 
+		-- 	l = {'<cmd>TestLast<CR>', 'Test last test run'}, 
+		-- 	v = {'<cmd>TestVisit<CR>', 'Test visit'}, 
+		-- },
 		g = {
 			name = '+Git',
 			s = {"<cmd>Git <CR>", "Git status"},
@@ -58,7 +58,7 @@ wk.register({
 		-- 	h =  {"<cmd>lua require('dap').toggle_breakpoint()<cr>", "Toggle breakpoint"},
 		-- 	r = {"<cmd>lua require('dap').repl.open({})<cr>"}
 		-- },
-		z = {':ZenMode<cr>', 'Zen mode'},
+		-- z = {':ZenMode<cr>', 'Zen mode'},
 		['-'] = 'Split vertically',
 		['\\'] = 'Split horizontally'
 	}

@@ -100,7 +100,6 @@ require('packer').startup(function()
 	use 'ggandor/lightspeed.nvim'
 
 end)
-vim.api.nvim_set_keymap('n', '<Leader>h', ':lua require("replacer").run()<cr>', { silent = true })
 require('plugins/bufferline')
 require('plugins/comp')
 require('plugins/commentary')
