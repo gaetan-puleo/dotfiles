@@ -14,6 +14,15 @@ if test -e ~/.config/fish/config.local.fish
     source ~/.config/fish/config.local.fish
 end
 
+# TERM
+set -gx TERM screen-256color-bce;
+
+# TMATE Functions
+
+set -gx TMATE_PAIR_NAME (whoami)"-pair"
+set -gx TMATE_SOCKET_LOCATION "/tmp/tmate-pair.sock"
+
+
 # if not set -q TMUX
 #     set -g TMUX tmux new-session -d -s 0
 #     eval $TMUX

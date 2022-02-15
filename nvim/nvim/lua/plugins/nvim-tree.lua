@@ -78,9 +78,13 @@ require'nvim-tree'.setup {
   },
   view = {
 		auto_resize = true,
-
 		mappings = {
 			list = list
 		}
+	},
+	git = {
+		enable = true,
+		ignore = false,
+		timeout = 500
 	}
 }

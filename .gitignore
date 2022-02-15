@@ -9,6 +9,7 @@ nvim/nvim/plugged
 nvim/nvim/plugin
 
 # tmux
+tmux/.tmate.local.conf
 tmux/.tmux/plugins
 tmux/.tmux/resurrect
 
