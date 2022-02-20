@@ -49,7 +49,7 @@ require('packer').startup(function()
   use({ 'hrsh7th/cmp-nvim-lsp' , commit = 'ebdfc204afb87f15ce3d3d3f5df0b8181443b5ba' })
   use({ 'onsails/lspkind-nvim', commit = 'f0d1552890e384f15b47ea88bd1b8a077cddc24a' })
   use({ 'saadparwaiz1/cmp_luasnip', commit = 'd6f837f4e8fe48eeae288e638691b91b97d1737f' })
-	use "rafamadriz/friendly-snippets"
+	-- use "rafamadriz/friendly-snippets"
   -- lsp
   use({ 'neovim/nvim-lspconfig', commit = 'e7df7ecae0b0d2f997ea65e951ddbe98ca3e154b'})
   use({ 'jose-elias-alvarez/null-ls.nvim', commit = 'e8a666829a3d803844f24daa4932e4f5fe76cbeb'})

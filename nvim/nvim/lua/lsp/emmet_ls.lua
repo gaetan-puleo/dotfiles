@@ -1,3 +1,7 @@
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 return {
-    filetypes = { "html", "css", "tsx", "js", "jsx" }
+	capabilities = capabilities,
+  filetypes = { "html", "css", "tsx", "js", "jsx" }
 }
