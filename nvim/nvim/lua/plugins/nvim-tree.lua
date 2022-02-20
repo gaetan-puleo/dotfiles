@@ -14,6 +14,7 @@ local list = {
 	{key = "x",              cb = tree_cb("cut")},
 	{key = "y",              cb = tree_cb("copy")},
 	{key = "p",              cb = tree_cb("paste")},
+	{key = "?",              cb = tree_cb("toggle_help")},
 }
 
 map('n', '<leader>fe', ':NvimTreeToggle<CR>', {})
