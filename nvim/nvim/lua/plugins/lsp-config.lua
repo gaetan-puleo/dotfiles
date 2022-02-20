@@ -98,7 +98,7 @@ local function setup_servers()
 	-- local servers = {'typescript', 'bash', 'json', 'css', 'graphql', 'html', 'diagnosticls'}
 	-- local servers = {'tsserver', 'bashls', 'jsonls', 'cssls', 'graphql', 'html', 'diagnosticls'}
 	-- local servers = {'tsserver', 'jsonls', 'cssls', 'graphql', 'html'}
-	local servers = {'tsserver', 'html', 'emmet_ls', 'tailwindcss', 'jsonls', 'cssls'}
+	local servers = {'tsserver', 'html', 'emmet_ls', 'tailwindcss', 'jsonls', 'cssls', 'solidity_ls', 'bashls'}
 
   for _, server in pairs(servers) do
 
