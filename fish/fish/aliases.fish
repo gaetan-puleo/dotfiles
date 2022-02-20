@@ -36,8 +36,8 @@ function tmate-pair
     tmate -S "$TMATE_SOCKET_LOCATION" -f "$HOME/.tmate.conf" new-session -d -s "$TMATE_PAIR_NAME"
     echo "started tmate"
 
+    echo "waiting for the url..."
     while [ -z "$url" ]
-      echo "waiting for the url..."
 
       set url (tmate -S $TMATE_SOCKET_LOCATION display -p '#{tmate_ssh}')
     end

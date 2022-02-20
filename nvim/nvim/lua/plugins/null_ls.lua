@@ -16,6 +16,7 @@ on_attach = function(client)
     end,
     sources = {
 			formatting.prettier,
+			formatting.eslint_d,
 			diagnostics.eslint_d
     },
 })
