@@ -104,6 +104,9 @@ local function setup_servers()
 
 			local path = 'lsp/' .. server
       local config = require(path)
+			config['flags'] = {
+				debounce_text_changes = 250,
+			}
    		nvim_lsp[server].setup(config)
     
   end

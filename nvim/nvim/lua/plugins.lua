@@ -61,7 +61,8 @@ require('packer').startup(function()
 	-- use('jparise/vim-graphql')
   -- front page
   use('glepnir/dashboard-nvim')
-
+	-- solidity
+  use('TovarishFin/vim-solidity')
   -- bufferline
   use({'akinsho/nvim-bufferline.lua', commit = '7451dfc97d28e6783dbeb1cdcff12619a9323c98'})
 	-- icons
