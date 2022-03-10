@@ -20,3 +20,5 @@
 	sa = stash apply --index
 [include]
   path = ~/.config/git/.gitconfig_local
+[pull]
+	rebase = true
