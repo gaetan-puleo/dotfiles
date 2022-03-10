@@ -4,9 +4,7 @@
 
 ### Quick Setup
 ```bash
-git clone https://github.com/gaetan-puleo/dotfiles.git
-
-bash dotfiles/bootstrap.bash
+git clone https://github.com/gaetan-puleo/dotfiles.git && bash dotfiles/bootstrap.bash
 ```
 <!-- ### Advanced Setup -->
 

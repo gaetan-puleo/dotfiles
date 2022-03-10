@@ -1,0 +1,16 @@
+name: tests-installations
+on: [push]
+jobs:
+  install: 
+    runs-on: ubuntu-20.04
+    container: ubuntu:20.04
+    steps:
+      - run: echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
+        shell: bash
+      - run: apt update && apt install sudo software-properties-common -y
+        shell: bash
+      - uses: actions/checkout@v2
+      - run: TERM=xterm bash "${GITHUB_WORKSPACE}/bootstrap.bash"
+        shell: bash
+      - run: TERM=xterm bash "${GITHUB_WORKSPACE}/tests/tests.bash"
+        shell: bash
