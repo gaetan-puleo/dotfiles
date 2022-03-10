@@ -1,18 +1,23 @@
-#/bin/bash
-CURR_PATH=$(dirname $(realpath ${BASH_SOURCE[0]}))
+#!/bin/bash
 
-bash "${CURR_PATH}/ubuntu/install.bash"
-bash "${CURR_PATH}/git/install.bash"
-bash "${CURR_PATH}/kitty/install.bash"
-bash "${CURR_PATH}/fonts/install.bash"
-bash "${CURR_PATH}/themes/install.bash"
-bash "${CURR_PATH}/nvim/install.bash"
-bash "${CURR_PATH}/fish/install.bash"
-# bash "${CURR_PATH}/node/install.bash" # Run in fish script
-bash "${CURR_PATH}/tmux/install.bash"
+export DEBIAN_FRONTEND=noninteractive
 
 
-bash "${CURR_PATH}/checkhealth.bash"
+source "$(dirname $(realpath ${BASH_SOURCE[0]}))/ubuntu/install.bash"
+source "$(dirname $(realpath ${BASH_SOURCE[0]}))/fish/install.bash"
+source "$(dirname $(realpath ${BASH_SOURCE[0]}))/node/install.bash"
+source "$(dirname $(realpath ${BASH_SOURCE[0]}))/lsp/install.bash"
+source "$(dirname $(realpath ${BASH_SOURCE[0]}))/nvim/install.bash"
+source "$(dirname $(realpath ${BASH_SOURCE[0]}))/git/install.bash"
+source "$(dirname $(realpath ${BASH_SOURCE[0]}))/kitty/install.bash"
+source "$(dirname $(realpath ${BASH_SOURCE[0]}))/fonts/install.bash"
+source "$(dirname $(realpath ${BASH_SOURCE[0]}))/themes/install.bash"
+source "$(dirname $(realpath ${BASH_SOURCE[0]}))/icons/install.bash"
+source "$(dirname $(realpath ${BASH_SOURCE[0]}))/tmux/install.bash"
 
-# fish
-chsh $USER -s $(which fish)
+
+if [ -z ${GITHUB_ACTIONS+x} ];
+then
+	# fish
+	figlet "Welcome Home" | lolcat 
+fi
