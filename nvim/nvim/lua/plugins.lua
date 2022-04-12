@@ -15,7 +15,10 @@ vim.api.nvim_exec([[
 
 require('packer').startup(function()
   use 'wbthomason/packer.nvim' -- packager for neovim
-  use {'folke/tokyonight.nvim', commit = '8223c970677e4d88c9b6b6d81bda23daf11062bb'} -- Theme
+  use {
+		'folke/tokyonight.nvim', 
+		-- commit = '8223c970677e4d88c9b6b6d81bda23daf11062bb'
+	} -- Theme
 
   use {'antoinemadec/FixCursorHold.nvim', commit = '0e4e22d21975da60b0fd2d302285b3b603f9f71e'}
   use 'nvim-lua/popup.nvim' 
@@ -66,9 +69,7 @@ require('packer').startup(function()
   -- bufferline
   use({'akinsho/nvim-bufferline.lua', commit = '7451dfc97d28e6783dbeb1cdcff12619a9323c98'})
 	-- icons
-	use {'kyazdani42/nvim-web-devicons', 
-    commit = '634e26818f2bea9161b7efa76735746838971824'
-  }
+	use {'kyazdani42/nvim-web-devicons'}
 
   -- better nodejs go to file
   use('PsychoLlama/further.vim')
@@ -84,7 +85,7 @@ require('packer').startup(function()
   use ({'norcalli/nvim-colorizer.lua', commit = '36c610a9717cc9ec426a07c8e6bf3b3abcb139d6'})
 
 	-- snap (grep in files)
-	use { 'camspiers/snap', commit = '500f97650136d4c5a00179d7f80dd614e13efdbe' }
+	use { 'camspiers/snap' }
 
  
 	use { 'tami5/lspsaga.nvim', branch = 'nvim6.0' }
