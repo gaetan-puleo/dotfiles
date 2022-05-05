@@ -1,3 +1,5 @@
 require'colorizer'.setup({
-  css = true;
+  css = { 
+		css = true;
+	};
 })

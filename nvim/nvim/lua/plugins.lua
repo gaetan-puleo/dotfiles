@@ -74,6 +74,8 @@ require('packer').startup(function()
   -- better nodejs go to file
   use('PsychoLlama/further.vim')
 
+  use('mdx-js/mdx')
+
 
   -- treesitter
   use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', commit = 'efedf3510aa85f89a687dd1e29eab6f4677fa17e'})
