@@ -23,3 +23,4 @@ require'bufferline'.setup{
 -- map('n', '<leader>9', '<Cmd>BufferLineGoToBuffer 9<CR>', {})
 map('n', '<leader>p', '<Cmd>BufferLinePick<CR>', {})
 map('n', '<leader>c', '<Cmd>BufferLinePickClose<CR>', {})
+

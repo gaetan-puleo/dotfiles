@@ -1,4 +1,8 @@
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
+
+-- local circles = require('circles')
+-- circles.setup({ icons = { empty = '', filled = '', lsp_prefix = '' } })
+
 local map = vim.api.nvim_set_keymap
 local list = {
 	{key = "<CR>",           cb = tree_cb("edit")},
@@ -25,41 +29,41 @@ map('n', '<leader>fs', ':NvimTreeFindFile<CR>', {})
 -- vim.g['nvim_tree_lsp_diagnostics'] = 1 -- show lsp diagnostic
 -- vim.g['nvim_tree_auto_close'] = 0 -- close if last window
 -- vim.g['nvim_tree_git_hl'] = 1 -- highlight open
-vim.g['nvim_tree_show_icons'] = {
-  git = 1,
-  folders = 1,
-  files = 1,
-}
+-- vim.g['nvim_tree_show_icons'] = {
+--   git = 1,
+--   folders = 1,
+--   files = 1,
+-- }
 
-vim.g['nvim_tree_icons'] = {
-  default = '',
-  symlink = '',
-  git = {
-    unstaged = "M",
-    staged = "✓",
-    unmerged = "",
-    renamed = "➜",
-    untracked = "U",
-    deleted = "D",
-    ignored = "◌",
-  },
-  folder = {
-    default = "",
-    open = "",
-    empty = "",
-    empty_open = "",
-    symlink = "",
-    symlink_open = "",
-  },
-  lsp = {
-    hint = "",
-    info = "",
-    warning = "",
-    error = "",
-  }
-}
+-- vim.g['nvim_tree_icons'] = {
+--   default = '',
+--   symlink = '',
+--   git = {
+--     unstaged = "M",
+--     staged = "✓",
+--     unmerged = "",
+--     renamed = "➜",
+--     untracked = "U",
+--     deleted = "D",
+--     ignored = "◌",
+--   },
+--   folder = {
+--     default = "",
+--     open = "",
+--     empty = "",
+--     empty_open = "",
+--     symlink = "",
+--     symlink_open = "",
+--   },
+--   lsp = {
+--     hint = "",
+--     info = "",
+--     warning = "",
+--     error = "",
+--   }
+-- }
 
-require'nvim-tree'.setup {
+return  {
   -- disables netrw completely
   disable_netrw = true,
   -- hijack netrw window on startup
@@ -67,25 +71,36 @@ require'nvim-tree'.setup {
   -- open the tree when running this setup function
   open_on_setup = false,
   -- closes neovim automatically when the tree is the last **WINDOW** in the view
-  auto_close = false,
-  diagnostics = {
-    enable = true,
-    icons = {
-      hint = "",
-      info = "",
-      warning = "",
-      error = "",
-    }
-  },
+  
   view = {
-		auto_resize = true,
-		mappings = {
-			list = list
+    mappings = { list = list },
+		signcolumn = 'yes'
+  },
+  renderer = {
+	icons = {
+		git_placement = "signcolumn",
+		glyphs = {
+		  	default = '',
+		  	symlink = '',
+		  	git = {
+					unstaged = "",
+					staged = "",
+					unmerged = "",
+					renamed = "",
+					untracked = "",
+					deleted = "D",
+					ignored = "◌",
+		  	},
+		  	folder = {
+					default = "",
+					open = "",
+					empty = "",
+					empty_open = "",
+					symlink = "",
+					symlink_open = "",
+				},
+			}
+
 		}
-	},
-	git = {
-		enable = true,
-		ignore = false,
-		timeout = 500
-	}
+  }
 }

@@ -1,6 +1,5 @@
 if(not vim.g.vscode) then
 	-- vim.cmd('source ~/.config/nvim/config/hi-override.vim')
-	require('theme')
 	require('config/settings')
 	require('config/mapping')
 	require('plugins')

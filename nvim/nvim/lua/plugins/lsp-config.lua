@@ -59,12 +59,12 @@ local on_attach = function(client, bufnr)
   -- buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
   -- buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
   -- buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
-  buf_set_keymap('n','gh', '<cmd>lua require(\'lspsaga.provider\').lsp_finder()<CR>', opts)
-  buf_set_keymap('n','ca', '<cmd>lua require(\'lspsaga.codeaction\').code_action()<CR>', opts)
-  buf_set_keymap('v','ca', '<cmd>lua require(\'lspsaga.codeaction\').range_code_action()<CR>', opts)
-  buf_set_keymap('n','K' , '<cmd>lua require(\'lspsaga.hover\').render_hover_doc()<CR>', opts)
-  buf_set_keymap('n','gR', '<cmd>lua require(\'lspsaga.rename\').rename()<CR>', opts)
-  buf_set_keymap('n','gs', '<cmd>lua require(\'lspsaga.signaturehelp\').signature_help()<CR>', opts)
+ -- buf_set_keymap('n','gh', '<cmd>lua require(\'lspsaga.provider\').lsp_finder()<CR>', opts)
+ -- buf_set_keymap('n','ca', '<cmd>lua require(\'lspsaga.codeaction\').code_action()<CR>', opts)
+ -- buf_set_keymap('v','ca', '<cmd>lua require(\'lspsaga.codeaction\').range_code_action()<CR>', opts)
+ -- buf_set_keymap('n','K' , '<cmd>lua require(\'lspsaga.hover\').render_hover_doc()<CR>', opts)
+ -- buf_set_keymap('n','gR', '<cmd>lua require(\'lspsaga.rename\').rename()<CR>', opts)
+ -- buf_set_keymap('n','gs', '<cmd>lua require(\'lspsaga.signaturehelp\').signature_help()<CR>', opts)
 
 end
 

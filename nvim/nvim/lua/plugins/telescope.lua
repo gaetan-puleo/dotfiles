@@ -38,7 +38,7 @@ map('n', "<C-p>", [[<cmd>lua require('telescope.builtin').find_files({hidden = t
 -- map('n', '<leader>t', [[<cmd>lua require('telescope.builtin').tags()<cr>]], { noremap = true, silent = true})
 -- map('n', '<leader>fo', [[<cmd>lua require('telescope.builtin').oldfiles()<cr>]], { noremap = true, silent = true})
 -- map('n', '<leader>sd', [[<cmd>lua require('telescope.builtin').grep_string()<cr>]], { noremap = true, silent = true})
--- map('n', '<leader>fg', [[<cmd>lua require('telescope.builtin').live_grep({hidden = true, ignore = true})<cr>]], { noremap = true, silent = true})
+map('n', '<leader>fg', [[<cmd>lua require('telescope.builtin').live_grep({hidden = true, ignore = true})<cr>]], { noremap = true, silent = true})
 -- map('n', '<leader>o', [[<cmd>lua require('telescope.builtin').tags{ only_current_buffer = true }<cr>]], { noremap = true, silent = true})
 
 -- TODO 
