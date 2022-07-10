@@ -1,15 +1,15 @@
 local map = vim.api.nvim_set_keymap
 
 require'bufferline'.setup{
-	options = {
-		separator_style = "slant",
-		offsets = {{filetype = "NvimTree", text = " NvimTree", highlight = "BufferLineFill", text_align = "center"}},
-		always_show_bufferline = true,
-		diagnostics = "nvim_lsp",
-		diagnostics_indicator = function(count, level, diagnostics_dict)
-			return "("..count..")"
-		end
-	}
+  options = {
+    separator_style = "slant",
+    offsets = {{filetype = "NvimTree", text = " NvimTree", highlight = "BufferLineFill", text_align = "center"}},
+    always_show_bufferline = true,
+    diagnostics = "nvim_lsp",
+    diagnostics_indicator = function(count, level, diagnostics_dict)
+      return "("..count..")"
+    end
+  }
 }
 
 -- map('n', '<leader>1', '<Cmd>BufferLineGoToBuffer 1<CR>', {})

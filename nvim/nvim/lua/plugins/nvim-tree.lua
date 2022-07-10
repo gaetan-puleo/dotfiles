@@ -74,33 +74,38 @@ return  {
   
   view = {
     mappings = { list = list },
-		signcolumn = 'yes'
+    signcolumn = 'yes'
+  },
+  git = {
+    ignore = false
+  },
+  filters = {
+    dotfiles = false
   },
   renderer = {
-	icons = {
-		git_placement = "signcolumn",
-		glyphs = {
-		  	default = '',
-		  	symlink = '',
-		  	git = {
-					unstaged = "",
-					staged = "",
-					unmerged = "",
-					renamed = "",
-					untracked = "",
-					deleted = "D",
-					ignored = "◌",
-		  	},
-		  	folder = {
-					default = "",
-					open = "",
-					empty = "",
-					empty_open = "",
-					symlink = "",
-					symlink_open = "",
-				},
-			}
-
-		}
+    icons = {
+      git_placement = "signcolumn",
+      glyphs = {
+        default = '',
+        symlink = '',
+        git = {
+          unstaged = "",
+          staged = "",
+          unmerged = "",
+          renamed = "",
+          untracked = "",
+          deleted = "D",
+          ignored = "◌",
+        },
+        folder = {
+          default = "",
+          open = "",
+          empty = "",
+          empty_open = "",
+          symlink = "",
+          symlink_open = "",
+        },
+      }
+    }
   }
 }

@@ -1,5 +1,5 @@
 -- Install packer
-local execute = vim.api.nvim_command
+-- local execute = vim.api.nvim_command
 local install_path = vim.fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
@@ -20,13 +20,21 @@ require('packer').startup(function()
   -- use 'djoshea/vim-autoread' -- Autoread file
   -- use 'RishabhRD/popfix'
 
+
+  use {
+    'terrortylor/nvim-comment', 
+    config = function() 
+      require('plugins/comment')
+    end
+  } -- this plugin needs to be here until this issue is fixed (https://github.com/neovim/neovim/issues/12587)
   -- cheatsheets
-	use {
-		'folke/tokyonight.nvim',
-		config = function () 
-			require('plugins/tokyonight')
-		end,
-	}
+  use {
+    'folke/tokyonight.nvim',
+      config = function () 
+        require('plugins/tokyonight')
+      end
+    ,
+  }
   
   use 'kyazdani42/nvim-web-devicons'
   -- use {'folke/which-key.nvim'}
@@ -42,13 +50,13 @@ require('packer').startup(function()
   })
 
   use {
-		'lewis6991/gitsigns.nvim',
-		config = function() 
-			require('plugins/gitsigns')
-		end,
+    'lewis6991/gitsigns.nvim',
+      config = function() 
+        require('plugins/gitsigns')
+      end,
   }
   -- -- comments
-	-- use {'tpope/vim-commentary'}
+        -- use {'tpope/vim-commentary'}
 
   -- test runners manager
   -- use {'janko/vim-test'}
@@ -69,41 +77,41 @@ require('packer').startup(function()
       'L3MON4D3/LuaSnip'
     }
   }
-	-- use "rafamadriz/friendly-snippets"
+        -- use "rafamadriz/friendly-snippets"
   -- lsp
   use({ 'neovim/nvim-lspconfig', 
-		config = function() 
-			require('plugins/lsp-config')
-		end,
-		}
-	)
+                config = function() 
+                        require('plugins/lsp-config')
+                end,
+                }
+        )
   use({ 
-		'jose-elias-alvarez/null-ls.nvim',
-		config = function()
-			require('plugins/null_ls')
-		end,
-		requires = {
-			'jose-elias-alvarez/nvim-lsp-ts-utils'	
-		}
-	})
+                'jose-elias-alvarez/null-ls.nvim',
+                config = function()
+                        require('plugins/null_ls')
+                end,
+                requires = {
+                        'jose-elias-alvarez/nvim-lsp-ts-utils'  
+                }
+        })
 
   -- statusline
   use({
-		'nvim-lualine/lualine.nvim',
-		config = function()
-			require('plugins/lualine')
-		end,
-	})
+                'nvim-lualine/lualine.nvim',
+                config = function()
+                        require('plugins/lualine')
+                end,
+        })
 
-	-- graphql
-	-- use('jparise/vim-graphql')
+        -- graphql
+        -- use('jparise/vim-graphql')
   -- front page
   use({
-		'glepnir/dashboard-nvim',
-		config = function() 
-			require('plugins/dashboard')
-		end
-	})
+                'glepnir/dashboard-nvim',
+                config = function() 
+                        require('plugins/dashboard')
+                end
+        })
 
   -- bufferline
   use({'akinsho/nvim-bufferline.lua',
@@ -115,7 +123,7 @@ require('packer').startup(function()
   -- better nodejs go to file
   -- use('PsychoLlama/further.vim')
 
-  use('mdx-js/mdx')
+  -- use('mdx-js/mdx')
 
 
   -- treesitter
@@ -131,36 +139,36 @@ require('packer').startup(function()
       require('plugins/treesitter') end,
     
   })
-
+  --
   -- check color preview
   -- use ({'norcalli/nvim-colorizer.lua', commit = '36c610a9717cc9ec426a07c8e6bf3b3abcb139d6'})
 
-	-- snap (grep in files)
-	-- use { 'camspiers/snap' }
+        -- snap (grep in files)
+        -- use { 'camspiers/snap' }
 
  
-	-- use { 'tami5/lspsaga.nvim', branch = 'nvim6.0' }
+        -- use { 'tami5/lspsaga.nvim', branch = 'nvim6.0' }
   use({
     'christoomey/vim-tmux-navigator', 
     config = function() require('plugins/tmux-navigator') end 
   })
 
-	-- finder
- 	use {'nvim-telescope/telescope.nvim',
-		config = function()
-			require('plugins/telescope')
-		end,
-		requires = {
-			{'nvim-lua/plenary.nvim'} 
-		}
-	}
+        -- finder
+        use {'nvim-telescope/telescope.nvim',
+                config = function()
+                        require('plugins/telescope')
+                end,
+                requires = {
+                        {'nvim-lua/plenary.nvim'} 
+                }
+        }
 
-	-- enable command like :32 to go to line 32
+        -- enable command like :32 to go to line 32
   -- use { 'nacro90/numb.nvim', commit = 'c8b128230adb22727256fd24a221f4c5a1b41e93' }
 
-	
+        
   -- use { 'nvim-pack/nvim-spectre', commit = '8223c970677e4d88c9b6b6d81bda23daf11062bb' }
-	-- use 'ggandor/lightspeed.nvim'
+        -- use 'ggandor/lightspeed.nvim'
 
 end)
 -- require('plugins/commentary')

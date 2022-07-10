@@ -6,7 +6,7 @@ local on_attach = function(client, bufnr)
 end
 
 return {
-	on_attach = on_attach,
+  on_attach = on_attach,
   capabilities = capabilities
 }
 

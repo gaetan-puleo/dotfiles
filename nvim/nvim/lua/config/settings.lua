@@ -1,3 +1,4 @@
+local opt = vim.opt
 -- Set true colors
 vim.o.termguicolors = true
 
@@ -8,9 +9,9 @@ vim.o.exrc = true
 vim.o.secure = true
 
 -- one tab is equal 2 spaces
-vim.cmd('set ts=2')
-vim.cmd('set sw=2')
-vim.bo.expandtab = true
+opt.expandtab = true
+opt.shiftwidth = 2
+opt.smartindent = true
 
 vim.wo.number = true -- set numbered lines
 

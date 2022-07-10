@@ -28,3 +28,8 @@ set -gx TMATE_SOCKET_LOCATION "/tmp/tmate-pair.sock"
 #     eval $TMUX
 #     tmux attach-session -d -t 0
 # end
+
+# Bun
+set -Ux BUN_INSTALL "/home/gaetan/.bun"
+set -px --path PATH "/home/gaetan/.bun/bin"
+
