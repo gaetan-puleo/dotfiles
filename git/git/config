@@ -1,4 +1,5 @@
 [user]
+	email = gaetan.puleo.dev@gmail.com
   # These values are set in ~/.gitconfig_local
 
 [core]
