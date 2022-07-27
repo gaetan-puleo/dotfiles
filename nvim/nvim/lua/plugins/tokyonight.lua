@@ -9,7 +9,7 @@ vim.g.tokyonight_hide_inactive_statusline = false
 vim.cmd("hi! SniprunVirtualTextOk ctermbg=Cyan guibg=#66eeff ctermfg=Black guifg=#000000")
 
 -- Change the "hint" color to the "orange" color, and make the "error" color bright red
-vim.g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
+-- vim.g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
 
 vim.cmd[[colorscheme tokyonight]]
 

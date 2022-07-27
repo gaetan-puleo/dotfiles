@@ -94,25 +94,25 @@ end
 --   }    
 -- end
 
-local function setup_servers()
-	-- local servers = {'typescript', 'bash', 'json', 'css', 'graphql', 'html', 'diagnosticls'}
-	-- local servers = {'tsserver', 'bashls', 'jsonls', 'cssls', 'graphql', 'html', 'diagnosticls'}
-	-- local servers = {'tsserver', 'jsonls', 'cssls', 'graphql', 'html'}
-	local servers = {'tsserver', 'html', 'emmet_ls', 'tailwindcss', 'jsonls', 'cssls', 'bashls'}
+-- local function setup_servers()
+--   -- local servers = {'typescript', 'bash', 'json', 'css', 'graphql', 'html', 'diagnosticls'}
+--   -- local servers = {'tsserver', 'bashls', 'jsonls', 'cssls', 'graphql', 'html', 'diagnosticls'}
+--   -- local servers = {'tsserver', 'jsonls', 'cssls', 'graphql', 'html'}
+--   local servers = {'tsserver', 'html', 'emmet_ls', 'tailwindcss', 'jsonls', 'cssls', 'bashls'}
 
-  for _, server in pairs(servers) do
+--   for _, server in pairs(servers) do
 
-			local path = 'lsp/' .. server
-      local config = require(path)
-			config['flags'] = {
-				debounce_text_changes = 250,
-			}
-   		nvim_lsp[server].setup(config)
+--   local path = 'lsp/' .. server
+--   local config = require(path)
+--     config['flags'] = {
+--       debounce_text_changes = 250,
+--     }
+--     nvim_lsp[server].setup(config)
     
-  end
-end
+--   end
+-- end
 
-setup_servers()
+-- setup_servers()
 
 -- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
 -- require'lspinstall'.post_install_hook = function ()

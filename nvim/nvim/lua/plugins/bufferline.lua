@@ -4,12 +4,23 @@ require'bufferline'.setup{
   options = {
     separator_style = "slant",
     offsets = {{filetype = "NvimTree", text = " NvimTree", highlight = "BufferLineFill", text_align = "center"}},
-    always_show_bufferline = true,
+    always_show_bufferline = false,
     diagnostics = "nvim_lsp",
     diagnostics_indicator = function(count, level, diagnostics_dict)
       return "("..count..")"
     end
-  }
+  },
+  highlights = {
+    separator = {
+      guifg = '#15161E',
+    },
+    separator_visible = {
+      guifg = '#15161E',
+    },
+    separator_selected = {
+      guifg = '#15161E',
+    },
+  },
 }
 
 -- map('n', '<leader>1', '<Cmd>BufferLineGoToBuffer 1<CR>', {})
