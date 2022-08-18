@@ -46,6 +46,21 @@ require'mason-tool-installer'.setup {
 }
 
 function on_attach(client, bufnr) 
+
+
+  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { silent = true,noremap = true })
+  vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, { silent = true,noremap = true })
+  vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { silent = true,noremap = true })
+  vim.keymap.set('n', 'gt', vim.lsp.buf.type_definition, {silent = true, noremap = true})
+
+  vim.keymap.set('n', 'K', vim.lsp.buf.signature_help, {silent = true, noremap = true} )
+  vim.keymap.set('n', 'gr', vim.lsp.buf.references, { silent = true, noremap = true})
+
+
+  vim.keymap.set('n', 'gt', vim.lsp.buf.definition, { silent = true,noremap = true })
+  vim.keymap.set('n', 'ca', vim.lsp.buf.code_action, { silent = true, noremap = true })
+  vim.keymap.set('n', 'gR', vim.lsp.buf.rename, { silent = true, noremap = true })
+
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -119,7 +134,7 @@ require("mason-lspconfig").setup_handlers {
       },
       on_attach = function (client, bufnr)
         require "lsp-format".on_attach(client)
-        -- on_attach(client, bufnr)
+        on_attach(client, bufnr)
         
       end
     }

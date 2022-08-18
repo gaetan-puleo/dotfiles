@@ -20,12 +20,18 @@ require('packer').startup(function()
   use 'djoshea/vim-autoread' -- Autoread file
   use 'RishabhRD/popfix'
 
+  -- use {
+  --   'folke/tokyonight.nvim',
+  --     config = function () 
+  --       require('plugins/tokyonight')
+  --     end
+  --   ,
+  -- }
   use {
-    'folke/tokyonight.nvim',
-      config = function () 
-        require('plugins/tokyonight')
-      end
-    ,
+    'LunarVim/horizon.nvim',
+    config = function ()
+      vim.cmd[[colorscheme horizon]] 
+    end
   }
   -- Lua
   use {
@@ -144,12 +150,19 @@ require('packer').startup(function()
       {'nvim-lua/plenary.nvim'} 
     }
   }
-  -- use({
-  --   "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-  --   config = function()
-  --     require("lsp_lines").setup()
-  --   end,
-  -- })
+
+  use {
+    "ray-x/lsp_signature.nvim",
+    config = function() 
+      require('plugins/lsp-signature')
+    end
+  }
+  use({
+    "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+    config = function()
+      require("lsp_lines").setup()
+    end,
+  })
   use({
     'lukas-reineke/lsp-format.nvim'
   })
@@ -160,6 +173,21 @@ require('packer').startup(function()
       require('plugins/nvim-ufo')
     end
   }
+
+  use {
+      'kosayoda/nvim-lightbulb',
+      config = function () 
+        require('plugins/lsp-lightbulb')
+      end
+  }
+
+  -- use({
+  --   "glepnir/lspsaga.nvim",
+  --   branch = "main",
+  --   config = function()
+  --     require("plugins/lspsaga")
+  --   end,
+  -- })
 
 
 -- need to test
