@@ -1,0 +1,25 @@
+[user]
+	email = gaetan.puleo.dev@gmail.com
+  # These values are set in ~/.gitconfig_local
+
+[core]
+  excludesfile = ~/.config/git/.gitignore_global
+
+[alias]
+  alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+  rb = rebase
+  rs = reset
+  l = log
+  lo = log --oneline
+  fa = fetch --all -p
+  st = status
+  co = checkout
+  cm = commit -m
+	oups = commit --amend --no-edit
+	sm = stash push -m
+	sl = stash list
+	sa = stash apply --index
+[include]
+  path = ~/.config/git/.gitconfig_local
+[pull]
+	rebase = true

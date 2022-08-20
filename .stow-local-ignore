@@ -1,0 +1,7 @@
+# stow ignore folder
+scripts
+.git
+.github
+wallpaper
+lsp
+tests
