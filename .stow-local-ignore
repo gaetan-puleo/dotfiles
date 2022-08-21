@@ -1,10 +1,10 @@
 # stow ignore folder
-scripts
+scripts/
+wallpaper/
+tests/
+
 \.git
 \.github
 \.gitignore
-wallpaper
-lsp
-tests
 
 ^/README
