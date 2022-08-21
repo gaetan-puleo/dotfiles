@@ -3,14 +3,12 @@
 case $1 in
   all)
     echo -n "Create symlinks for all directories"
-    stow --verbose --target=$HOME --restow --adopt act gsimplecal picom autorandr i3 polybar themes icons tmux dunst kitty rofi fish neofetch fonts nix sxhkd git nvim bash
-    git reset --hard
+    stow --verbose --target=$HOME --restow act gsimplecal picom autorandr i3 polybar themes icons tmux dunst kitty rofi fish neofetch fonts nix sxhkd git nvim bash
     ;;
 
   minimal)
     echo -n "Create symlinks for minimal setup"
     stow --verbose --target=$HOME --restow nvim tmux fish bash nix git kitty
-    git reset --hard
     ;;
 
   delete)
