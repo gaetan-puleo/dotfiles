@@ -14,7 +14,7 @@ XF86PowerOff
     bash ~/.config/rofi/bin/menu_powermenu
 
 XF86AudioMute 
-    amixer sset 'Master' toggle
+    amixer set 'Master' toggle
 XF86AudioLowerVolume 
     pactl -- set-sink-volume @DEFAULT_SINK@ -5% #decrease sound volume
     
