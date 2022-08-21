@@ -50,6 +50,9 @@ home-manager switch
 # echo "Set Fish a default shell"
 # sudo chsh $USER -s $(which fish)
 
+echo "Source bashrc"
+. ~/.bashrc
+
 echo "Install fisher"
 
 fish -c "cd; curl -sL https://git.io/fisher | source && fisher update"
