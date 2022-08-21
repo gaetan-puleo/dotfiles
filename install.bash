@@ -45,16 +45,16 @@ rm ~/.bashrc
 echo "symlink everything"
 bash ./symlink.bash all
 
-echo "Install packer"
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-
 echo "uninstall git and stow"
 nix-env --uninstall git
 nix-env --uninstall stow
 
 echo "Apply home-manager config"
 home-manager switch
+
+echo "Install packer"
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 echo "Install fisher"
 fish -c "cd; curl -sL https://git.io/fisher | source && fisher update"
