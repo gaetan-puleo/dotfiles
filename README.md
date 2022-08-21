@@ -2,9 +2,37 @@
 
 ## Setup
 
-### Quick Setup
+
+First we need git and stow
 ```bash
-git clone https://github.com/gaetan-puleo/dotfiles.git && bash dotfiles/bootstrap.bash
+# install stow and git on debian based distro
+sudo apt update -y; sudo apt install -y stow git
+
+# install stow and git on arch based distro
+sudo pacman -Suy git stow
+```
+Clone the repository
+
+```bash
+git clone https://github.com/gaetan-puleo/dotfiles.git && cd dotfiles
+```
+
+Create symlinks
+```bash
+# All symlinks
+bash ./symlimks all
+
+# Minimal Symlinks
+bash ./symlimks minimal
+```
+Install Nix, Home manager and the dependencies
+```bash
+bash ./scripts/nix.bash
+```
+## Uninstall dotfiles
+
+```bash
+bash ./symlimks delete
 ```
 <!-- ### Advanced Setup -->
 
