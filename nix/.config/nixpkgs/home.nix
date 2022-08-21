@@ -63,5 +63,6 @@
     pkgs.sxhkd 
     pkgs.picom 
     pkgs.rofi
+    pkgs.feh
   ];
 }
