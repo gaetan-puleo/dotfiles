@@ -12,13 +12,13 @@ require'bufferline'.setup{
   },
   highlights = {
     separator = {
-      guifg = '#15161E',
+      fg = '#15161E',
     },
     separator_visible = {
-      guifg = '#15161E',
+      fg = '#15161E',
     },
     separator_selected = {
-      guifg = '#15161E',
+      fg = '#15161E',
     },
   },
 }

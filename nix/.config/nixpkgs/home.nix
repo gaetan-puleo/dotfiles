@@ -42,6 +42,8 @@
     pkgs.lolcat
     pkgs.stow
     pkgs.fish
+    pkgs.gcc
+    pkgs.libstdcxx5 
  
     # DEV
     pkgs.neovim
@@ -50,5 +52,8 @@
     # Node
     pkgs.nodejs-16_x
     pkgs.yarn
+
+    # GUI
+    pkgs.firefox
   ];
 }

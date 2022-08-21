@@ -26,7 +26,6 @@ require'mason-tool-installer'.setup {
         'cssmodules-language-server',
         'tailwindcss-language-server',
         'emmet-ls',
-        'efm',
         -- linter
         'eslint_d',
         -- formatter
