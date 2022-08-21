@@ -22,7 +22,7 @@
     }))
   ];
   # Let Home Manager install and manage itself.
-  /* programs.home-manager.enable = true; */
+  # programs.home-manager.enable = true; 
   home.packages = [
 
     # CLI
@@ -41,14 +41,14 @@
     pkgs.figlet
     pkgs.lolcat
     pkgs.stow
+    pkgs.fish
  
     # DEV
     pkgs.neovim
-    /* pkgs.vimPlugins.packer-nvim  */
+    # pkgs.vimPlugins.packer-nvim
  
     # Node
     pkgs.nodejs-16_x
     pkgs.yarn
-    pkgs.nodePackages.npm 
   ];
 }
