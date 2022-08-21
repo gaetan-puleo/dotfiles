@@ -48,7 +48,14 @@ echo "Apply home-manager config"
 home-manager switch
 
 # echo "Set Fish a default shell"
-sudo chsh $USER -s $(which fish)
+# sudo chsh $USER -s $(which fish)
 
-# echo "Install fisher"
-# fish -c "cd; curl -sL https://git.io/fisher | source && fisher update"
+echo "Install fisher"
+fish -c "cd; curl -sL https://git.io/fisher | source && fisher update"
+
+echo "Install packer"
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+echo "Source bashrc"
+. ~/.bashrc
