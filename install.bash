@@ -23,7 +23,7 @@ nix-env -iA nixpkgs.stow
 nix-env -iA nixpkgs.git
 
 # clone repo
-git clone git@github.com:gaetan-puleo/dotfiles.git ~/dotfiles
+git clone https://github.com/gaetan-puleo/dotfiles.git ~/dotfiles
 
 # go to dotfiles
 cd ~/dotfiles
