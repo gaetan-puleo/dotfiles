@@ -58,7 +58,7 @@
 
     #I3
     pkgs.polybar 
-    pkgs.dunst 
+    #pkgs.dunst 
     pkgs.gsimplecal 
     pkgs.sxhkd 
     pkgs.picom 
