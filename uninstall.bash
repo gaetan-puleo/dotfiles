@@ -5,3 +5,6 @@ cp ~/.bashrc.bak ~/.bashrc
 cp ~/.profile.bak ~/.profile
 
 rm -rf $HOME/{.nix-channels,.nix-defexpr,.nix-profile}
+
+cd ~/dotfiles
+bash ~/symlink.bash delete
