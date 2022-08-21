@@ -22,11 +22,11 @@
     }))
   ];
   # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
+  /* programs.home-manager.enable = true; */
   home.packages = [
+
     # CLI
     pkgs.bottom
-    pkgs.htop
     pkgs.tmux
     pkgs.git
     pkgs.curl
