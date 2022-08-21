@@ -4,7 +4,7 @@
 
 ### Quick setup (Beta)
 ```bash
-wget -O - https://raw.githubusercontent.com/gaetan-puleo/dotfiles/new-config/install.bash | sudo bash
+wget -O - https://raw.githubusercontent.com/gaetan-puleo/dotfiles/new-config/install.bash | bash
 ```
 
 
