@@ -12,31 +12,43 @@ nix-channel --update
 
 export NIX_PATH=$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels${NIX_PATH:+:$NIX_PATH}
 
+echo "Install home-manager"
 nix-env -iA nixpkgs.home-manager
 
+echo "Install nixGL"
 nix-channel --add https://github.com/guibou/nixGL/archive/main.tar.gz nixgl && nix-channel --update
 
 nix-env -iA nixgl.auto.nixGLDefault   # or replace `nixGLDefault` with your desired wrapper
 
-# install stow 
+echo "install stow and git" 
 nix-env -iA nixpkgs.stow
 nix-env -iA nixpkgs.git
 
 # clone repo
+echo "Clone dotfiles"
 git clone https://github.com/gaetan-puleo/dotfiles.git ~/dotfiles
 
-# go to dotfiles
+echo "go to dotfiles"
 cd ~/dotfiles
+
+echo "change to new-config branch"
 git checkout new-config
 
-# remove bashrc
+echo "remove bashrc"
 rm ~/.bashrc
-# symlink everything
+
+echo "symlink everything"
 bash ./symlink.bash all
 
-#uninstall git and stow
+echo "uninstall git and stow"
 nix-env --uninstall git
 nix-env --uninstall stow
 
+echo "Apply home-manager config"
 home-manager switch
 
+echo "Set Fish a default shell"
+sudo chsh $USER -s $(which fish)
+
+echo "Install fisher"
+fish -c "cd; curl -sL https://git.io/fisher | source && fisher update"

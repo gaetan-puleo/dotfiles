@@ -44,9 +44,11 @@
  
     # DEV
     pkgs.neovim
+    pkgs.vimPlugins.packer-nvim 
  
     # Node
     pkgs.nodejs-16_x
     pkgs.yarn
+    pkgs.nodePackages.npm 
   ];
 }
