@@ -51,6 +51,7 @@ home-manager switch
 # sudo chsh $USER -s $(which fish)
 
 echo "Install fisher"
+
 fish -c "cd; curl -sL https://git.io/fisher | source && fisher update"
 
 echo "Install packer"
