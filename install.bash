@@ -50,11 +50,13 @@ home-manager switch
 # echo "Set Fish a default shell"
 # sudo chsh $USER -s $(which fish)
 
-echo "Source bashrc"
-. ~/.bashrc
+# echo "Source bashrc"
+# . ~/.bashrc
 
 # source nix
-. ~/.nix-profile/etc/profile.d/nix.sh
+# . ~/.nix-profile/etc/profile.d/nix.sh
+bash
+
 echo "Install fisher"
 
 fish -c "cd; curl -sL https://git.io/fisher | source && fisher update"
@@ -63,5 +65,5 @@ echo "Install packer"
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
-echo "Source bashrc"
-. ~/.bashrc
+# echo "Source bashrc"
+# . ~/.bashrc
