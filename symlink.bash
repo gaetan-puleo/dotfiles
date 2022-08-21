@@ -3,7 +3,7 @@
 case $1 in
   all)
     echo -n "Create symlinks for all directories"
-    stow --verbose --target=$HOME --restow */
+    stow --verbose --target=$HOME --restow act gsimplecal picom autorandr i3 polybar themes icons tmux dunst kitty rofi fish neofetch fonts nix sxhkd  git nvim
     ;;
 
   minimal)
