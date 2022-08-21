@@ -44,7 +44,7 @@
  
     # DEV
     pkgs.neovim
-    pkgs.vimPlugins.packer-nvim 
+    /* pkgs.vimPlugins.packer-nvim  */
  
     # Node
     pkgs.nodejs-16_x
