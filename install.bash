@@ -26,24 +26,24 @@ nix-channel --add https://github.com/guibou/nixGL/archive/main.tar.gz nixgl && n
 nix-env -iA nixgl.auto.nixGLDefault   # or replace `nixGLDefault` with your desired wrapper
 
 echo "install stow and git" 
-# nix-env -iA nixpkgs.stow
-# nix-env -iA nixpkgs.git
+nix-env -iA nixpkgs.stow
+nix-env -iA nixpkgs.git
 
-# # clone repo
-# echo "Clone dotfiles"
-# git clone https://github.com/gaetan-puleo/dotfiles.git ~/dotfiles
+# clone repo
+echo "Clone dotfiles"
+git clone https://github.com/gaetan-puleo/dotfiles.git ~/dotfiles
 
-# echo "go to dotfiles"
-# cd ~/dotfiles
+echo "go to dotfiles"
+cd ~/dotfiles
 
-# echo "change to new-config branch"
-# git checkout new-config
+echo "change to new-config branch"
+git checkout new-config
 
-# echo "remove bashrc"
-# rm ~/.bashrc
+echo "remove bashrc"
+rm ~/.bashrc
 
-# echo "symlink everything"
-# bash ./symlink.bash all
+echo "symlink everything"
+bash ./symlink.bash all
 
 echo "Install packer"
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
