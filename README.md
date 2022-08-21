@@ -2,6 +2,13 @@
 
 ## Setup
 
+### Quick setup (Beta)
+```bash
+wget -O - https://raw.githubusercontent.com/gaetan-puleo/dotfiles/new-config/install.bash | sudo bash
+```
+
+
+### Normal setup (Beta)
 
 First we need git and stow
 ```bash
