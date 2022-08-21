@@ -55,5 +55,13 @@
 
     # GUI
     pkgs.firefox
+
+    #I3
+    pkgs.polybar 
+    pkgs.dunst 
+    pkgs.gsimplecal 
+    pkgs.sxhkd 
+    pkgs.picom 
+    pkgs.rofi
   ];
 }
