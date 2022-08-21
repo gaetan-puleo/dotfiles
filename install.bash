@@ -1,3 +1,8 @@
+echo "backup files"
+
+cp ~/.bashrc ~/.bashrc.bak
+cp ~/.profile ~/.profile.bak
+
 # install nix
 echo "Install nix"
 sh <(curl -L https://nixos.org/nix/install) --no-daemon
