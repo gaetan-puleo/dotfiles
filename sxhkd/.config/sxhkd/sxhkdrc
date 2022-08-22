@@ -15,14 +15,13 @@ XF86PowerOff
 
 XF86AudioMute 
     amixer set 'Master' toggle
+
 XF86AudioLowerVolume 
     pactl -- set-sink-volume @DEFAULT_SINK@ -5% #decrease sound volume
     
 XF86AudioRaiseVolume 
     pactl -- set-sink-volume @DEFAULT_SINK@ +5% #increase sound volume
 
-super + space
-  bash ~/.config/rofi/bin/launcher_colorful
 
 XF86MonBrightnessUp
   light -A 1
