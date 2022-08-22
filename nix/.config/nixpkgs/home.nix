@@ -56,19 +56,5 @@
     # GUI
     pkgs.firefox
 
-    #I3
-    pkgs.polybar 
-    #pkgs.dunst 
-    pkgs.gsimplecal 
-    pkgs.sxhkd 
-    pkgs.picom 
-    pkgs.rofi
-    pkgs.feh
-    pkgs.light
-    pkgs.xdo
-    pkgs.noto-fonts-emoji 
-    pkgs.noto-fonts 
-    pkgs.material-design-icons 
-    pkgs.libertine
   ];
 }
