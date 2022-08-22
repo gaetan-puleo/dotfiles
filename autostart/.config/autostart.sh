@@ -1,10 +1,10 @@
 #auto detect monitors
 autorandr --change & 
 
-~/.fehbg &
+bash ~/.fehbg &
 
 # exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper/tokyo-night-girl.jpg
-picom -b & 
+picom -b --experimental-backends & 
 bash ~/.config/polybar/scripts/launch-bars.sh & 
 
 # keyboard
