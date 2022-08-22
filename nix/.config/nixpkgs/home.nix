@@ -56,6 +56,7 @@
     # GUI
     pkgs.firefox
     pkgs.polybar
+    pkgs.acpi
 
   ];
 }
