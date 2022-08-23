@@ -31,7 +31,7 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id bash ~/.config/autostart.sh &
 # exec --no-startup-id super + space  bash ~/.config/rofi/bin/launcher_colorfuly
 
-bindsym $mod+space exec --no-startup-id bash ~/.config/rofi/bin/launcher_colorful
+# bindsym $mod+space exec --no-startup-id bash ~/.config/rofi/bin/launcher_colorful
 
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so

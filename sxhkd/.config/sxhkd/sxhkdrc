@@ -1,8 +1,8 @@
 ctrl + alt + t
-    kitty
+    nixGL kitty
 
 super + Return
-    kitty
+    nixGL kitty
 
 super + q
     xdo close
