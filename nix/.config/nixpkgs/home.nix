@@ -11,6 +11,7 @@ let
 in {
   /* config = lib.mkIf cfg.enable (lib.mkMerge [ */
     /* (lib.mkIf pkgs.stdenv.isLinux { */
+     # @TODO add statics icons
       home.file = {
         ".local/share/applications/firefox.desktop" = {
           text = ''
@@ -38,8 +39,23 @@ in {
             Categories=Development;System
             Exec=nixGL kitty
             GenericName=Terminal
-            Icon=${pkgs.firefox}/share/icons/hicolor/128x128/apps/firefox.png
+            Icon=${pkgs.kitty}/share/icons/hicolor/256x256/apps/kitty.png
             Name=Kitty
+            Type=Application
+            Version=1.4
+            Terminal=False
+          '';
+          executable = true;
+        };
+
+      ".local/share/applications/blender.desktop" = {
+          text = ''
+            [Desktop Entry]
+            Categories=Graphics
+            Exec=nixGL blender
+            GenericName=Blender
+            Icon=${pkgs.blender}/share/icons/hicolor/scalable/apps/blender.svg
+            Name=Blender
             Type=Application
             Version=1.4
             Terminal=False
@@ -123,7 +139,7 @@ in {
     polybar
     acpi
     kitty
-
+    blender
   ];
 	/*   programs.kitty = { */
 	/*     enable = true; */
@@ -147,6 +163,15 @@ in {
       news-feed-eradicator
       metamask
       reduxdevtools
+    ];
+  };
+
+  programs.vscode = {
+    enable = true;
+    extensions = with pkgs.vscode-extensions; [
+      dbaeumer.vscode-eslint
+      pkief.material-icon-theme
+      zhuangtongfa.material-theme
     ];
   };
 }
