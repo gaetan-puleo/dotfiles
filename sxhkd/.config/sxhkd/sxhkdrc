@@ -7,6 +7,9 @@ super + Return
 super + q
     xdo close
 
+super + space
+  bash ~/.config/rofi/bin/launcher_colorful
+
 Print
     bash ~/.config/rofi/bin/menu_screenshot
 

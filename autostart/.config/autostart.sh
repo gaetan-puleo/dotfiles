@@ -13,5 +13,5 @@ bash ~/.config/polybar/scripts/launch-bars.sh &
 # keyboard
 setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl && xmodmap ~/.Xmodmap &
 
-sxhkd &
+sleep 0.3; sxhkd &
 

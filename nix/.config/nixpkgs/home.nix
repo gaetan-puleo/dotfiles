@@ -1,5 +1,6 @@
 { config, pkgs, lib, ... }:
 let
+  mod = "Mod4";
   cfg = config.customHomeProfile.GUI;
   nixGL = (import (pkgs.fetchFromGitHub {
 	owner = "guibou";
@@ -9,6 +10,47 @@ let
 	
   }) {}).nixGLDefault;
 in {
+  xsession.windowManager.i3 = {
+    enable = true;
+    package = pkgs.i3-gaps;
+    extraConfig = ''
+          for_window [class="^.*"] border pixel 3
+          default_border pixel 3
+          default_floating_border pixel 3
+
+          # Hide borders at the edge of the screen
+          hide_edge_borders smart
+          client.focused           #9aa5ce #364A82 #c0caf5 #9aa5ce   #9aa5ce
+          client.focused_inactive  #16161d #16161d #c0caf5 #16161d   #16161d
+          client.unfocused         #16161d #16161d #c0caf5 #16161d   #16161d
+        '';
+    config = {
+      modifier = mod;
+      gaps = {
+        inner = 4;
+        outer = 0;
+        smartBorders = "on";
+        smartGaps = true;
+      };
+      keybindings = {};
+      bars = [ ];
+
+      window.border = 0;
+      startup = [
+        {
+          command = "exec i3-msg workspace 1";
+          always = true;
+          notification = false;
+        }
+        {
+          command = "exec bash ~/.config/autostart.sh &";
+          always = false;
+          notification = false;
+        }
+      ];
+    };
+  };
+
   /* config = lib.mkIf cfg.enable (lib.mkMerge [ */
     /* (lib.mkIf pkgs.stdenv.isLinux { */
      # @TODO add statics icons
@@ -62,7 +104,9 @@ in {
           '';
           executable = true;
         };
+      /* ".config/i3/config".source =~/dotfiles/.config/i3/config; */
       };
+
     /* }) */
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
