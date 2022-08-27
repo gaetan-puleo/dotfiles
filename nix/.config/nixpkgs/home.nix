@@ -53,7 +53,6 @@ in {
 
   /* config = lib.mkIf cfg.enable (lib.mkMerge [ */
     /* (lib.mkIf pkgs.stdenv.isLinux { */
-     # @TODO add statics icons
       home.file = {
         ".local/share/applications/firefox.desktop" = {
           text = ''
@@ -169,6 +168,7 @@ in {
     fish
     gcc
     libstdcxx5 
+    sxhkd
  
     # DEV
     neovim
@@ -177,13 +177,21 @@ in {
     # Node
     nodejs-16_x
     yarn
+    commitizen
 
     # GUI
     # pkgs.firefox
+    autorandr
     polybar
     acpi
     kitty
     blender
+    gsimplecal
+    picom
+    rofi
+    feh
+    xdo
+    light
   ];
 	/*   programs.kitty = { */
 	/*     enable = true; */

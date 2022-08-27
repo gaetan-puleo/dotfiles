@@ -28,9 +28,9 @@ require('packer').startup(function()
   --   ,
   -- }
   use {
-    'LunarVim/horizon.nvim',
+    'folke/tokyonight.nvim',
     config = function ()
-      vim.cmd[[colorscheme horizon]] 
+      require('plugins/tokyonight') 
     end
   }
   -- Lua
@@ -191,7 +191,6 @@ require('packer').startup(function()
 
 
 -- need to test
--- https://github.com/kevinhwang91/nvim-ufo#how-does-nvim-ufo-get-the-folds
 -- https://github.com/0x100101/lab.nvim
 
 end)

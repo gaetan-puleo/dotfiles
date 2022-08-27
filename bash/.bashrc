@@ -14,6 +14,6 @@ TERM=screen-256color-bce
 
 export NIX_PATH=$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels${NIX_PATH:+:$NIX_PATH}
 
-exec fish;
+# exec fish;
 
 PS1='[\u@\h \W]\$ '

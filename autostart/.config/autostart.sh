@@ -4,7 +4,7 @@ autorandr --change &
 
 bash ~/.fehbg &
 
-picom -b --experimental-backends & 
+nixGL picom -b --experimental-backends & 
 bash ~/.config/polybar/scripts/launch-bars.sh & 
 
 
