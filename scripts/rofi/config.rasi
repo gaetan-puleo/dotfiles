@@ -1,0 +1,7 @@
+configuration {
+location: 0;
+terminal: "/nix/store/3ajwiiq4gbqhiw9l00zzqvil6af0a0hf-kitty-0.25.2/bin/kitty";
+xoffset: 0;
+yoffset: 0;
+}
+@theme "~/dotfiles/scripts/rofi/theme.rafi"

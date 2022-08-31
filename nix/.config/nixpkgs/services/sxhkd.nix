@@ -8,11 +8,11 @@
       
       "super + q" = "xdo close";
 
-      "super + space" = "bash ~/.config/rofi/bin/launcher_colorful";
+      "super + space" = "bash ~/dotfiles/scripts/rofi/bin/launcher_colorful";
 
-      "Print" = "bash ~/.config/rofi/bin/menu_screenshot";
+      "Print" = "bash ~/dotfiles/scripts/rofi/bin/menu_screenshot";
 
-      "XF86PowerOff" = "bash ~/.config/rofi/bin/menu_powermenu";
+      "XF86PowerOff" = "bash ~/dotfiles/scripts/rofi/bin/menu_powermenu";
 
       "XF86AudioMute" = "amixer set 'Master' toggle";
 
