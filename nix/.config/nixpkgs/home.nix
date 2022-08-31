@@ -10,8 +10,7 @@ in {
     ./packages/kitty.nix
     ./packages/rofi.nix
     ./packages/git.nix
-    ./packages/autorandr.nix
-    # ./packages/polybar.nix
+    #./packages/autorandr.nix
     ./services/dunst.nix
     ./services/sxhkd.nix
     ./user.nix
