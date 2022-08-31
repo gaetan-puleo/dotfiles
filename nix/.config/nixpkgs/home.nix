@@ -1,6 +1,5 @@
 { config, pkgs, lib, ... }:
 let
-  mod = "Mod4";
   cfg = config.customHomeProfile.GUI;
 in {
   imports = [
