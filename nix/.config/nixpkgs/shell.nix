@@ -2,7 +2,7 @@
   home.shellAliases = {
     dot = "cd ~/dotfiles";
     nuke = "rm -rf";
-    mkd = "mkdir";
+    md = "mkdir";
   };
   programs.fish.enable = true;
   programs.fish.plugins = [

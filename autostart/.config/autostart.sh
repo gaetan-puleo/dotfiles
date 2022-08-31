@@ -6,7 +6,7 @@ nixGL picom -b --experimental-backends &
 
 bash ~/.config/polybar/scripts/launch-bars.sh & 
 
-bash ~/.fehbg &
+feh --no-fehbg --bg-fill '/home/gaetan/.config/wallpaper/tokyo-night-girl.jpg' &
 
 # exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper/tokyo-night-girl.jpg
 

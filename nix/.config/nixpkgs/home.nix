@@ -7,6 +7,7 @@ in {
     ./packages/firefox.nix
     ./packages/vscode.nix
     ./packages/i3-gaps.nix
+    ./packages/kitty.nix
     ./packages/rofi.nix
     ./packages/git.nix
     ./packages/autorandr.nix
