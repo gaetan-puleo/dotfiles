@@ -1,0 +1,10 @@
+# stow ignore folder
+scripts/
+wallpaper/
+tests/
+
+\.git
+\.github
+\.gitignore
+
+^/README
