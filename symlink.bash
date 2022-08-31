@@ -3,7 +3,7 @@
 case $1 in
   all)
     echo -n "Create symlinks for all directories"
-    stow --verbose --target=$HOME --restow picom autostart autorandr polybar tmux nix nvim wallpaper xmodmap
+    stow --verbose --target=$HOME --restow picom autostart polybar tmux nix nvim wallpaper xmodmap
     ;;
 
   minimal)

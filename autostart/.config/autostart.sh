@@ -1,6 +1,6 @@
 
 #auto detect monitors
-autorandr --change --force & 
+#autorandr --change --force & 
 
 nixGL picom -b --experimental-backends & 
 
