@@ -7,7 +7,7 @@
       enable_audio_bell = "no"; # silent bell
 
       dynamic_background_opacity = "yes";
-      background_opacity = "0.93";
+      background_opacity = "0.90";
 
       # use the option as alt key in mac because mac is stupid to not di it by default
       #macos_option_as_alt yes
