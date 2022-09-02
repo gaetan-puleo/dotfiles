@@ -5,6 +5,8 @@
       dbaeumer.vscode-eslint
       pkief.material-icon-theme
       zhuangtongfa.material-theme
+      ms-vsliveshare.vsliveshare
+      github.vscode-pull-request-github
     ];
   };
 }
