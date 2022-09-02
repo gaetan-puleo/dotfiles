@@ -157,12 +157,12 @@ require('packer').startup(function()
       require('plugins/lsp-signature')
     end
   }
-  use({
-    "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-    config = function()
-      require("lsp_lines").setup()
-    end,
-  })
+  -- use({
+  --   "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+  --   config = function()
+  --     require("lsp_lines").setup()
+  --   end,
+  -- })
   use({
     'lukas-reineke/lsp-format.nvim'
   })
