@@ -1,5 +1,31 @@
-{ pkgs, nixGL, ... }: {
+{ pkgs, nixGL, config, ... }: {
        home.file = {
+        # dotfiles
+
+        # TMUX
+        "${config.xdg.configHome}/tmux/tmux.conf".source = ../../../tmux/.config/tmux/tmux.conf;
+        "${config.xdg.configHome}/tmux/theme.conf".source = ../../../tmux/.config/tmux/theme.conf;
+
+        # Picom
+        "${config.xdg.configHome}/picom/picom.conf".source = ../../../picom/.config/picom/picom.conf;
+
+        # Polybar
+        "${config.xdg.configHome}/polybar/config.ini".source = ../../../polybar/.config/polybar/config.ini;
+
+        # Nvim
+        "${config.xdg.configHome}/nvim".source = ../../../nvim/.config/nvim;
+
+
+        # Wallpaper
+        "${config.xdg.configHome}/wallpaper".source = ../../../wallpaper/.config/wallpaper;
+
+        # Autostart
+        "${config.xdg.configHome}/autostart.sh".source = ../../../autostart/.config/autostart.sh;
+
+        # Autostart
+        ".Xmodmap".source = ../../../xmodmap/.Xmodmap;
+
+        # desktop files
         ".local/share/applications/firefox.desktop" = {
           text = ''
             [Desktop Entry]

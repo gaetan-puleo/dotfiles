@@ -3,6 +3,11 @@
     dot = "cd ~/dotfiles";
     nuke = "rm -rf";
     md = "mkdir";
+    vim = "nvim";
+    mnt = "mount | grep -E ^/dev | column -t";
+  };
+  home.sessionVariables = {
+    EDITOR = "nvim";
   };
   programs.fish.enable = true;
   programs.fish.plugins = [

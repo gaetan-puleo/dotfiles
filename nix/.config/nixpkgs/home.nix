@@ -17,7 +17,7 @@ in {
     ./gtk.nix
     ./xsession.nix
     ./programs.nix
-    ./desktop-files.nix
+    ./files.nix
   ];
  
   # This value determines the Home Manager release that your
@@ -29,6 +29,7 @@ in {
   # the Home Manager release notes for a list of state version
   # changes in each release.
   home.stateVersion = "22.05";
+
   nixpkgs.config.allowUnfree = true;
 
   nixpkgs.overlays = [
