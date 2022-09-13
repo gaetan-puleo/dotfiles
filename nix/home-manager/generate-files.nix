@@ -15,6 +15,8 @@
         # Nvim
         "${config.xdg.configHome}/nvim".source = ../../nvim;
 
+        # sxhkd
+        "${config.xdg.configHome}/sxhkd/sxhkdrc".source = ../../sxhkd/sxhkdrc;
 
         # Wallpaper
         "${config.xdg.configHome}/wallpaper".source = ../../wallpaper;
@@ -22,7 +24,7 @@
         # Autostart
         "${config.xdg.configHome}/autostart.sh".source = ../../autostart/autostart.sh;
 
-        # Autostart
+        # Xmodmap
         ".Xmodmap".source = ../../xmodmap/.Xmodmap;
 
         # desktop files

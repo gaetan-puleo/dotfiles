@@ -3,6 +3,7 @@ let
   cfg = config.customHomeProfile.GUI;
 in {
   imports = [
+    ./home-manager/packages/autorandr.nix
     ./home-manager/packages/firefox.nix
     ./home-manager/packages/vscode.nix
     ./home-manager/packages/i3-gaps.nix
@@ -10,7 +11,7 @@ in {
     ./home-manager/packages/rofi.nix
     ./home-manager/packages/git.nix
     ./home-manager/services/dunst.nix
-    ./home-manager/services/sxhkd.nix
+    /* ./home-manager/services/sxhkd.nix */
     ./home-manager/user.nix
     ./home-manager/overlays.nix
     ./home-manager/shell.nix
