@@ -8,6 +8,7 @@
   };
   home.sessionVariables = {
     EDITOR = "nvim";
+    VSCODE_PORTABLE="\${XDG_DATA_HOME}/vscode";
   };
   programs.fish.enable = true;
   programs.fish.plugins = [

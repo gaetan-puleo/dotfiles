@@ -55,14 +55,15 @@ in {
     gsimplecal
     picom
     rofi
+    rofi-power-menu
     feh
     xdo
     light
     polybarFull
+    pamixer
+    i3lock-blur
 
     # services
     dunst
-
-
   ];
 }

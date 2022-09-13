@@ -16,13 +16,13 @@
 
       "XF86AudioMute" = "amixer set 'Master' toggle";
 
-      "XF86AudioLowerVolume" = "amixer -q sset Master 5%-"; #decrease sound volume
+      "XF86AudioLowerVolume" = "pamixer -d 5 && bash -c \"dunstify Volume -h int:value:`pamixer --get-volume` -r 3999\""; #decrease sound volume
     
-      "XF86AudioRaiseVolume" =  "amixer -q sset Master 5%+"; #increase sound volume
+      "XF86AudioRaiseVolume" =  "pamixer -i 5 && bash -c \"dunstify Volume -h int:value:`pamixer --get-volume` -r 3999\""; #increase sound volume
 
-      "XF86MonBrightnessUp" = "light -A 10 && bash -c \"dunstify `light`% -r 2999\"";
+      "XF86MonBrightnessUp" = "light -A 10 && bash -c \"dunstify Brightness -h int:value:`light`% -r 2999\"";
 
-      "XF86MonBrightnessDown" = "light -U 10 && bash -c \"dunstify `light`% -r 2999\"";
+      "XF86MonBrightnessDown" = "light -U 10 && bash -c \"dunstify Brightness -h int:value:`light`% -r 2999\"";
 
       ###########################
       #
