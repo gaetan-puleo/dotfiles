@@ -62,6 +62,7 @@ in {
     polybarFull
     pamixer
     i3lock-blur
+    libnotify
 
     # services
     dunst
