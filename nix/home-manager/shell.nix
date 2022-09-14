@@ -28,5 +28,5 @@
       onEvent = "fish_command_not_found";
     };
   };
-  programs.fish.interactiveShellInit = "fish_vi_key_bindings";
+  /* programs.fish.interactiveShellInit = "fish_vi_key_bindings"; */
 }
