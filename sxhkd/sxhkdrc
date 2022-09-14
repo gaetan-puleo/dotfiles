@@ -7,8 +7,12 @@ super + Return
 super + q
     xdo close
 
+#super + space
+#  bash ~/dotfiles/scripts/rofi/bin/launcher_colorful
+
+
 super + space
-  bash ~/dotfiles/scripts/rofi/bin/launcher_colorful
+  rofi -show drun -show-icons
 
 
 XF86MonBrightnessUp
