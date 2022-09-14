@@ -16,7 +16,6 @@ super + Tab
 super + space
   rofi -show drun -show-icons
 
-
 XF86MonBrightnessUp
   light -A 1
 
@@ -30,7 +29,7 @@ XF86PowerOff
   bash ~/dotfiles/scripts/rofi/bin/menu_powermenu
 
 XF86AudioMute
-  amixer set 'Master' toggle
+  pamixer -t
 
 XF86AudioLowerVolume
   pamixer -d 5 && bash -c "dunstify Volume -h int:value:`pamixer --get-volume` -r 3999" #decrease sound volume
