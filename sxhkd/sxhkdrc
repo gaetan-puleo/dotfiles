@@ -10,6 +10,8 @@ super + q
 #super + space
 #  bash ~/dotfiles/scripts/rofi/bin/launcher_colorful
 
+super + Tab
+  rofi -show window -show-icons
 
 super + space
   rofi -show drun -show-icons
