@@ -63,6 +63,7 @@ in {
     pamixer
     i3lock-blur
     libnotify
+    pavucontrol
 
     # services
     dunst

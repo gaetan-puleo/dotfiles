@@ -48,6 +48,7 @@ in {
 
     # GUI
     # pkgs.firefox
+    pavucontrol
     autorandr
     acpi
     kitty
@@ -64,6 +65,9 @@ in {
     i3lock-blur
     libnotify
     google-chrome
+    slack
+    insomnia
+    brave
 
     # services
     dunst
