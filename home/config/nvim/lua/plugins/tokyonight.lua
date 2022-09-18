@@ -11,6 +11,6 @@ vim.cmd("hi! SniprunVirtualTextOk ctermbg=Cyan guibg=#66eeff ctermfg=Black guifg
 -- Change the "hint" color to the "orange" color, and make the "error" color bright red
 -- vim.g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
 
-vim.cmd[[colorscheme tokyonight]]
+vim.cmd[[colorscheme tokyonight-night]]
 
 
