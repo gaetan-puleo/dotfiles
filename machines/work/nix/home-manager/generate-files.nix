@@ -31,6 +31,10 @@
         # Autostart
         "${config.xdg.configHome}/autostart.sh".source = ../../config/autostart/autostart.sh;
 
+        # Fonts
+        ".fonts/Icomoon-Feather.ttf".source = ../../../../home/fonts/Icomoon-Feather.ttf;
+
+
         # Xmodmap
         ".Xmodmap".source = ../../../../home/config/xmodmap/.Xmodmap;
 
