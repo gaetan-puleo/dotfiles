@@ -16,7 +16,8 @@
         "${config.xdg.configHome}/rofi".source = ../../../../home/config/rofi;
 
         # Nvim
-        "${config.xdg.configHome}/nvim".source = ../../../../home/config/nvim;
+        "${config.xdg.configHome}/nvim/lua".source = ../../../../home/config/nvim/lua;
+        "${config.xdg.configHome}/nvim/init.lua".source = ../../../../home/config/nvim/init.lua;
 
         # sxhkd
         "${config.xdg.configHome}/sxhkd/sxhkdrc".source = ../../config/sxhkd/sxhkdrc;
