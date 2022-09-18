@@ -5,9 +5,10 @@
     font.name = "Fira Code Regular Nerd Font Complete Mono";
     settings = {
       enable_audio_bell = "no"; # silent bell
-
+      shell = "fish --interactive --login";
       dynamic_background_opacity = "yes";
       background_opacity = "0.90";
+      confirm_os_window_close = "0";
 
       # use the option as alt key in mac because mac is stupid to not di it by default
       #macos_option_as_alt yes

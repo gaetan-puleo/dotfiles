@@ -10,7 +10,7 @@
         "${config.xdg.configHome}/picom/picom.conf".source = ../../../../home/config/picom/picom.conf;
 
         # Polybar
-        "${config.xdg.configHome}/polybar".source = ../../../../home/config/polybar;
+        "${config.xdg.configHome}/polybar".source = ../../config/polybar;
 
         # Rofi
         "${config.xdg.configHome}/rofi".source = ../../../../home/config/rofi;
@@ -19,7 +19,7 @@
         "${config.xdg.configHome}/nvim".source = ../../../../home/config/nvim;
 
         # sxhkd
-        "${config.xdg.configHome}/sxhkd/sxhkdrc".source = ../../../../home/config/sxhkd/sxhkdrc;
+        "${config.xdg.configHome}/sxhkd/sxhkdrc".source = ../../config/sxhkd/sxhkdrc;
 
         # Wallpaper
         "${config.xdg.configHome}/wallpaper".source = ../../../../home/config/wallpaper;
@@ -28,7 +28,7 @@
         "${config.xdg.configHome}/scripts".source = ../../../../home/config/scripts;
 
         # Autostart
-        "${config.xdg.configHome}/autostart.sh".source = ../../../../home/config/autostart/autostart.sh;
+        "${config.xdg.configHome}/autostart.sh".source = ../../config/autostart/autostart.sh;
 
         # Xmodmap
         ".Xmodmap".source = ../../../../home/config/xmodmap/.Xmodmap;
@@ -38,7 +38,7 @@
           text = ''
             [Desktop Entry]
             Categories=Network;WebBrowser
-            Exec=nixGL firefox -P Default %U
+            Exec=nixGLIntel firefox -P Default %U
             GenericName=Web Browser
             Icon=${pkgs.firefox}/share/icons/hicolor/128x128/apps/firefox.png
             MimeType=text/html;text/xml;application/xhtml+xml;application/vnd.mozilla.xul+xml;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp
@@ -50,7 +50,7 @@
             [Desktop Action private_window]
             Name=Open a Private Window
             Icon=${pkgs.firefox}/share/icons/hicolor/128x128/apps/firefox.png
-            Exec=nixGL firefox -P Private %U
+            Exec=nixGLIntel; firefox -P Private %U
           '';
           executable = true;
         };
@@ -58,7 +58,7 @@
           text = ''
             [Desktop Entry]
             Categories=Development;System
-            Exec=nixGL kitty
+            Exec=nixGLIntel kitty
             GenericName=Terminal
             Icon=${pkgs.kitty}/share/icons/hicolor/256x256/apps/kitty.png
             Name=Kitty
@@ -73,7 +73,7 @@
           text = ''
             [Desktop Entry]
             Categories=Graphics
-            Exec=nixGL blender
+            Exec=nixGLIntel blender
             GenericName=Blender
             Icon=${pkgs.blender}/share/icons/hicolor/scalable/apps/blender.svg
             Name=Blender

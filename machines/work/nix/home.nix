@@ -6,12 +6,13 @@ in {
     # Host specific config
     ./home-manager/programs.nix
     ./home-manager/generate-files.nix
+    ./home-manager/fonts.nix
 
     # common global
     ./home-manager/common/packages/autorandr.nix
     ./home-manager/common/packages/firefox.nix
     ./home-manager/common/packages/vscode.nix
-    ./home-manager/common/packages/i3-gaps.nix
+    ./home-manager/packages/i3.nix
     ./home-manager/common/packages/kitty.nix
     /* ./home-manager/packages/rofi.nix */
     ./home-manager/common/packages/git.nix
@@ -21,7 +22,7 @@ in {
     ./home-manager/common/packages/shell.nix
     ./home-manager/common/misc/overlays.nix
     ./home-manager/common/misc/gtk.nix
-    ./home-manager/common/misc/xsession.nix
+    #./home-manager/common/misc/xsession.nix
   ];
 
   # This value determines the Home Manager release that your

@@ -5,7 +5,7 @@ let nixGL = (import (pkgs.fetchFromGitHub {
 	rev = "7d6bc1b21316bab6cf4a6520c2639a11c25a220e";
 	sha256 = "02y38zmdplk7a9ihsxvnrzhhv7324mmf5g8hmxqizaid5k5ydpr3";
 	
-  }) {}).nixGLDefault;
+  }) {}).nixGLIntel;
 
 in {
   # Let Home Manager install and manage itself.
@@ -71,5 +71,19 @@ in {
 
     # services
     dunst
+    # fonts
+
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+    liberation_ttf
+    noto-fonts-extra
+    twitter-color-emoji
+    fira-code
+    fira-code-symbols
+    dina-font
+    mplus-outline-fonts.githubRelease
+    material-design-icons
+    (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
   ];
 }

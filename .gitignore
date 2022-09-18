@@ -5,8 +5,8 @@ node_modules
 zsh/zsh/.zcompdump
 
 # nvim
-nvim/nvim/plugged
-nvim/nvim/plugin
+*/nvim/plugged
+*/nvim/plugin
 
 # tmux
 tmux/.tmate.local.conf
