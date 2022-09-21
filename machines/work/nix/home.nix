@@ -20,6 +20,7 @@ in {
     /* ./home-manager/services/sxhkd.nix */
     ../../../users/user.nix
     ./home-manager/common/packages/shell.nix
+    ./home-manager/common/packages/tmux.nix
     ./home-manager/common/misc/overlays.nix
     ./home-manager/common/misc/gtk.nix
     #./home-manager/common/misc/xsession.nix
