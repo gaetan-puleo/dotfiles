@@ -3,7 +3,7 @@
         # dotfiles
 
         # TMUX
-        "${config.xdg.configHome}/tmux/tmux.conf".source = ../../../../home/config/tmux/tmux.conf;
+        #"${config.xdg.configHome}/tmux/tmux.conf".source = ../../../../home/config/tmux/tmux.conf;
         "${config.xdg.configHome}/tmux/theme.conf".source = ../../../../home/config/tmux/theme.conf;
 
         # Picom
