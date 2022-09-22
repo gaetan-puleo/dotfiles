@@ -32,23 +32,23 @@ XF86AudioMute
   pamixer -t
 
 XF86AudioLowerVolume
-  pamixer -d 5 && bash -c "dunstify Volume -h int:value:`pamixer --get-volume` -r 3999" #decrease sound volume
-    
-XF86AudioRaiseVolume 
-  pamixer -i 5 && bash -c "dunstify Volume -h int:value:`pamixer --get-volume` -r 3999"; #increase sound volume
+  pamixer -d 5 && bash -c "dunstify Volume -h int:value:`pamixer --get-volume` -r 3999" #decrease sound volume"
 
-XF86MonBrightnessUp 
+XF86AudioRaiseVolume
+  pamixer -i 5 && bash -c "dunstify Volume -h int:value:`pamixer --get-volume` -r 3999"; #increase sound volume"
+
+XF86MonBrightnessUp
   light -A 10 && bash -c "dunstify Brightness -h int:value:`light`% -r 2999"
 
-XF86MonBrightnessDown 
-  light -U 10 && bash -c dunstify Brightness -h int:value:`light`% -r 2999";
+XF86MonBrightnessDown
+  light -U 10 && bash -c "dunstify Brightness -h int:value:`light`% -r 2999"
 
 
 
 ###########################
 #
 #
-# I3 gaps keybinding 
+# I3 gaps keybinding
 #
 #
 ###########################
@@ -61,12 +61,12 @@ super + {_, shift} + {h,j,k,l}
 super + {_, shift} + {Left,Down,Up,Right}
   i3-msg {focus,move} {left, down, up, right}
 
-# reload config 
-super + shift +c 
+# reload config
+super + shift +c
   i3-msg reload
 
 # restart  i3
-super + shift + r 
+super + shift + r
   i3-msg restart
 
 # resize mode
