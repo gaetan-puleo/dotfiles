@@ -183,6 +183,13 @@ require('packer').startup(function()
       end
   }
 
+  use {
+    'folke/which-key.nvim',
+      config = function ()
+        require('plugins/which-key')
+      end
+  }
+
   -- use({
   --   "glepnir/lspsaga.nvim",
   --   branch = "main",
