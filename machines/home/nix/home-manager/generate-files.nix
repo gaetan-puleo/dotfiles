@@ -34,6 +34,9 @@
         # Xmodmap
         ".Xmodmap".source = ../../../../home/config/xmodmap/.Xmodmap;
 
+        # NPM
+        ".npmrc.dist".source = ../../../../home/config/npm/.npmrc.dist;
+
         # desktop files
         ".local/share/applications/firefox.desktop" = {
           text = ''
