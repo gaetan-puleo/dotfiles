@@ -8,7 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
 	<nixos-hardware/lenovo/thinkpad/t14s/amd/gen1>
-	./hardware-configuration.nix
+	/etc/nixos/hardware-configuration.nix
     ];
 
   # Bootloader.
@@ -31,6 +31,9 @@
 
   # Dolphin emulator
   services.udev.packages = [ pkgs.dolphinEmu ];
+
+  services.flatpak.enable = true;
+  hardware.sane.enable = true;
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.utf8";
@@ -123,7 +126,7 @@
   users.users.gaetan = {
     isNormalUser = true;
     description = "Gaetan Puleo";
-    extraGroups = [ "networkmanager" "wheel" "video" "adbusers" ];
+    extraGroups = [ "networkmanager" "wheel" "video" "adbusers" "scanner" "lp"];
     packages = with pkgs; [
     #  thunderbird
       dolphin-emu
