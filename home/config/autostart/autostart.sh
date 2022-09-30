@@ -1,10 +1,10 @@
 
 #auto detect monitors
-autorandr --change --force & 
+autorandr --change --force &
 
-nixGL picom -b --experimental-backends & 
+picom -b --experimental-backends &
 
-# bash ~/.config/scripts/polybar/launch-bars.sh & 
+# bash ~/.config/scripts/polybar/launch-bars.sh &
 
 # feh --no-fehbg --bg-fill ~/.config/wallpaper/tokyo-night-girl.jpg &
 

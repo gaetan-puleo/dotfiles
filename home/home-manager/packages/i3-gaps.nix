@@ -17,6 +17,8 @@ in {
           client.focused           #9aa5ce #364A82 #c0caf5 #9aa5ce   #9aa5ce
           client.focused_inactive  #16161d #16161d #c0caf5 #16161d   #16161d
           client.unfocused         #16161d #16161d #c0caf5 #16161d   #16161d
+
+          for_window [title="^Android Emulator*"] floating enable
         '';
     config = {
       modifier = mod;

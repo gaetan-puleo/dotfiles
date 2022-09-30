@@ -30,6 +30,7 @@
   time.timeZone = "Europe/Paris";
 
   # Dolphin emulator
+  /* services.udev.packages = [ pkgs.dolphinEmu pkgs.ledger-udev-rules ]; */
   services.udev.packages = [ pkgs.dolphinEmu ];
 
   services.flatpak.enable = true;
@@ -126,7 +127,7 @@
   users.users.gaetan = {
     isNormalUser = true;
     description = "Gaetan Puleo";
-    extraGroups = [ "networkmanager" "wheel" "video" "adbusers" "scanner" "lp"];
+    extraGroups = [ "networkmanager" "wheel" "video" "adbusers" "scanner" "lp" "adbusers"];
     packages = with pkgs; [
     #  thunderbird
       dolphin-emu

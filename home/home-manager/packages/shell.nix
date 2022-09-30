@@ -7,8 +7,11 @@
     mnt = "mount | grep -E ^/dev | column -t";
   };
   home.sessionVariables = {
+    JAVA_HOME = "${pkgs.jdk11}";
+    ANDROID_HOME = "$HOME/Android/Sdk";
     EDITOR = "nvim";
     VSCODE_PORTABLE="\${XDG_DATA_HOME}/vscode";
+    PATH="${pkgs.jdk11}/bin:$PATH";
   };
   programs.fish.enable = true;
   programs.fish.plugins = [
