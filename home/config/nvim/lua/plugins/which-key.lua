@@ -7,6 +7,30 @@ require("which-key").setup { -- your configuration comes here
 
 local wk = require("which-key")
 
+wk.register({
+
+  ['<leader>'] = {
+    ["<space>"] = 'Show previous buffer',
+    c = 'Pick and close the selected buffer',
+    p = 'Pick and switch to the selected buffer',
+    f = {
+      name = '+Files / Find',
+			e = 'Open file tree panel',
+      g = 'Grep / Search in files',
+ 			s = 'Show current file in file tree panel',
+    },
+    g = {
+      name = '+Git',
+ 			s = 'Show status (git status)',
+ 			l = 'Show commit history (git log)',
+ 			b = 'Git blame',
+    },
+    s = {
+      name = '+Search',
+      r = 'Global search and replace'
+    },
+  }
+})
 -- wk.register({
 -- 	c = 'pick and close a buffer',
 -- 	p = 'pick and choose a buffer',

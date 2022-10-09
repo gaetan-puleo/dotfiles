@@ -11,6 +11,26 @@ require('telescope').setup {
     generic_sorter =  require'telescope.sorters'.get_fzy_sorter,
     file_sorter =  require'telescope.sorters'.get_fzy_sorter,
   },
+
+  pickers = {
+    find_files = {
+      sorting_strategy = 'ascending',
+      prompt_title = false,
+      previewer = false,
+      hidden = true,
+      ignore = true,
+      layout_strategy = 'vertical',
+      layout_config = { prompt_position = 'top' },
+    },
+    live_grep = {
+      hidden = true,
+      ignore = true,
+    },
+    grep_string = {
+      hidden = true,
+      ignore = true,
+    },
+  }
 	-- pickers = {
 	-- 	find_files = {
 	-- 		layout_config = {
@@ -31,17 +51,17 @@ nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr> ]]
 
 --Add leader shortcuts
-map('n', "<C-p>", [[<cmd>lua require('telescope.builtin').find_files({hidden = true, ignore = true})<cr>]], { noremap = true, silent = true})
+map('n', "<C-p>", [[<cmd>lua require('telescope.builtin').find_files()<cr>]], { noremap = true, silent = true})
 -- map('n', "<leader>fp", [[<cmd>lua require('telescope.builtin').find_files({hidden = true, ignore = true})<cr>]], { noremap = true, silent = true})
 -- map('n', '<leader>fb', [[<cmd>lua require('telescope.builtin').buffers()<cr>]], { noremap = true, silent = true})
 -- map('n', '<leader>fl', [[<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>]], { noremap = true, silent = true})
 -- map('n', '<leader>t', [[<cmd>lua require('telescope.builtin').tags()<cr>]], { noremap = true, silent = true})
 -- map('n', '<leader>fo', [[<cmd>lua require('telescope.builtin').oldfiles()<cr>]], { noremap = true, silent = true})
 -- map('n', '<leader>sd', [[<cmd>lua require('telescope.builtin').grep_string()<cr>]], { noremap = true, silent = true})
-map('n', '<leader>fg', [[<cmd>lua require('telescope.builtin').live_grep({hidden = true, ignore = true})<cr>]], { noremap = true, silent = true})
+map('n', '<leader>fg', [[<cmd>lua require('telescope.builtin').live_grep()<cr>]], { noremap = true, silent = true})
 -- map('n', '<leader>o', [[<cmd>lua require('telescope.builtin').tags{ only_current_buffer = true }<cr>]], { noremap = true, silent = true})
 
--- TODO 
+-- TODO
 -- map('n', '<leader>gc', [[<cmd>lua require('telescope.builtin').git_commits()<cr>]], { noremap = true, silent = true})
 -- map('n', '<leader>gb', [[<cmd>lua require('telescope.builtin').git_branches()<cr>]], { noremap = true, silent = true})
 -- map('n', '<leader>gs', [[<cmd>lua require('telescope.builtin').git_status()<cr>]], { noremap = true, silent = true})

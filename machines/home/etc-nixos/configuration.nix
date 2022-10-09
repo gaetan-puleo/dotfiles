@@ -30,8 +30,8 @@
   time.timeZone = "Europe/Paris";
 
   # Dolphin emulator
-  /* services.udev.packages = [ pkgs.dolphinEmu pkgs.ledger-udev-rules ]; */
-  services.udev.packages = [ pkgs.dolphinEmu ];
+  services.udev.packages = [ pkgs.dolphinEmu pkgs.ledger-udev-rules ];
+  /* services.udev.packages = [ pkgs.dolphinEmu ]; */
 
   services.flatpak.enable = true;
   hardware.sane.enable = true;

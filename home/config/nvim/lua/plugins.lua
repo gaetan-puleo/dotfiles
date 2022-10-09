@@ -20,20 +20,14 @@ require('packer').startup(function()
   use 'djoshea/vim-autoread' -- Autoread file
   use 'RishabhRD/popfix'
 
-  -- use {
-  --   'folke/tokyonight.nvim',
-  --     config = function ()
-  --       require('plugins/tokyonight')
-  --     end
-  --   ,
-  -- }
+  -- Awesome theme by Folke
   use {
     'folke/tokyonight.nvim',
     config = function ()
       require('plugins/tokyonight')
     end
   }
-  -- Lua
+  -- LSP issues list
   use {
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
@@ -49,10 +43,10 @@ require('packer').startup(function()
     end
   }
 
-
+  -- fancy icons
   use 'kyazdani42/nvim-web-devicons'
 
-  -- nvim tree
+  -- Files tree viewer
   use ({
     'kyazdani42/nvim-tree.lua',
     config = function()
@@ -62,6 +56,8 @@ require('packer').startup(function()
     end,
   })
 
+
+  -- show lines modifications
   use {
     'lewis6991/gitsigns.nvim',
       config = function()
@@ -69,7 +65,7 @@ require('packer').startup(function()
       end,
   }
 
-  -- completion
+  -- completion engines with plugins
   use {
     'hrsh7th/nvim-cmp',
     config = function()
@@ -85,8 +81,10 @@ require('packer').startup(function()
     }
   }
 
+  -- .editorconfig
   use { "gpanders/editorconfig.nvim" }
 
+  -- LSP server installer
   use { "williamboman/mason.nvim",
         config = function()
           require('plugins/mason')
@@ -97,7 +95,7 @@ require('packer').startup(function()
         }
       }
 
-  -- lsp
+  -- lsp wrapper config
   use({
     'neovim/nvim-lspconfig',
     config = function()
@@ -120,10 +118,8 @@ require('packer').startup(function()
     end
   })
 
-  -- better nodejs go to file
-  use('PsychoLlama/further.vim')
 
-  -- treesitter
+  -- treesitter a better syntax parser
   use({'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
 
@@ -137,12 +133,13 @@ require('packer').startup(function()
 
   })
 
+  -- help navigate in nvim and tmux panes
   use({
     'christoomey/vim-tmux-navigator',
     config = function() require('plugins/tmux-navigator') end
   })
 
-  -- finder
+  -- global finder
   use {
     'nvim-telescope/telescope.nvim',
     config = function()
@@ -153,6 +150,7 @@ require('packer').startup(function()
     }
   }
 
+  -- show signature help
   use {
     "ray-x/lsp_signature.nvim",
     config = function()
@@ -165,17 +163,22 @@ require('packer').startup(function()
   --     require("lsp_lines").setup()
   --   end,
   -- })
+
+  -- LSP Wrapper to format on save
   use({
     'lukas-reineke/lsp-format.nvim'
   })
 
 
+  -- Folding
   use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async',
     config = function ()
       require('plugins/nvim-ufo')
     end
   }
 
+
+  -- Show little lightbulb when hint are available
   use {
     'kosayoda/nvim-lightbulb',
       config = function ()
@@ -183,12 +186,50 @@ require('packer').startup(function()
       end
   }
 
+
+  -- Show Key mapping
   use {
     'folke/which-key.nvim',
       config = function ()
         require('plugins/which-key')
       end
   }
+
+  -- Show and Replace pane
+  use {
+    'nvim-pack/nvim-spectre',
+    config = function ()
+      require('plugins/spectre')
+    end
+  }
+
+  -- Show and Replace pane
+  use {
+    'tpope/vim-fugitive',
+    config = function ()
+      require('plugins/fugitive')
+    end,
+    requires = {
+      -- {'tpope/vim-rhubarb'}
+    }
+
+  }
+
+  -- Show diff
+   use {
+    'sindrets/diffview.nvim',
+    config = function ()
+      require('plugins/diffview')
+    end
+  }
+
+
+  -- use {
+  --   'akinsho/git-conflict.nvim', tag = "*",
+  --   config = function()
+  --     require('git-conflict').setup()
+  --   end
+  -- }
 
   -- use({
   --   "glepnir/lspsaga.nvim",

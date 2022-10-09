@@ -44,19 +44,24 @@ require'mason-tool-installer'.setup {
     run_on_start = true
 }
 
-function on_attach(client, bufnr) 
+function on_attach(client, bufnr)
 
+  -- mouse actions
+  vim.keymap.set('n', '<2-LeftMouse>', vim.lsp.buf.definition, { silent = true, noremap = true })
+  vim.keymap.set('n', '<C-LeftMouse>', '<LeftMouse>gf', { silent = true, noremap = true })
+  vim.keymap.set('n', '<RightMouse>', '<LeftMouse><cmd> lua vim.lsp.buf.hover()<CR>', { silent = true,noremap = true })
 
-  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { silent = true,noremap = true })
-  vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, { silent = true,noremap = true })
-  vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { silent = true,noremap = true })
+  -- keyboard
+  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { silent = true, noremap = true })
+  vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, { silent = true, noremap = true })
+  vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { silent = true, noremap = true })
   vim.keymap.set('n', 'gt', vim.lsp.buf.type_definition, {silent = true, noremap = true})
 
   vim.keymap.set('n', 'K', vim.lsp.buf.signature_help, {silent = true, noremap = true} )
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, { silent = true, noremap = true})
 
 
-  vim.keymap.set('n', 'gt', vim.lsp.buf.definition, { silent = true,noremap = true })
+  vim.keymap.set('n', 'gt', vim.lsp.buf.definition, { silent = true, noremap = true })
   vim.keymap.set('n', 'ca', vim.lsp.buf.code_action, { silent = true, noremap = true })
   vim.keymap.set('n', 'gR', vim.lsp.buf.rename, { silent = true, noremap = true })
 
@@ -134,7 +139,7 @@ require("mason-lspconfig").setup_handlers {
       on_attach = function (client, bufnr)
         require "lsp-format".on_attach(client)
         on_attach(client, bufnr)
-        
+
       end
     }
   end
