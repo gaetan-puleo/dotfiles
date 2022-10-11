@@ -20,6 +20,14 @@ require('packer').startup(function()
   use 'djoshea/vim-autoread' -- Autoread file
   use 'RishabhRD/popfix'
 
+
+  -- Scrollbar
+  use({"petertriho/nvim-scrollbar",
+    config = function ()
+      require('plugins/nvim-scrollbar')
+    end
+  })
+
   -- Awesome theme by Folke
   use {
     'folke/tokyonight.nvim',
