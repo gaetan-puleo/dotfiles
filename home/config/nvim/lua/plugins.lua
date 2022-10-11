@@ -27,6 +27,7 @@ require('packer').startup(function()
       require('plugins/tokyonight')
     end
   }
+
   -- LSP issues list
   use {
     "folke/trouble.nvim",
@@ -36,6 +37,7 @@ require('packer').startup(function()
     end
   }
 
+  -- Comments
   use {
     'terrortylor/nvim-comment',
     config = function()
@@ -43,7 +45,7 @@ require('packer').startup(function()
     end
   }
 
-  -- fancy icons
+  -- Fancy icons
   use 'kyazdani42/nvim-web-devicons'
 
   -- Files tree viewer
@@ -55,7 +57,6 @@ require('packer').startup(function()
       require('nvim-tree').setup(config)
     end,
   })
-
 
   -- show lines modifications
   use {
@@ -86,14 +87,14 @@ require('packer').startup(function()
 
   -- LSP server installer
   use { "williamboman/mason.nvim",
-        config = function()
-          require('plugins/mason')
-        end,
-        requires = {
-          'WhoIsSethDaniel/mason-tool-installer.nvim',
-          "williamboman/mason-lspconfig.nvim",
-        }
-      }
+    config = function()
+      require('plugins/mason')
+    end,
+    requires = {
+      'WhoIsSethDaniel/mason-tool-installer.nvim',
+      "williamboman/mason-lspconfig.nvim",
+    }
+  }
 
   -- lsp wrapper config
   use({
@@ -117,7 +118,6 @@ require('packer').startup(function()
       require('plugins/bufferline')
     end
   })
-
 
   -- treesitter a better syntax parser
   use({'nvim-treesitter/nvim-treesitter',
@@ -157,18 +157,11 @@ require('packer').startup(function()
       require('plugins/lsp-signature')
     end
   }
-  -- use({
-  --   "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-  --   config = function()
-  --     require("lsp_lines").setup()
-  --   end,
-  -- })
 
   -- LSP Wrapper to format on save
   use({
     'lukas-reineke/lsp-format.nvim'
   })
-
 
   -- Folding
   use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async',
@@ -177,7 +170,6 @@ require('packer').startup(function()
     end
   }
 
-
   -- Show little lightbulb when hint are available
   use {
     'kosayoda/nvim-lightbulb',
@@ -185,7 +177,6 @@ require('packer').startup(function()
         require('plugins/lsp-lightbulb')
       end
   }
-
 
   -- Show Key mapping
   use {
@@ -212,7 +203,6 @@ require('packer').startup(function()
     requires = {
       -- {'tpope/vim-rhubarb'}
     }
-
   }
 
   -- Show diff
@@ -231,27 +221,20 @@ require('packer').startup(function()
     config = function ()
       require('plugins/neotest')
     end,
-
   }
 
+  use {
+    'ahmedkhalf/project.nvim',
+    config = function ()
+      require('plugins/project-nvim')
+    end
+  }
 
-  -- use {
-  --   'akinsho/git-conflict.nvim', tag = "*",
-  --   config = function()
-  --     require('git-conflict').setup()
-  --   end
-  -- }
-
-  -- use({
-  --   "glepnir/lspsaga.nvim",
-  --   branch = "main",
-  --   config = function()
-  --     require("plugins/lspsaga")
-  --   end,
-  -- })
-
-
--- need to test
--- https://github.com/0x100101/lab.nvim
+  use {
+    'gelguy/wilder.nvim',
+    config = function ()
+      require('plugins/wilder-nvim')
+    end
+  }
 
 end)

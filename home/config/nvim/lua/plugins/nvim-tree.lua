@@ -64,6 +64,14 @@ map('n', '<leader>fs', ':NvimTreeFindFile<CR>', {})
 -- }
 
 return  {
+  --needed for project.nvim
+  sync_root_with_cwd = true,
+  respect_buf_cwd = true,
+  update_focused_file = {
+    enable = true,
+    update_root = true
+  },
+  -- end nvim project.nvim
   -- disables netrw completely
   disable_netrw = true,
   -- hijack netrw window on startup
@@ -71,7 +79,7 @@ return  {
   -- open the tree when running this setup function
   open_on_setup = false,
   -- closes neovim automatically when the tree is the last **WINDOW** in the view
-  
+
   view = {
     mappings = { list = list },
     signcolumn = 'yes'

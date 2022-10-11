@@ -5,5 +5,5 @@ require('spectre').setup({
 })
 
 
-map('n', "<leader>sr", [[<cmd>lua require('spectre').open()<CR>]], { noremap = true, silent = true})
+map('n', "<leader>fr", [[<cmd>lua require('spectre').open()<CR>]], { noremap = true, silent = true})
 

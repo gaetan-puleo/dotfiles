@@ -8,10 +8,9 @@ require('telescope').setup {
         ["<C-d>"] = false,
       },
     },
-    generic_sorter =  require'telescope.sorters'.get_fzy_sorter,
-    file_sorter =  require'telescope.sorters'.get_fzy_sorter,
+    generic_sorter = require'telescope.sorters'.get_fzy_sorter,
+    file_sorter = require'telescope.sorters'.get_fzy_sorter,
   },
-
   pickers = {
     find_files = {
       sorting_strategy = 'ascending',

@@ -12,12 +12,14 @@ wk.register({
   ['<leader>'] = {
     ["<space>"] = 'Show previous buffer',
     c = 'Pick and close the selected buffer',
-    p = 'Pick and switch to the selected buffer',
+    s = 'Pick and switch to the selected buffer',
+    p = 'Switch project',
     f = {
       name = '+Files / Find',
 			e = 'Open file tree panel',
       g = 'Grep / Search in files',
  			s = 'Show current file in file tree panel',
+      r = 'Global search and replace',
     },
     t = {
       name = '+Tests',
@@ -29,10 +31,6 @@ wk.register({
  			s = 'Show status (git status)',
  			l = 'Show commit history (git log)',
  			b = 'Git blame',
-    },
-    s = {
-      name = '+Search',
-      r = 'Global search and replace'
     },
   }
 })
