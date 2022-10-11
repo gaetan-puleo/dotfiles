@@ -14,6 +14,10 @@ wk.register({
     c = 'Pick and close the selected buffer',
     s = 'Pick and switch to the selected buffer',
     p = 'Switch project',
+    o = {
+      name = "+Open",
+      t = "Toggle terminal"
+    },
     f = {
       name = '+Files / Find',
 			e = 'Open file tree panel',
