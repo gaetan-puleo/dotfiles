@@ -11,6 +11,7 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagn
   underline = true,
   update_in_insert = true,
 })
+
 require("mason").setup()
 require("lsp-format").setup {}
 require'mason-tool-installer'.setup {

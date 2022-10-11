@@ -23,10 +23,10 @@ XF86MonBrightnessDown
   light -U 1
 
 Print
-  bash ~/dotfiles/scripts/rofi/bin/menu_screenshot
+  bash ~/.config/scripts/rofi/scripts/menu-screenshot.sh
 
 XF86PowerOff
-  bash ~/dotfiles/scripts/rofi/bin/menu_powermenu
+  bash ~/.config/scripts/rofi/bin/menu_powermenu
 
 XF86AudioMute
   pamixer -t

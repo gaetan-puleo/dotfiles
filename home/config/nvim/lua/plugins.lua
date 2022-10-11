@@ -223,6 +223,17 @@ require('packer').startup(function()
     end
   }
 
+  use {
+    'nvim-neotest/neotest',
+    requires = {
+      "haydenmeade/neotest-jest"
+    },
+    config = function ()
+      require('plugins/neotest')
+    end,
+
+  }
+
 
   -- use {
   --   'akinsho/git-conflict.nvim', tag = "*",

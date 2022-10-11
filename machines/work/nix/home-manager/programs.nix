@@ -1,15 +1,15 @@
-{ pkgs, nixGL, ... }: 
+{ pkgs, nixGL, ... }:
 let nixGL = (import (pkgs.fetchFromGitHub {
 	owner = "guibou";
 	repo = "nixGL";
 	rev = "7d6bc1b21316bab6cf4a6520c2639a11c25a220e";
 	sha256 = "02y38zmdplk7a9ihsxvnrzhhv7324mmf5g8hmxqizaid5k5ydpr3";
-	
+
   }) {}).nixGLIntel;
 
 in {
   # Let Home Manager install and manage itself.
-  # programs.home-manager.enable = true; 
+  # programs.home-manager.enable = true;
   home.packages = with pkgs; [
     # Enable opengl
     nixGL
@@ -23,7 +23,7 @@ in {
     fzf
     ripgrep
     neofetch
-    docker 
+    docker
     docker-compose
     xclip
     figlet
@@ -31,16 +31,17 @@ in {
     stow
     fish
     gcc
-    libstdcxx5 
+    libstdcxx5
     sxhkd
     xorg.xmodmap
     xorg.setxkbmap
- 
+    xdotool
+
     # DEV
     neovim
     fishPlugins.pure
     # pkgs.vimPlugins.packer-nvim
- 
+
     # Node
     nodejs-16_x
     yarn
@@ -74,6 +75,7 @@ in {
     # fonts
 
     noto-fonts
+    maim
     noto-fonts-cjk
     noto-fonts-emoji
     liberation_ttf

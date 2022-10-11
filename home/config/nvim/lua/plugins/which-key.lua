@@ -19,6 +19,11 @@ wk.register({
       g = 'Grep / Search in files',
  			s = 'Show current file in file tree panel',
     },
+    t = {
+      name = '+Tests',
+			n = 'Run nearest test',
+ 			f = 'Run current file',
+    },
     g = {
       name = '+Git',
  			s = 'Show status (git status)',
