@@ -221,6 +221,7 @@ require('packer').startup(function()
     end
   }
 
+  -- Add tests
   use {
     'nvim-neotest/neotest',
     requires = {
@@ -231,6 +232,7 @@ require('packer').startup(function()
     end,
   }
 
+  -- Add project list
   use {
     'ahmedkhalf/project.nvim',
     config = function ()
@@ -238,11 +240,35 @@ require('packer').startup(function()
     end
   }
 
+  -- improve wild menu
   use {
     'gelguy/wilder.nvim',
     config = function ()
       require('plugins/wilder-nvim')
     end
   }
+
+  -- Terminal
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+    require("plugins/toggleterm")
+  end}
+
+  -- -- Dap
+  -- use {
+  --   'mfussenegger/nvim-dap',
+  --   config = function ()
+  --     require('plugins/nvim-dap')
+  --   end
+  -- }
+
+  -- use { "mxsdev/nvim-dap-vscode-js" }
+
+  -- use { "rcarriga/nvim-dap-ui" }
+
+  -- use {
+  --   "microsoft/vscode-js-debug",
+  --   opt = true,
+  --   run = "npm install --legacy-peer-deps && npm run compile"
+  -- }
 
 end)

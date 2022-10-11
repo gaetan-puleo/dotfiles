@@ -3,7 +3,7 @@ local colors = require("tokyonight.colors").setup()
 require("scrollbar").setup({
   handlers = {
     diagnostic = true,
-    search = true,
+    search = false,
   },
   handle = {
     color = colors.bg_highlight,
