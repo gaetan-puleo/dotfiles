@@ -48,7 +48,7 @@ require'mason-tool-installer'.setup {
 function on_attach(client, bufnr)
 
   -- mouse actions
-  vim.keymap.set('n', '<2-LeftMouse>', vim.lsp.buf.definition, { silent = true, noremap = true })
+  -- vim.keymap.set('n', '<2-LeftMouse>', vim.lsp.buf.definition, { silent = true, noremap = true })
   vim.keymap.set('n', '<C-LeftMouse>', '<LeftMouse>gf', { silent = true, noremap = true })
   vim.keymap.set('n', '<RightMouse>', '<LeftMouse><cmd> lua vim.lsp.buf.hover()<CR>', { silent = true,noremap = true })
 

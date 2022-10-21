@@ -253,6 +253,10 @@ require('packer').startup(function()
     require("plugins/toggleterm")
   end}
 
+
+  use {"ellisonleao/carbon-now.nvim",
+    config = function() require('plugins/carbon-now')
+  end}
   -- -- Dap
   -- use {
   --   'mfussenegger/nvim-dap',

@@ -36,6 +36,10 @@ wk.register({
  			l = 'Show commit history (git log)',
  			b = 'Git blame',
     },
+    m = {
+      name = '+Miscellaneous',
+      c = 'Save to Carbon.now'
+    }
   }
 })
 -- wk.register({
