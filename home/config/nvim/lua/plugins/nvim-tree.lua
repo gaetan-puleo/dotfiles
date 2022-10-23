@@ -64,14 +64,6 @@ map('n', '<leader>fs', ':NvimTreeFindFile<CR>', {})
 -- }
 
 return  {
-  --needed for project.nvim
-  sync_root_with_cwd = false,
-  respect_buf_cwd = false,
-  update_focused_file = {
-    enable = true,
-    update_root = false
-  },
-  -- end nvim project.nvim
   -- disables netrw completely
   disable_netrw = true,
   -- hijack netrw window on startup

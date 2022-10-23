@@ -232,13 +232,13 @@ require('packer').startup(function()
     end,
   }
 
-  -- Add project list
-  use {
-    'ahmedkhalf/project.nvim',
-    config = function ()
-      require('plugins/project-nvim')
-    end
-  }
+  -- -- Add project list
+  -- use {
+  --   'ahmedkhalf/project.nvim',
+  --   config = function ()
+  --     require('plugins/project-nvim')
+  --   end
+  -- }
 
   -- improve wild menu
   use {
@@ -256,6 +256,10 @@ require('packer').startup(function()
 
   use {"ellisonleao/carbon-now.nvim",
     config = function() require('plugins/carbon-now')
+  end}
+
+  use {"lukas-reineke/indent-blankline.nvim",
+    config = function() require('plugins/indent-blankline')
   end}
   -- -- Dap
   -- use {
