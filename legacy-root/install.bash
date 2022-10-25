@@ -20,7 +20,7 @@ export NIX_PATH=$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/
 echo "Install home-manager"
 nix-env -iA nixpkgs.home-manager
 
-echo "install stow and git" 
+echo "install stow and git"
 nix-env -iA nixpkgs.stow
 nix-env -iA nixpkgs.git
 

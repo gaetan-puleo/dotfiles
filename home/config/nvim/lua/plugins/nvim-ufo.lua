@@ -77,3 +77,10 @@ require('ufo').setup({
 -- will override global handler if it is existed
 local bufnr = vim.api.nvim_get_current_buf()
 require('ufo').setFoldVirtTextHandler(bufnr, handler)
+
+-- -- Using ufo provider need remap `zR` and `zM`. If Neovim is 0.6.1, remap yourself
+--
+vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
+vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
+vim.keymap.set('n', 'zr', require('ufo').openFoldsExceptKinds)
+vim.keymap.set('n', 'zm', require('ufo').closeFoldsWith) -- closeAllFolds == closeFoldsWith(0)
