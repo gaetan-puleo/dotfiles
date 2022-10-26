@@ -39,7 +39,8 @@ wk.register({
     m = {
       name = '+Miscellaneous',
       c = 'Save to Carbon.now'
-    }
+    },
+    z = 'ZenMode'
   }
 })
 -- wk.register({

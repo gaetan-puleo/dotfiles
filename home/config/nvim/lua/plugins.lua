@@ -258,6 +258,13 @@ require('packer').startup(function()
     config = function() require('plugins/carbon-now')
   end}
 
+  use {
+    "folke/zen-mode.nvim",
+    config = function()
+      require('plugins.zen-mode')
+    end
+  }
+
   -- use {"lukas-reineke/indent-blankline.nvim",
   --  config = function() require('plugins/indent-blankline')
   --end}
