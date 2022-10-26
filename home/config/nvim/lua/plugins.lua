@@ -258,9 +258,9 @@ require('packer').startup(function()
     config = function() require('plugins/carbon-now')
   end}
 
-  use {"lukas-reineke/indent-blankline.nvim",
-    config = function() require('plugins/indent-blankline')
-  end}
+  -- use {"lukas-reineke/indent-blankline.nvim",
+  --  config = function() require('plugins/indent-blankline')
+  --end}
   -- -- Dap
   -- use {
   --   'mfussenegger/nvim-dap',
