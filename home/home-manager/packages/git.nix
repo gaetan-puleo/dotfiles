@@ -5,7 +5,7 @@
     enable = true;
     aliases = {
       alias = "! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /";
-      co = "checkout"; 
+      co = "checkout";
       rs = "reset";
       l = "log";
       lo = "log --oneline";
