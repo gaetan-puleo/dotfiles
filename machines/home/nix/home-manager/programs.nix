@@ -1,4 +1,6 @@
 { pkgs, nixGL, ... }:
+let
+  unstable = import <nixos-unstable> {};
 /* let nixGL = (import (pkgs.fetchFromGitHub { */
 /* 	owner = "guibou"; */
 /* 	repo = "nixGL"; */
@@ -7,7 +9,7 @@
 
 /*   }) {}).nixGLDefault; */
 
-{
+in {
   # Let Home Manager install and manage itself.
   # programs.home-manager.enable = true;
   home.packages = with pkgs; [
