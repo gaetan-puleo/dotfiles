@@ -35,6 +35,8 @@ in {
   # changes in each release.
   home.stateVersion = "22.05";
 
+  manual.manpages.enable = false;
+
   nixpkgs.config.allowUnfree = true;
 
   /* nixpkgs.overlays = [ */

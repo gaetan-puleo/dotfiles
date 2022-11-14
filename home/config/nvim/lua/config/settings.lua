@@ -42,7 +42,7 @@ vim.cmd[[set undofile]]
 vim.o.showmode = false -- We don't need to see things like -- INSERT -- anymore
 
 vim.wo.numberwidth = 4 -- columns number in gutter
-vim.o.cmdheight = 2 -- cmd line height
+vim.o.cmdheight = 0 -- cmd line height
 
 --Enable break indent
 vim.o.breakindent = true

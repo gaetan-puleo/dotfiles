@@ -1,6 +1,6 @@
 { pkgs, nixGL, ... }:
 let
-  unstable = import <nixos-unstable> {};
+  unstable = import <nixos-unstable> { overlays = []; };
 /* let nixGL = (import (pkgs.fetchFromGitHub { */
 /* 	owner = "guibou"; */
 /* 	repo = "nixGL"; */
@@ -38,7 +38,7 @@ in {
     xorg.setxkbmap
 
     # DEV
-    neovim
+    /* unstable.neovim */
     fishPlugins.pure
     # Android (react native)
     watchman
@@ -53,11 +53,9 @@ in {
     commitizen
 
     # GUI
-    # pkgs.firefox
     autorandr
     acpi
     kitty
-    blender
     gsimplecal
     picom
     rofi
@@ -71,8 +69,29 @@ in {
     libnotify
     pavucontrol
     ledger-live-desktop
+    libreoffice
 
     # services
+
+    # browsers
+    microsoft-edge
+    brave
+    google-chrome
+    # firefox # listed in firefox
+
+    # graphics
+    blender
+    gimp
+    krita
+    darktable
+    inkscape
+    fontforge
+    scribus
+
+    # office
+    libreoffice
     dunst
-  ];
+  ] ++ (with unstable; [
+    neovim
+  ]);
 }
