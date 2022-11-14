@@ -25,8 +25,101 @@ require('packer').startup(function()
   use({"petertriho/nvim-scrollbar",
     config = function ()
       require('plugins/nvim-scrollbar')
-    end
+    end,
   })
+
+use {
+  "utilyre/barbecue.nvim",
+  requires = {
+    "kyazdani42/nvim-web-devicons", -- optional
+  },
+  config = function()
+    require("barbecue").setup(
+{
+  ---whether to attach navic to language servers automatically
+  ---@type boolean
+  attach_navic = false,
+
+  ---whether to create winbar updater autocmd
+  ---@type boolean
+  create_autocmd = true,
+
+  ---buftypes to enable winbar in
+  ---@type string[]
+  include_buftypes = { "" },
+
+  ---filetypes not to enable winbar in
+  ---@type string[]
+  exclude_filetypes = { "toggleterm" },
+
+  ---returns a string to be shown at the end of winbar
+  ---@type fun(bufnr: number): number|string
+  custom_section = function()
+    return ""
+  end,
+
+  modifiers = {
+    ---filename modifiers applied to dirname
+    ---@type string
+    dirname = ":~:.",
+
+    ---filename modifiers applied to basename
+    ---@type string
+    basename = "",
+  },
+
+  ---icons used by barbecue
+  ---@type table<string, string>
+  symbols = {
+    ---entry separator
+    ---@type string
+    separator = ">",
+
+    ---modification indicator
+    ---`false` to disable
+    ---@type false|string
+    modified = false,
+
+    ---context placeholder for the root node
+    ---`false` to disable
+    ---@type false|string
+    default_context = "…",
+  },
+
+  ---icons for different context entry kinds
+  ---@type table<string, string>
+  kinds = {
+        File          = " ",
+        Module        = " ",
+        Namespace     = " ",
+        Package       = " ",
+        Class         = " ",
+        Method        = " ",
+        Property      = " ",
+        Field         = " ",
+        Constructor   = " ",
+        Enum          = "練",
+        Interface     = "練",
+        Function      = " ",
+        Variable      = " ",
+        Constant      = " ",
+        String        = " ",
+        Number        = " ",
+        Boolean       = "◩ ",
+        Array         = " ",
+        Object        = " ",
+        Key           = " ",
+        Null          = "ﳠ ",
+        EnumMember    = " ",
+        Struct        = " ",
+        Event         = " ",
+        Operator      = " ",
+        TypeParameter = " ",
+  },
+}
+    )
+  end,
+}
 
   -- Awesome theme by Folke
   use {
@@ -101,6 +194,7 @@ require('packer').startup(function()
     requires = {
       'WhoIsSethDaniel/mason-tool-installer.nvim',
       "williamboman/mason-lspconfig.nvim",
+      "smiteshp/nvim-navic",
     }
   }
 

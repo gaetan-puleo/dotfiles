@@ -12,6 +12,45 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagn
   update_in_insert = true,
 })
 
+local navic = require("nvim-navic")
+
+navic.setup {
+    icons = {
+        File          = " ",
+        Module        = " ",
+        Namespace     = " ",
+        Package       = " ",
+        Class         = " ",
+        Method        = " ",
+        Property      = " ",
+        Field         = " ",
+        Constructor   = " ",
+        Enum          = "練",
+        Interface     = "練",
+        Function      = " ",
+        Variable      = " ",
+        Constant      = " ",
+        String        = " ",
+        Number        = " ",
+        Boolean       = "◩ ",
+        Array         = " ",
+        Object        = " ",
+        Key           = " ",
+        Null          = "ﳠ ",
+        EnumMember    = " ",
+        Struct        = " ",
+        Event         = " ",
+        Operator      = " ",
+        TypeParameter = " ",
+    },
+    highlight = false,
+    separator = " > ",
+    depth_limit = 0,
+    depth_limit_indicator = "..",
+    safe_output = true
+}
+
+
 require("mason").setup()
 require("lsp-format").setup {}
 require'mason-tool-installer'.setup {
@@ -65,6 +104,10 @@ function on_attach(client, bufnr)
   vim.keymap.set('n', 'gt', vim.lsp.buf.definition, { silent = true, noremap = true })
   vim.keymap.set('n', 'ca', vim.lsp.buf.code_action, { silent = true, noremap = true })
   vim.keymap.set('n', 'gR', vim.lsp.buf.rename, { silent = true, noremap = true })
+
+  if client.server_capabilities.documentSymbolProvider then
+      navic.attach(client, bufnr)
+  end
 
 end
 
@@ -150,5 +193,7 @@ require("mason-lspconfig").setup_handlers {
 --             -- require("rust-tools").setup {}
 --         -- end
 }
+
+vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
 
 
