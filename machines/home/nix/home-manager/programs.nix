@@ -47,6 +47,8 @@ in {
     jdk11
     # pkgs.vimPlugins.packer-nvim
 
+    # Runtime
+
     # Node
     nodejs-16_x
     yarn
@@ -93,5 +95,7 @@ in {
     dunst
   ] ++ (with unstable; [
     neovim
+    # Runtime
+    bun
   ]);
 }
