@@ -38,7 +38,6 @@ in {
     xdotool
 
     # DEV
-    neovim
     fishPlugins.pure
     # pkgs.vimPlugins.packer-nvim
 
