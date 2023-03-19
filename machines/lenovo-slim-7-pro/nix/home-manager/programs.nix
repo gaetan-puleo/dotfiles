@@ -13,22 +13,26 @@ in {
   # Let Home Manager install and manage itself.
   # programs.home-manager.enable = true;
   home.packages = with pkgs; [
-    # Enable opengl
-    # CLI
+    ######################################
+    #
+    # Terminal
+    #
+    ######################################
     bottom
-    tmux
-    git
-    curl
     jq
+    curl
     httpie
     fzf
     ripgrep
     xclip
     figlet
     lolcat
-    fish
     gcc
     libstdcxx5
+    rpi-imager
+    nb
+    gnumake
+    wget
 
     # DEV
     fishPlugins.pure
@@ -39,28 +43,49 @@ in {
 
     # Runtime
 
-    # Node
-    nodejs-16_x
+
+    ######################################
+    #
+    # DEV
+    #
+    ######################################
+
+    # CLI
+    fish
+    git
+    tmux
+
+    # IDE
+    neovim
+
+    # JS
+    nodejs-18_x
     yarn
+    bun
 
     # GUI
     acpi
     kitty
-    pavucontrol
     ledger-live-desktop
     libreoffice
     gnome.gnome-screenshot
     xmind
 
-    # services
-
-    # browsers
+    ######################################
+    #
+    # Browsers
+    #
+    ######################################
     microsoft-edge
     brave
     google-chrome
     # firefox # listed in firefox
 
-    # graphics
+    ######################################
+    #
+    # Graphics
+    #
+    ######################################
     blender
     gimp
     krita
@@ -68,9 +93,12 @@ in {
     inkscape
     fontforge
     scribus
-    neovim
-    bun
-    # office
+
+    ######################################
+    #
+    # Office
+    #
+    ######################################
     libreoffice
   ] ++ (with unstable; [
     # Runtime

@@ -9,7 +9,7 @@
 
   services.udev.packages = [ pkgs.ledger-udev-rules ];
 
-  services.flatpak.enable = false;
+  services.flatpak.enable = true;
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -71,4 +71,9 @@
   services.xserver.libinput.enable = true;
 
   hardware.sane.enable = true;
+
+  programs.kdeconnect = {
+      enable = true;
+      package = pkgs.gnomeExtensions.gsconnect;
+  };
 }

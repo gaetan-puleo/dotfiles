@@ -3,6 +3,7 @@ if(not vim.g.vscode) then
 	require('config/settings')
 	require('config/mapping')
 	require('plugins')
+
 end
 
 if(vim.g.vscode) then

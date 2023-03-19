@@ -8,7 +8,9 @@
     qemu_kvm
     qemu
     libvirt
-
     gnomeExtensions.dash-to-dock
+    gnomeExtensions.tray-icons-reloaded
+    # gnomeExtensions.gsconnect
+    openssl
   ];
 }

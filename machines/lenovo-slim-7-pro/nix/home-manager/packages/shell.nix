@@ -5,6 +5,7 @@
     md = "mkdir";
     vim = "nvim";
     mnt = "mount | grep -E ^/dev | column -t";
+    # ssh = "kitty +kitten ssh";
   };
   home.sessionVariables = {
     JAVA_HOME = "${pkgs.jdk11}";

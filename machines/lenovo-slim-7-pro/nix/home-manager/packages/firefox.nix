@@ -6,11 +6,6 @@
             reduxdevtools
 
             # minimalism
-            canvasblocker
-            ublock-origin
-
-            # privacy
-            multi-account-containers
             youtube-recommended-videos
             news-feed-eradicator
             youtube-shorts-block
@@ -25,6 +20,9 @@
             # privacy
             i-dont-care-about-cookies
             ublock-origin
+            privacy-badger
+            canvasblocker
+            multi-account-containers
 
             # crypto
             metamask

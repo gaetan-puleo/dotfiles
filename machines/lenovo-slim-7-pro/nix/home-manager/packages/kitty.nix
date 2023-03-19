@@ -4,6 +4,7 @@
     font.size = 12;
     font.name = "Fira Code Regular Nerd Font Complete Mono";
     settings = {
+      term = "xterm-256color";
       enable_audio_bell = "no"; # silent bell
       shell = "fish --interactive --login";
       dynamic_background_opacity = "true";
