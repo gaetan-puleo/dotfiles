@@ -214,6 +214,18 @@ require("lazy").setup({
       require('plugins/spectre')
     end
   },
+
+
+  {
+    "folke/trouble.nvim",
+--     requires = "kyazdani42/nvim-web-devicons",
+    dependencies = {
+      "kyazdani42/nvim-web-devicons"
+    },
+    config = function()
+      require('plugins/trouble')
+    end
+  }
 })
 
 
