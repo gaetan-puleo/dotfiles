@@ -6,70 +6,36 @@ for type, icon in pairs(signs) do
 end
 
 vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-  virtual_text = false,
+  virtual_text = true,
   signs = true,
   underline = true,
   update_in_insert = true,
 })
 
-local navic = require("nvim-navic")
-
-navic.setup {
-    icons = {
-        File          = " ",
-        Module        = " ",
-        Namespace     = " ",
-        Package       = " ",
-        Class         = " ",
-        Method        = " ",
-        Property      = " ",
-        Field         = " ",
-        Constructor   = " ",
-        Enum          = "練",
-        Interface     = "練",
-        Function      = " ",
-        Variable      = " ",
-        Constant      = " ",
-        String        = " ",
-        Number        = " ",
-        Boolean       = "◩ ",
-        Array         = " ",
-        Object        = " ",
-        Key           = " ",
-        Null          = "ﳠ ",
-        EnumMember    = " ",
-        Struct        = " ",
-        Event         = " ",
-        Operator      = " ",
-        TypeParameter = " ",
-    },
-    highlight = true,
-    separator = " > ",
-    depth_limit = 0,
-    depth_limit_indicator = "..",
-    safe_output = true
-}
-
 
 require("mason").setup()
 require("lsp-format").setup {}
-require'mason-tool-installer'.setup {
+
+require'mason-lspconfig'.setup {
 
     -- a list of all tools you want to ensure are installed upon
     -- start; they should be the names Mason uses for each tool
     ensure_installed = {
         --lsp
-        'json-lsp',
-        'html-lsp',
-        'css-lsp',
-        'typescript-language-server',
-        'cssmodules-language-server',
-        'tailwindcss-language-server',
-        'emmet-ls',
+        'html',
+        'cssls',
+        'cssmodules_ls',
+        'vtsls', -- ts
+        -- 'tsserver',
+        'jsonls',
+        -- 'tailwindcss',
+        'astro',
+        'eslint',
+        -- 'emmet-ls',
+        -- 'solidity',
         -- linter
-        'eslint_d',
         -- formatter
-        'prettier',
+        -- other
     },
 
     -- if set to true this will check each tool for updates. If updates
@@ -83,6 +49,7 @@ require'mason-tool-installer'.setup {
     -- Default: true
     run_on_start = true
 }
+
 
 function on_attach(client, bufnr)
 
@@ -105,57 +72,11 @@ function on_attach(client, bufnr)
   vim.keymap.set('n', 'ca', vim.lsp.buf.code_action, { silent = true, noremap = true })
   vim.keymap.set('n', 'gR', vim.lsp.buf.rename, { silent = true, noremap = true })
 
-  if client.server_capabilities.documentSymbolProvider then
-      navic.attach(client, bufnr)
-  end
-
+  require("lsp-format").on_attach(client)
 end
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-
-local eslint = {
-  lintCommand = "eslint_d -f visualstudio --stdin --stdin-filename ${INPUT}",
-  lintFormats = {"%f(%l,%c): %tarning %m", "%f(%l,%c): %trror %m"},
-  lintStdin = true,
-  lintIgnoreExitCode = true,
-  lintSource = "eslint",
-  formatCommand = "eslint_d --fix-to-stdout --stdin --stdin-filename ${INPUT}",
-  formatStdin = true
-}
-
-local jq = {
-  lintCommand = "jq .",
-  lintFormats = {"parse %trror: %m at line %l, column %c"},
-  lintSource = "jq"
-}
-
-local prettier = {
-  formatCommand = 'prettierd "${INPUT}"',
-  formatStdin = true
-}
-
-local shellcheck = {
-  lintCommand = "shellcheck -f gcc -x -",
-  lintStdin = true,
-  lintFormats = {
-    "%f:%l:%c: %trror: %m", "%f:%l:%c: %tarning: %m", "%f:%l:%c: %tote: %m"
-  },
-  lintSource = "shellcheck"
-}
-
-local languages = {
-  css = {prettier},
-  html = {prettier},
-  javascript = {prettier, eslint},
-  javascriptreact = {prettier, eslint},
-  --json = {prettier, jq},
-  markdown = {prettier},
-  --pandoc = {prettier},
-  sh = {shellcheck},
-  typescript = {prettier, eslint},
-  typescriptreact = {prettier, eslint},
-  --yaml = {prettier}
-}
+-- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 require("mason-lspconfig").setup_handlers {
 --         -- The first entry (without a key) will be the default handler
@@ -163,37 +84,11 @@ require("mason-lspconfig").setup_handlers {
 --         -- a dedicated handler.
   function (server_name) -- default handler (optional)
     require("lspconfig")[server_name].setup {
-      on_attach = on_attach
+      on_attach = on_attach,
+      capabilities = capabilities,
     }
   end,
 
-  ['efm'] = function ()
-    require("lspconfig").efm.setup {
-      capabilities = capabilities,
-      init_options = {
-        documentFormatting = true
-      },
-      filetypes = vim.tbl_keys(languages),
-      settings = {
-        rootMarkers = {
-        ".git", "package.json", "node_modules", "tsconfig.json"
-        },
-        languages = languages
-      },
-      on_attach = function (client, bufnr)
-        require "lsp-format".on_attach(client)
-        on_attach(client, bufnr)
-
-      end
-    }
-  end
---         -- Next, you can provide targeted overrides for specific servers.
---         -- For example, a handler override for the `rust_analyzer`:
---         -- ["rust_analyzer"] = function ()
---             -- require("rust-tools").setup {}
---         -- end
 }
-
-vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
 
 

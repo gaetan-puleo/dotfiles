@@ -42,9 +42,11 @@ require("lazy").setup({
     dependencies = {
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-path',
       'saadparwaiz1/cmp_luasnip',
       'onsails/lspkind-nvim',
-      'L3MON4D3/LuaSnip'
+      'L3MON4D3/LuaSnip',
+      -- 'Exafunction/codeium.vim',
     }
   },
 
@@ -53,15 +55,17 @@ require("lazy").setup({
 
   -- LSP server installer
   { "williamboman/mason.nvim",
+    build = ":MasonUpdate", -- :MasonUpdate updates registry contents
     config = function()
       require('plugins/mason')
     end,
     dependencies = {
-      'WhoIsSethDaniel/mason-tool-installer.nvim',
+      -- 'WhoIsSethDaniel/mason-tool-installer.nvim',
       "williamboman/mason-lspconfig.nvim",
-      "smiteshp/nvim-navic",
-      'lukas-reineke/lsp-format.nvim',
-      'neovim/nvim-lspconfig'
+      'neovim/nvim-lspconfig',
+      "jose-elias-alvarez/null-ls.nvim",
+      "jay-babu/mason-null-ls.nvim",
+      "lukas-reineke/lsp-format.nvim"
     }
   },
 
@@ -104,13 +108,13 @@ require("lazy").setup({
   },
 
 
-  -- better menu
-  {
-    'gelguy/wilder.nvim',
-    config = function ()
-      require('plugins/wilder-nvim')
-    end
-  },
+  -- -- better menu
+  -- {
+  --   'gelguy/wilder.nvim',
+  --   config = function ()
+  --     require('plugins/wilder-nvim')
+  --   end
+  -- },
 
   -- statusline
   {
@@ -181,23 +185,7 @@ require("lazy").setup({
 
   -- icons
   { 'kyazdani42/nvim-web-devicons' },
-  {
-    "folke/zen-mode.nvim",
-    config = function()
-      require('plugins.zen-mode')
-    end
-  },
 
-  {
-    "folke/twilight.nvim",
-    config = function()
-      require("twilight").setup {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-      }
-    end
-  },
 
   -- Show little lightbulb when hint are available
   {

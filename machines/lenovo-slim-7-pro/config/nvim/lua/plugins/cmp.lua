@@ -2,8 +2,11 @@ vim.o.completeopt = "menuone,noselect"
 
 local cmp = require'cmp'
 local lspkind = require('lspkind')
+
+
+
 require("luasnip/loaders/from_vscode").load()
-cmp.setup({ 
+cmp.setup({
     snippet = {
       expand = function(args)
         require'luasnip'.lsp_expand(args.body)
@@ -23,6 +26,7 @@ cmp.setup({
       { name = 'luasnip' },
       { name = 'nvim_lsp' },
       { name = 'buffer' },
+      { name = 'path' },
     },
     formatting = {
       format = lspkind.cmp_format({

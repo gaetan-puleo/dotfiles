@@ -54,6 +54,7 @@ in {
     fish
     git
     tmux
+    mtm
 
     # IDE
     neovim
@@ -70,6 +71,13 @@ in {
     libreoffice
     gnome.gnome-screenshot
     xmind
+
+    ######################################
+    #
+    # Mail
+    #
+    ######################################
+    evolution
 
     ######################################
     #
@@ -102,6 +110,6 @@ in {
     libreoffice
   ] ++ (with unstable; [
     # Runtime
-
+    protonmail-bridge
   ]);
 }

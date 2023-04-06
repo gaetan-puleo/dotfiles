@@ -11,7 +11,8 @@ vim.o.secure = true
 -- one tab is equal 2 spaces
 opt.expandtab = true
 opt.shiftwidth = 2
-opt.smartindent = true
+opt.tabstop = 2
+opt.softtabstop = 2
 
 vim.wo.number = true -- set numbered lines
 

@@ -16,6 +16,8 @@ in {
     ./user.nix
     ./home-manager/packages/shell.nix
     ./home-manager/packages/tmux.nix
+
+    ./home-manager/services/proton-bridge.nix
   ];
 
   # This value determines the Home Manager release that your

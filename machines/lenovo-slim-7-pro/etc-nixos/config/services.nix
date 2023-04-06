@@ -22,6 +22,7 @@
 
   services.xserver.desktopManager = {
     gnome.enable = true;
+    plasma5.enable = false;
     xterm.enable = false;
   };
 

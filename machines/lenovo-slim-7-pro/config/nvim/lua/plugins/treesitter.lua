@@ -1,8 +1,24 @@
 vim.opt.runtimepath:append("$HOME/.local/share/treesitter")
 require'nvim-treesitter.configs'.setup {
   parser_install_dir = "$HOME/.local/share/treesitter",
-  ensure_installed = "all",
-  ignore_install = {"haskell"},
+  ensure_installed = {
+    'javascript',
+    'typescript',
+    'tsx',
+    'html',
+    'css',
+    'scss',
+    'yaml',
+    'json',
+    'jsonc',
+    'lua',
+    'markdown',
+    'vue',
+    'svelte',
+    'graphql',
+    'solidity',
+    'nix',
+  },
   autotag = {
 		enable = true
 	},
@@ -18,29 +34,12 @@ require'nvim-treesitter.configs'.setup {
 			}
 		}
   },
-  playground = {
-    enable = true,
-    disable = {},
-    updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
-    persist_queries = false, -- Whether the query persists across vim sessions
-    keybindings = {
-      toggle_query_editor = 'o',
-      toggle_hl_groups = 'i',
-      toggle_injected_languages = 't',
-      toggle_anonymous_nodes = 'a',
-      toggle_language_display = 'I',
-      focus_language = 'f',
-      unfocus_language = 'F',
-      update = 'R',
-      goto_node = '<cr>',
-      show_help = '?',
-    },
-  },
 	refactor = {
     highlight_definitions = { enable = true },
     highlight_current_scope = { enable = false },
   },
 	highlight = {
-    enable = true
+    enable = true,
+    use_languagetree = true
   }
 }
