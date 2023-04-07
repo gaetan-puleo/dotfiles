@@ -52,6 +52,7 @@ require("lazy").setup({
 
   -- .editorconfig
   { "gpanders/editorconfig.nvim" },
+  { "Exafunction/codeium.vim" },
 
   -- LSP server installer
   { "williamboman/mason.nvim",

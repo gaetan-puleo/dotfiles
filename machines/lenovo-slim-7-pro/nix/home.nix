@@ -8,16 +8,13 @@ in {
     ./home-manager/generate-files.nix
     ./gnome.nix
 
-    # common global
-    ./home-manager/packages/firefox.nix
-    ./home-manager/packages/vscode.nix
-    ./home-manager/packages/kitty.nix
-    ./home-manager/packages/git.nix
-    ./user.nix
-    ./home-manager/packages/shell.nix
-    ./home-manager/packages/tmux.nix
+    ./hm-config/firefox.nix
+    ./hm-config/kitty.nix
+    ./hm-config/git.nix
+    ./hm-config/shell.nix
+    ./hm-config/tmux.nix
 
-    ./home-manager/services/proton-bridge.nix
+    ./user.nix
   ];
 
   # This value determines the Home Manager release that your

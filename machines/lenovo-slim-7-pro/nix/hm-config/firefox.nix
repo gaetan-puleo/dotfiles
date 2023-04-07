@@ -2,49 +2,6 @@
 
 {
    programs.firefox = {
-        /* extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-            # dev
-            #react-devtools
-            reduxdevtools
-           #preact-devtools
-           (buildFirefoxXpiAddon {
-              pname = "preact-devtools";
-              version = "4.7.0";
-              addonId = "devtools@marvinh.dev";
-              url = "https://addons.mozilla.org/firefox/downloads/file/4079432/preact_devtools-4.7.0.xpi";
-              sha256 = "090dc4375b9ee1ca5c9da211c99090e9d4948abbd649986f94a2d53953e2d859";
-              meta = {};
-            })
-
-            # minimalism
-            youtube-recommended-videos
-            news-feed-eradicator
-            youtube-shorts-block
-            sponsorblock
-
-            # theme
-            tokyo-night-v2
-
-            # password manager
-            bitwarden
-
-            # privacy
-            i-dont-care-about-cookies
-            ublock-origin
-            privacy-badger
-            canvasblocker
-            multi-account-containers
-            zoom-redirector
-
-            # crypto
-            metamask
-
-            # tools
-            languagetool
-            xbrowsersync
-
-
-        ];*/
       enable = true;
       package = pkgs.wrapFirefox pkgs.firefox-unwrapped {
         extraPolicies = {
