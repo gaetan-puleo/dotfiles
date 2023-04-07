@@ -35,17 +35,18 @@ in {
 
   nixpkgs.config.allowUnfree = true;
 
-  nixpkgs.config.packageOverrides = pkgs: {
+  /*nixpkgs.config.packageOverrides = pkgs: {
     nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
       inherit pkgs;
     };
-  };
+  };*/
 
-  home.pointerCursor = {
+
+  /*home.pointerCursor = {
     x11 = {enable = true;};
     name = "capitaine-cursors";
     package = pkgs.capitaine-cursors;
     size = 32;
-  };
+  }; */
 
 }

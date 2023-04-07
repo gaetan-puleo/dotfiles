@@ -55,6 +55,7 @@ in {
     git
     tmux
     mtm
+    distrobox
 
     # IDE
     neovim

@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, config, ... }: {
+
   programs.kitty = {
     enable = true;
     font.size = 12;

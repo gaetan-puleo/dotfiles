@@ -2,8 +2,11 @@ vim.o.completeopt = "menuone,noselect"
 
 local cmp = require'cmp'
 local lspkind = require('lspkind')
+
+
+
 require("luasnip/loaders/from_vscode").load()
-cmp.setup({ 
+cmp.setup({
     snippet = {
       expand = function(args)
         require'luasnip'.lsp_expand(args.body)
@@ -23,6 +26,7 @@ cmp.setup({
       { name = 'luasnip' },
       { name = 'nvim_lsp' },
       { name = 'buffer' },
+      { name = 'path' },
     },
     formatting = {
       format = lspkind.cmp_format({
@@ -34,3 +38,11 @@ cmp.setup({
       })
     },
 })
+
+vim.g.codeium_disable_bindings = 1
+
+vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true })
+vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
+vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
+vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
+

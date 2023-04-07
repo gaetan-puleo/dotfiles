@@ -1,4 +1,10 @@
-{ pkgs, ... }: {
+{ pkgs, config, ... }: {
+
+  # symlink
+  home.file."${config.xdg.configHome}/tmux/theme.conf" = {
+    source = config.lib.file.mkOutOfStoreSymlink ../../../config/tmux/theme.conf;
+  };
+
   programs.tmux = {
     enable = true;
     shell = "${pkgs.fish}/bin/fish";
@@ -10,9 +16,9 @@
     set-option -g prefix None
     set-option -g prefix2 None
 
-    unbind -n C-h   
-    unbind -n C-j 
-    unbind -n C-k 
+    unbind -n C-h
+    unbind -n C-j
+    unbind -n C-k
     unbind -n C-l
 
     #PLUGINS
@@ -23,7 +29,7 @@
     # set -g @plugin 'tmux-plugins/tmux-continuum'
 
     # Last saved environment is automatically restored when tmux is started.
-    # set -g @continuum-boot 'on'  
+    # set -g @continuum-boot 'on'
 
     # set -g terminal-overrides ',xterm-256color:Tc'
     # set -g default-terminal "tmux-256color"
@@ -43,7 +49,7 @@
     set -g base-index 1
     setw -g pane-base-index 1
 
-    # Split pane 
+    # Split pane
     bind-key -n "M-\\" split-window -h
     bind-key -n M-| split-window -h
     bind-key -n M-- split-window -v
