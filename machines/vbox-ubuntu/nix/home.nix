@@ -19,6 +19,12 @@ in {
     ./hm-config/user.nix
   ];
 
+
+  home.file."${config.xdg.configHome}/home-manager/home.nix"= {
+    source = config.lib.file.mkOutOfStoreSymlink ./home.nix;
+  };
+}
+
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new Home Manager release introduces backwards
