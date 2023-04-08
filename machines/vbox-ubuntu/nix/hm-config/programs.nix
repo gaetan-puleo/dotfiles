@@ -18,7 +18,7 @@ in {
     # Terminal
     #
     ######################################
-    bottom
+/*    bottom
     jq
     curl
     httpie
@@ -33,7 +33,7 @@ in {
     nb
     gnumake
     wget
-
+*/
     # DEV
     fishPlugins.pure
     # Android (react native)
@@ -54,7 +54,6 @@ in {
     fish
     git
     tmux
-    mtm
     distrobox
 
     # IDE
@@ -63,31 +62,30 @@ in {
     # JS
     nodejs-18_x
     yarn
-    bun
+    # bun
 
     # GUI
-    acpi
-    kitty
-    ledger-live-desktop
-    libreoffice
-    gnome.gnome-screenshot
-    xmind
+    # acpi
+    # kitty
+    # ledger-live-desktop
+    # gnome.gnome-screenshot
+    # xmind
 
     ######################################
     #
     # Mail
     #
     ######################################
-    evolution
+    # evolution
 
     ######################################
     #
     # Browsers
     #
     ######################################
-    microsoft-edge
-    brave
-    google-chrome
+    # microsoft-edge
+    # brave
+    # google-chrome
     # firefox # listed in firefox
 
     ######################################
@@ -95,19 +93,19 @@ in {
     # Graphics
     #
     ######################################
-    blender
-    gimp
-    krita
-    darktable
-    inkscape
-    fontforge
-    scribus
+    # blender
+    # gimp
+    # krita
+    # darktable
+    # inkscape
+    # fontforge
+    # scribus
 
     ######################################
     #
     # Office
     #
     ######################################
-    libreoffice
+    # libreoffice
   ] ;
 }
