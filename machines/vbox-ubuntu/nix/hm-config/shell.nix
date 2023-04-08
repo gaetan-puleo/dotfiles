@@ -42,4 +42,10 @@
       onEvent = "fish_command_not_found";
     };
   };
+
+  programs.bash = {
+    profileExtra = ''
+    . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+    '';
+  };
 }
