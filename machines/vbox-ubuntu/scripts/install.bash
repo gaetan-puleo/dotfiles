@@ -1,11 +1,12 @@
 #!/bin/bash
 
 # requirement
-sudo apt install curl -y
+sudo --version
+sudo apt install -y curl
 
 echo fs.inotify.max_user_watches=66536 | sudo tee -a /etc/sysctl.conf
 
-sudo apt install flatpak
+sudo apt install -y flatpak
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
@@ -35,3 +36,5 @@ flatpak install -y --noninteractive flathub org.kde.krita
 flatpak install -y --noninteractive flathub org.mozilla.firefox
 flatpak install -y --noninteractive flathub com.google.Chrome
 flatpak install -y --noninteractive flathub com.microsoft.Edge
+
+figlet "welcome home \n Gaetan"| lolcat

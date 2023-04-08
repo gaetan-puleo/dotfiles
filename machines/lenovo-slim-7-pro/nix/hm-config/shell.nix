@@ -13,7 +13,6 @@
     EDITOR = "nvim";
     VSCODE_PORTABLE="\${XDG_DATA_HOME}/vscode";
     PATH="${pkgs.jdk11}/bin:$PATH";
-    DBX_CONTAINER_MANAGER="podman";
   };
   programs.fish.enable = true;
   programs.fish.plugins = [
