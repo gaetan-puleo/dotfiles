@@ -17,3 +17,4 @@ nix-channel --update
 
 # install home manager
 nix-shell '<home-manager>' -A install
+

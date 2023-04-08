@@ -6,7 +6,6 @@ let
 in {
   imports = [
     # Host specific config
-    ./hm-config/generate-files.nix
     ./hm-config/gnome.nix
 
     ./hm-config/programs.nix
