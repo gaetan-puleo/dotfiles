@@ -1,6 +1,6 @@
 { pkgs, nixGL, ... }:
 let
-  unstable = import <nixos-unstable> { overlays = []; };
+  unstable = import <nixpkgs-unstable> { overlays = []; };
 /* let nixGL = (import (pkgs.fetchFromGitHub { */
 /* 	owner = "guibou"; */
 /* 	repo = "nixGL"; */
