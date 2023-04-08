@@ -1,6 +1,6 @@
 { pkgs, nixGL, ... }:
 let
-  unstable = import <nixpkgs-unstable> { overlays = []; };
+  # unstable = import <nixpkgs-unstable> { overlays = []; };
 /* let nixGL = (import (pkgs.fetchFromGitHub { */
 /* 	owner = "guibou"; */
 /* 	repo = "nixGL"; */
@@ -109,8 +109,5 @@ in {
     #
     ######################################
     libreoffice
-  ] ++ (with unstable; [
-    # Runtime
-    protonmail-bridge
-  ]);
+  ] ;
 }
