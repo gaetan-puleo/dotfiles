@@ -18,7 +18,8 @@ in {
     # Terminal
     #
     ######################################
-/*    bottom
+
+    bottom
     jq
     curl
     httpie
@@ -27,17 +28,19 @@ in {
     xclip
     figlet
     lolcat
-    gcc
-    libstdcxx5
     rpi-imager
     nb
     gnumake
     wget
-*/
+    gcc
+    libstdcxx5
+
     # DEV
+
     fishPlugins.pure
     # Android (react native)
     watchman
+    cargo # rust (needed for neovim)
     /* android-tools */
     # pkgs.vimPlugins.packer-nvim
 
@@ -107,5 +110,7 @@ in {
     #
     ######################################
     # libreoffice
+
+  (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
   ] ;
 }

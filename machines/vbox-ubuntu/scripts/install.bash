@@ -8,3 +8,5 @@ bash ~/dotfiles/commons/scripts/install.bash
 
 
 home-manager -f ~/dotfiles/machines/vbox-ubuntu/nix/home.nix switch -b override
+
+echo fs.inotify.max_user_watches=66536 | sudo tee -a /etc/sysctl.conf

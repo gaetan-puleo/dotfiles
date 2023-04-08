@@ -46,13 +46,18 @@ require("lazy").setup({
       'saadparwaiz1/cmp_luasnip',
       'onsails/lspkind-nvim',
       'L3MON4D3/LuaSnip',
-      -- 'Exafunction/codeium.vim',
+      -- "jcdickinson/codeium.nvim",
+      'Exafunction/codeium.vim',
     }
   },
 
   -- .editorconfig
   { "gpanders/editorconfig.nvim" },
-  { "Exafunction/codeium.vim" },
+  -- { "Exafunction/codeium.vim" },
+  -- {
+    -- "jcdickinson/http.nvim",
+    -- run = "cargo build --workspace --release"
+  -- },
 
   -- LSP server installer
   { "williamboman/mason.nvim",

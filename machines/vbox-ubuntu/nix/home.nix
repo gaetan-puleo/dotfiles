@@ -2,7 +2,7 @@
 let
   cfg = config.customHomeProfile.GUI;
   dotfilePath = "${config.home.homeDirectory}/dotfiles";
-  mqchinePath = "${dotfilePath}/machines/lenovo-slim-7-pro";
+  machinePath = "${dotfilePath}/machines/lenovo-slim-7-pro";
 in {
   imports = [
     # Host specific config

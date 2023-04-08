@@ -3,4 +3,6 @@
   # paths it should manage.
   home.username = "gaetan";
   home.homeDirectory = "/home/gaetan";
+
+  fonts.fontconfig.enable = true;
 }

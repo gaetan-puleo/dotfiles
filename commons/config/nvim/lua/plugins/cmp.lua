@@ -4,7 +4,6 @@ local cmp = require'cmp'
 local lspkind = require('lspkind')
 
 
-
 require("luasnip/loaders/from_vscode").load()
 cmp.setup({
     snippet = {
@@ -23,6 +22,7 @@ cmp.setup({
       ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
     sources = {
+      { name = 'codeium' },
       { name = 'luasnip' },
       { name = 'nvim_lsp' },
       { name = 'buffer' },
@@ -39,10 +39,10 @@ cmp.setup({
     },
 })
 
-vim.g.codeium_disable_bindings = 1
+-- vim.g.codeium_disable_bindings = 1
 
-vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true })
-vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
-vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
-vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
+-- vim.keymap.set('i', '<leader>a', function () return vim.fn['codeium#Accept']() end, { expr = true })
+-- vim.keymap.set('i', '<leader>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
+-- vim.keymap.set('i', '<leader>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
+-- vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
 
