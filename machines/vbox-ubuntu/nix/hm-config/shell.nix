@@ -47,6 +47,8 @@
     profileExtra = ''
     . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
 
+    . /home/gaetan/.nix-profile/etc/profile.d/nix.sh
+
     '';
   };
 }
