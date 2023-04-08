@@ -20,18 +20,18 @@ home-manager -f ~/dotfiles/machines/vbox-ubuntu/nix/home.nix switch -b override
 # flatpak
 
 # DEV
-flatpak install flathub com.visualstudio.code
+flatpak install -y --noninteractive flathub com.visualstudio.code
 
 # job
-flatpak install flathub com.discordapp.Discord
-flatpak install flathub com.slack.Slack
+flatpak install -y --noninteractive flathub com.discordapp.Discord
+flatpak install -y --noninteractive flathub com.slack.Slack
 
 # graphic
-flatpak install flathub org.kde.kdenlive
-flatpak install flathub org.gimp.GIMP
-flatpak install flathub org.kde.krita
+flatpak install -y --noninteractive flathub org.kde.kdenlive
+flatpak install -y --noninteractive flathub org.gimp.GIMP
+flatpak install -y --noninteractive flathub org.kde.krita
 
 # browser
-flatpak install flathub org.mozilla.firefox
-flatpak install flathub com.google.Chrome
-flatpak install flathub com.microsoft.Edge
+flatpak install -y --noninteractive flathub org.mozilla.firefox
+flatpak install -y --noninteractive flathub com.google.Chrome
+flatpak install -y --noninteractive flathub com.microsoft.Edge
