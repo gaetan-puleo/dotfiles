@@ -14,6 +14,9 @@
     VSCODE_PORTABLE="\${XDG_DATA_HOME}/vscode";
     PATH="${pkgs.jdk11}/bin:$PATH";
   };
+  programs.fish.shellInit = ''
+  starship init fish | source
+  '';
   programs.fish.enable = true;
   programs.fish.plugins = [
     {

@@ -5,10 +5,12 @@
  #  virtualisation.virtualbox.host.enableExtensionPack = true;
   virtualisation.libvirtd.enable = true;
   programs.dconf.enable = true;
-  virtualisation.docker.rootless = {
+
+  virtualisation.docker.enable = true;
+  /*virtualisation.docker.rootless = {
     enable = true;
     setSocketVariable = true;
-  };
+  };*/
   virtualisation.virtualbox.host.enable = true;
   virtualisation.virtualbox.host.enableExtensionPack = true;
 

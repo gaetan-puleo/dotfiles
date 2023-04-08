@@ -5,7 +5,7 @@
   users.users.gaetan = {
     isNormalUser = true;
     description = "Gaetan Puleo";
-    extraGroups = [ "networkmanager" "wheel" "video" "adbusers" "scanner" "lp" "adbusers" "libvirtd"];
+    extraGroups = [ "networkmanager" "wheel" "video" "adbusers" "scanner" "lp" "adbusers" "libvirtd" "docker"];
     packages = with pkgs; [
 
     ];

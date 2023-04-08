@@ -33,6 +33,7 @@ in {
     nb
     gnumake
     wget
+    starship
 
     # DEV
     fishPlugins.pure
