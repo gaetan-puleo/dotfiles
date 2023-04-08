@@ -1,3 +1,15 @@
+**WIP**
+# Setup
+
+```
+git clone http://github.com/gaetan-puleo/dotfiles.git
+```
+
+### VM Installation
+
+```
+bash ~/dotfiles/machines/vbox-ubuntu/scripts/install.bash 
+```
 # Nixos
 ```bash
 nix-shell -p wget git
