@@ -17,7 +17,12 @@ require'nvim-treesitter.configs'.setup {
     'svelte',
     'graphql',
     'solidity',
+    -- linux
     'nix',
+    'bash',
+    'fish',
+    -- git
+    'cmake',
   },
   autotag = {
 		enable = true

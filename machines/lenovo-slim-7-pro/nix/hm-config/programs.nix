@@ -29,11 +29,8 @@ in {
     lolcat
     gcc
     libstdcxx5
-    rpi-imager
-    nb
     gnumake
     wget
-    starship
 
     # DEV
     fishPlugins.pure
@@ -55,8 +52,8 @@ in {
     fish
     git
     tmux
-    mtm
-    distrobox
+    neofetch
+    # distrobox
 
     # IDE
     neovim
@@ -64,13 +61,10 @@ in {
     # JS
     nodejs-18_x
     yarn
-    bun
 
     # GUI
     acpi
     kitty
-    ledger-live-desktop
-    libreoffice
     gnome.gnome-screenshot
     xmind
 
@@ -86,9 +80,6 @@ in {
     # Browsers
     #
     ######################################
-    microsoft-edge
-    brave
-    google-chrome
     # firefox # listed in firefox
 
     ######################################
@@ -96,22 +87,13 @@ in {
     # Graphics
     #
     ######################################
-    blender
-    gimp
-    krita
-    darktable
-    inkscape
-    fontforge
-    scribus
 
     ######################################
     #
     # Office
     #
     ######################################
-    libreoffice
   ] ++ (with unstable; [
-    # Runtime
-    protonmail-bridge
+    distrobox
   ]);
 }

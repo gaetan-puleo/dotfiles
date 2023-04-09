@@ -5,6 +5,7 @@
     md = "mkdir";
     vim = "nvim";
     mnt = "mount | grep -E ^/dev | column -t";
+    db = "distrobox";
     # ssh = "kitty +kitten ssh";
   };
   home.sessionVariables = {
@@ -14,9 +15,6 @@
     VSCODE_PORTABLE="\${XDG_DATA_HOME}/vscode";
     PATH="${pkgs.jdk11}/bin:$PATH";
   };
-  programs.fish.shellInit = ''
-  starship init fish | source
-  '';
   programs.fish.enable = true;
   programs.fish.plugins = [
     {
