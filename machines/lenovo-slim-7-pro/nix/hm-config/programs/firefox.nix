@@ -89,6 +89,11 @@
               installation_mode = "force_installed";
               install_url = "https://addons.mozilla.org/firefox/downloads/latest/youtube-recommended-videos/latest.xpi";
             };
+            # deprocrastinatio
+            "{b6425a68-cf3b-4285-b6a9-649f9fc0ec91}" = {
+              installation_mode = "force_installed";
+              install_url = "https://addons.mozilla.org/firefox/downloads/latest/deprocrastination-block-sites/latest.xpi";
+            };
             # minimal twitter
             "{e7476172-097c-4b77-b56e-f56a894adca9}" = {
               installation_mode = "force_installed";
