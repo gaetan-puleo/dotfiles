@@ -83,6 +83,7 @@ require("lazy").setup({
       config = function() require('plugins/nvim-cmp') end
     },
 
+    -- Snippets
     {"rafamadriz/friendly-snippets", config = function() require('luasnip.loaders.from_vscode').lazy_load() end, },
 
     -- Comment
@@ -91,7 +92,11 @@ require("lazy").setup({
         config = function() require('plugins/comment-nvim') end
     },
 
+    -- Improve UI
     {'stevearc/dressing.nvim'},
+
+    -- General pickeer tool
+    {'nvim-telescope/telescope.nvim', tag = '0.1.1', dependencies = {'nvim-lua/plenary.nvim'}, config = function() require('plugins/telescope-nvim') end}
 
     -- git diff manager
     -- { 'sindrets/diffview.nvim', dependencies = {'nvim-lua/plenary.nvim'} }

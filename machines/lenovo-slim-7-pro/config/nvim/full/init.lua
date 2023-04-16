@@ -3,9 +3,6 @@ if(not vim.g.vscode) then
 	require('settings/global')
 	require('settings/mapping')
 	require('plugin-list')
-	-- require('mapping')
-	-- require('theme')
-	-- require('minimal')
 end
 
 if(vim.g.vscode) then
