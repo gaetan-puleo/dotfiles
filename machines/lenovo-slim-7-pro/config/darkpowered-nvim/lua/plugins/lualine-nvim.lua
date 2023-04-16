@@ -59,7 +59,8 @@ require('lualine').setup {
     lualine_y = {'progress'},
     lualine_z = {'location'}
   },
-	--
+  winbar = { lualine_a = {'filename'}},
+  inactive_winbar = { lualine_a = {'filename'}}
   -- ... your lualine config
 }
 

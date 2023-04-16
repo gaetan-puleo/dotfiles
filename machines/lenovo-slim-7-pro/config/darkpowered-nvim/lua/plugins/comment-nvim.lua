@@ -10,3 +10,4 @@ vim.api.nvim_set_keymap('v', '<M-/>', ":'<,'>CommentToggle<CR>", {noremap = true
 
 vim.api.nvim_set_keymap('n', '<C-/>', ':CommentToggle<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('v', '<C-/>', ":'<,'>CommentToggle<CR>", {noremap = true, silent = true})
+

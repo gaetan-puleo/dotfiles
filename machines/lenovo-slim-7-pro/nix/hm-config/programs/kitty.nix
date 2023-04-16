@@ -2,7 +2,7 @@
 
   programs.kitty = {
     enable = true;
-    font.size = 12;
+    font.size = 10;
     font.name = "Fira Code Regular Nerd Font Complete Mono";
     settings = {
       term = "xterm-256color";
