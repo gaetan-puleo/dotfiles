@@ -31,6 +31,7 @@ in {
     libstdcxx5
     gnumake
     wget
+    tmux
 
     # DEV
     fishPlugins.pure
