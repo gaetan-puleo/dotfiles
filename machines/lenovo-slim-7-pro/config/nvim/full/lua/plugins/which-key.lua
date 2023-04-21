@@ -9,6 +9,7 @@ local leader_groups = {
   g = { name = 'git'},
   b = { name = 'buffers'},
   f = { name = 'files'},
+  ['<space>'] = "which_key_ignore"
 }
 
 wk.register(leader_groups, {buffer = bufnr, prefix = "<leader>"})

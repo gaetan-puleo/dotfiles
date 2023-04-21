@@ -31,6 +31,10 @@ require("telescope").setup{
 
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {desc = '[F]ind [F]iles'})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {desc = '[F]ind with [G]rep'})
+vim.keymap.set('n', '<leader>?', builtin.keymaps, {desc = 'Show keymaps'})
+
+vim.keymap.set('n', '<leader>gh', builtin.git_commits, {desc = 'Show [g]it [h]istory '})
+vim.keymap.set('n', '<leader>gb', builtin.git_branches, {desc = 'Select [g]it [b]ranches'})
 
 -- vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 -- vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
