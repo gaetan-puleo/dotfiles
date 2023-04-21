@@ -5,9 +5,12 @@ require("telescope").setup{
   defaults = {
     mappings = {
       i = {
-        ["<esc>"] = actions.close
+        ["<esc>"] = actions.close,
+        ['<C-j>'] = actions.preview_scrolling_down;
+        ['<C-k>'] = actions.preview_scrolling_up,
+
       },
-    },
+         },
   },
   pickers = {
     find_files = {

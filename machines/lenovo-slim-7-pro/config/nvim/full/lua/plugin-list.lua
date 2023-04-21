@@ -16,6 +16,10 @@ require("lazy").setup({
         'folke/tokyonight.nvim',
         config = function () require('plugins/tokyonight-nvim') end
     },
+    {
+      "savq/melange-nvim",
+
+    },
 
     -- Status
     {
@@ -115,6 +119,13 @@ require("lazy").setup({
         vim.o.timeoutlen = 300
         require('plugins/which-key')
       end,
+    },
+    {
+      'kosayoda/nvim-lightbulb',
+      dependencies = 'antoinemadec/FixCursorHold.nvim',
+      config = function()
+        require('nvim-lightbulb').setup({autocmd = {enabled = true}})
+      end
     },
 
 
