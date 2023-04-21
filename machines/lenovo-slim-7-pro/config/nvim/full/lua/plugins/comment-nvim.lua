@@ -8,6 +8,7 @@ require('nvim_comment').setup({
 vim.api.nvim_set_keymap('n', '<M-/>', ':CommentToggle<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('v', '<M-/>', ":'<,'>CommentToggle<CR>", {noremap = true, silent = true})
 
+-- used for azerty keyboard (need to be removed when)
 vim.api.nvim_set_keymap('n', '<C-/>', ':CommentToggle<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('v', '<C-/>', ":'<,'>CommentToggle<CR>", {noremap = true, silent = true})
 
