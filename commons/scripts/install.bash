@@ -18,3 +18,7 @@ nix-channel --update
 # install home manager
 nix-shell '<home-manager>' -A install
 
+# gnome settings
+dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:ctrl_modifier']"
+
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

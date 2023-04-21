@@ -104,7 +104,24 @@ require("lazy").setup({
     {'stevearc/dressing.nvim'},
 
     -- General pickeer tool
-    {'nvim-telescope/telescope.nvim', tag = '0.1.1', dependencies = {'nvim-lua/plenary.nvim'}, config = function() require('plugins/telescope-nvim') end}
+    {'nvim-telescope/telescope.nvim', tag = '0.1.1', dependencies = {'nvim-lua/plenary.nvim'}, config = function() require('plugins/telescope-nvim') end},
+
+    {'christoomey/vim-tmux-navigator', config = function() require('plugins/vim-tmux-navigator') end},
+
+    {
+      "folke/which-key.nvim",
+      config = function()
+        vim.o.timeout = true
+        vim.o.timeoutlen = 300
+        require("which-key").setup({
+          -- your configuration comes here
+          -- or leave it empty to use the default settings
+          -- refer to the configuration section below
+        })
+      end,
+    },
+
+
 
     -- git diff manager
     -- { 'sindrets/diffview.nvim', dependencies = {'nvim-lua/plenary.nvim'} }

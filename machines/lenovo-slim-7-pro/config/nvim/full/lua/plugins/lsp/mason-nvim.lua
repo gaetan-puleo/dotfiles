@@ -1,3 +1,4 @@
+local wk = require("which-key")
 local null_ls = require 'null-ls'
 null_ls.setup({
   on_attach = function(client, bufnr)
@@ -32,8 +33,8 @@ require("mason-null-ls").setup({
     },
 })
 require("mason-lspconfig").setup({
-  ensure_installed = { 
-    "cssls", -- css 
+  ensure_installed = {
+    "cssls", -- css
     "cssmodules_ls", -- css module
     "html",
     "jsonls",
@@ -76,6 +77,17 @@ vim.api.nvim_create_autocmd('LspAttach', {
       vim.keymap.set(mode, lhs, rhs, opts)
     end
 
+    local g_mapping = {
+      d = { desc = "Go to definition"},
+      D = { desc = "Go to declaration"},
+      i = { desc = "List all the implementations"},
+      t = { desc = "Go to type definition"},
+      r = { desc = "List all the references"},
+      s = { desc = "Show current signature information"},
+      l = { desc = "Show Diagnostics popup"},
+    }
+
+    wk.register(g_mapping, {buffer = bufnr, prefix = "g"})
     -- Displays hover information about the symbol under the cursor
     bufmap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
 
@@ -89,9 +101,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
     bufmap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>')
 
     -- Jumps to the definition of the type symbol
-    bufmap('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
+    bufmap('n', 'gt', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
 
-    -- Lists all the references 
+    -- Lists all the references
     bufmap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>')
 
     -- Displays a function's signature information
@@ -102,6 +114,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     -- Selects a code action available at the current cursor position
     bufmap('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>')
+    bufmap('n', '<C-a>', '<cmd>lua vim.lsp.buf.code_action()<cr>')
     bufmap('x', '<F4>', '<cmd>lua vim.lsp.buf.range_code_action()<cr>')
 
     -- Show diagnostics in a floating window

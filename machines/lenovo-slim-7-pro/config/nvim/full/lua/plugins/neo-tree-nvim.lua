@@ -2,6 +2,7 @@
 local map = vim.api.nvim_set_keymap
 
 map('n', '<leader>fe', "<Cmd>Neotree toggle source=filesystem<CR>", { })
+map('n', '<C-p>', "<Cmd>Neotree toggle source=filesystem<CR>", { })
 map('n', '<leader>fg', "<Cmd>Neotree toggle source=git_status<CR>", { })
 map('n', '<leader>fb', "<Cmd>Neotree toggle source=buffers<CR>", { })
 

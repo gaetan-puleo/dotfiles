@@ -14,8 +14,8 @@ require("telescope").setup{
       sorting_strategy = 'ascending',
       prompt_title = false,
       previewer = false,
-      hidden = true,  -- incluse hidden files
-      ignore = true,  -- incluse hidden files
+      hidden = true,  -- include hidden files
+      ignore = true,  -- include ignored files
       layout_strategy = 'vertical',
       layout_config = {
         vertical = {

@@ -14,16 +14,16 @@ map({ 'n', 'v' }, '<Space>', '<Nop>', { noremap = true, silent = true })
 map({ 'n', 'v' }, '<C-r>', '<Cmd>source $MYVIMRC<CR>', { noremap = true, silent = true })
 
 -- go to the left
-map({ 'n', 'v' }, '<M-h>', '<C-w>h', { noremap = true, silent = true })
+--map({ 'n', 'v' }, '<M-h>', '<C-w>h', { noremap = true, silent = true })
 
 -- go to the right
-map({ 'n', 'v' }, '<M-l>', '<C-w>l', { noremap = true, silent = true })
+--map({ 'n', 'v' }, '<M-l>', '<C-w>l', { noremap = true, silent = true })
 
 -- go to the top
-map({ 'n', 'v' }, '<M-k>', '<C-w>k', { noremap = true, silent = true })
+--map({ 'n', 'v' }, '<M-k>', '<C-w>k', { noremap = true, silent = true })
 
 -- go to the bottom
-map({ 'n', 'v' }, '<M-j>', '<C-w>j', { noremap = true, silent = true })
+-- map({ 'n', 'v' }, '<M-j>', '<C-w>j', { noremap = true, silent = true })
 
 -- move cursor to 1 line to the top
 map('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
