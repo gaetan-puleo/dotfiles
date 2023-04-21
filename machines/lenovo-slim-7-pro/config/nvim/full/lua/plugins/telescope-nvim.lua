@@ -22,15 +22,15 @@ require("telescope").setup{
           anchor = "N", -- pin to top (N like nord)
           height = 0.5, -- 0.1 equal 10%
           prompt_position = "top",
-          width = 0.5 -- 0.1 equal 10%
+          width = 0.7 -- 0.1 equal 10%
         },
       },
     }
   },
 }
 
-vim.keymap.set('n', '<leader>fa', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {desc = '[F]ind [F]iles'})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {desc = '[F]ind with [G]rep'})
 
 -- vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 -- vim.keymap.set('n', '<leader>fb', builtin.buffers, {})

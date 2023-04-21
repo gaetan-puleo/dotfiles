@@ -1,10 +1,9 @@
 
 local map = vim.api.nvim_set_keymap
 
-map('n', '<leader>fe', "<Cmd>Neotree toggle source=filesystem<CR>", { })
-map('n', '<C-p>', "<Cmd>Neotree toggle source=filesystem<CR>", { })
-map('n', '<leader>fg', "<Cmd>Neotree toggle source=git_status<CR>", { })
-map('n', '<leader>fb', "<Cmd>Neotree toggle source=buffers<CR>", { })
+vim.keymap.set('n', '<leader>fe', "<Cmd>Neotree toggle source=filesystem<CR>", {desc = 'Toggle [F]iles [E]xplorer'})
+vim.keymap.set('n', '<leader>bl', "<Cmd>Neotree toggle source=buffers<CR>", {desc = 'Toggle [B]uffer [L]ist'})
+vim.keymap.set('n', '<leader>gs', "<Cmd>Neotree toggle source=git_status<CR>", {desc = 'Toggle [G]it [S]tatus'})
 
 require("neo-tree").setup({
     default_component_configs = {
