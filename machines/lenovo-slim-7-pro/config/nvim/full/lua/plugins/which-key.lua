@@ -9,6 +9,7 @@ local leader_groups = {
   g = { name = 'git'},
   b = { name = 'buffers'},
   f = { name = 'files'},
+  s = { name = 'search'},
   ['<space>'] = "which_key_ignore"
 }
 

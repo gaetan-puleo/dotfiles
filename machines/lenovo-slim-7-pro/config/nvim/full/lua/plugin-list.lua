@@ -128,6 +128,14 @@ require("lazy").setup({
       end
     },
 
+    {
+      'nvim-pack/nvim-spectre',
+        config = function()
+          require('plugins/nvim-spectre')
+        end
+
+    },
+
 
 
     -- git diff manager

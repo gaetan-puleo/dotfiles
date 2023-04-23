@@ -83,11 +83,25 @@ vim.api.nvim_create_autocmd('LspAttach', {
       i = { desc = "List all the implementations"},
       t = { desc = "Go to type definition"},
       r = { desc = "List all the references"},
-      s = { desc = "Show current signature information"},
-      l = { desc = "Show Diagnostics popup"},
+      -- s = { desc = "Show current signature information"},
+      -- l = { desc = "Show Diagnostics popup"},
+      R = { desc = "Rename symbol"},
     }
 
     wk.register(g_mapping, {buffer = bufnr, prefix = "g"})
+
+    local leader_mapping = {
+      l = {
+        name = "lsp",
+        r = 'Rename Current Symbol',
+        a = 'Show current action',
+        s = { desc = "Show current signature information"},
+        d = { desc = "Show Diagnostics popup"},
+
+      },
+    }
+
+    wk.register(leader_mapping, {buffer = bufnr, prefix = "<leader>"})
     -- Displays hover information about the symbol under the cursor
     bufmap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
 
@@ -107,18 +121,18 @@ vim.api.nvim_create_autocmd('LspAttach', {
     bufmap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>')
 
     -- Displays a function's signature information
-    bufmap('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>')
+    bufmap('n', '<leader>s', '<cmd>lua vim.lsp.buf.signature_help()<cr>')
 
     -- Renames all references to the symbol under the cursor
-    bufmap('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>')
+    bufmap('n', 'gR', '<cmd>lua vim.lsp.buf.rename()<cr>')
+    bufmap('n', '<leader>lr', '<cmd>lua vim.lsp.buf.rename()<cr>')
 
     -- Selects a code action available at the current cursor position
-    bufmap('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>')
-    bufmap('n', '<C-a>', '<cmd>lua vim.lsp.buf.code_action()<cr>')
-    bufmap('x', '<F4>', '<cmd>lua vim.lsp.buf.range_code_action()<cr>')
+    bufmap('n', '<leader>la', '<cmd>lua vim.lsp.buf.code_action()<cr>')
+    bufmap('x', '<leader>la', '<cmd>lua vim.lsp.buf.range_code_action()<cr>')
 
     -- Show diagnostics in a floating window
-    bufmap('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>')
+    bufmap('n', '<leader>ld', '<cmd>lua vim.diagnostic.open_float()<cr>')
 
     -- Move to the previous diagnostic
     bufmap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
