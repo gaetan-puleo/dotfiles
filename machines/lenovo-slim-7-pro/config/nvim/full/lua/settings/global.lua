@@ -73,7 +73,7 @@ vim.o.hidden = true -- Required to keep multiple buffers open
 vim.o.showmode = false -- We don't need to see things like -- INSERT -- anymore
 
 vim.wo.numberwidth = 4 -- columns number in gutter
-vim.o.cmdheight = 0 -- cmd line height
+vim.o.cmdheight = 2 -- cmd line height
 
 --Set highlight on search
 vim.o.hlsearch = true

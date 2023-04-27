@@ -1,9 +1,10 @@
 {config, pkgs, ...}:
-{
+let unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
+in {
   environment.gnome.excludePackages = (with pkgs; [
     gnome-photos
     gnome-tour
-  ]) ++ (with pkgs.gnome; [
+  ]) ++ (with unstable.gnome; [
     # cheese # webcam tool
     # gnome-music
     gnome-terminal

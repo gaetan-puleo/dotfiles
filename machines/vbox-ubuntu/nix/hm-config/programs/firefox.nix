@@ -62,7 +62,7 @@
             };
             # PRIVACY
 
-            # I don t car about cookies
+            # I don t care about cookies
             "jid1-KKzOGWgsW3Ao4Q@jetpack" = {
               installation_mode = "force_installed";
               install_url = "https://addons.mozilla.org/firefox/downloads/latest/i-dont-care-about-cookies/latest.xpi";
