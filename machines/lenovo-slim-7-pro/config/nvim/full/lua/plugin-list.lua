@@ -6,26 +6,55 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     -- Git column signs and git blame
-    {
-        'lewis6991/gitsigns.nvim',
-        config = function() require('plugins/gitsigns-nvim') end,
-    },
+    require('plugins/gitsigns-nvim'),
 
-    -- Theme
+    --Theme
     {
         'folke/tokyonight.nvim',
         config = function () require('plugins/tokyonight-nvim') end
     },
-    {
-      "savq/melange-nvim",
+    -- buffer tabs
+    require('plugins/bufferline-nvim'),
 
-    },
+    -- dashboard
+    require('plugins/mini-starter'),
+
+    -- scroll
+    require('plugins/nvim-scrollbar'),
+
+    -- Search
+    require('plugins/nvim-hlslens'),
+
+
+    -- {
+    --   'kvrohit/rasmus.nvim',
+    --   config = function ()
+
+    --   -- Configure the appearance
+    --   vim.g.rasmus_italic_functions = true
+    --   vim.g.rasmus_bold_functions = true
+
+    --   -- Set the colorscheme variant to monochrome
+    --   vim.g.rasmus_variant = "dark"
+    --     vim.cmd [[colorscheme rasmus]]
+    --   end
+    -- },
+
+    -- {
+    --   'mcchrish/zenbones.nvim',
+    --   dependencies = "rktjmp/lush.nvim",
+    --   config = function ()
+    --     vim.cmd [[colorscheme rosebones]]
+    --   end
+    -- },
+    -- {
+    --   'rktjmp/lush.nvim'
+    -- },
 
     -- Status
-    {
-        'nvim-lualine/lualine.nvim',
-        config = function () require('plugins/lualine-nvim') end
-    },
+    require('plugins/lualine-nvim'),
+    -- indent line
+    require('plugins/indent-blankline-nvim'),
 
     -- treesitter a better syntax parser
     {
@@ -34,7 +63,8 @@ require("lazy").setup({
         dependencies = {
             'JoosepAlviste/nvim-ts-context-commentstring',
             'windwp/nvim-ts-autotag',
-            'nvim-treesitter/nvim-treesitter-refactor'
+            'nvim-treesitter/nvim-treesitter-refactor',
+            'nvim-treesitter/playground'
         },
         config = function() require('plugins/treesitter-nvim') end,
     },
@@ -70,14 +100,17 @@ require("lazy").setup({
           require('plugins/lsp/mason-nvim')
         end
     },
-    {
-      "jay-babu/mason-null-ls.nvim",
-      event = { "BufReadPre", "BufNewFile" },
-      dependencies = {
-        "williamboman/mason.nvim",
-        "jose-elias-alvarez/null-ls.nvim",
-      },
-    },
+
+    require('plugins/nvim-lint'),
+    require('plugins/formatter-nvim'),
+    -- {
+    --   "jay-babu/mason-null-ls.nvim",
+    --   event = { "BufReadPre", "BufNewFile" },
+    --   dependencies = {
+    --     "williamboman/mason.nvim",
+    --     "jose-elias-alvarez/null-ls.nvim",
+    --   },
+    -- },
 
     -- Completion module
     {
@@ -99,10 +132,7 @@ require("lazy").setup({
     {"rafamadriz/friendly-snippets", config = function() require('luasnip.loaders.from_vscode').lazy_load() end, },
 
     -- Comment
-    {
-        'terrortylor/nvim-comment',
-        config = function() require('plugins/comment-nvim') end
-    },
+    require('plugins/comment-nvim'),
 
     -- Improve UI
     {'stevearc/dressing.nvim'},
@@ -112,29 +142,13 @@ require("lazy").setup({
 
     {'christoomey/vim-tmux-navigator', config = function() require('plugins/vim-tmux-navigator') end},
 
-    {
-      "folke/which-key.nvim",
-      config = function()
-        vim.o.timeout = true
-        vim.o.timeoutlen = 300
-        require('plugins/which-key')
-      end,
-    },
-    {
-      'kosayoda/nvim-lightbulb',
-      dependencies = 'antoinemadec/FixCursorHold.nvim',
-      config = function()
-        require('nvim-lightbulb').setup({autocmd = {enabled = true}})
-      end
-    },
 
-    {
-      'nvim-pack/nvim-spectre',
-        config = function()
-          require('plugins/nvim-spectre')
-        end
+    -- keyboard mapping
+    require("plugins/which-key"),
+    require("plugins/nvim-lightbulb"),
 
-    },
+    -- Search and replace
+    require('plugins/nvim-spectre'),
 
 
 

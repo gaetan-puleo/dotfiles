@@ -11,7 +11,7 @@ map({'n'}, '<leader><leader>', ':e# <CR>', {noremap = true, silent = true})
 map({ 'n', 'v' }, '<Space>', '<Nop>', { noremap = true, silent = true })
 
 -- source init lua
-map({ 'n', 'v' }, '<C-r>', '<Cmd>source $MYVIMRC<CR>', { noremap = true, silent = true })
+map({ 'n', 'v' }, '<C-r>', '<Cmd>luafile ~/.config/nvim/init.lua<CR>', { noremap = true, silent = true })
 
 -- go to the left
 --map({ 'n', 'v' }, '<M-h>', '<C-w>h', { noremap = true, silent = true })

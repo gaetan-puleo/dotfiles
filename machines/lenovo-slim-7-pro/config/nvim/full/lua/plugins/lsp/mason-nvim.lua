@@ -1,37 +1,39 @@
+vim.diagnostic.config({ virtual_text = false })
+
 local wk = require("which-key")
-local null_ls = require 'null-ls'
-null_ls.setup({
-  on_attach = function(client, bufnr)
-    if client.supports_method("textDocument/formatting") then
-        vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-        vim.api.nvim_create_autocmd("BufWritePre", {
-            group = augroup,
-            buffer = bufnr,
-            callback = function()
-              vim.lsp.buf.format({
-                bufnr = bufnr,
-                filter = function(client)
-                  return client.name == "null-ls"
-                end
-                })
-            end,
-        })
-    end
-  end
-})
+-- local null_ls = require 'null-ls'
+-- null_ls.setup({
+--   on_attach = function(client, bufnr)
+--     if client.supports_method("textDocument/formatting") then
+--         vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+--         vim.api.nvim_create_autocmd("BufWritePre", {
+--             group = augroup,
+--             buffer = bufnr,
+--             callback = function()
+--               vim.lsp.buf.format({
+--                 bufnr = bufnr,
+--                 filter = function(client)
+--                   return client.name == "null-ls"
+--                 end
+--                 })
+--             end,
+--         })
+--     end
+--   end
+-- })
 
 require("mason").setup()
-require("mason-null-ls").setup({
-    automatic_setup = true,
-    ensure_installed = {
-      "eslint_d",
-      "prettier",
-        -- Opt to list sources here, when available in mason.
-    },
-    handlers = {
+-- require("mason-null-ls").setup({
+--     automatic_setup = true,
+--     ensure_installed = {
+--       "eslint_d",
+--       "prettier",
+--         -- Opt to list sources here, when available in mason.
+--     },
+--     handlers = {
 
-    },
-})
+--     },
+-- })
 require("mason-lspconfig").setup({
   ensure_installed = {
     "cssls", -- css
@@ -141,4 +143,3 @@ vim.api.nvim_create_autocmd('LspAttach', {
     bufmap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>')
   end
 })
-

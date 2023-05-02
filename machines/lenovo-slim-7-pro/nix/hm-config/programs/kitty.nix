@@ -3,9 +3,9 @@
   programs.kitty = {
     enable = true;
     font.size = 10;
-    font.name = "Fira Code Regular Nerd Font Complete Mono";
+    font.name = "Lilex Regular Nerd Font Complete";
     settings = {
-      term = "xterm-256color";
+      # term = "xterm-256color";
       enable_audio_bell = "no"; # silent bell
       shell = "fish --interactive --login";
       dynamic_background_opacity = "true";
