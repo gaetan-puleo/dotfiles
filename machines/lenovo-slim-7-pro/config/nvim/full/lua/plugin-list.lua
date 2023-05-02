@@ -54,7 +54,7 @@ require("lazy").setup({
     -- Status
     require('plugins/lualine-nvim'),
     -- indent line
-    require('plugins/indent-blankline-nvim'),
+    { 'echasnovski/mini.indentscope', version = '*', config = function ()  require('mini.indentscope').setup() end },
 
     -- treesitter a better syntax parser
     {
