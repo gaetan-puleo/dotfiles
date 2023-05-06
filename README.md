@@ -58,6 +58,7 @@ bash $HOME/dotfiles/distrobox/arch/install.bash
 ### VM Installation
 
 ```bash
+sudo apt update && sudo apt install git curl -y
 bash ~/dotfiles/machines/vbox-ubuntu/scripts/install.bash
 ```
 
