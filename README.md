@@ -61,7 +61,7 @@ bash $HOME/dotfiles/distrobox/arch/install.bash
 bash ~/dotfiles/machines/vbox-ubuntu/scripts/install.bash
 ```
 
-# Nixos
+### Nixos
 
 ```bash
 nix-shell -p wget git
@@ -73,7 +73,7 @@ cp /etc/nixos/configuration.nix /etc/nixos/configuration.nix.bak
 ln -s /home/{username}/dotfiles/machines/{host}/etc-nixos/configuration.nix
 ```
 
-# Home-manager
+### Home-manager
 
 ```bash
 cd to/dotfiles/path
