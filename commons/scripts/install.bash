@@ -22,3 +22,6 @@ nix-shell '<home-manager>' -A install
 dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:ctrl_modifier']"
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+
+. /home/gaetan/dotfiles/distrobox/arch/install.bash
