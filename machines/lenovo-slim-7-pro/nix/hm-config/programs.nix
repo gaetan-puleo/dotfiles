@@ -37,7 +37,7 @@ in {
     fishPlugins.pure
     # Android (react native)
     watchman
-    /* android-tools */
+    android-tools
     # pkgs.vimPlugins.packer-nvim
 
     # Runtime

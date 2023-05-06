@@ -17,8 +17,10 @@
   /*   ".npmrc.dist".source = ../../config/npm/.npmrc.dist; */
 
   /*   # Android */
+      home.file."/Android/Sdk/platform-tools"= {
+        source = config.lib.file.mkOutOfStoreSymlink "${pkgs.android-tools}/bin";
+      };
 
-  /*   /* "Android/Sdk/platform-tools".source = "${pkgs.android-tools}/bin";  */
 
   /*   /* ".config/i3/config".source =~/dotfiles/.config/i3/config; */
   /* }; */
