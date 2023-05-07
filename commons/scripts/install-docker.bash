@@ -11,10 +11,6 @@ echo 'Add docker group'
 sudo groupadd docker 2> /dev/null
 sudo usermod -aG docker $USER 2> /dev/null
 
-echo 'run hello world'
-docker run hello-world
-
-
 echo 'run start service'
 sudo systemctl enable docker.service 2> /dev/null
 sudo systemctl enable containerd.service 2> /dev/null
@@ -33,5 +29,12 @@ rm ./get_distrobox.sh
 
 echo 'end files'
 
+echo 'run hello world'
+newgrp docker << END
+
+docker run hello-world
+
 distrobox-create arch --image archlinux
 distrobox-enter arch
+
+END
