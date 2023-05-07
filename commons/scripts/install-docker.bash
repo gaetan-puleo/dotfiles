@@ -40,3 +40,5 @@ distrobox-create arch --image archlinux --yes
 distrobox-enter arch
 
 END
+
+sudo reboot
