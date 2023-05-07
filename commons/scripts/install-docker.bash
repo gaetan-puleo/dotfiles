@@ -18,7 +18,7 @@ sudo systemctl enable containerd.service 2> /dev/null
 
 echo 'install distrobox'
 
-curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install 2> get_distrobox.sh
+curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install > get_distrobox.sh
 
 sh ./get_distrobox.sh
 
