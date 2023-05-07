@@ -1,0 +1,41 @@
+#!/bin/bash
+#requirement curl
+
+# get docker
+echo 'install docker'
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+
+dockerd-rootless-setuptool.sh install
+
+# echo 'Add docker group'
+# sudo groupadd docker 2> /dev/null
+# sudo usermod -aG docker $USER 2> /dev/null
+
+echo 'install distrobox'
+
+curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install > get_distrobox.sh
+
+sh ./get_distrobox.sh
+
+
+echo 'clean files'
+# clean
+rm ./get-docker.sh
+rm ./get_distrobox.sh
+
+echo 'end files'
+
+# echo 'run hello world'
+# newgrp docker << END
+
+docker run hello-world
+
+PATH=~/.local/bin:$PATH
+
+distrobox-create arch --image archlinux --yes
+distrobox-enter arch
+
+# END
+
+# sudo reboot
