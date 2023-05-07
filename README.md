@@ -8,8 +8,6 @@ sudo apt update && sudo apt install -y curl git uidmap
 git clone http://github.com/gaetan-puleo/dotfiles.git
 
 bash ~/dotfiles/commons/scripts/install-docker.bash
-# or
-bash ~/dotfiles/commons/scripts/install-docker-rootless.bash
 ```
 # Mes Dotfiles et script d'installation
 
@@ -22,12 +20,6 @@ La procédure à suivre est comprise dans la partie VM Installation.
 Je ne garantie pas pour autant le fonctionnement de ma config dans la VM même si je vais essayer de la garder fonctionnelle pour des besoins de tests.
 
 
-## TL'DR
-
-```bash
-# require curl and git
-
-```
 
 ## Présentation
 

@@ -40,5 +40,3 @@ distrobox-create arch --image archlinux --yes
 distrobox-enter arch -- bash ~/dotfiles/distrobox/arch/install.bash
 
 END
-
-sudo reboot
