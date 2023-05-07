@@ -11,11 +11,6 @@ echo 'Add docker group'
 sudo groupadd docker 2> /dev/null
 sudo usermod -aG docker $USER 2> /dev/null
 
-
-echo 'refresh group'
-newgrp docker
-
-
 echo 'run hello world'
 docker run hello-world
 
