@@ -36,7 +36,7 @@ docker run hello-world
 
 PATH=~/.local/bin:$PATH
 
-distrobox-create arch --image archlinux
+distrobox-create arch --image archlinux -y
 distrobox-enter arch
 
 END
