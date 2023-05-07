@@ -1,13 +1,16 @@
 #!/bin/bash
+#requirement curl and uidmap
 
 # get docker
 curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
 
-systemctl --user start docker
+dockerd-rootless-setuptool.sh install
 
-systemctl --user enable docker
-sudo loginctl enable-linger $(whoami)
+# check if installed
+docker run hello-world
 
 # get distrobox
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
+
+distrobox create arch --image archlinux
