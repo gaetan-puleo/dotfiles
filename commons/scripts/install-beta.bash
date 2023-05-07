@@ -17,7 +17,7 @@ docker run hello-world
 # get distrobox
 echo 'install distrobox'
 
-curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh -s -- --next
+curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh -s -- --next -v
 
 
 distrobox create arch --image archlinux --yes -v
