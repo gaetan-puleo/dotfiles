@@ -8,6 +8,8 @@ sudo apt update && sudo apt install -y curl git uidmap
 git clone http://github.com/gaetan-puleo/dotfiles.git
 
 bash ~/dotfiles/commons/scripts/install-docker.bash
+# or
+bash ~/dotfiles/commons/scripts/install-docker-rootless.bash
 ```
 # Mes Dotfiles et script d'installation
 
