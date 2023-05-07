@@ -31,5 +31,7 @@ echo 'clean files'
 rm ./get-docker.sh
 rm ./get_distrobox.sh
 
-
 echo 'end files'
+
+distrobox-create arch --image archlinux
+distrobox-enter arch
