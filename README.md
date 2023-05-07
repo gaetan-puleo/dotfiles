@@ -1,4 +1,12 @@
 **WIP**
+
+# TL'DR
+
+```bash
+sudo apt update && sudo apt install -y curl git uidmap
+
+git clone http://github.com/gaetan-puleo/dotfiles.git
+```
 # Mes Dotfiles et script d'installation
 
 Comme on dit, "Here be dragons"!, l'utilisation de ce repo est personnelle et je ne garantie aucunement son utilisation.

@@ -2,6 +2,7 @@
 #requirement curl uidmap
 
 # get docker
+echo 'install docker'
 curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
 
@@ -14,6 +15,7 @@ docker run hello-world
 # curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/extras/install-podman | sh -s -- --prefix ~/.local
 
 # get distrobox
+echo 'install distrobox'
 
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh -s -- --next
 
