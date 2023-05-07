@@ -31,9 +31,6 @@ distrobox-export --app darktable
 sudo pacman --noconfirm -Syu discord
 distrobox-export --app discord
 
-# office
-sudo pacman --noconfirm -Syu libreoffice
-distrobox-export --app libreoffice # libreoffice is slow to copy to the host
 
 # browsers
 yay --noconfirm -Syyu google-chrome brave-bin microsoft-edge-stable-bin

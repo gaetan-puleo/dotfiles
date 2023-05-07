@@ -3,11 +3,7 @@
 # TL'DR
 
 ```bash
-sudo apt update && sudo apt install -y curl git uidmap
-
-git clone http://github.com/gaetan-puleo/dotfiles.git
-
-bash ~/dotfiles/commons/scripts/install-docker.bash
+sudo apt update && sudo apt install -y curl git uidmap && git clone http://github.com/gaetan-puleo/dotfiles.git && bash ~/dotfiles/commons/scripts/install-docker.bash
 ```
 # Mes Dotfiles et script d'installation
 
