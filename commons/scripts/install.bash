@@ -6,7 +6,7 @@
 # install nix
 sh <(curl -L https://nixos.org/nix/install) --no-daemon
 
-. /home/gaetan/.nix-profile/etc/profile.d/nix.sh
+. ~/.nix-profile/etc/profile.d/nix.sh
 
 # add channel
 nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
@@ -24,4 +24,4 @@ dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:ctrl_modifier']
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 
-. /home/gaetan/dotfiles/distrobox/arch/install.bash
+# . /home/gaetan/dotfiles/distrobox/arch/install.bash

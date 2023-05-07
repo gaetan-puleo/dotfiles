@@ -9,6 +9,14 @@ La procédure à suivre est comprise dans la partie VM Installation.
 
 Je ne garantie pas pour autant le fonctionnement de ma config dans la VM même si je vais essayer de la garder fonctionnelle pour des besoins de tests.
 
+
+## TL'DR
+
+```bash
+# require curl and git
+
+```
+
 ## Présentation
 
 Bienvenue dans mon repo, ici ce trouve ma configuration que j'utilise au quotidien.
