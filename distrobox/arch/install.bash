@@ -8,6 +8,10 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
+
+yay --version
+
+
 # dev
 sudo pacman --noconfirm -Syu code
 distrobox-export --app code
@@ -29,7 +33,7 @@ distrobox-export --app discord
 
 # office
 sudo pacman --noconfirm -Syu libreoffice
-distrobox-export --app libreoffice --verbose # libreoffice is slow to copy to the host
+distrobox-export --app libreoffice # libreoffice is slow to copy to the host
 
 # browsers
 yay --noconfirm -Syyu google-chrome brave-bin microsoft-edge-stable-bin
@@ -42,7 +46,7 @@ distrobox-export --app microsoft-edge
 sudo pacman --noconfirm -Syu tmux neovim
 
 # terminal tools
-sudo pacman --noconfirm -Syu figlet neofetch fzf fish kitty
+sudo pacman --noconfirm -Syu neofetch fzf fish kitty
 
 distrobox-export --app kitty
 

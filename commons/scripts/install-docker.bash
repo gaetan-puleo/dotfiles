@@ -1,5 +1,5 @@
 #!/bin/bash
-#requirement curl
+#requirement curl git
 
 # get docker
 echo 'install docker'
