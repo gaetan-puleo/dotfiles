@@ -34,6 +34,8 @@ newgrp docker << END
 
 docker run hello-world
 
+PATH=~/.local/bin:$PATH
+
 distrobox-create arch --image archlinux
 distrobox-enter arch
 
