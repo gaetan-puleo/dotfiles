@@ -19,7 +19,7 @@ echo 'install distrobox'
 
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install > get_distrobox.sh
 
-sh ./get_distrobox.sh
+sh ./get_distrobox.sh --next
 
 
 echo 'clean files'
@@ -37,7 +37,7 @@ docker run hello-world
 PATH=~/.local/bin:$PATH
 
 # distrobox-create arch --image archlinux --yes
-distrobox-create arch --image quay.io/toolbx-images/archlinux-toolbox --yes
-distrobox-enter arch -- bash ~/dotfiles/distrobox/arch/install.bash
-
+# distrobox-create arch --image quay.io/toolbx-images/archlinux-toolbox --yes
+# distrobox-enter arch -- bash ~/dotfiles/distrobox/arch/install.bash
+distrobox -v
 END

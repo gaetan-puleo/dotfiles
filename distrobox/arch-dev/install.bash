@@ -9,7 +9,7 @@ makepkg -si --noconfirm
 yay --version
 
 # dev
-sudo pacman --noconfirm -Syyu code
+yay --noconfirm -Syyu vscode
 distrobox-export --app code
 
 # terminal dev
@@ -27,6 +27,7 @@ sudo pacman --noconfirm -Syyu tmux neovim
 #  wget - File downloader
 #  ripgrep - a better and faster grep
 #  fish - a shell with fancy options
+#  nodejs-lts-hydrogen - nodejs 18
 sudo pacman --noconfirm -Syyu \
   neofetch \
   fzf \
@@ -37,8 +38,8 @@ sudo pacman --noconfirm -Syyu \
   bottom \
   gcc \
   gnumake \
-  libstdcxx5
-
+  libstdcxx5 \
+  nodejs-lts-hydrogen
 
 # terminal lolz
 sudo pacman --noconfirm -Syyu figlet lolcat
