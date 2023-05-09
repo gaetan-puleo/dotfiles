@@ -32,8 +32,10 @@ docker run hello-world
 
 PATH=~/.local/bin:$PATH
 
+distrobox-assemble create --verbose --file ~/dotfiles/commons/config/distrobox/distrobox.ini
 # distrobox-create arch --image archlinux --yes
 # distrobox-create arch --image quay.io/toolbx-images/archlinux-toolbox --yes
-# distrobox-enter arch -- bash ~/dotfiles/distrobox/arch/install.bash
+distrobox-enter dev -- bash ~/dotfiles/distrobox/arch-dev/install.bash
+distrobox-enter gui -- bash ~/dotfiles/distrobox/ubuntu-app/install.bash
 distrobox -v
 END
