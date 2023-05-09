@@ -36,6 +36,14 @@ distrobox-assemble create --verbose --file ~/dotfiles/commons/config/distrobox/d
 # distrobox-create arch --image archlinux --yes
 # distrobox-create arch --image quay.io/toolbx-images/archlinux-toolbox --yes
 distrobox-enter dev -- bash ~/dotfiles/distrobox/arch-dev/install.bash
-distrobox-enter gui -- bash ~/dotfiles/distrobox/ubuntu-app/install.bash
-distrobox -v
+END
+
+newgrp docker << END
+
+docker run hello-world
+
+PATH=~/.local/bin:$PATH
+
+
+distrobox-enter app -- bash ~/dotfiles/distrobox/ubuntu-app/install.bash
 END

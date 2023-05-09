@@ -6,7 +6,7 @@ sudo apt update -y
 sudo apt upgrade -y
 
 
-sudo apt install curl wget -y
+sudo apt install curl wget gnumake -y
 
 # video, graphic, 3d
 sudo apt install -y blender gimp krita inkscape darktable flowblade
@@ -16,7 +16,7 @@ distrobox-export --app gimp
 distrobox-export --app kdenlive
 distrobox-export --app inkscape
 distrobox-export --app darktable
-distrobox-export --app flowtable
+distrobox-export --app flowblade
 
 # other
 sudo -E gpg --no-default-keyring --keyring=/usr/share/keyrings/javinator9889-ppa-keyring.gpg --keyserver keyserver.ubuntu.com --recv-keys 08633B4AAAEB49FC
@@ -44,7 +44,7 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] http
 # edge
 sudo sh -c 'echo "deb [arch=amd64] http://packages.microsoft.com/repos/edge/ stable main" >> /etc/apt/sources.list.d/microsoft_edge.list'
 
-sudo apt update
+sudo apt update -y
 
 sudo apt install microsoft-edge-stable -y
 sudo apt-get install google-chrome-stable -y
