@@ -45,5 +45,5 @@ docker run hello-world
 PATH=~/.local/bin:$PATH
 
 
-distrobox-enter app -- bash ~/dotfiles/distrobox/ubuntu-app/install.bash
+distrobox-enter gui -- bash ~/dotfiles/distrobox/ubuntu-app/install.bash
 END
