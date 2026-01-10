@@ -1,0 +1,109 @@
+{
+  "if":{
+    "prefix": "if",
+    "body": ["if($1){",
+    "  $2",
+    "}"
+    ],
+    "description": "creates an if block"
+  },
+  "else":{
+    "prefix": ["el"],
+    "body": ["else {",
+    "  $1",
+    "}"
+    ],
+    "description": "creates an it block"
+  },
+  "while": {
+    "prefix": ["while"],
+    "body": [
+      "while ($1) {",
+      "  $2",
+      "}"]
+  },
+  "for": {
+    "prefix": ["for"],
+    "body": [
+      "for (let i = 0; let i < ${1:array}.length; i++) {",
+      "  $2",
+      "}"]
+  },
+  "try": {
+    "prefix": ["try"],
+    "body": [
+      "try {",
+      "  $1",
+      "}"
+    ]
+  },
+  "catch": {
+    "prefix": ["catch"],
+    "body": [
+      "catch (${1:error}) {",
+      "  $2",
+      "}"]
+  },
+  "trycatch": {
+    "prefix": ["trycatch"],
+    "body": [
+      "try {",
+      "  $1",
+      "}",
+      "catch (${2:error}) {",
+      "  ${3:console.error(error)}",
+      "}"]
+  },
+  "reduce": {
+    "prefix": [".reduce", "reduce"],
+    "body": [
+      ".reduce((${2:accumulator}, ${3:current}) => {",
+      "  $4",
+      "}, $1)"
+    ]
+  },
+  "map": {
+    "prefix": [".map", "map"],
+    "body": [
+      ".map((${1:x}) => {",
+      "  return $2",
+      "})"
+    ]
+  },
+  "filter": {
+    "prefix": [".filter", "filter"],
+    "body": [
+      ".filter((${1:x}) => {",
+      "  return $2",
+      "})"
+    ]
+  },
+  "log": {
+    "prefix": ["console", "log"],
+    "body": "console.log($1)"
+  },
+  "new error": {
+    "prefix": ["newE"],
+    "body": "new Error('${1:Error message}')"
+  },
+  "throw": {
+    "prefix": ["throw"],
+    "body": "throw new Error('$1')"
+  },
+  "debugger": {
+    "prefix": ["debugger"],
+    "body": "debugger"
+  },
+  "import" : {
+    "prefix": ["import"],
+    "body": "import $1 from '${2:./file}'"
+  },
+  "export const": {
+    "prefix" : ["exconst"],
+    "body": "export const $1 = $2"
+  },
+  "export default": {
+    "prefix" : ["exdefault"],
+    "body": "export default $1"
+  }
+}

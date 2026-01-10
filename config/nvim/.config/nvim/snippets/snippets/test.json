@@ -1,0 +1,26 @@
+{
+  "it":{
+    "prefix": "it",
+    "body": "it('${1:Should }', () => {\n\t$0\n});",
+    "description": "creates an it block"
+  },
+  "describe": {
+    "prefix": "desc",
+    "body": "describe('${1:Name of the group}', () => {\n\t$0\n});",
+    "description": "creates a describe block"
+  },
+  "test-file": {
+    "prefix": "testfile",
+    "body": [
+      "import {$1} from './$2';",
+      "",
+      "describe('$1', () => {",
+      "  it('Should', () => {",
+      "    $3",
+      "    ",
+      "    expect().toEqual()",
+      "  })",
+      "})"
+    ]
+  }
+}
