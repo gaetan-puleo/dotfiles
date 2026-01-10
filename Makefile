@@ -8,4 +8,4 @@ dotfiles:
 	$(stow) $(CONFIG_DIRS)
 
 install:
-	brew install wget neovim tmux fish
+	brew install wget neovim tmux fish fnm jq
