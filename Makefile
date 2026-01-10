@@ -1,6 +1,6 @@
 stow = cd config && stow -v -t ~
 
-CONFIG_DIRS := $(shell find config -mindepth 1 -maxdepth 1 -type d -printf '%f ')
+CONFIG_DIRS := $(notdir $(wildcard config/*/))
 
 .PHONY: dotfiles dotfiles-dry
 
