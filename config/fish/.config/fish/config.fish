@@ -17,8 +17,3 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-# opencode
-fish_add_path /home/gaetanpuleo/.opencode/bin
-fish_add_path /home/gaetanpuleo/.local/bin
