@@ -1,0 +1,53 @@
+{
+  "functionComponent": {
+    "key": "typescriptReactFunctionalComponent",
+    "prefix": ["comp"],
+    "body": [
+      "import React from 'react'",
+      "",
+      "export interface ${TM_FILENAME_BASE}Props {",
+      "",
+      "}",
+      "",
+      "export default function ${1:${TM_FILENAME_BASE}}({}: ${TM_FILENAME_BASE}Props) {",
+      "  return (",
+      "    <div>${1:first}</div>",
+      "  )",
+      "}"
+    ],
+    "description": "Creates a React Functional Component with ES7 module system and TypeScript interface"
+  },
+  "hook": {
+    "key": "typescriptReactFunctionalComponent",
+    "prefix": ["hook", "use"],
+    "body": [
+      "export interface HookType {",
+      "",
+      "}",
+      "",
+      "export default function use${1:${TM_FILENAME_BASE}}() {",
+      "  return {",
+      "  }",
+      "}"
+    ],
+    "description": "Create a React Custom Hook with an TypeScript interface"
+  },
+  "use Effect":{
+    "key": "typescriptReactUseEffect",
+    "prefix": ["useEffect"],
+    "body": [
+      "useEffect(() => {",
+      "  $1",
+      "}, [$2])"
+    ],
+    "description": "Use useEffect hook"
+  },
+  "use State":{
+    "key": "typescriptReactUseState",
+    "prefix": ["useState"],
+    "body": [
+      "const [$1, set$1] = useState<$3>($4)"
+    ],
+    "description": "Use useState hook"
+  }
+}

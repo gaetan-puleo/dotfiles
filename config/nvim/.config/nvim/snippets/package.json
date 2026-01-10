@@ -1,0 +1,43 @@
+{
+    "name": "personal-snippets",
+    "contributes": {
+        "snippets": [
+            {
+                "language": [
+                    "all"
+                ],
+                "path": "./snippets/global.json"
+            },
+
+            {
+              "language": [
+                "javascript",
+                "typescript",
+                "typescriptreact"
+              ],
+              "path": "./snippets/javascript.json"
+            },
+
+            {
+              "language": [
+                "javascript",
+                "typescript"
+              ],
+              "path": "./snippets/test.json"
+            },
+            {
+              "language": [
+                "typescript"
+              ],
+              "path": "./snippets/typescript.json"
+            },
+            {
+              "language": [
+                "typescript",
+                "typescriptreact"
+              ],
+              "path": "./snippets/react-ts.json"
+            }
+        ]
+    }
+}

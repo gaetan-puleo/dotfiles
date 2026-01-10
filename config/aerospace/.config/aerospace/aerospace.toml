@@ -1,0 +1,40 @@
+start-at-login = true
+
+[gaps]
+    inner.horizontal = 8
+    inner.vertical =   8
+    outer.left =       8
+    outer.bottom =     8
+    outer.top =        8
+    outer.right =      8
+
+[mode.main.binding]
+    ctrl-cmd-right = 'workspace next'
+    ctrl-cmd-left = 'workspace prev'
+    ctrl-shift-cmd-left = 'move-node-to-workspace prev'
+    ctrl-shift-cmd-right = 'move-node-to-workspace next'
+
+
+[[on-window-detected]]
+    if.app-id = 'com.figma.Desktop'
+    run = ['move-node-to-workspace 1 --focus-follows-window']
+
+[[on-window-detected]]
+    if.app-id = 'net.kovidgoyal.kitty'
+    run = ['move-node-to-workspace 2 --focus-follows-window']
+
+[[on-window-detected]]
+    if.app-id = 'com.microsoft.VSCode'
+    run = ['move-node-to-workspace 2 --focus-follows-window']
+
+[[on-window-detected]]
+    if.app-id = 'com.google.Chrome'
+    run = ['move-node-to-workspace 3 --focus-follows-window']
+
+[[on-window-detected]]
+    if.app-id = 'com.microsoft.teams2'
+    run = ['move-node-to-workspace 4 --focus-follows-window']
+
+[[on-window-detected]]
+     if.app-id = 'com.apple.finder'
+     run = 'layout floating'
