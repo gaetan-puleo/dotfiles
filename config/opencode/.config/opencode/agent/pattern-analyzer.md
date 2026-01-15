@@ -5,6 +5,8 @@ temperature: 0.2
 tools:
   write: false
   edit: false
+  bash: true
+permission:
   bash:
     "*": deny
     "ls *": allow
