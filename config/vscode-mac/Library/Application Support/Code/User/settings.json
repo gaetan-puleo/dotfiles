@@ -31,5 +31,6 @@
     "workbench.commandPalette.experimental.askChatLocation": "hidden",
     "chat.commandCenter.enabled": false,
     "workbench.sideBar.location": "left",
-    "workbench.panel.defaultLocation": "bottom"
+    "workbench.panel.defaultLocation": "bottom",
+    "http.proxyStrictSSL": false
 }
