@@ -1,0 +1,4 @@
+ai-smith.nvim-ui-modes
+asvetliakov.vscode-neovim
+catppuccin.catppuccin-vsc
+gitlab.gitlab-workflow
