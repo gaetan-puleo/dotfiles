@@ -21,6 +21,9 @@ end
 # Source API keys from secure location
 test -e ~/.secrets/api-keys.fish; and source ~/.secrets/api-keys.fish
 
+# Source local configuration if it exists
+test -e ~/.config/fish/config.local.fish; and source ~/.config/fish/config.local.fish
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
