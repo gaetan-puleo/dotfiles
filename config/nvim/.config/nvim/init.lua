@@ -1,5 +1,8 @@
 require('config/options')
-require('config/lsp')
 require('config/mapping')
-require('config/lazy')
+
+if not vim.g.vscode then
+  require('config/lsp')
+  require('config/lazy')
+end
 
