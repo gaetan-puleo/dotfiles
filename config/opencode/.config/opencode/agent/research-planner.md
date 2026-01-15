@@ -5,6 +5,8 @@ temperature: 0.3
 tools:
   write: false
   edit: false
+  bash: true
+permission:
   bash:
     "*": deny
     "ls *": allow
@@ -12,7 +14,6 @@ tools:
     "find *": allow
     "git status": allow
     "git log*": allow
-permission:
   task:
     "*": deny
     "pattern-analyzer": allow
