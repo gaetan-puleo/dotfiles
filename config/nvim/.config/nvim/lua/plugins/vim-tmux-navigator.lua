@@ -1,14 +1,14 @@
+local is_mac = vim.fn.has("macunix") == 1
+local mod = is_mac and "D" or "M"
+
 return {
-
-    'christoomey/vim-tmux-navigator',
-    config = function ()
-        local map = vim.keymap.set
-        vim.g.tmux_navigator_no_mappings = 1
-
-        map({'n'}, '<M-h>', ':<C-U>TmuxNavigateLeft<cr>', {noremap = true, silent = true})
-        map({'n'}, '<M-l>', ':<C-U>TmuxNavigateRight<cr>', {noremap = true, silent = true})
-        map({'n'}, '<M-k>', ':<C-U>TmuxNavigateUp<cr>', {noremap = true, silent = true})
-        map({'n'}, '<M-j>', ':<C-U>TmuxNavigateDown<cr>', {noremap = true, silent = true})
-
-    end,
+    "MunsMan/kitty-navigator.nvim",
+    opts = {
+        keybindings = {
+            left = "<" .. mod .. "-h>",
+            down = "<" .. mod .. "-j>",
+            up = "<" .. mod .. "-k>",
+            right = "<" .. mod .. "-l>",
+        },
+    },
 }
