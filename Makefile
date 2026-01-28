@@ -1,9 +1,16 @@
-stow = cd config && stow -v -t ~
+STOW := stow -v -t ~
+STOW_CONFIG := $(STOW) -d config
+STOW_COMMON := $(STOW) -d config/common
+STOW_UBUNTU := $(STOW) -d config/ubuntu
+STOW_FEDORA := $(STOW) -d config/fedora
+STOW_MACOS := $(STOW) -d config/macos
 
-# Get all config directories excluding OS-specific vscode
-BASE_DIRS := $(filter-out vscode-linux vscode-mac,$(notdir $(wildcard config/*)))
+COMMON_PACKAGES := $(notdir $(wildcard config/common/*))
+UBUNTU_PACKAGES := $(notdir $(wildcard config/ubuntu/*))
+FEDORA_PACKAGES := $(notdir $(wildcard config/fedora/*))
+MACOS_PACKAGES := $(notdir $(wildcard config/macos/*))
 
-.PHONY: help dotfiles dotfiles-linux dotfiles-mac install vscode-extensions-linux vscode-extensions-mac
+.PHONY: help dotfiles dotfiles-linux dotfiles-mac dotfiles-ubuntu dotfiles-fedora dotfiles-macos setup-ubuntu setup-fedora install vscode-extensions-linux vscode-extensions-mac fisher-plugins fonts-linux
 
 help:
 	@echo "Available commands:"
@@ -17,16 +24,81 @@ help:
 	@echo "  make dotfiles                  - Alias for dotfiles-linux"
 
 dotfiles-linux:
-	$(stow) $(BASE_DIRS) vscode-linux
+	@if [ -n "$(COMMON_PACKAGES)" ]; then $(STOW_COMMON) $(COMMON_PACKAGES); fi
+	@if [ -n "$(UBUNTU_PACKAGES)" ]; then $(STOW_UBUNTU) $(UBUNTU_PACKAGES); fi
+	$(STOW_CONFIG) vscode-linux
 
 dotfiles-mac:
-	$(stow) $(BASE_DIRS) vscode-mac
+	@if [ -n "$(COMMON_PACKAGES)" ]; then $(STOW_COMMON) $(COMMON_PACKAGES); fi
+	@if [ -n "$(MACOS_PACKAGES)" ]; then $(STOW_MACOS) $(MACOS_PACKAGES); fi
+	$(STOW_CONFIG) vscode-mac
+
+dotfiles-ubuntu:
+	@if [ -n "$(COMMON_PACKAGES)" ]; then $(STOW_COMMON) $(COMMON_PACKAGES); fi
+	@if [ -n "$(UBUNTU_PACKAGES)" ]; then $(STOW_UBUNTU) $(UBUNTU_PACKAGES); fi
+	$(STOW_CONFIG) vscode-linux
+
+dotfiles-fedora:
+	@if [ -n "$(COMMON_PACKAGES)" ]; then $(STOW_COMMON) $(COMMON_PACKAGES); fi
+	@if [ -n "$(FEDORA_PACKAGES)" ]; then $(STOW_FEDORA) $(FEDORA_PACKAGES); fi
+	$(STOW_CONFIG) vscode-linux
+
+dotfiles-macos:
+	@if [ -n "$(COMMON_PACKAGES)" ]; then $(STOW_COMMON) $(COMMON_PACKAGES); fi
+	@if [ -n "$(MACOS_PACKAGES)" ]; then $(STOW_MACOS) $(MACOS_PACKAGES); fi
+	$(STOW_CONFIG) vscode-mac
 
 # Default target
 .DEFAULT_GOAL := help
 
 # Alias for backward compatibility
 dotfiles: dotfiles-linux
+
+setup-ubuntu:
+	@command -v apt >/dev/null 2>&1 || (echo "apt not found. This target is for Ubuntu." && exit 1)
+	sudo apt update
+	xargs -a setup/ubuntu/packages.txt sudo apt install -y
+	$(MAKE) fonts-linux
+	@if ! command -v brew >/dev/null 2>&1; then \
+	  /bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; \
+	  if [ -d /home/linuxbrew/.linuxbrew/bin ]; then \
+	    eval "$$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"; \
+	  fi; \
+	fi
+	brew install neovim fnm
+	fnm install --lts
+	fnm default lts-latest
+	eval "$$(fnm env)" && npm install -g opencode-ai
+	$(MAKE) dotfiles-ubuntu
+	$(MAKE) fisher-plugins
+	$(MAKE) vscode-extensions-linux
+
+setup-fedora:
+	@command -v dnf >/dev/null 2>&1 || (echo "dnf not found. This target is for Fedora." && exit 1)
+	sudo dnf update -y
+	sudo dnf install -y $$(cat setup/fedora/packages.txt | tr '\n' ' ')
+	$(MAKE) fonts-linux
+	@if ! command -v brew >/dev/null 2>&1; then \
+	  /bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; \
+	  if [ -d /home/linuxbrew/.linuxbrew/bin ]; then \
+	    eval "$$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"; \
+	  fi; \
+	fi
+	brew install neovim fnm
+	fnm install --lts
+	fnm default lts-latest
+	eval "$$(fnm env)" && npm install -g opencode-ai
+	$(MAKE) dotfiles-fedora
+	$(MAKE) fisher-plugins
+	$(MAKE) vscode-extensions-linux
+
+fonts-linux:
+	mkdir -p ~/.local/share/fonts
+	cp -r setup/common/fonts/*/*.ttf ~/.local/share/fonts/
+	fc-cache -fv
+
+fisher-plugins:
+	fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update'
 
 vscode-extensions-linux:
 	cat ~/.config/Code/User/extensions.txt | xargs -L 1 code --install-extension

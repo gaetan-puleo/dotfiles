@@ -1,0 +1,19 @@
+# Local Fish Configuration Example
+# Copy this file to config.local.fish and customize for your machine
+# config.local.fish will be sourced automatically but not committed to git
+
+# Machine-specific environment variables
+# set -x PROJECT_PATH /path/to/your/projects
+# set -x CUSTOM_VAR "value"
+
+# Machine-specific aliases
+# alias myproject 'cd /path/to/specific/project'
+# alias dev 'cd ~/Development'
+
+# Machine-specific PATH additions
+# fish_add_path /custom/path/bin
+
+# Machine-specific functions
+# function custom_function
+#     echo "Custom function"
+# end
