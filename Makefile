@@ -61,14 +61,19 @@ setup-ubuntu:
 	$(MAKE) fonts-linux
 	@if ! command -v brew >/dev/null 2>&1; then \
 	  /bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; \
-	  if [ -d /home/linuxbrew/.linuxbrew/bin ]; then \
-	    eval "$$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"; \
-	  fi; \
 	fi
-	brew install neovim fnm
-	fnm install --lts
-	fnm default lts-latest
-	eval "$$(fnm env)" && npm install -g opencode-ai
+	@if [ -d /home/linuxbrew/.linuxbrew/bin ]; then \
+	  eval "$$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"; \
+	  brew install neovim fnm; \
+	  fnm install --lts; \
+	  fnm default lts-latest; \
+	  eval "$$(fnm env)" && npm install -g opencode-ai; \
+	elif command -v brew >/dev/null 2>&1; then \
+	  brew install neovim fnm; \
+	  fnm install --lts; \
+	  fnm default lts-latest; \
+	  eval "$$(fnm env)" && npm install -g opencode-ai; \
+	fi
 	$(MAKE) dotfiles-ubuntu
 	$(MAKE) fisher-plugins
 	$(MAKE) vscode-extensions-linux
@@ -80,14 +85,19 @@ setup-fedora:
 	$(MAKE) fonts-linux
 	@if ! command -v brew >/dev/null 2>&1; then \
 	  /bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; \
-	  if [ -d /home/linuxbrew/.linuxbrew/bin ]; then \
-	    eval "$$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"; \
-	  fi; \
 	fi
-	brew install neovim fnm
-	fnm install --lts
-	fnm default lts-latest
-	eval "$$(fnm env)" && npm install -g opencode-ai
+	@if [ -d /home/linuxbrew/.linuxbrew/bin ]; then \
+	  eval "$$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"; \
+	  brew install neovim fnm; \
+	  fnm install --lts; \
+	  fnm default lts-latest; \
+	  eval "$$(fnm env)" && npm install -g opencode-ai; \
+	elif command -v brew >/dev/null 2>&1; then \
+	  brew install neovim fnm; \
+	  fnm install --lts; \
+	  fnm default lts-latest; \
+	  eval "$$(fnm env)" && npm install -g opencode-ai; \
+	fi
 	$(MAKE) dotfiles-fedora
 	$(MAKE) fisher-plugins
 	$(MAKE) vscode-extensions-linux
