@@ -111,10 +111,18 @@ fisher-plugins:
 	fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update'
 
 vscode-extensions-linux:
-	cat ~/.config/Code/User/extensions.txt | xargs -L 1 code --install-extension
+	@if command -v code >/dev/null 2>&1; then \
+	  cat ~/.config/Code/User/extensions.txt | xargs -L 1 code --install-extension; \
+	else \
+	  echo "VSCode not installed. Skipping extensions installation."; \
+	fi
 
 vscode-extensions-mac:
-	cat ~/Library/Application\ Support/Code/User/extensions.txt | xargs -L 1 code --install-extension
+	@if command -v code >/dev/null 2>&1; then \
+	  cat ~/Library/Application\ Support/Code/User/extensions.txt | xargs -L 1 code --install-extension; \
+	else \
+	  echo "VSCode not installed. Skipping extensions installation."; \
+	fi
 
 install:
 	brew install wget neovim tmux fish fnm jq fisher anomalyco/tap/opencode
