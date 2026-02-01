@@ -67,15 +67,6 @@ setup-ubuntu:
 	  eval "$$(fnm env)" && npm install -g opencode-ai; \
 	fi
 	$(MAKE) dotfiles-linux
-	$(MAKE) fisher-plugins
-	$(MAKE) vscode-extensions-linux
-
-fonts-linux:
-	mkdir -p ~/.local/share/fonts
-	cp -r setup/common/fonts/*/*.ttf ~/.local/share/fonts/
-	fc-cache -fv
-
-fisher-plugins:
 	@rm -f "$(HOME)/.config/fish/completions/fisher.fish"
 	@rm -f "$(HOME)/.config/fish/conf.d/hydro.fish"
 	@rm -f "$(HOME)/.config/fish/conf.d/z.fish"
@@ -86,6 +77,15 @@ fisher-plugins:
 	@rm -f "$(HOME)/.config/fish/functions/__z_add.fish"
 	@rm -f "$(HOME)/.config/fish/functions/__z_clean.fish"
 	@rm -f "$(HOME)/.config/fish/functions/__z_complete.fish"
+	$(MAKE) fisher-plugins
+	$(MAKE) vscode-extensions-linux
+
+fonts-linux:
+	mkdir -p ~/.local/share/fonts
+	cp -r setup/common/fonts/*/*.ttf ~/.local/share/fonts/
+	fc-cache -fv
+
+fisher-plugins:
 	fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update'
 
 vscode-extensions-linux:
