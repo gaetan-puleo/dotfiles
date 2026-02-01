@@ -65,6 +65,7 @@ fi
 make -C "$DOTFILES_DIR" dotfiles-linux
 cat "$HOME/.config/fish/fish_plugins"
 fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source; fisher install jorgebucaran/fisher; fisher update'
+cat "$HOME/.config/fish/fish_plugins"
 
 # if command -v code >/dev/null 2>&1; then
 #   cat ~/.config/Code/User/extensions.txt | xargs -L 1 code --install-extension
