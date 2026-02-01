@@ -2,19 +2,19 @@ DOTFILES_DIR := $(CURDIR)
 CONFIG_DIR := $(DOTFILES_DIR)/config
 VSCODE_FILES := settings.json keybindings.json extensions.txt
 
-.PHONY: help dotfiles-linux dotfiles-macos setup-ubuntu install vscode-extensions-linux vscode-extensions-mac fisher-plugins fonts-linux link-common link-vscode-linux link-vscode-macos clean-fish-plugins
+.PHONY: help dotfiles-linux dotfiles-mac setup-ubuntu install vscode-extensions-linux vscode-extensions-mac fisher-plugins fonts-linux link-common link-vscode-linux link-vscode-macos clean-fish-plugins
 
 help:
 	@echo "Available commands:"
 	@echo "  make install                    - Install packages via Homebrew"
 	@echo "  make dotfiles-linux            - Symlink dotfiles for Linux"
-	@echo "  make dotfiles-macos            - Symlink dotfiles for macOS"
+	@echo "  make dotfiles-mac              - Symlink dotfiles for macOS"
 	@echo "  make vscode-extensions-linux   - Install VSCode extensions on Linux"
 	@echo "  make vscode-extensions-mac     - Install VSCode extensions on macOS"
 
 dotfiles-linux: link-common link-vscode-linux
 
-dotfiles-macos: link-common
+dotfiles-mac: link-common
 	@ln -sfn "$(CONFIG_DIR)/aerospace/.config/aerospace" "$(HOME)/.config/aerospace"
 	@$(MAKE) link-vscode-macos
 
