@@ -2,7 +2,7 @@ DOTFILES_DIR := $(CURDIR)
 CONFIG_DIR := $(DOTFILES_DIR)/config
 VSCODE_FILES := settings.json keybindings.json extensions.txt
 
-.PHONY: help dotfiles-linux dotfiles-mac setup-ubuntu vscode-extensions-linux vscode-extensions-mac fisher-plugins fonts-linux link-common link-vscode-linux link-vscode-macos clean-fish-plugins
+.PHONY: help dotfiles-linux dotfiles-mac setup-ubuntu vscode-extensions-linux vscode-extensions-mac fisher-plugins fonts-linux link-common link-vscode-linux link-vscode-macos
 
 help:
 	@echo "Available commands:"
@@ -41,7 +41,6 @@ setup-ubuntu:
 	  eval "$$(fnm env)" && npm install -g opencode-ai; \
 	fi
 	$(MAKE) dotfiles-linux
-	@$(MAKE) clean-fish-plugins
 	$(MAKE) fisher-plugins
 	$(MAKE) vscode-extensions-linux
 
@@ -69,18 +68,6 @@ link-vscode-linux:
 link-vscode-macos:
 	@mkdir -p "$(HOME)/Library/Application Support/Code/User"
 	@$(foreach file,$(VSCODE_FILES),ln -sfn "$(CONFIG_DIR)/vscode/$(file)" "$(HOME)/Library/Application Support/Code/User/$(file)";)
-
-clean-fish-plugins:
-	@rm -f "$(HOME)/.config/fish/completions/fisher.fish"
-	@rm -f "$(HOME)/.config/fish/conf.d/hydro.fish"
-	@rm -f "$(HOME)/.config/fish/conf.d/z.fish"
-	@rm -f "$(HOME)/.config/fish/functions/fisher.fish"
-	@rm -f "$(HOME)/.config/fish/functions/fish_prompt.fish"
-	@rm -f "$(HOME)/.config/fish/functions/fish_mode_prompt.fish"
-	@rm -f "$(HOME)/.config/fish/functions/__z.fish"
-	@rm -f "$(HOME)/.config/fish/functions/__z_add.fish"
-	@rm -f "$(HOME)/.config/fish/functions/__z_clean.fish"
-	@rm -f "$(HOME)/.config/fish/functions/__z_complete.fish"
 
 vscode-extensions-linux:
 	@if command -v code >/dev/null 2>&1; then \
