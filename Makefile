@@ -2,7 +2,7 @@ DOTFILES_DIR := $(CURDIR)
 CONFIG_DIR := $(DOTFILES_DIR)/config
 VSCODE_FILES := settings.json keybindings.json extensions.txt
 
-.PHONY: help dotfiles dotfiles-linux dotfiles-macos setup-ubuntu install vscode-extensions-linux vscode-extensions-mac fisher-plugins fonts-linux link-common link-vscode-linux link-vscode-macos clean-fish-plugins
+.PHONY: help dotfiles-linux dotfiles-macos setup-ubuntu install vscode-extensions-linux vscode-extensions-mac fisher-plugins fonts-linux link-common link-vscode-linux link-vscode-macos clean-fish-plugins
 
 help:
 	@echo "Available commands:"
@@ -11,9 +11,6 @@ help:
 	@echo "  make dotfiles-macos            - Symlink dotfiles for macOS"
 	@echo "  make vscode-extensions-linux   - Install VSCode extensions on Linux"
 	@echo "  make vscode-extensions-mac     - Install VSCode extensions on macOS"
-	@echo ""
-	@echo "Aliases:"
-	@echo "  make dotfiles                  - Alias for dotfiles-linux"
 
 dotfiles-linux: link-common link-vscode-linux
 
@@ -23,9 +20,6 @@ dotfiles-macos: link-common
 
 # Default target
 .DEFAULT_GOAL := help
-
-# Alias for backward compatibility
-dotfiles: dotfiles-linux
 
 setup-ubuntu:
 	@command -v apt >/dev/null 2>&1 || (echo "apt not found. This target is for Ubuntu." && exit 1)
