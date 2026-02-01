@@ -38,24 +38,6 @@ make setup-ubuntu
 make dotfiles-linux
 ```
 
-## Fedora setup
-
-### Prerequisites
-- Fedora 38+ or Fedora-based distro
-- `wget` installed
-
-### Bootstrap from GitHub
-```sh
-wget -qO- https://raw.githubusercontent.com/gaetan-puleo/dotfiles/main/scripts/setup-fedora.sh | bash
-```
-
-Or if you already have the repo:
-
-```sh
-cd ~/dotfiles
-make setup-fedora
-```
-
 ## Manual installation
 
 ### Install fonts only
