@@ -76,6 +76,16 @@ fonts-linux:
 	fc-cache -fv
 
 fisher-plugins:
+	@rm -f "$(HOME)/.config/fish/completions/fisher.fish"
+	@rm -f "$(HOME)/.config/fish/conf.d/hydro.fish"
+	@rm -f "$(HOME)/.config/fish/conf.d/z.fish"
+	@rm -f "$(HOME)/.config/fish/functions/fisher.fish"
+	@rm -f "$(HOME)/.config/fish/functions/fish_prompt.fish"
+	@rm -f "$(HOME)/.config/fish/functions/fish_mode_prompt.fish"
+	@rm -f "$(HOME)/.config/fish/functions/__z.fish"
+	@rm -f "$(HOME)/.config/fish/functions/__z_add.fish"
+	@rm -f "$(HOME)/.config/fish/functions/__z_clean.fish"
+	@rm -f "$(HOME)/.config/fish/functions/__z_complete.fish"
 	fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update'
 
 vscode-extensions-linux:
