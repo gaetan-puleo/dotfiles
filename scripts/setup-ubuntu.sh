@@ -24,7 +24,27 @@ sudo chmod 0644 /etc/apt/keyrings/microsoft.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/microsoft.gpg] https://packages.microsoft.com/repos/code stable main" | sudo tee /etc/apt/sources.list.d/vscode.list >/dev/null
 
 sudo apt update
-xargs -a "$DOTFILES_DIR/setup/ubuntu/packages.txt" sudo apt install -y
+sudo apt install -y \
+  build-essential \
+  ca-certificates \
+  curl \
+  fd-find \
+  fish \
+  fzf \
+  git \
+  gnupg \
+  jq \
+  kitty \
+  lsb-release \
+  pkg-config \
+  python3 \
+  python3-pip \
+  ripgrep \
+  tar \
+  tmux \
+  unzip \
+  wget \
+  zip
 sudo apt install -y code
 
 if ! command -v brew >/dev/null 2>&1; then
