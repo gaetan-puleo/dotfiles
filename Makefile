@@ -1,22 +1,14 @@
-STOW := stow -v -t ~
-STOW_CONFIG := $(STOW) -d config
-STOW_COMMON := $(STOW) -d config/common
-STOW_UBUNTU := $(STOW) -d config/ubuntu
-STOW_FEDORA := $(STOW) -d config/fedora
-STOW_MACOS := $(STOW) -d config/macos
+DOTFILES_DIR := $(CURDIR)
+CONFIG_DIR := $(DOTFILES_DIR)/config
+VSCODE_FILES := settings.json keybindings.json extensions.txt
 
-COMMON_PACKAGES := $(notdir $(wildcard config/common/*))
-UBUNTU_PACKAGES := $(notdir $(wildcard config/ubuntu/*))
-FEDORA_PACKAGES := $(notdir $(wildcard config/fedora/*))
-MACOS_PACKAGES := $(notdir $(wildcard config/macos/*))
-
-.PHONY: help dotfiles dotfiles-linux dotfiles-mac dotfiles-ubuntu dotfiles-fedora dotfiles-macos setup-ubuntu setup-fedora install vscode-extensions-linux vscode-extensions-mac fisher-plugins fonts-linux
+.PHONY: help dotfiles dotfiles-linux dotfiles-mac dotfiles-macos setup-ubuntu setup-fedora install vscode-extensions-linux vscode-extensions-mac fisher-plugins fonts-linux
 
 help:
 	@echo "Available commands:"
 	@echo "  make install                    - Install packages via Homebrew"
-	@echo "  make dotfiles-linux            - Stow dotfiles for Linux"
-	@echo "  make dotfiles-mac              - Stow dotfiles for macOS"
+	@echo "  make dotfiles-linux            - Symlink dotfiles for Linux"
+	@echo "  make dotfiles-mac              - Symlink dotfiles for macOS"
 	@echo "  make vscode-extensions-linux   - Install VSCode extensions on Linux"
 	@echo "  make vscode-extensions-mac     - Install VSCode extensions on macOS"
 	@echo ""
@@ -24,29 +16,29 @@ help:
 	@echo "  make dotfiles                  - Alias for dotfiles-linux"
 
 dotfiles-linux:
-	@if [ -n "$(COMMON_PACKAGES)" ]; then $(STOW_COMMON) $(COMMON_PACKAGES); fi
-	@if [ -n "$(UBUNTU_PACKAGES)" ]; then $(STOW_UBUNTU) $(UBUNTU_PACKAGES); fi
-	$(STOW_CONFIG) vscode-linux
+	@mkdir -p "$(HOME)/.config"
+	@ln -sfn "$(CONFIG_DIR)/kitty/.config/kitty" "$(HOME)/.config/kitty"
+	@ln -sfn "$(CONFIG_DIR)/fish/.config/fish" "$(HOME)/.config/fish"
+	@ln -sfn "$(CONFIG_DIR)/nvim/.config/nvim" "$(HOME)/.config/nvim"
+	@ln -sfn "$(CONFIG_DIR)/tmux/.config/tmux" "$(HOME)/.config/tmux"
+	@ln -sfn "$(CONFIG_DIR)/git/.config/git" "$(HOME)/.config/git"
+	@ln -sfn "$(CONFIG_DIR)/opencode/.config/opencode" "$(HOME)/.config/opencode"
+	@mkdir -p "$(HOME)/.config/Code/User"
+	@$(foreach file,$(VSCODE_FILES),ln -sfn "$(CONFIG_DIR)/vscode/$(file)" "$(HOME)/.config/Code/User/$(file)";)
 
-dotfiles-mac:
-	@if [ -n "$(COMMON_PACKAGES)" ]; then $(STOW_COMMON) $(COMMON_PACKAGES); fi
-	@if [ -n "$(MACOS_PACKAGES)" ]; then $(STOW_MACOS) $(MACOS_PACKAGES); fi
-	$(STOW_CONFIG) vscode-mac
-
-dotfiles-ubuntu:
-	@if [ -n "$(COMMON_PACKAGES)" ]; then $(STOW_COMMON) $(COMMON_PACKAGES); fi
-	@if [ -n "$(UBUNTU_PACKAGES)" ]; then $(STOW_UBUNTU) $(UBUNTU_PACKAGES); fi
-	$(STOW_CONFIG) vscode-linux
-
-dotfiles-fedora:
-	@if [ -n "$(COMMON_PACKAGES)" ]; then $(STOW_COMMON) $(COMMON_PACKAGES); fi
-	@if [ -n "$(FEDORA_PACKAGES)" ]; then $(STOW_FEDORA) $(FEDORA_PACKAGES); fi
-	$(STOW_CONFIG) vscode-linux
+dotfiles-mac: dotfiles-macos
 
 dotfiles-macos:
-	@if [ -n "$(COMMON_PACKAGES)" ]; then $(STOW_COMMON) $(COMMON_PACKAGES); fi
-	@if [ -n "$(MACOS_PACKAGES)" ]; then $(STOW_MACOS) $(MACOS_PACKAGES); fi
-	$(STOW_CONFIG) vscode-mac
+	@mkdir -p "$(HOME)/.config"
+	@ln -sfn "$(CONFIG_DIR)/kitty/.config/kitty" "$(HOME)/.config/kitty"
+	@ln -sfn "$(CONFIG_DIR)/fish/.config/fish" "$(HOME)/.config/fish"
+	@ln -sfn "$(CONFIG_DIR)/nvim/.config/nvim" "$(HOME)/.config/nvim"
+	@ln -sfn "$(CONFIG_DIR)/tmux/.config/tmux" "$(HOME)/.config/tmux"
+	@ln -sfn "$(CONFIG_DIR)/git/.config/git" "$(HOME)/.config/git"
+	@ln -sfn "$(CONFIG_DIR)/opencode/.config/opencode" "$(HOME)/.config/opencode"
+	@ln -sfn "$(CONFIG_DIR)/aerospace/.config/aerospace" "$(HOME)/.config/aerospace"
+	@mkdir -p "$(HOME)/Library/Application Support/Code/User"
+	@$(foreach file,$(VSCODE_FILES),ln -sfn "$(CONFIG_DIR)/vscode/$(file)" "$(HOME)/Library/Application Support/Code/User/$(file)";)
 
 # Default target
 .DEFAULT_GOAL := help
@@ -74,7 +66,7 @@ setup-ubuntu:
 	  fnm default lts-latest; \
 	  eval "$$(fnm env)" && npm install -g opencode-ai; \
 	fi
-	$(MAKE) dotfiles-ubuntu
+	$(MAKE) dotfiles-linux
 	$(MAKE) fisher-plugins
 	$(MAKE) vscode-extensions-linux
 
