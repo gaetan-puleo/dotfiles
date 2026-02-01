@@ -18,3 +18,9 @@ Dotfiles only:
 make dotfiles-linux
 make dotfiles-mac
 ```
+
+Fisher (Homebrew):
+
+```sh
+brew install fisher
+```
