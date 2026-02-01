@@ -13,16 +13,27 @@ if ! command -v brew >/dev/null 2>&1; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
+if [ -d /opt/homebrew/bin ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif command -v brew >/dev/null 2>&1; then
+  eval "$(brew shellenv)"
+fi
+
 if [ -d "$DOTFILES_DIR/.git" ]; then
   git -C "$DOTFILES_DIR" pull --rebase
 else
   git clone "${DOTFILES_REPO:-$DOTFILES_REPO_DEFAULT}" "$DOTFILES_DIR"
 fi
 
-brew install wget neovim tmux fish fnm jq fisher anomalyco/tap/opencode
+brew install wget fish git curl make fzf ripgrep tmux kitty jq neovim fnm anomalyco/tap/opencode
+brew install --cask visual-studio-code
 fnm install --lts
 fnm default lts-latest
 eval "$(fnm env)" && npm install -g opencode-ai
 
 make -C "$DOTFILES_DIR" dotfiles-mac
-make -C "$DOTFILES_DIR" vscode-extensions-mac
+fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update'
+
+if command -v code >/dev/null 2>&1; then
+  cat ~/Library/Application\ Support/Code/User/extensions.txt | xargs -L 1 code --install-extension
+fi
