@@ -32,7 +32,12 @@ fnm default lts-latest
 eval "$(fnm env)" && npm install -g opencode-ai
 
 make -C "$DOTFILES_DIR" dotfiles-mac
-fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update'
+mkdir -p "$HOME/.config/fish/functions"
+if [ ! -f "$HOME/.config/fish/functions/fisher.fish" ]; then
+  curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish \
+    -o "$HOME/.config/fish/functions/fisher.fish"
+fi
+fish -c 'source ~/.config/fish/functions/fisher.fish; fisher update'
 
 if command -v code >/dev/null 2>&1; then
   cat ~/Library/Application\ Support/Code/User/extensions.txt | xargs -L 1 code --install-extension
