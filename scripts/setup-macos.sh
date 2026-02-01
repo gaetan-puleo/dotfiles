@@ -37,7 +37,7 @@ if [ ! -f "$HOME/.config/fish/functions/fisher.fish" ]; then
   curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish \
     -o "$HOME/.config/fish/functions/fisher.fish"
 fi
-fish -c 'source ~/.config/fish/functions/fisher.fish; fisher update'
+fish -c 'set -eU fish_plugins; set -e fish_plugins; source ~/.config/fish/functions/fisher.fish; fisher update'
 
 if command -v code >/dev/null 2>&1; then
   cat ~/Library/Application\ Support/Code/User/extensions.txt | xargs -L 1 code --install-extension
