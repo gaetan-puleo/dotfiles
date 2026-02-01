@@ -20,3 +20,10 @@ else
 fi
 
 make -C "$DOTFILES_DIR" setup-ubuntu
+
+if command -v fish >/dev/null 2>&1; then
+  current_shell=$(getent passwd "$USER" | cut -d: -f7)
+  if [ "$current_shell" != "/usr/bin/fish" ]; then
+    sudo chsh -s /usr/bin/fish "$USER"
+  fi
+fi
