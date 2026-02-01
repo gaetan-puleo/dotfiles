@@ -11,7 +11,7 @@ DOTFILES_REPO_DEFAULT="https://github.com/gaetan-puleo/dotfiles.git"
 
 
 sudo dnf update -y
-sudo dnf install -y curl git make stow
+sudo dnf install -y curl git make
 
 if [ -d "$DOTFILES_DIR/.git" ]; then
   git -C "$DOTFILES_DIR" pull --rebase

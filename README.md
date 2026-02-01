@@ -1,7 +1,7 @@
 # Dotfiles
 
 ## Overview
-This repository contains dotfiles organized by OS with a shared common base. Use the Makefile targets to install configs and set up dependencies.
+This repository contains dotfiles in a single config root. Use the Makefile targets to install configs and set up dependencies.
 
 ## Ubuntu setup
 
@@ -10,7 +10,7 @@ This repository contains dotfiles organized by OS with a shared common base. Use
 - `wget` installed (usually pre-installed)
 
 ### Bootstrap from GitHub
-Run this from a fresh Ubuntu machine (installs curl, git, make, stow first):
+Run this from a fresh Ubuntu machine (installs curl, git, make first):
 
 ```sh
 wget -qO- https://raw.githubusercontent.com/gaetan-puleo/dotfiles/main/scripts/setup-ubuntu.sh | bash
@@ -24,7 +24,7 @@ make setup-ubuntu
 ```
 
 ### What gets installed
-- **System packages** (via apt): build-essential, curl, fd-find, fish, fzf, git, jq, kitty, ripgrep, stow, tmux, etc.
+- **System packages** (via apt): build-essential, curl, fd-find, fish, fzf, git, jq, kitty, ripgrep, tmux, etc.
 - **Fonts**: FiraCode Nerd Font
 - **Homebrew**: If not already installed
 - **Via Homebrew**: neovim, fnm (Fast Node Manager)
@@ -35,7 +35,7 @@ make setup-ubuntu
 
 ### Dotfiles only (skip package installation)
 ```sh
-make dotfiles-ubuntu
+make dotfiles-linux
 ```
 
 ## Fedora setup

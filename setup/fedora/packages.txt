@@ -13,7 +13,6 @@ pkgconf
 python3
 python3-pip
 ripgrep
-stow
 tar
 tmux
 unzip
