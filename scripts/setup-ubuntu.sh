@@ -63,7 +63,7 @@ fi
 # eval "$(fnm env)" && npm install -g opencode-ai
 
 make -C "$DOTFILES_DIR" dotfiles-linux
-# fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source; fisher install jorgebucaran/fisher'
+fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source; fisher install jorgebucaran/fisher; fisher update'
 
 # if command -v code >/dev/null 2>&1; then
 #   cat ~/.config/Code/User/extensions.txt | xargs -L 1 code --install-extension
