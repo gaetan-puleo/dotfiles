@@ -38,6 +38,25 @@ make setup-ubuntu
 make dotfiles-linux
 ```
 
+## macOS setup
+
+### Prerequisites
+- macOS 13+ recommended
+- `curl` installed (pre-installed on macOS)
+
+### Bootstrap from GitHub
+```sh
+curl -fsSL https://raw.githubusercontent.com/gaetan-puleo/dotfiles/main/scripts/setup-macos.sh | bash
+```
+
+Or if you already have the repo cloned:
+
+```sh
+cd ~/dotfiles
+make dotfiles-mac
+make vscode-extensions-mac
+```
+
 ## Manual installation
 
 ### Install fonts only

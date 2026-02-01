@@ -2,11 +2,10 @@ DOTFILES_DIR := $(CURDIR)
 CONFIG_DIR := $(DOTFILES_DIR)/config
 VSCODE_FILES := settings.json keybindings.json extensions.txt
 
-.PHONY: help dotfiles-linux dotfiles-mac setup-ubuntu install vscode-extensions-linux vscode-extensions-mac fisher-plugins fonts-linux link-common link-vscode-linux link-vscode-macos clean-fish-plugins
+.PHONY: help dotfiles-linux dotfiles-mac setup-ubuntu vscode-extensions-linux vscode-extensions-mac fisher-plugins fonts-linux link-common link-vscode-linux link-vscode-macos clean-fish-plugins
 
 help:
 	@echo "Available commands:"
-	@echo "  make install                    - Install packages via Homebrew"
 	@echo "  make dotfiles-linux            - Symlink dotfiles for Linux"
 	@echo "  make dotfiles-mac              - Symlink dotfiles for macOS"
 	@echo "  make vscode-extensions-linux   - Install VSCode extensions on Linux"
@@ -96,6 +95,3 @@ vscode-extensions-mac:
 	else \
 	  echo "VSCode not installed. Skipping extensions installation."; \
 	fi
-
-install:
-	brew install wget neovim tmux fish fnm jq fisher anomalyco/tap/opencode
