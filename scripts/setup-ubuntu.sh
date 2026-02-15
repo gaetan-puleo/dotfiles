@@ -63,6 +63,9 @@ fnm default lts-latest
 eval "$(fnm env)" && npm install -g opencode-ai
 
 make -C "$DOTFILES_DIR" dotfiles-linux
+if [ ! -f "$HOME/.config/opencode/opencode.json" ]; then
+  cp "$HOME/.config/opencode/opencode.json.example" "$HOME/.config/opencode/opencode.json"
+fi
 cat "$HOME/.config/fish/fish_plugins"
 fish -c 'fisher update'
 cat "$HOME/.config/fish/fish_plugins"

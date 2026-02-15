@@ -24,3 +24,9 @@ Fisher (Homebrew):
 ```sh
 brew install fisher
 ```
+
+OpenCode local config:
+
+```sh
+cp ~/.config/opencode/opencode.json.example ~/.config/opencode/opencode.json
+```

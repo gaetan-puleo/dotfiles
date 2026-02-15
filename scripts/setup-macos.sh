@@ -32,6 +32,9 @@ fnm default lts-latest
 eval "$(fnm env)" && npm install -g opencode-ai
 
 make -C "$DOTFILES_DIR" dotfiles-mac
+if [ ! -f "$HOME/.config/opencode/opencode.json" ]; then
+  cp "$HOME/.config/opencode/opencode.json.example" "$HOME/.config/opencode/opencode.json"
+fi
 mkdir -p "$HOME/.config/fish/functions"
 if [ ! -f "$HOME/.config/fish/functions/fisher.fish" ]; then
   curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish \
