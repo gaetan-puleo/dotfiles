@@ -17,3 +17,5 @@
 # function custom_function
 #     echo "Custom function"
 # end
+#
+wtp shell-init fish | source

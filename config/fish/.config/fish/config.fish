@@ -9,6 +9,7 @@ alias vim 'nvim'
 alias vi 'nvim'
 alias oc 'opencode'
 alias nvm 'fnm'
+alias d 'git difftool --no-symlinks --dir-diff'
 
 if test -d /home/linuxbrew/.linuxbrew/bin
     fish_add_path /home/linuxbrew/.linuxbrew/bin
@@ -27,3 +28,4 @@ test -e ~/.config/fish/config.local.fish; and source ~/.config/fish/config.local
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
+
