@@ -7,11 +7,9 @@ return {
     'windwp/nvim-ts-autotag',
   },
   config = function()
-    local treesitter = require('nvim-treesitter')
+    local parser_install_dir = vim.fn.stdpath('data') .. '/site'
 
-    treesitter.setup({
-      install_dir = vim.fn.stdpath('data') .. '/site',
-    })
+    vim.opt.runtimepath:append(parser_install_dir)
 
     local parsers = {
       'javascript', 'typescript', 'tsx', 'html', 'css',
@@ -34,7 +32,18 @@ return {
       'lua',
     }
 
-    treesitter.install(parsers)
+    require('nvim-treesitter.configs').setup({
+      parser_install_dir = parser_install_dir,
+      ensure_installed = parsers,
+      sync_install = false,
+      auto_install = true,
+      highlight = {
+        enable = true,
+      },
+      indent = {
+        enable = true,
+      },
+    })
 
     vim.api.nvim_create_autocmd('FileType', {
       pattern = {
@@ -50,7 +59,7 @@ return {
         if ok and stats and stats.size > max_filesize then
           return
         end
-        vim.treesitter.start()
+        pcall(vim.treesitter.start, buf)
       end,
     })
 
