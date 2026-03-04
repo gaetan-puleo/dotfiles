@@ -7,6 +7,8 @@ return {
     'windwp/nvim-ts-autotag',
   },
   config = function()
+    vim.g.skip_ts_context_commentstring_module = true
+
     local parser_install_dir = vim.fn.stdpath('data') .. '/site'
 
     vim.opt.runtimepath:append(parser_install_dir)
@@ -32,17 +34,13 @@ return {
       'lua',
     }
 
-    require('nvim-treesitter.configs').setup({
-      parser_install_dir = parser_install_dir,
-      ensure_installed = parsers,
-      sync_install = false,
-      auto_install = true,
-      highlight = {
-        enable = true,
-      },
-      indent = {
-        enable = true,
-      },
+    local nvim_treesitter = require('nvim-treesitter')
+    nvim_treesitter.setup({
+      install_dir = parser_install_dir,
+    })
+
+    nvim_treesitter.install(parsers, {
+      summary = true,
     })
 
     vim.api.nvim_create_autocmd('FileType', {
@@ -60,6 +58,7 @@ return {
           return
         end
         pcall(vim.treesitter.start, buf)
+        vim.bo[buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
       end,
     })
 
