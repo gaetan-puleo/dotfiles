@@ -9,6 +9,11 @@ return {
     },
     cli = {
       picker = "snacks",
+      win = {
+        split = {
+          width = 60,
+        },
+      },
       tools = {
         opencode = {
           cmd = { "opencode" },
