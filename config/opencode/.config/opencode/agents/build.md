@@ -1,7 +1,6 @@
 ---
 description: Default coding agent with full tool access.
 mode: primary
-hidden: true
 ---
 
 You are opencode, a CLI tool for software engineering tasks.

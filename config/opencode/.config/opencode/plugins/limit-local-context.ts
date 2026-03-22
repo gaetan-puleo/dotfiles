@@ -25,39 +25,6 @@ Set subagent_type. Summarize results for user. Pass task_id to resume. Use Read/
 }
 
 export default async ({ directory }: { directory: string }) => {
-  const { z } = await import("zod")
-
-  const o = z.object
-  const s = z.string()
-  const so = z.string().optional()
-  const no = z.number().optional()
-  const bo = z.boolean().optional()
-
-  const minimalSchemas: Record<string, any> = {
-    bash: o({ command: s, workdir: so }),
-    read: o({ filePath: s, offset: no, limit: no }),
-    glob: o({ pattern: s, path: so }),
-    grep: o({ pattern: s, path: so, include: so }),
-    edit: o({ filePath: s, oldString: s, newString: s, replaceAll: bo }),
-    multiedit: o({ filePath: s, edits: z.array(o({ oldString: s, newString: s })) }),
-    write: o({ filePath: s, content: s }),
-    webfetch: o({ url: s, format: so, timeout: no }),
-    websearch: o({ query: s, numResults: no, type: so }),
-    codesearch: o({ query: s, tokensNum: no }),
-    todowrite: o({ todos: z.array(o({ content: s, status: s, priority: s })) }),
-    todoread: o({}),
-    task: o({ description: s, prompt: s, subagent_type: s, task_id: so }),
-    question: o({ questions: z.array(o({ question: s, header: s, options: z.array(o({ label: s, description: s })), multiple: bo })) }),
-    skill: o({ name: s }),
-    lsp: o({ filePath: s, line: z.number(), character: z.number(), operation: s }),
-    batch: o({ calls: z.array(o({ tool: s, parameters: z.record(z.any()) })) }),
-    apply_patch: o({ patch: s }),
-    "plan-enter": o({}),
-    "plan-exit": o({}),
-    ls: o({ path: so }),
-    invalid: o({ tool: s, error: s }),
-  }
-
   const agentBySession = new Map<string, string>()
   const ENV_MARKER = "You are powered by the model"
 
@@ -104,14 +71,6 @@ export default async ({ directory }: { directory: string }) => {
           }
         }
         output.description = slim
-      }
-
-      const minimal = minimalSchemas[input.toolID]
-      if (minimal) {
-        output.parameters = minimal
-      } else if (output.parameters?._def) {
-        output.parameters._def.shape = typeof output.parameters._def.shape === "function" ? () => ({}) : {}
-        output.parameters._def.unknownKeys = "passthrough"
       }
     },
   }
