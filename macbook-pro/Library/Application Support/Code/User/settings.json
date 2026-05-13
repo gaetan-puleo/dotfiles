@@ -30,10 +30,12 @@
   "workbench.tree.indent": 16,
   "workbench.sideBar.location": "right",
   "workbench.editor.tabCloseButton": "off",
+  "workbench.editor.tabActionCloseVisibility": false,
   "workbench.statusBar.visible": false,
   "workbench.activityBar.location": "top",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "window.commandCenter": false,
+  "window.nativeFullScreen": false,
   "breadcrumbs.enabled": false,
 
   // ── Navigation ──────────────────────────────────────────
@@ -60,7 +62,7 @@
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.rightClickBehavior": "paste",
-  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.defaultProfile.osx": "bash",
 
   // ── Files ───────────────────────────────────────────────
   "files.trimTrailingWhitespace": true,
@@ -75,6 +77,5 @@
   "chat.disableAIFeatures": true,
 
   // ── Telemetry ───────────────────────────────────────────
-  "telemetry.telemetryLevel": "off",
-  "workbench.editor.tabActionCloseVisibility": false
+  "telemetry.telemetryLevel": "off"
 }
