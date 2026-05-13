@@ -18,7 +18,7 @@
   "editor.hideCursorInOverviewRuler": true,
   "editor.folding": false,
   "editor.occurrencesHighlight": "off",
-  "editor.glyphMargin": false,
+  "editor.glyphMargin": true,
   "editor.copyWithSyntaxHighlighting": false,
   "editor.emptySelectionClipboard": true,
   "editor.snippetSuggestions": "top",
@@ -29,7 +29,6 @@
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 16,
   "workbench.sideBar.location": "right",
-  "workbench.editor.tabCloseButton": "off",
   "workbench.statusBar.visible": false,
   "workbench.activityBar.location": "top",
   "workbench.editor.enablePreviewFromQuickOpen": false,
@@ -71,10 +70,13 @@
     "**/node_modules": true
   },
 
+  // ── Git ──────────────────────────────────────────────────
+  "git.decorations.enabled": true,
+  "scm.diffDecorations": "gutter",
+
   // ── AI (tout désactivé) ──────────────────────────────────
   "chat.disableAIFeatures": true,
 
   // ── Telemetry ───────────────────────────────────────────
-  "telemetry.telemetryLevel": "off",
-  "workbench.editor.tabActionCloseVisibility": false
+  "telemetry.telemetryLevel": "off"
 }
