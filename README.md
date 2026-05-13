@@ -1,32 +1,25 @@
-# Dotfiles
+# dotfiles
 
-Bootstrap Ubuntu:
+Dotfiles organisés par machine. Chaque dossier reproduit l'arborescence de `$HOME`.
 
-```sh
-wget -qO- https://raw.githubusercontent.com/gaetan-puleo/dotfiles/main/scripts/setup-ubuntu.sh | bash
+## Installation
+
+```bash
+git clone <repo> ~/dotfiles
+cd ~/dotfiles
+./install.sh <machine>
 ```
 
-Bootstrap macOS:
+Exemple :
 
-```sh
-curl -fsSL https://raw.githubusercontent.com/gaetan-puleo/dotfiles/main/scripts/setup-macos.sh | bash
+```bash
+./install.sh ubuntu-framework-laptop
 ```
 
-Dotfiles only:
+Le script crée des symlinks de chaque fichier du dossier machine vers `$HOME`. Les fichiers existants sont sauvegardés en `.bak`.
 
-```sh
-make dotfiles-linux
-make dotfiles-mac
-```
+## Ajouter une machine
 
-Fisher (Homebrew):
-
-```sh
-brew install fisher
-```
-
-OpenCode local config:
-
-```sh
-cp ~/.config/opencode/opencode.json.example ~/.config/opencode/opencode.json
-```
+1. Créer un dossier au nom de la machine
+2. Y placer les fichiers en respectant l'arborescence de `$HOME`
+3. Lancer `./install.sh <nouvelle-machine>`
